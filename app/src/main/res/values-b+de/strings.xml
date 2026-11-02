@@ -27,7 +27,7 @@
     <string name="preview_background_img_des">Hintergrundbildvorschau</string>
     <string name="player_speed_text_format" formatted="true">Geschwindigkeit (%.2fx)</string>
     <string name="rated_format" formatted="true">Bewertung: %.1f</string>
-    <string name="new_update_format" formatted="true">Neues Update gefunden! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Füller</string>
     <string name="duration_format" formatted="true">%d Min</string>
     <string name="app_name">CloudStream</string>
@@ -149,7 +149,7 @@
     <string name="backup_failed">Speicherberechtigungen fehlen. Bitte erneut versuchen.</string>
     <string name="search">Suche</string>
     <string name="category_account">Konten und Sicherheit</string>
-    <string name="category_updates">Aktualisierungen und Datensicherung</string>
+
     <string name="settings_info">Info</string>
     <string name="advanced_search">Erweiterte Suche</string>
     <string name="advanced_search_des">Liefert die Suchergebnisse getrennt nach Anbietern</string>
@@ -158,8 +158,7 @@
     <string name="kitsu_settings">Vorschaubilder von Kitsu anzeigen</string>
     <string name="pref_filter_search_quality">Ausgewählte Videoqualität in den Suchergebnissen ausblenden</string>
     <string name="automatic_plugin_updates">Automatische Plugin-Updates</string>
-    <string name="updates_settings">App-Updates anzeigen</string>
-    <string name="updates_settings_des">Automatisches Suchen nach neuen Updates nach dem Start.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Light Novel App von denselben Entwicklern</string>
     <string name="anim">Anime App von denselben Entwicklern</string>
@@ -241,14 +240,13 @@
     <string name="show_sub">Sub-Label</string>
     <string name="show_title">Titel</string>
     <string name="poster_ui_settings">UI-Elemente auf Vorschaubild umschalten</string>
-    <string name="no_update_found">Kein Update gefunden</string>
-    <string name="check_for_update">Auf Updates prüfen</string>
+
     <string name="video_lock">Sperren</string>
     <string name="video_aspect_ratio_resize">Skalieren</string>
     <string name="video_source">Quelle</string>
     <string name="video_skip_op">Intro überspringen</string>
     <string name="dont_show_again">Nicht mehr anzeigen</string>
-    <string name="skip_update">Update ignorieren</string>
+
     <string name="update">Update</string>
     <string name="watch_quality_pref">Bevorzugte Videoqualität (WLAN)</string>
     <string name="limit_title">Videoplayertitel max. Zeichen</string>
@@ -437,11 +435,10 @@
     <string name="automatic_plugin_download">Automatisches Herunterladen von Plugins</string>
     <string name="automatic_plugin_download_summary">Automatische Installation aller noch nicht installierten Plugins aus hinzugefügten Repositories.</string>
     <string name="redo_setup_process">Einrichtungsvorgang wiederholen</string>
-    <string name="apk_installer_settings">APK-Installer</string>
-    <string name="apk_installer_settings_des">Einige Geräte unterstützen den neuen Package-Installer nicht. Benutze die Legacy-Option, wenn sich die Updates nicht installieren lassen.</string>
+
     <string name="season_format">%1$s %2$d%3$s</string>
     <string name="pref_category_links">Links</string>
-    <string name="pref_category_app_updates">App-Updates</string>
+
     <string name="pref_category_backup">Sicherung</string>
     <string name="pref_category_extensions">Erweiterungen</string>
     <string name="pref_category_actions">Wartung</string>
@@ -458,13 +455,7 @@
     <string name="confirm_exit_dialog">Sicher, dass die App beendet werden soll?</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
-    <string name="update_notification_downloading">App-Update wird heruntergeladen…</string>
-    <string name="update_notification_installing">App-Update wird installiert…</string>
-    <string name="update_notification_failed">Die neue Version der App konnte nicht installieren werden</string>
-    <string name="apk_installer_legacy">Legacy</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
-    <string name="update_started">Aktualisierung gestartet</string>
-    <string name="delayed_update_notice">Die Anwendung wird beim Beenden aktualisiert</string>
+
     <string name="plugin_downloaded">Das Plugin wurde heruntergeladen</string>
     <string name="action_remove_from_watched">Von geschaut entfernen</string>
     <string name="library">Bibliothek</string>
@@ -701,9 +692,7 @@
     <string name="top_center">Oben mitte</string>
     <string name="top_right">Oben rechts</string>
     <string name="play_full_series_button">Gesamte Serie abspielen</string>
-    <string name="install_prerelease">Vorabversion installieren</string>
-    <string name="prerelease_already_installed">Vorabversion ist bereits installiert.</string>
-    <string name="prerelease_install_failed">Die Installation der Vorabversion ist fehlgeschlagen.</string>
+
     <string name="episode_action_play_mirror">Spiel Mirror ab</string>"
     <string name="show_episode_text">Episodentext</string>
     <string name="search_suggestions">Empfehlungen suchen</string>

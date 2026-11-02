@@ -111,8 +111,7 @@
     <string name="episode_action_auto_download">Téléchargement automatique</string>
     <string name="episode_action_download_mirror">Télécharger depuis le miroir</string>
     <string name="episode_action_reload_links">Recharger les liens</string>
-    <string name="no_update_found">Pas de mise-à-jour trouvés</string>
-    <string name="check_for_update">Vérifier les mise-à-jour</string>
+
     <string name="video_lock">Verouiller</string>
     <string name="video_aspect_ratio_resize">Redimensionner</string>
     <string name="video_source">Source</string>
@@ -121,7 +120,7 @@
     <string name="update">Mettre à jour</string>
     <string name="dns_pref_summary">Utile pour contourner les bloquages des FAI</string>
     <string name="download_path_pref">Emplacement de téléchargement</string>
-    <string name="new_update_format" formatted="true">Nouvelle mise à jour trouvée ! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Épisode spécial</string>
     <string name="watch_quality_pref">Qualité de visionnage préférée (WiFi)</string>
     <string name="video_buffer_size_settings">Taille de la mémoire cache</string>
@@ -274,7 +273,7 @@
     <string name="backup_failed_error_format">Erreur de sauvegarde %s</string>
     <string name="search">Recherche</string>
     <string name="category_account">Comptes et Sécurité</string>
-    <string name="category_updates">Mises à jour et Sauvegarde</string>
+
     <string name="settings_info">Info</string>
     <string name="advanced_search">Recherche avancée</string>
     <string name="advanced_search_des">Vous donne les résultats de la recherche séparés par fournisseur</string>
@@ -283,8 +282,7 @@
     <string name="kitsu_settings">Montrer les affiches provenant de Kitsu</string>
     <string name="pref_filter_search_quality">Masque la qualité vidéo sélectionnée dans les résultats de recherche</string>
     <string name="automatic_plugin_updates">Mises à jour automatiques des plugins</string>
-    <string name="updates_settings">Afficher les mises à jour de l\'application</string>
-    <string name="updates_settings_des">Recherche automatique de nouvelles mises à jour au démarrage.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Application Light Novel par les mêmes devs</string>
     <string name="anim">Anime app by the same devs</string>
@@ -308,7 +306,7 @@
     <string name="stream">Stream</string>
     <string name="confirm_exit_dialog">Êtes-vous sûr·e de vouloir quitter ?</string>
     <string name="no">Non</string>
-    <string name="update_notification_downloading">Téléchargement de la mise à jour…</string>
+
     <string name="next_episode_format" formatted="true">L\'épisode %d sera publié dans</string>
     <string name="show_hd">Étiquette de qualité</string>
     <string name="limit_title_rez">Afficher les informations du lecteur</string>
@@ -340,7 +338,7 @@
     <string name="subtitles_remove_captions">Enlever les sous-titres pour sourds et malentendants</string>
     <string name="automatic_plugin_download">Télécharger automatiquement les plugins</string>
     <string name="poster_ui_settings">Activer ou désactiver les éléments du poster</string>
-    <string name="skip_update">Ignorer cette mise-à-jour</string>
+
     <string name="error_invalid_data">Données invalides</string>
     <string name="subtitles_encoding">Encodage des sous titres</string>
     <string name="category_providers">Fournisseurs</string>
@@ -380,7 +378,7 @@
     <string name="extras">Extras</string>
     <string name="network_adress_example">https://exemple.com/exemple.mp4</string>
     <string name="referer">Référent (facultatif)</string>
-    <string name="apk_installer_settings">Installeur APK</string>
+
     <string name="go_forward_30">+30</string>
     <string name="quality_cam">Cam</string>
     <string name="subtitles_remove_bloat">Supprimer les pubs des sous-titres</string>
@@ -421,9 +419,7 @@
     <string name="player_pref">Lecteur vidéo préféré</string>
     <string name="skip_type_mixed_ed">Fin mitigée</string>
     <string name="skip_type_mixed_op">Introduction mitigée</string>
-    <string name="update_notification_installing">Installation de la mise a jour de l\'application…</string>
-    <string name="update_notification_failed">Impossible d\'installer la nouvelle version de l\'application</string>
-    <string name="apk_installer_settings_des">Certains appareils ne supportent pas le nouvel installateur d\'application. Essayez l\'option de l\'ancien installateur si les mises-à-jour ne s\'installe pas.</string>
+
     <string name="previous">Précédent</string>
     <string name="skip_setup">Ignorer la configuration</string>
     <string name="repository_name_hint">Nom de dépôt (optionnel)</string>
@@ -442,13 +438,13 @@
     <string name="player_settings_play_in_app">Lecteur interne</string>
     <string name="app_not_found_error">Application introuvable</string>
     <string name="clipboard_too_large">Trop de texte. Impossible de sauvegarder dans le presse papier.</string>
-    <string name="apk_installer_package_installer">Installateur de paquet</string>
+
     <string name="plugin">plugins</string>
     <string name="delete_repository_plugins">Cela supprimera également tous les plugins du repository</string>
     <string name="blank_repo_message">CloudStream n\'a aucun site installé par défaut. Vous devez installer les sites à partir de dépôts. \n \nRejoignez notre Discord ou cherchez en ligne.</string>
     <string name="extension_language">Langage</string>
     <string name="enable_skip_op_from_database_des">Afficher les popups skip pour les intro / fins</string>
-    <string name="apk_installer_legacy">Ancienne méthode d\'installation</string>
+
     <string name="pref_category_links">Liens</string>
     <string name="pref_category_gestures">Gestes</string>
     <string name="pref_category_player_features">Fonctionnalités du lecteur</string>
@@ -458,14 +454,13 @@
     <string name="pref_category_looks">Apparence</string>
     <string name="pref_category_ui_features">Fonctionnalités</string>
     <string name="play_trailer_button">Lire la bande-annonce</string>
-    <string name="pref_category_app_updates">Mises à jour de l\'application</string>
+
     <string name="pref_category_backup">Sauvegarde</string>
     <string name="pref_category_extensions">Extensions</string>
     <string name="pref_category_actions">Actions</string>
     <string name="pref_category_cache">Cache</string>
     <string name="redo_setup_process">Refaire le processus d\'installation</string>
-    <string name="update_started">Mise à jour commencée</string>
-    <string name="delayed_update_notice">L\'application sera mise à jour dès la fin de la session</string>
+
     <string name="plugin_downloaded">Plugin Téléchargé</string>
     <string name="action_remove_from_watched">Retirer de la vue</string>
     <string name="library">Bibliothèque</string>
@@ -703,9 +698,7 @@
     <string name="top_center">En haut au centre</string>
     <string name="top_right">En haut à droite</string>
     <string name="play_full_series_button">Jouer la série complète</string>
-    <string name="install_prerelease">Installer la version préliminaire</string>
-    <string name="prerelease_already_installed">La version préliminaire est déjà installée.</string>
-    <string name="prerelease_install_failed">L\'installation de la version préliminaire a échouée.</string>
+
     <string name="show_episode_text">Texte de l\'épisode</string>
     <string name="search_suggestions">Suggestions de recherche</string>
     <string name="search_suggestions_des">Afficher des suggestions de recherche pendant la saisie</string>

@@ -12,7 +12,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">سرعة (%.2fx)</string>
     <string name="rated_format" formatted="true">تقييم: %.1f</string>
-    <string name="new_update_format" formatted="true">يوجد تحديث جديد! \n%1$s -&gt; %2$s</string>
+
     <string name="duration_format" formatted="true">%d دقيقة</string>
     <string name="app_name">CloudStream</string>
     <string name="play_with_app_name">تشغيل بواسطة CloudStream</string>
@@ -137,7 +137,7 @@
     <string name="backup_failed_error_format">فشل إنشاء نسخة احتياطية %s</string>
     <string name="search">بحث</string>
     <string name="category_account">الحسابات والأمن</string>
-    <string name="category_updates">التحديثات والنسخ الاحتياطية</string>
+
     <string name="settings_info">معلومات</string>
     <string name="advanced_search">البحث المتقدم</string>
     <string name="advanced_search_des">يعطيك نتائج البحث مفصولة عن طريق المزود</string>
@@ -147,8 +147,7 @@
     <string name="pref_filter_search_quality">إخفاء جودة الفيديو المختارة من نتائج البحث</string>
     <string name="automatic_plugin_updates">تحديث الإضافات تلقائيًا</string>
     <string name="automatic_plugin_download">تنزيل الإضافات تلقائيًا</string>
-    <string name="updates_settings">التحديث التلقائي</string>
-    <string name="updates_settings_des">ابحث تلقائيا عن التحديثات الجديدة بعد بدء التطبيق.</string>
+
     <string name="github">غيت هاب</string>
     <string name="lightnovel">تطبيق روايات خفيف من نفس المطورين</string>
     <string name="anim">تطبيق أنمي من نفس المطورين</string>
@@ -233,14 +232,13 @@
     <string name="show_sub">ملصق مترجم</string>
     <string name="show_title">العنوان</string>
     <string name="poster_ui_settings">التحكم في عناصر الواجهة على الملصق</string>
-    <string name="no_update_found">لم يتم العثور على تحديثات</string>
-    <string name="check_for_update">تحقق من التحديثات</string>
+
     <string name="video_lock">قفل</string>
     <string name="video_aspect_ratio_resize">تغيير الحجم</string>
     <string name="video_source">مصدر</string>
     <string name="video_skip_op">تخطي المقدمة</string>
     <string name="dont_show_again">لا تظهر مرة أخرى</string>
-    <string name="skip_update">تخطي هذا التحديث</string>
+
     <string name="update">تحديث</string>
     <string name="watch_quality_pref">جودة المشاهدة المفضلة (WiFi)</string>
     <string name="limit_title">أقصى عدد لحروف عنوان مُشغل الفيديو</string>
@@ -444,27 +442,23 @@
     <string name="no">ﻻ</string>
     <string name="app_dub_sub_episode_text_format" formatted="true">%1$s الحلقة %2$d</string>
     <string name="next_episode_format" formatted="true">سيتم إصدار الحلقة %d في</string>
-    <string name="update_notification_failed">تعذر تثبيت الإصدار الجديد من التطبيق</string>
+
     <string name="extension_install_first">تثبيت الإضافة أولا</string>
     <string name="player_settings_play_in_app">مشغل داخلي</string>
     <string name="app_not_found_error">لم يتم العثور على التطبيق</string>
     <string name="all_languages_preference">جميع اللغات</string>
     <string name="skip_type_credits">الإعتمادات</string>
-    <string name="update_notification_downloading">‌تنزيل تحديث التطبيق…</string>
-    <string name="update_notification_installing">‏تثبيت تحديث التطبيق…</string>
+
     <string name="next_episode_time_min_format" formatted="true">%d دقيقة</string>
     <string name="episodes_range">%1$d-%2$d</string>
     <string name="episode_format" formatted="true">%1$d %2$s</string>
     <string name="confirm_exit_dialog">هل أنت متأكد أنك تريد الخروج؟</string>
     <string name="automatic_plugin_download_summary">قم بتثبيت جميع المكونات الإضافية التي لم يتم تثبيتها بعد تلقائيا من المستودعات المضافة.</string>
-    <string name="apk_installer_settings">مثبت الحزم</string>
-    <string name="apk_installer_settings_des">بعض الاجهزة لا تدعم مثبت الحزمة الجديد. جرب الخيار القديم إذا لم يتم تثبيت التحديثات.</string>
-    <string name="apk_installer_legacy">قياسي</string>
-    <string name="apk_installer_package_installer">مثبت الحزمة</string>
+
     <string name="pref_category_player_layout">التخطيط</string>
     <string name="redo_setup_process">إعادة عملية الإعداد</string>
     <string name="pref_category_links">الروابط</string>
-    <string name="pref_category_app_updates">تحديثات التطبيق</string>
+
     <string name="pref_category_backup">النسخ الإحتياطي</string>
     <string name="pref_category_extensions">الإضافات</string>
     <string name="pref_category_actions">الإجراءات</string>
@@ -476,8 +470,7 @@
     <string name="pref_category_ui_features">المميزات</string>
     <string name="pref_category_looks">المظهر</string>
     <string name="play_trailer_button">تشغيل المقطع الدعائي</string>
-    <string name="delayed_update_notice">سيتم تحديث التطبيق عند الخروج</string>
-    <string name="update_started">بدأ التحديث</string>
+
     <string name="plugin_downloaded">تم تنزيل الإضافة</string>
     <string name="action_remove_from_watched">إزالة من المشاهدة</string>
     <string name="sort_alphabetical_a">الترتيب الأبجدي (من الألف إلى الياء)</string>
@@ -722,9 +715,7 @@
     <string name="search_suggestions_des">عرض اقتراحات البحث أثناء الكتابة</string>
     <string name="clear_suggestions">مسح الاقتراحات</string>
     <string name="show_cast_in_details">عرض لوحة فريق التمثيل</string>
-    <string name="install_prerelease">تثبيت الإصدار التجريبي</string>
-    <string name="prerelease_already_installed">تم تثبيت الإصدار التجريبي بالفعل.</string>
-    <string name="prerelease_install_failed">فشل تثبيت الإصدار التجريبي.</string>
+
     <string name="show_episode_text">نص الحلقة</string>
     <string name="video_info">معلومات الوسائط</string>
     <string name="source_name">اسم المصدر</string>

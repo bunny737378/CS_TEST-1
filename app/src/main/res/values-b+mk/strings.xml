@@ -3,7 +3,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Брзина (%.2fx)</string>
     <string name="rated_format" formatted="true">Оценето: %.1f</string>
-    <string name="new_update_format" formatted="true">Пронајдена нова верзија!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Филтер</string>
     <string name="app_name">CloudStream</string>
     <string name="title_home">Дома</string>
@@ -101,8 +101,7 @@
     <string name="advanced_search">Напредно пребарување</string>
     <string name="advanced_search_des">Ви ги дава резултатите од пребарувањето одделени по провајдер</string>
     <string name="show_fillers_settings">Прикажи епизода за полнење за аниме</string>
-    <string name="updates_settings">Прикажи ажурирања на апликации</string>
-    <string name="updates_settings_des">Автоматски пребарувај нови ажурирања откако ќе ја стартуваш апликацијата.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Едноставна апликација за новели од истите развивачи</string>
     <string name="anim">Апликација за аниме од истите развивачи</string>
@@ -158,8 +157,7 @@
     <string name="episode_action_auto_download">Автоматско преземање</string>
     <string name="episode_action_download_mirror">Преземи Mirror</string>
     <string name="episode_action_reload_links">Вчитај ги повторно линковите</string>
-    <string name="no_update_found">Не е пронајдено ажурирање</string>
-    <string name="check_for_update">Провери дали има нови верзии за апликацијата</string>
+
     <string name="video_lock">Заклучи</string>
     <string name="video_aspect_ratio_resize">Промени ја големината</string>
     <string name="video_source">Извор</string>
@@ -217,7 +215,7 @@
     <string name="home_random">Случајно</string>
     <string name="error">Грешка</string>
     <string name="view_public_repositories_button">Прикажи складишта на заедницата</string>
-    <string name="skip_update">Прескокни го ова ажурирање</string>
+
     <string name="batch_download">Групно преземање</string>
     <string name="actor_background">Позадина</string>
     <string name="documentaries">Документарни филмови</string>
@@ -238,7 +236,7 @@
     <string name="pref_category_actions">Дејства</string>
     <string name="subs_subtitle_languages">Јазик на преводот</string>
     <string name="extension_description">Опис</string>
-    <string name="delayed_update_notice">Апликацијата ќе се ажурира по излегувањето</string>
+
     <string name="subscription_deleted">Отпишана е од %s</string>
     <string name="jsdelivr_proxy">GitHub прокси</string>
     <string name="quality_tc">TC</string>
@@ -248,7 +246,7 @@
     <string name="backup_failed">Недостасуваат дозволи за складирање. Обиди се повторно.</string>
     <string name="sort_save">Зачувај</string>
     <string name="player_load_subtitles">Вчитај од датотека</string>
-    <string name="pref_category_app_updates">Ажурирања на апликацијата</string>
+
     <string name="browser">Прелистувач</string>
     <string name="restore_success">Вчитана резервна датотека</string>
     <string name="pref_category_gestures">Гестови</string>
@@ -285,9 +283,9 @@
     <string name="android_tv_interface_off_seek_settings_summary">Износот на барањето што се користи кога плеерот е скриен</string>
     <string name="episode_action_download_subtitle">Преземи преводи</string>
     <string name="view_public_repositories_button_short">Јавна листа</string>
-    <string name="apk_installer_package_installer">Инсталатор на пакети</string>
+
     <string name="ova_singular">ОВА</string>
-    <string name="category_updates">Ажурирање и резервна копија</string>
+
     <string name="empty_library_no_accounts_message">Твојата библиотека е празна :(\nНајави се на корисничка сметка или додади серии во твојата локална библиотека.</string>
     <string name="no_episodes_found">Не се пронајдени епизоди</string>
     <string name="subtitles_example_text">Брзата кафеава лисица го прескокнува мрзливото куче</string>
@@ -316,7 +314,7 @@
     <string name="audio_tracks">Аудио јазик</string>
     <string name="poster_ui_settings">Вклучи ги елементите на корисничкиот интерфејс на постерот</string>
     <string name="plugins_disabled" formatted="true">Оневозможено: %d</string>
-    <string name="apk_installer_legacy">Легаси</string>
+
     <string name="autoplay_next_settings">Автоматска репродукција на следната епизода</string>
     <string name="video_buffer_clear_settings">Исчисти го кешот на видео и слики</string>
     <string name="pref_category_ui_features">Карактеристики</string>
@@ -362,9 +360,9 @@
     <string name="quality_blueray">Blu-ray</string>
     <string name="backup_success">Зачувани податоци</string>
     <string name="video_ram_description">Предизвикува падови ако е превисоко поставено на уреди со слаба меморија, како што е Android TV.</string>
-    <string name="update_notification_installing">Се инсталира ажурирање на апликацијата…</string>
+
     <string name="repository_url_hint">URL на изворот или краток код</string>
-    <string name="update_notification_failed">Не може да се инсталира новата верзија на апликацијата</string>
+
     <string name="kitsu_settings">Прикажи постери од Kitsu</string>
     <string name="confirm_exit_dialog">Дали си сигурен дека сакаш да изглезеш?</string>
     <string name="video_disk_description">Предизвикува проблеми ако е превисоко поставено на уреди со мал простор за складирање, како што е Android TV.</string>
@@ -378,11 +376,11 @@
     <string name="show_log_cat">Прикажи Logcat 🐈</string>
     <string name="plugins_downloaded" formatted="true">Преземено: %d</string>
     <string name="resolution_and_title">Резолуција и наслов</string>
-    <string name="update_started">Ажурирањето започна</string>
+
     <string name="chromecast_subtitles_settings">Преводи на Chromecast</string>
     <string name="subtitle_offset_extra_hint_before_format">Користи го ова ако преводите се прикажуваат %d ms подоцна</string>
     <string name="random_button_settings">Случајно копче</string>
-    <string name="apk_installer_settings">Инсталатор на APK</string>
+
     <string name="extensions">Екстензии</string>
     <string name="quality_uhd">UHD</string>
     <string name="referer">Референт (опционално)</string>
@@ -444,7 +442,7 @@
     <string name="autoplay_next_settings_des">Започни ја следната епизода кога ќе заврши тековната</string>
     <string name="backup_failed_error_format">Грешка при правење резервна копија на %s</string>
     <string name="pref_filter_search_quality">Сокриј го избраниот квалитет на видеото во резултатите од пребарувањето</string>
-    <string name="apk_installer_settings_des">Некои уреди не го поддржуваат новиот инсталатор на пакети. Испробај ја легаси(старата) опција, ако ажурирањата не се инсталираат.</string>
+
     <string name="limit_title_rez">Прикажи информации за плеерот</string>
     <string name="video_buffer_size_settings">Големина на видео баферот</string>
     <string name="pref_category_player_layout">Распоред</string>
@@ -473,7 +471,7 @@
     <string name="action_mark_as_watched">Обележи како гледано</string>
     <string name="enable_skip_op_from_database_des">Прикажи скокачки прозорци за отворање/завршување</string>
     <string name="no">Не</string>
-    <string name="update_notification_downloading">Се презема ажурирање на апликацијата…</string>
+
     <string name="sort_rating_desc">Оцена (висока до ниска)</string>
     <string name="sort_rating_asc">Оцена (ниска до висока)</string>
     <string name="sort_updated_new">Ажурирано (ново на старо)</string>
@@ -715,9 +713,7 @@
     <string name="clear_suggestions">Исчисти предлози</string>
     <string name="show_player_metadata_overlay">Прикажи преклоп со метаподатоци на плеерот</string>
     <string name="show_cast_in_details">Прикажи панел за емитување</string>
-    <string name="install_prerelease">Инсталирај предиздавачка верзија</string>
-    <string name="prerelease_already_installed">Предиздавачката верзија е веќе инсталирана.</string>
-    <string name="prerelease_install_failed">Неуспешна инсталација на предиздавачката верзија.</string>
+
     <string name="video_singular">Видео</string>
     <string name="show_episode_text">Текст на епизода</string>
     <string name="video_info">Информации за медиумот</string>

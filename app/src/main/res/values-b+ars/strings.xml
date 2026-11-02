@@ -35,7 +35,7 @@
     <string name="download_paused">توقف التنزيل</string>
     <string name="type_plan_to_watch">خطط للمشاهدة</string>
     <string name="type_re_watching">إعادة المشاهدة</string>
-    <string name="new_update_format" formatted="true">!تم العثور على تحديث جديد \n%1$s -&gt; %2$s</string>
+
     <string name="rated_format" formatted="true">%.1f:قدر</string>
     <string name="duration_format" formatted="true">%dاقل</string>
     <string name="app_name">كلاودستريم</string>
@@ -82,7 +82,7 @@
     <string name="search">بحث</string>
     <string name="library">مكتبة</string>
     <string name="settings_info">معلومات</string>
-    <string name="category_updates">التحديثات والنسخ الاحتياطي</string>
+
     <string name="advanced_search_des">يعطيك نتائج البحث مفصولة حسب المزود</string>
     <string name="show_trailers_settings">عرض المقطورات</string>
     <string name="kitsu_settings">عرض الملصقات من كيتسو</string>
@@ -90,7 +90,7 @@
     <string name="show_fillers_settings">عرض حلقة حشو للأنمي</string>
     <string name="pref_filter_search_quality">إخفاء جودة الفيديو المحددة في نتائج البحث</string>
     <string name="automatic_plugin_updates">تحديثات البرنامج المساعد التلقائي</string>
-    <string name="updates_settings_des">البحث تلقائيًا عن التحديثات الجديدة بعد بدء تشغيل التطبيق.</string>
+
     <string name="automatic_plugin_download">تنزيل المكونات الإضافية تلقائيًا</string>
     <string name="redo_setup_process">إعادة عملية الإعداد</string>
     <string name="automatic_plugin_download_mode_title">حدد الوضع لتصفية تنزيل المكونات الإضافية</string>
@@ -99,7 +99,7 @@
     <string name="eigengraumode_settings">وضع إيجينجرافي</string>
     <string name="swipe_to_seek_settings">انتقد للبحث</string>
     <string name="backup_settings">نسخ إحتياطي للبيانات</string>
-    <string name="updates_settings">إظهار تحديثات التطبيق</string>
+
     <string name="player_subtitles_settings_des">إعدادات ترجمات المشغل</string>
     <string name="chromecast_subtitles_settings">ترجمات كرومكاست</string>
     <string name="swipe_to_change_settings_des">قم بالتمرير لأعلى أو لأسفل على الجانب الأيسر أو الأيمن لتغيير السطوع أو مستوى الصوت</string>
@@ -111,8 +111,7 @@
     <string name="app_language">لغة التطبيق</string>
     <string name="discord">انضم إلى الديسكورد</string>
     <string name="benene_des">بنيني معطا</string>
-    <string name="apk_installer_settings_des">بعض الهواتف لا تدعم مثبت الحزمة الجديد. جرب الخيار القديم إذا لم يتم تثبيت التحديثات.</string>
-    <string name="apk_installer_settings">مثبت تتبيق</string>
+
     <string name="test_passed">اجتاز</string>
     <string name="episodes">الحلقات</string>
     <string name="season">موسم</string>
@@ -120,7 +119,7 @@
     <string name="delete">مسح</string>
     <string name="cancel">الغي</string>
     <string name="pause">وقف</string>
-    <string name="update_notification_downloading">جارٍ تنزيل تحديث التطبيق…</string>
+
     <string name="subs_default_reset_toast">إعادة التعيين إلى القيمة العادية</string>
     <string name="season_short">س</string>
     <string name="episode_format" formatted="true">%1$d %2$s</string>
@@ -133,7 +132,7 @@
     <string name="episodes_range">%1$d-%2$d</string>
     <string name="episode_short">يي</string>
     <string name="clear_history">امسح التاريخ</string>
-    <string name="update_notification_installing">جارٍ تثبيت تحديث التطبيق…</string>
+
     <string name="start">بدأ</string>
     <string name="no_episodes_found">لم يتم العثور على أي حلقات</string>
     <string name="enable_skip_op_from_database_des">إظهار تخطي النوافذ المنبثقة للفتح/الإنهاء</string>
@@ -149,9 +148,7 @@
     <string name="confirm_exit_dialog">هل أنت متأكد أنك تريد الخروج؟</string>
     <string name="yes">نعم</string>
     <string name="no">لا</string>
-    <string name="update_notification_failed">تعذر تثبيت الإصدار الجديد من التطبيق</string>
-    <string name="apk_installer_legacy">إرث</string>
-    <string name="apk_installer_package_installer">منزل المجموعة</string>
+
     <string name="sort_rating_asc">التقييم (من الأقل إلى الأعلى)</string>
     <string name="sort_updated_new">تم التحديث (من الجديد إلى القديم)</string>
     <string name="sort_updated_old">تم التحديث (القديم إلى الجديد)</string>
@@ -169,7 +166,7 @@
     <string name="sort_alphabetical_z">أبجديًا (ياء إلى ألف)</string>
     <string name="sort_by">ترتيب حسب</string>
     <string name="subscription_list_name">مشترك</string>
-    <string name="delayed_update_notice">سيتم تحديث التطبيق عند الخروج</string>
+
     <string name="sort">رتب</string>
     <string name="sort_rating_desc">التقييم (من الأعلى إلى الأقل)</string>
     <string name="select_library">حدد المكتبة</string>
@@ -204,7 +201,7 @@
     <string name="subs_window_color">لون النافذة</string>
     <string name="subs_subtitle_elevation">ارتفاع الترجمة</string>
     <string name="popup_delete_file">حذف ملف</string>
-    <string name="update_started">بدأ التحديث</string>
+
     <string name="sort_copy">انسخ</string>
     <string name="stream">بث</string>
     <string name="popup_play_file">ملف اللعب</string>
@@ -251,9 +248,9 @@
     <string name="backup_frequency">تكرار النسخ الاحتياطي</string>
     <string name="movies_singular">فلم</string>
     <string name="torrent_singular">توررنت</string>
-    <string name="no_update_found">لا يوجد تحديث</string>
+
     <string name="tv_series">مسلسل تلفزيونى</string>
-    <string name="check_for_update">فحص التحديثات</string>
+
     <string name="render_error">خطأ في العارض</string>
     <string name="show_title">عنوان</string>
     <string name="download_path_pref">مسار التحميل</string>
@@ -292,7 +289,7 @@
     <string name="used_storage">مستعمل</string>
     <string name="video_disk_description">.Android TV يسبب مشاكل إذا تم ضبطه على أجهزة ذات مساحة تخزين منخفضة، مثل</string>
     <string name="others">اخرون</string>
-    <string name="skip_update">تخطي هذا التحديث</string>
+
     <string name="jsdelivr_proxy_summary">.قد يتسبب في تأخير التحديثات لبضعة أيام .jsDelivr باستخدام GitHubيتجاوز حظر</string>
     <string name="asian_drama">الدرامات الآسيوية</string>
     <string name="queued">في قائمة الانتظار</string>

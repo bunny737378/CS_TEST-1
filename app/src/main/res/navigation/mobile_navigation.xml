@@ -255,8 +255,8 @@
         app:popExitAnim="@anim/exit_anim" />
 
     <fragment
-        android:id="@+id/navigation_settings_updates"
-        android:name="com.lagradost.cloudstream3.ui.settings.SettingsUpdates2"
+        android:id="@+id/navigation_settings_backup"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsBackup2"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -386,8 +386,8 @@
         app:popEnterAnim="@anim/enter_anim"
         app:popExitAnim="@anim/exit_anim" />
     <action
-        android:id="@+id/action_navigation_global_to_navigation_settings_updates"
-        app:destination="@id/navigation_settings_updates"
+        android:id="@+id/action_navigation_global_to_navigation_settings_backup"
+        app:destination="@id/navigation_settings_backup"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
         app:popEnterAnim="@anim/enter_anim"

@@ -34,7 +34,7 @@
     <string name="preview_background_img_des">Предпросмотр фона</string>
     <string name="player_speed_text_format" formatted="true">Скорость (%.2fx)</string>
     <string name="rated_format" formatted="true">Оценили: %.1f</string>
-    <string name="new_update_format" formatted="true">Новое обновление найдено! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Заполнитель</string>
     <string name="app_name">CloudStream</string>
     <string name="action_remove_from_bookmarks">Убрать</string>
@@ -74,7 +74,7 @@
     <string name="download_canceled">Скачивание отменено</string>
     <string name="download_done">Скачивание закончено</string>
     <string name="home_info">Инфо</string>
-    <string name="update_started">Обновление началось</string>
+
     <string name="home_expanded_hide">Прятать</string>
     <string name="home_play">Смотреть</string>
     <string name="home_more_info">Подробнее</string>
@@ -147,16 +147,14 @@
     <string name="restore_failed_format" formatted="true">Не удалось восстановить данные из %s</string>
     <string name="backup_failed">Отсутствует разрешение на хранение. Пожалуйста, попробуйте снова.</string>
     <string name="category_account">Учётные записи и Безопасность</string>
-    <string name="category_updates">Обновления и Резервное копирование</string>
+
     <string name="settings_info">Информация</string>
     <string name="advanced_search">Расширенный поиск</string>
     <string name="show_trailers_settings">Показывать трейлеры</string>
     <string name="pref_filter_search_quality">Скрыть выбранные форматы видео в результатах поиска</string>
     <string name="automatic_plugin_updates">Автоматическое обновление дополнений</string>
     <string name="automatic_plugin_download">Автозагрузка дополнений</string>
-    <string name="updates_settings">Показать обновления приложения</string>
-    <string name="updates_settings_des">Автоматически проверять обновления при старте приложения.</string>
-    <string name="apk_installer_settings">APK установщик</string>
+
     <string name="github">Github</string>
     <string name="app_language">Язык приложения</string>
     <string name="no_links_found_toast">Ссылок не найдено</string>
@@ -224,13 +222,13 @@
     <string name="restore_settings">Восстановить данные из резервной копии</string>
     <string name="show_fillers_settings">Показывать Филлер серии для аниме</string>
     <string name="kitsu_settings">Показывать афиши из Kitsu</string>
-    <string name="apk_installer_settings_des">Некоторые устройства не поддерживают новые установщики. Попробуйте использовать legacy (старый) вариант, если обновления не устанавливаются.</string>
+
     <string name="status_ongoing">Выходит</string>
     <string name="video_lock">Блокировка</string>
-    <string name="no_update_found">Обновление не найдено</string>
+
     <string name="video_aspect_ratio_resize">Изменить размер</string>
     <string name="video_source">Источник</string>
-    <string name="check_for_update">Проверить обновления</string>
+
     <string name="add_site_pref">Клон сайта</string>
     <string name="dns_pref">DNS через HTTPS</string>
     <string name="remove_site_pref">Удалить сайт</string>
@@ -287,7 +285,7 @@
     <string name="poster_ui_settings">Переключение элементов интерфейса на плакате</string>
     <string name="video_skip_op">Пропустить OP</string>
     <string name="dont_show_again">Больше не показывать</string>
-    <string name="skip_update">Пропустить это обновление</string>
+
     <string name="nginx_url_pref">URL сервера NGINX</string>
     <string name="create_account">Создать учётную запись</string>
     <string name="add_sync">Добавить слежение</string>
@@ -339,7 +337,7 @@
     <string name="account">учётная запись</string>
     <string name="automatic">Автоматически</string>
     <string name="example_ip">127.0.0.1</string>
-    <string name="pref_category_app_updates">Обновления приложения</string>
+
     <string name="pref_category_backup">Резервная копия</string>
     <string name="pref_category_actions">Действия</string>
     <string name="pref_category_cache">Кэш</string>
@@ -427,7 +425,7 @@
     <string name="sort_rating_asc">Рейтинг (низкий - высокий)</string>
     <string name="sort_updated_new">Обновленный (новый - старый)</string>
     <string name="sort_by">Сортировать по</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
+
     <string name="subtitles_encoding">Кодировка субтитров</string>
     <string name="player_load_subtitles">Загрузить из файла</string>
     <string name="extension_rating" formatted="true">Рейтинг: %s</string>
@@ -440,7 +438,7 @@
     <string name="plugins_downloaded" formatted="true">Скачано: %d</string>
     <string name="plugins_updated" formatted="true">Обновлено %d дополнений</string>
     <string name="player_load_subtitles_online">Скачивать из интернета</string>
-    <string name="update_notification_downloading">Скачивание обновления приложения…</string>
+
     <string name="error_invalid_url">Недопустимый URL</string>
     <string name="apply_on_restart">Перезапустите приложение, чтобы увидеть изменения.</string>
     <string name="preferred_media_subtext">Что вы хотите увидеть</string>
@@ -461,10 +459,9 @@
     <string name="safe_mode_description">Все дополнения были отключены из-за сбоя, чтобы помочь вам найти то, которое вызывает проблемы.</string>
     <string name="skip_type_recap">Повтор</string>
     <string name="clipboard_too_large">Слишком много текста. Не удалось сохранить в буфер обмена.</string>
-    <string name="update_notification_installing">Установка обновления приложения…</string>
-    <string name="update_notification_failed">Не удалось установить новую версию приложения</string>
+
     <string name="safe_mode_file">Файл безопасного режима найден! \nНе загружаются никакие дополнения при запуске, пока файл не будет удалён.</string>
-    <string name="delayed_update_notice">Приложение будет обновлено после выхода</string>
+
     <string name="empty_library_logged_in_message">Этот список пуст, попробуйте переключиться на другой.</string>
     <string name="uppercase_all_subtitles">Все субтитры заглавными</string>
     <string name="enable_skip_op_from_database_des">Показывать всплывающие окна для пропуска вступления/заключения</string>
@@ -473,7 +470,7 @@
     <string name="network_adress_example">https://example.com/example.mp4</string>
     <string name="random_button_settings_desc">Отображать случайную кнопку в библиотеке и главной странице</string>
     <string name="random_button_settings">Случайная кнопка</string>
-    <string name="apk_installer_legacy">Устаревший</string>
+
     <string name="episode_action_reload_links">Перезагрузить ссылки</string>
     <string name="preferred_media_settings">Предпочтительные медиа</string>
     <string name="subtitles_depressed">Опущенные</string>
@@ -702,9 +699,7 @@
     <string name="top_center">Верхний центр</string>
     <string name="top_right">Верхний справа</string>
     <string name="play_full_series_button">Смотреть полностью</string>
-    <string name="install_prerelease">Установить предварительный выпуск</string>
-    <string name="prerelease_already_installed">Предварительный выпуск уже установлен.</string>
-    <string name="prerelease_install_failed">Не удалось установить предварительный выпуск.</string>
+
     <string name="show_episode_text">Текст эпизода</string>
     <string name="search_suggestions">Поиск предложений</string>
     <string name="search_suggestions_des">Показывать подсказки поиска при вводе текста</string>

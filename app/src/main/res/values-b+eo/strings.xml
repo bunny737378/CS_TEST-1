@@ -83,7 +83,7 @@
     <string name="next_episode_time_day_format" formatted="true">%1$dt %2$dh %3$dm</string>
     <string name="next_episode_time_hour_format" formatted="true">%1$dh %2$dm</string>
     <string name="next_episode_time_min_format" formatted="true">%dm</string>
-    <string name="new_update_format" formatted="true">Nova ĝisdatigo trovita! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Speciala epizodo</string>
     <string name="app_name">CloudStream</string>
     <string name="download_started">Elŝuto Komencite</string>
@@ -106,7 +106,7 @@
     <string name="type_re_watching">Re-spektante</string>
     <string name="play_torrent_button">Elsendflui Torenton</string>
     <string name="download_done">Elŝuto Farite</string>
-    <string name="update_started">Ĝisdatigo Komencite</string>
+
     <string name="error_loading_links_toast">Eraro okazis dum la Ŝarĝado de Ligiloj</string>
     <string name="type_dropped">Forlasita</string>
     <string name="duration_format" formatted="true">%d min</string>

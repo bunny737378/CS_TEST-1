@@ -15,7 +15,7 @@
     <string name="preview_background_img_des">ব্যাকগ্রাউন্ড দেখান</string>
     <string name="player_speed_text_format" formatted="true">গতি (%.2f গুণ)</string>
     <string name="rated_format" formatted="true">মূল্যায়নঃ %.1f</string>
-    <string name="new_update_format" formatted="true">নতুন আপডেট এসেছে! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">ফিলার</string>
     <string name="duration_format" formatted="true">%d মিনিট</string>
     <string name="app_name">ক্লাউডস্ট্রিম</string>
@@ -134,21 +134,20 @@
     <string name="kitsu_settings">Kitsu থেকে পোস্টারসমূহ প্রদর্শন করুন</string>
     <string name="automatic_plugin_updates">স্বয়ংক্রিয় প্লাগইন আপডেট</string>
     <string name="automatic_plugin_download">স্বয়ংক্রিয়ভাবে প্লাগিনসমুহের ডাউনলোড</string>
-    <string name="category_updates">হালনাগাদ ও ব্যাকআপ</string>
-    <string name="updates_settings">অ্যাপ এর হালনাগাদ দেখান</string>
+
     <string name="swipe_to_seek_settings">খুঁজতে সোয়াইপ করুন</string>
     <string name="search_poster_img_des">পোস্টার</string>
     <string name="action_open_play">@string/home_play</string>
     <string name="double_tap_to_seek_settings">আগাতে ডবল ট্যাপ করুন</string>
     <string name="eigengraumode_settings">প্লেব্যাক এর গতি</string>
-    <string name="update_started">আপডেট শুরু হয়েছে</string>
+
     <string name="browser">ব্রাউজার</string>
     <string name="test_log">লগ</string>
     <string name="double_tap_to_seek_amount_settings">প্লেয়ারে এগিয়ে যাওয়ার পরিমাণ (সেকেন্ডে)</string>
     <string name="double_tap_to_seek_settings_des">সামনে বা পিছনের দিকে যেতে ডান বা বাম দিকে দুবার আলতো চাপুন</string>
     <string name="delete_file">ফাইল ডিলিট</string>
     <string name="subs_default_reset_toast">মান ডিফল্ট এ রিসেট করুন</string>
-    <string name="updates_settings_des">স্টার্টআপে নতুন আপডেটের জন্য স্বয়ংক্রিয়ভাবে অনুসন্ধান করুন যোগ।</string>
+
     <string name="movies_singular">মুভি</string>
     <string name="show_fillers_settings">অ্যানিমে ফিলার পর্ব প্রদর্শন</string>
     <string name="tv_series">টিভি সিরিজ</string>
@@ -174,7 +173,7 @@
     <string name="delete">ডিলিট</string>
     <string name="start">শুরু</string>
     <string name="cartoons">কার্টুনসমূহ</string>
-    <string name="apk_installer_settings_des">Some devices do not support the new package installer. Try the legacy option if updates do not install।</string>
+
     <string name="no_subtitles">সাবটাইটেল নেই</string>
     <string name="no_chromecast_support_toast">এই প্রোভাইডার ক্রোমকাস্ট সাপোর্ট করে না</string>
     <string name="advanced_search">উন্নত অনুসন্ধান</string>
@@ -207,7 +206,7 @@
     <string name="pref_filter_search_quality">অনুসন্ধানের ফলে নির্বাচিত ভিডিওর মান লুকান</string>
     <string name="app_storage">অ্যাপ</string>
     <string name="livestreams">লাইভস্ট্রিম</string>
-    <string name="apk_installer_settings">APK ইনস্টলার</string>
+
     <string name="duration">সময়কাল</string>
     <string name="app_language">অ্যাপের ভাষা</string>
     <string name="test_passed">পাস করেছে</string>
@@ -242,7 +241,7 @@
     <string name="cartoons_singular">কার্টুন</string>
     <string name="anime_singular">এনিমে</string>
     <string name="poster_ui_settings">পোস্টারে ইউ আই উপাদান টগল করুন</string>
-    <string name="check_for_update">আপডেট চেক করুন</string>
+
     <string name="video_aspect_ratio_resize">রিসাইজ</string>
     <string name="video_skip_op">ওপেনিং স্কিপ করুন</string>
     <string name="video_buffer_disk_settings">ডিক্সের ভিডিও ক্যাশ</string>
@@ -301,7 +300,7 @@
     <string name="example_site_url">https://example.com</string>
     <string name="subscribe_tooltip">নতুন এপিসোডের নোটিফিকেশন</string>
     <string name="result_search_tooltip">অন্য এক্সটেনশনের মধ্যে খুঁজুন</string>
-    <string name="no_update_found">কোন আপডেট পাওয়া যায়নি</string>
+
     <string name="example_password">অ আ ক খ ১২৩</string>
     <string name="episode_upcoming_format" formatted="true">আসছে %s সময়ের মধ্যে</string>
     <string name="cancel">বাতিল করুন</string>
@@ -318,7 +317,7 @@
     <string name="show_dub">ডাব লেবেল</string>
     <string name="video_lock">লক</string>
     <string name="dont_show_again">আর দেখাবেন না</string>
-    <string name="skip_update">এই আপডেট স্কিপ করুন</string>
+
     <string name="update">আপডেট</string>
     <string name="watch_quality_pref">ওয়াইফাই তে যে কোয়ালিটিতে দেখতে চান</string>
     <string name="watch_quality_pref_data">মোবাইল ডাটায় যে কোয়ালিটিতে দেখতে চান</string>
@@ -331,7 +330,7 @@
     <string name="display_subbed_dubbed_settings">ডাব/সাব এনিমে দেখান</string>
     <string name="resize_fill">স্ট্রেচ</string>
     <string name="resize_zoom">বড় করুন</string>
-    <string name="pref_category_app_updates">অ্যাপ আপডেট</string>
+
     <string name="pref_category_gestures">গ্যাসচার</string>
     <string name="pref_category_defaults">ডিফল্ট সেটিংস</string>
     <string name="category_general">সাধারণ</string>
@@ -370,9 +369,7 @@
     <string name="clear_suggestions">সাজেশন মুছে ফেলুন</string>
     <string name="show_player_metadata_overlay">প্লেয়ার মেটাডেটা ওভারলে প্রদর্শন</string>
     <string name="show_cast_in_details">কাস্ট প্যানেল প্রদর্শন</string>
-    <string name="install_prerelease">প্রাক-মুক্তি সংস্করণ ইনস্টলেশন</string>
-    <string name="prerelease_already_installed">প্রাক-মুক্তি সংস্করণ ইতোমধ্যে ইনস্টল রয়েছে।</string>
-    <string name="prerelease_install_failed">প্রাক-মুক্তি সংস্করণ ইনস্টল করতে সমস্যা হয়েছে।</string>
+
     <string name="delete_format" formatted="true">(%1$d | %2$s) মুছুন</string>
     <string name="test_warning">সাবধান</string>
     <string name="delete_message_multiple" formatted="true">আপনি কি নিম্নলিখিত আইটেমগুলো স্থায়ীভাবে মুছতে চান?\n\n%s</string>
@@ -581,12 +578,7 @@
     <string name="battery_dialog_message">সাবস্ক্রাইব করা টিভি শোগুলোর নিরবচ্ছিন্ন ডাউনলোড এবং নোটিফিকেশন নিশ্চিত করতে CloudStream-এর ব্যাকগ্রাউন্ডে চলার অনুমতি প্রয়োজন। ঠিক আছে চাপলে একটি অনুমতির ডায়ালগ দেখানো হবে।\n\nঅনুগ্রহ করে \'অনুমতি দিন\' চাপুন।\n\nমনে রাখবেন, এই অনুমতির কারণে CS3 আপনার অতিরিক্ত ব্যাটারি খরচ করবে না। এটি কেবল প্রয়োজনের সময়ই ব্যাকগ্রাউন্ডে কাজ করবে, যেমন অফিসিয়াল এক্সটেনশন থেকে ভিডিও ডাউনলোড বা নোটিফিকেশন প্রাপ্তির সময়।</string>
     <string name="app_unrestricted_toast">অ্যাপের ব্যাটারি ব্যবহার ইতোমধ্যে সীমাবদ্ধতাহীন হিসেবে সেট করা আছে</string>
     <string name="app_info_intent_error">CloudStream-এর অ্যাপের তথ্য খোলা যাচ্ছে না।</string>
-    <string name="update_notification_downloading">অ্যাপ আপডেট ডাউনলোড হচ্ছে…</string>
-    <string name="update_notification_installing">অ্যাপ আপডেট ইনস্টল হচ্ছে…</string>
-    <string name="update_notification_failed">অ্যাপের নতুন সংস্করণ ইনস্টল করা যায়নি</string>
-    <string name="apk_installer_legacy">লিগ্যাসি</string>
-    <string name="apk_installer_package_installer">প্যাকেজ ইনস্টলার</string>
-    <string name="delayed_update_notice">অ্যাপ থেকে প্রস্থান করার পর আপডেট করা হবে</string>
+
     <string name="sort_by">সাজানোর ভিত্তি</string>
     <string name="sort">সাজান</string>
     <string name="sort_rating_desc">রেটিং (সর্বোচ্চ থেকে সর্বনিম্ন)</string>

@@ -20,7 +20,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Tốc độ (%.2fx)</string>
     <string name="rated_format" formatted="true">Đánh giá: %.1f</string>
-    <string name="new_update_format" formatted="true">Đã tìm thấy bản cập nhật mới!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Bộ lọc</string>
     <string name="duration_format" formatted="true">%d phút</string>
     <string name="app_name">CloudStream</string>
@@ -146,7 +146,7 @@
     <string name="backup_failed_error_format">Lỗi khi sao lưu %s</string>
     <string name="search">Tìm kiếm</string>
     <string name="category_account">Tài khoản và Bảo mật</string>
-    <string name="category_updates">Cập nhật và Sao lưu</string>
+
     <string name="settings_info">Thông tin</string>
     <string name="advanced_search">Tìm kiếm nâng cao</string>
     <string name="advanced_search_des">Cung cấp cho bạn kết quả tìm kiếm được phân loại theo từng nguồn phim</string>
@@ -155,8 +155,7 @@
     <string name="kitsu_settings">Hiển thị poster từ Kitsu</string>
     <string name="pref_filter_search_quality">Ẩn chất lượng video trong kết quả tìm kiếm</string>
     <string name="automatic_plugin_updates">Tự động cập nhật tiện ích mở rộng</string>
-    <string name="updates_settings">Hiển thị thông báo cập nhật ứng dụng</string>
-    <string name="updates_settings_des">Tự động tìm kiếm bản cập nhật mới sau khi khởi động ứng dụng.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Ứng dụng đọc tiểu thuyết của cùng nhà phát triển</string>
     <string name="anim">Ứng dụng xem Anime của cùng nhà phát triển</string>
@@ -243,14 +242,13 @@
     <string name="show_sub">Nhãn phụ đề</string>
     <string name="show_title">Tên phim</string>
     <string name="poster_ui_settings">Hiển thị các thông tin trên poster</string>
-    <string name="no_update_found">Bạn đang dùng phiên bản mới nhất</string>
-    <string name="check_for_update">Kiểm tra cập nhật</string>
+
     <string name="video_lock">Khóa</string>
     <string name="video_aspect_ratio_resize">Thu phóng</string>
     <string name="video_source">Nguồn</string>
     <string name="video_skip_op">Bỏ qua Giới thiệu</string>
     <string name="dont_show_again">Không hiện lại</string>
-    <string name="skip_update">Bỏ qua bản cập nhật này</string>
+
     <string name="update">Cập nhật</string>
     <string name="watch_quality_pref">Chất lượng xem ưu tiên (WiFi)</string>
     <string name="limit_title">Số ký tự tối đa tiêu đề trình phát</string>
@@ -425,12 +423,11 @@
     <string name="action_mark_as_watched">Đánh dấu là đã xem</string>
     <string name="automatic_plugin_download">Tự động tải xuống tiện ích mở rộng</string>
     <string name="redo_setup_process">Làm lại tiến trình thiết lập</string>
-    <string name="apk_installer_settings">Trình cài đặt APK</string>
-    <string name="apk_installer_settings_des">Một số thiết bị không hỗ trợ trình cài đặt gói mới. Hãy thử chọn chế độ tương thích cũ nếu các bản cập nhật không thể cài đặt.</string>
+
     <string name="season_format">%1$s %2$d%3$s</string>
     <string name="play_trailer_button">Phát Trailer</string>
     <string name="automatic_plugin_download_summary">Tự động cài đặt tất cả tiện ích mở rộng chưa được cài đặt từ những kho nguồn phim đã thêm.</string>
-    <string name="update_started">Cập nhật đã bắt đầu</string>
+
     <string name="pref_category_links">Liên kết</string>
     <string name="hls_playlist">Danh sách HLS</string>
     <string name="player_pref">Trình phát ưu tiên</string>
@@ -439,7 +436,7 @@
     <string name="no">Không</string>
     <string name="extension_version">Phiên bản</string>
     <string name="extension_authors">Tác giả</string>
-    <string name="pref_category_app_updates">Cập nhật ứng dụng</string>
+
     <string name="pref_category_backup">Sao lưu</string>
     <string name="pref_category_extensions">Tiện ích mở rộng</string>
     <string name="pref_category_actions">Hành động</string>
@@ -474,20 +471,17 @@
     <string name="action_remove_from_watched">Xoá khỏi đã xem</string>
     <string name="confirm_exit_dialog">Bạn có chắc muốn thoát?</string>
     <string name="yes">Có</string>
-    <string name="update_notification_downloading">Đang tải xuống bản cập nhật…</string>
-    <string name="update_notification_installing">Đang cài bản cập nhật…</string>
-    <string name="update_notification_failed">Không thể cài đặt phiên bản mới</string>
-    <string name="delayed_update_notice">Ứng dụng sẽ được cập nhật sau khi thoát</string>
+
     <string name="library">Thư viện</string>
     <string name="browser">Trình duyệt</string>
     <string name="plugin_downloaded">Tiện ích mở rộng đã tải xuống</string>
-    <string name="apk_installer_legacy">Chế độ tương thích cũ</string>
+
     <string name="sort_updated_new">Đã cập nhật (Mới đến Cũ)</string>
     <string name="sort_updated_old">Đã cập nhật (Cũ đến Mới)</string>
     <string name="empty_library_no_accounts_message">Thư viện của bạn đang trống :( \nĐăng nhập vào tài khoản thư viện hoặc thêm phim vào thư viện cục bộ.</string>
     <string name="open_with">Mở bằng</string>
     <string name="provider_info_meta">Siêu dữ liệu không được cung cấp bởi trang web, video sẽ không tải được nếu nó không tồn tại trên trang web.</string>
-    <string name="apk_installer_package_installer">Trình cài đặt gói</string>
+
     <string name="sort">Sắp xếp</string>
     <string name="sort_rating_desc">Xếp hạng (Cao đến Thấp)</string>
     <string name="sort_rating_asc">Xếp hạng (Thấp đến Cao)</string>
@@ -720,9 +714,7 @@
     <string name="search_suggestions">Gợi ý tìm kiếm</string>
     <string name="search_suggestions_des">Hiển thị gợi ý tìm kiếm khi đang nhập</string>
     <string name="clear_suggestions">Xóa gợi ý</string>
-    <string name="install_prerelease">Cài đặt phiên bản phát hành trước</string>
-    <string name="prerelease_already_installed">Bản phát hành trước đã được cài đặt.</string>
-    <string name="prerelease_install_failed">Cài đặt bản phát hành trước thất bại.</string>
+
     <string name="show_episode_text">Tập</string>
     <string name="extra_brightness_settings_des">Bật bộ lọc độ sáng khi độ sáng màn hình vượt quá 100%</string>
     <string name="show_cast_in_details">Hiển thị bảng dàn diễn viên</string>

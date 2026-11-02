@@ -18,7 +18,7 @@
     <string name="home_change_provider_img_des">Ibdel Il-fornitur</string>
     <string name="player_speed_text_format" formatted="true">veloċità (%.2fx)</string>
     <string name="rated_format" formatted="true">Klassifikazzjoni: %.1f</string>
-    <string name="new_update_format" formatted="true">Aġġornament ġdid misjub! \n%1$s -&gt; %2$s</string>
+
     <string name="duration_format" formatted="true">%d min</string>
     <string name="app_name">CloudStream</string>
     <string name="play_with_app_name">Ara bil-CloudStream</string>
@@ -55,7 +55,7 @@
     <string name="downloaded">Imniżżel</string>
     <string name="download_canceled">Tniżżil ikkanċellat</string>
     <string name="download_done">Lest it-tniżżil</string>
-    <string name="update_started">Beda l-aġġornament</string>
+
     <string name="stream">Network stream</string>
     <string name="error_loading_links_toast">Tagħbija tal-Links falliet</string>
     <string name="links_reloaded_toast">Links regaw gew mogħbija</string>

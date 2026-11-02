@@ -11,7 +11,7 @@ actual fun <T> platformThrowAbleToResource(throwable: Throwable): Resource<T> {
         is NoSuchMethodException, is NoSuchFieldException, is NoSuchMethodError, is NoSuchFieldError, is NoSuchPropertyException -> {
             Resource.Failure(
                 false,
-                "App or extension is outdated, update the app or try pre-release.\n${throwable.message}" // todo add exact version?
+                "The extension is incompatible with this app version.\n${throwable.message}"
             )
         }
         is SocketTimeoutException, is InterruptedIOException -> {

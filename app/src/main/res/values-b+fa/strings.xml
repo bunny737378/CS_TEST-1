@@ -56,7 +56,7 @@
     <string name="action_remove_from_bookmarks">حذف</string>
     <string name="download_started">دانلود آغاز شد</string>
     <string name="sort_clear">پاک کردن</string>
-    <string name="update_started">به‌روزرسانی آغاز شد</string>
+
     <string name="sort_copy">کپی</string>
     <string name="home_more_info">اطلاعات بیشتر</string>
     <string name="subs_auto_select_language">انتخاب زبان خودکار</string>
@@ -113,7 +113,7 @@
     <string name="type_watching">در حال تماشا</string>
     <string name="title_downloads">بارگیری‌ها</string>
     <string name="player_speed_text_format" formatted="true">سرعت (%.2f برابر)</string>
-    <string name="new_update_format" formatted="true">بروزرسانی جدید پیدا شد! \n%1$s -&gt; %2$s</string>
+
     <string name="play_movie_button">پخش فیلم</string>
     <string name="browser">مرورگر</string>
     <string name="play_episode">پخش قسمت</string>
@@ -148,7 +148,7 @@
     <string name="subs_outline_color">رنگ حاشیه متن</string>
     <string name="player_size_settings">دکمه تغییر‌اندازه پخش‌کننده</string>
     <string name="speed_setting_summary">گزینه سرعت در پخش‌کننده را اضافه می‌کند</string>
-    <string name="category_updates">بروزرسانی و پشتیبانی</string>
+
     <string name="kitsu_settings">نمیش پوستر از kitsu</string>
     <string name="advanced_search">جستجوی پیشرفته</string>
     <string name="season">فصل</string>
@@ -232,7 +232,7 @@
     <string name="torrent_info">این ویدیو یک تورنت است، این بدان معنی است که فعالیت ویدیویی شما قابل ردیابی است. \nقبل از ادامه، مطمئن شوید که تورنت را درک کرده اید.</string>
     <string name="picture_in_picture_des">پخش را در یک پخش کننده مینیاتوری در بالای برنامه های دیگر ادامه می دهد</string>
     <string name="error_invalid_data">داده نامعتبر</string>
-    <string name="check_for_update">چک‌کردن به‌روزرسانی</string>
+
     <string name="wifi">وای‌فای</string>
     <string name="pref_category_player_features">قابلیت‌های پخش‌کننده</string>
     <string name="remote_error">خطای ریموت</string>
@@ -302,9 +302,9 @@
     <string name="episode_sync_settings">به‌روزرسانی پیشرفت ساعت</string>
     <string name="begin_speaking">شروع کنید به صحبت کردن…</string>
     <string name="advanced_search_des">جواب سرچ های شما با تامین کننده</string>
-    <string name="updates_settings">نشان دادن آپدیت های برنامه</string>
+
     <string name="redo_setup_process">دوباره پروسه راه اندازی را انجام بده</string>
-    <string name="apk_installer_settings">نصب کننده APK</string>
+
     <string name="lightnovel">برنامه سبک رمان از توسعه دهندگان یکسان</string>
     <string name="anim">برنامه انیمه از توسعه دهندگان یکسان</string>
     <string name="no_chromecast_support_toast">این ارائه دهنده هیچ پشتیبانی از کروم کست ندارد</string>
@@ -322,12 +322,12 @@
     <string name="podcast_singular">پادکست</string>
     <string name="episode_action_play_in_app">پخش کردن در برنامه</string>
     <string name="episode_action_auto_download">دانلود اتوماتیک</string>
-    <string name="no_update_found">هیچ آپدیتی پیدا نشد</string>
+
     <string name="video_lock">قفل</string>
     <string name="video_aspect_ratio_resize">تغییر اندازه</string>
     <string name="video_source">منبع</string>
     <string name="dont_show_again">دیگر نمایش نده</string>
-    <string name="skip_update">این آپدیت را اسکیپ کن</string>
+
     <string name="update">آپدیت</string>
     <string name="video_ram_description">اگر در دستگاه های دارای حافظه کم در تنظیمات بالا گذاشته شود باعث کرش می‌شود، مانند تلویزیون های اندروید</string>
     <string name="remove_site_pref">از بین بردن سایت</string>
@@ -335,7 +335,7 @@
     <string name="display_subbed_dubbed_settings">نمایش دادن انیمه های دوبله شده یا دارای زیرنویس</string>
     <string name="legal_notice">هشدار</string>
     <string name="pref_category_links">لینک ها</string>
-    <string name="pref_category_app_updates">آپدیت های برنامه</string>
+
     <string name="pref_category_extensions">افزونه ها</string>
     <string name="pref_category_android_tv">تلویزیون اندروید</string>
     <string name="pref_category_security">محافظت</string>

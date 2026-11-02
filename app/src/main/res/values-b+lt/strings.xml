@@ -13,15 +13,14 @@
     <string name="sort_clear">Išvalyti</string>
     <string name="search_poster_img_des">Plakatas</string>
     <string name="filter_bookmarks">Filtruoti žymas</string>
-    <string name="update_notification_failed">Nepavyko įrašyti naujos programos versijos</string>
-    <string name="updates_settings_des">Automatiškai ieškoti atnaujinimų, kai paleidžiama programa.</string>
+
     <string name="movies_singular">Filmas</string>
     <string name="torrent_singular">Torrentas</string>
     <string name="show_fillers_settings">Rodyti tarpines serijas animei</string>
     <string name="subs_font_size">Šrifto dydis</string>
     <string name="no_links_found_toast">Nuorodos ne rastos</string>
     <string name="type_plan_to_watch">Planuojama žiūrėti</string>
-    <string name="update_started">Atnaujinimas pradėtas</string>
+
     <string name="sort_copy">Kopijuoti</string>
     <string name="benene_des">Duoti bananai</string>
     <string name="home_more_info">Daugiau informacijos</string>
@@ -31,7 +30,7 @@
     <string name="go_forward_30">+30</string>
     <string name="download_done">Atsisiuntimas baigtas</string>
     <string name="continue_watching">Tęsti žiūrėjimą</string>
-    <string name="new_update_format" formatted="true">Rastas atnaujinimas!\n%1$s -&gt; %2$s</string>
+
     <string name="subs_download_languages">Atsisiųsti kalbas</string>
     <string name="search_provider_text_providers">Ieškoti naudojant tiekėjus</string>
     <string name="go_back_img_des">Grįžti atgal</string>
@@ -77,7 +76,7 @@
     <string name="pick_subtitle">Subtitrai</string>
     <string name="next_episode">Kita serija</string>
     <string name="download_paused">Siuntimas sustabdytas</string>
-    <string name="updates_settings">Rodyti programos atnaujinimus</string>
+
     <string name="download">Atsisiųsti</string>
     <string name="library">Biblioteka</string>
     <string name="video_disk_description">Kelią problemas jei nustatytas per didelis ant prietaisų su mažai turymos vietos, tokiu kaip Android TV.</string>
@@ -130,7 +129,7 @@
     <string name="app_name">CloudStream</string>
     <string name="home_play">Paleisti</string>
     <string name="livestreams">Gyvos transliacijos</string>
-    <string name="apk_installer_settings">APK įrašymas</string>
+
     <string name="download_storage_text">Vidinė atmintis</string>
     <string name="autoplay_next_settings">Automatiškai paleisti kitą seriją</string>
     <string name="player_subtitles_settings_des">Grotuvo subtitrų nustatymai</string>
@@ -144,8 +143,7 @@
     <string name="season">Sezonas</string>
     <string name="added_sync_format" formatted="true">Pridėta %s</string>
     <string name="video_source">Šaltinis</string>
-    <string name="pref_category_app_updates">Programos atnaujinimai</string>
-    <string name="no_update_found">Nerasta atnaujinimų</string>
+
     <string name="show_title">Pavadinimas</string>
     <string name="download_path_pref">Atsiuntimo kelias</string>
     <string name="normal">Normalu</string>
@@ -158,7 +156,7 @@
     <string name="sync_total_episodes_none">/??</string>
     <string name="unexpected_error">Netikėta grotuvo klaida</string>
     <string name="sync_score">Įvertinta</string>
-    <string name="skip_update">Praleisti šį atnaujinimą</string>
+
     <string name="pref_category_actions">Veiksmai</string>
     <string name="episode_action_play_in_app">Paleisti programoje</string>
     <string name="upload_sync">Sinchronizuoti</string>
@@ -220,19 +218,19 @@
     <string name="trailer">Anonsas</string>
     <string name="history">Istorija</string>
     <string name="subscription_episode_released">Serija %d išleista!</string>
-    <string name="update_notification_downloading">Atsiunčiamas programos atnaujinimas…</string>
+
     <string name="plugins_downloaded" formatted="true">Atsiųsta: %d</string>
     <string name="error">Klaida</string>
     <string name="logout">Atsijungti</string>
     <string name="sort">Rūšiuoti</string>
     <string name="video_tracks">Vaizdo takelis</string>
     <string name="quality_blueray">Blu-ray</string>
-    <string name="delayed_update_notice">Programa bus atnaujinta išėjus</string>
+
     <string name="primary_color_settings">Pagrindinė kalba</string>
     <string name="login">Prisijungti</string>
     <string name="action_mark_as_watched">Pažymėti kaip žiūrima</string>
     <string name="preferred_media_subtext">Ką norite matyti</string>
-    <string name="update_notification_installing">Įrašomas programos atnaujinimas…</string>
+
     <string name="plugin_load_fail" formatted="true">Nepavyko įkelti %s</string>
     <string name="extension_rating" formatted="true">Įvertinimas: %s</string>
     <string name="extension_status">Statusas</string>

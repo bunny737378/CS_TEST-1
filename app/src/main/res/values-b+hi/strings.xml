@@ -2,7 +2,7 @@
 <resources>
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">स्पीड (%.2fx)</string>
-    <string name="new_update_format" formatted="true">नया अपडेट आया है! \n%1$s -&gt; %2$s</string>
+
     <string name="title_home">होम</string>
     <string name="title_search">खोजें</string>
     <string name="title_downloads">डाउनलोडस</string>
@@ -70,7 +70,7 @@
     <string name="search">खोजें</string>
     <string name="settings_info">जानकारी</string>
     <string name="advanced_search_des">खोज नतीजों को प्रोवाइडरों के हिसाब से अलग-अलग आपको दिखाता है</string>
-    <string name="updates_settings_des">हर बार एप खुलने पर स्वचालित रूप से नए अपडेट खोजें।</string>
+
     <string name="lightnovel">उन्हीं डेवलपर्स द्वारा Light novel ऐप</string>
     <string name="anim">उन्हीं डेवलपर्स द्वारा Anime ऐप</string>
     <string name="discord">Discord से जुड़िये</string>
@@ -110,8 +110,7 @@
     <string name="episode_action_auto_download">डाउनलोड करें</string>
     <string name="episode_action_download_mirror">मिरर डाउनलोड</string>
     <string name="episode_action_reload_links">लिंक दोबारा लोड करें</string>
-    <string name="no_update_found">कोई अपडेट नहीं मिला</string>
-    <string name="check_for_update">अपडेट के लिये जांचें</string>
+
     <string name="video_lock">ताला</string>
     <string name="video_aspect_ratio_resize">आकार बदलें</string>
     <string name="video_source">सोर्स</string>
@@ -154,7 +153,7 @@
     <string name="duplicate_message_multiple" formatted="true">आपकी लाइब्रेरी में संभावित डुप्लिकेट आइटम पाए गए हैं: \n \n%s \n \nक्या आप किसी भी तरह इस आइटम को जोड़ना चाहेंगे, मौजूदा आइटम को बदलना चाहेंगे, या कार्रवाई रद्द करना चाहेंगे?</string>
     <string name="enter_pin_with_name" formatted="true">%s के लिए पिन दर्ज करें</string>
     <string name="duplicate_title">संभावित डुप्लिकेट मिला</string>
-    <string name="update_started">अपडेट शुरू हुआ</string>
+
     <string name="lock_profile">प्रोफ़ाइल लॉक करें</string>
     <string name="duplicate_replace_all">सबको बदली करें</string>
     <string name="pin_error_incorrect">ग़लत पिन. कृपया पुन: प्रयास करें।</string>
@@ -253,7 +252,7 @@
     <string name="restore_failed_format" formatted="true">फाइल %s से आंकड़ों को पुनर्स्थापित करने में विफल</string>
     <string name="backup_failed_error_format">%s के बैकअप करने में विफलता</string>
     <string name="delete_message_series_only" formatted="true">क्या आप वाकई निम्नलिखित श्रृंखला के सभी प्रकरण को स्थायी रूप से हटाना चाहते हैं?\n\n%s</string>
-    <string name="category_updates">अद्यतन और बैकअप</string>
+
     <string name="no_episodes_found">कोई प्रकरण नहीं मिले</string>
     <string name="go_back_30">-३०</string>
     <string name="other_singular">वीडियो</string>
@@ -313,10 +312,9 @@
     <string name="download_time_left_min_sec_format" formatted="true">%1$d मि %2$d से</string>
     <string name="download_time_left_sec_format" formatted="true">%1$d सेकंड</string>
     <string name="automatic_plugin_download_mode_title">प्लगइन डाउनलोड को फ़िल्टर करने के लिए मोड चुने</string>
-    <string name="updates_settings">ऐप अपडेट दिखाएं</string>
+
     <string name="redo_setup_process">सेटअप प्रक्रिया दोबारा करें</string>
-    <string name="apk_installer_settings">APK इंस्टॉलर</string>
-    <string name="apk_installer_settings_des">कुछ डिवाइस नए पैकेज इंस्टॉलर को सपोर्ट नहीं करते हैं। यदि अपडेट इंस्टॉल नहीं होते हैं, तो पुराने विकल्प को आज़माएं।</string>
+
     <string name="subs_default_reset_toast">डिफ़ॉल्ट मान पर रीसेट करें</string>
     <string name="audio_singular">ऑडियो</string>
     <string name="podcast_singular">पॉडकास्ट</string>
@@ -328,13 +326,11 @@
     <string name="episode_action_play_mirror">Play mirror</string>"
     <string name="show_hd">कितना hd है वो वाला लेबल</string>
     <string name="play_full_series_button">पूरी सीरीज़ शरु करे</string>
-    <string name="install_prerelease">प्री-रिलीज़ संस्करण स्थापित करें</string>
-    <string name="prerelease_already_installed">प्री-रिलीज़ पहले से ही स्थापित है।</string>
-    <string name="prerelease_install_failed">प्री-रिलीज़ इंस्टॉल करने में विफल रहा।</string>
+
     <string name="show_dub">डब लेबल</string>
     <string name="show_sub">सब लेबल</string>
     <string name="show_rating">रेटिंग लेबल</string>
-    <string name="skip_update">इस अपडेट को छोड़ें</string>
+
     <string name="watch_quality_pref_data">पसंदीदा देखने की गुणवत्ता (मोबाइल डेटा)</string>
     <string name="limit_title">वीडियो प्लेयर शीर्षक अधिकतम वर्ण</string>
     <string name="limit_title_rez">वीडियो प्लेयर रिज़ॉल्यूशन</string>
@@ -362,7 +358,7 @@
     <string name="legal_notice">अस्वीकरण</string>
     <string name="pref_category_bypass">आईएसपी बाईपास</string>
     <string name="pref_category_links">लिंक्स</string>
-    <string name="pref_category_app_updates">ऐप अपडेट्स</string>
+
     <string name="pref_category_backup">बैकअप</string>
     <string name="pref_category_extensions">एक्सटेंशन्स</string>
     <string name="pref_category_actions">कार्यवाही</string>

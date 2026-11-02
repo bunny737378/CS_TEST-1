@@ -11,7 +11,7 @@
     <string name="preview_background_img_des">배경 미리보기</string>
     <string name="player_speed_text_format" formatted="true">속도 (%.2fx)</string>
     <string name="rated_format" formatted="true">평점: %.1f</string>
-    <string name="new_update_format" formatted="true">새로운 업데이트! \n%1$s -&gt; %2$s</string>
+
     <string name="duration_format" formatted="true">%d분</string>
     <string name="app_name">CloudStream</string>
     <string name="play_with_app_name">CloudStream으로 재생</string>
@@ -69,7 +69,7 @@
     <string name="download_failed">다운로드 실패</string>
     <string name="download_canceled">다운로드 취소</string>
     <string name="download_done">다운로드 완료</string>
-    <string name="update_started">업데이트 시작</string>
+
     <string name="error_loading_links_toast">링크 로딩 오류</string>
     <string name="download_storage_text">내부 저장공간</string>
     <string name="subs_auto_select_language">자동 선택 언어</string>
@@ -88,7 +88,7 @@
     <string name="title_search">검색</string>
     <string name="popup_delete_file">파일 삭제</string>
     <string name="action_remove_from_bookmarks">제거</string>
-    <string name="category_updates">업데이트 및 백업</string>
+
     <string name="pref_category_backup">백업</string>
     <string name="app_dubbed_text">더빙</string>
     <string name="app_subbed_text">자막</string>
@@ -139,9 +139,7 @@
     <string name="automatic_plugin_download">플러그인 자동 다운로드</string>
     <string name="automatic_plugin_updates">플러그인 자동 업데이트</string>
     <string name="automatic_plugin_download_summary">추가된 저장소에서 아직 설치되지 않은 모든 플러그인을 자동으로 설치합니다.</string>
-    <string name="updates_settings">앱 업데이트 표시</string>
-    <string name="updates_settings_des">앱을 시작한 후 새 업데이트를 자동으로 검색합니다.</string>
-    <string name="apk_installer_settings_des">일부 기기에서는 최신 방식의 설치 프로그램이 작동하지 않을 수 있습니다. 업데이트가 안 된다면 \'기본 방식\' 설정을 사용해 보세요.</string>
+
     <string name="lightnovel">같은 개발자가 만든 라이트 노벨 앱</string>
     <string name="anim">같은 개발자가 만든 애니메이션 앱</string>
     <string name="discord">Discord에 참여하기</string>
@@ -187,12 +185,12 @@
     <string name="show_dub">더빙 라벨</string>
     <string name="show_sub">자막 라벨</string>
     <string name="show_title">제목</string>
-    <string name="check_for_update">업데이트 확인</string>
+
     <string name="video_lock">잠금</string>
     <string name="video_aspect_ratio_resize">크기 조정</string>
     <string name="video_source">소스</string>
     <string name="video_skip_op">오프닝 스킵</string>
-    <string name="skip_update">다음에 업데이트</string>
+
     <string name="watch_quality_pref">선호하는 화질 (WiFi)</string>
     <string name="watch_quality_pref_data">선호하는 화질 (모바일 데이터)</string>
     <string name="limit_title_rez">플레이어 내 표시 정보</string>
@@ -325,7 +323,7 @@
     <string name="settings_info">정보</string>
     <string name="advanced_search">고급 검색</string>
     <string name="redo_setup_process">설정 프로세스 재실행</string>
-    <string name="apk_installer_settings">APK 인스톨러</string>
+
     <string name="github">Github</string>
     <string name="source_error">소스 오류</string>
     <string name="no_chromecast_support_toast">이 소스는 크롬캐스트를 지원하지 않습니다</string>
@@ -371,7 +369,7 @@
     <string name="episode_action_chromecast_episode">Chromecast 에피소드</string>
     <string name="unexpected_error">예기치 않은 플레이어 오류</string>
     <string name="dont_show_again">다시 표시하지 않음</string>
-    <string name="no_update_found">업데이트를 찾을 수 없음</string>
+
     <string name="update">업데이트</string>
     <string name="jsdelivr_proxy">GitHub 프록시</string>
     <string name="video_buffer_length_settings">동영상 버퍼 길이</string>
@@ -387,7 +385,7 @@
     <string name="display_subbed_dubbed_settings">더빙/자막 애니메이션 표시</string>
     <string name="legal_notice">거부</string>
     <string name="pref_category_bypass">ISP 우회</string>
-    <string name="pref_category_app_updates">앱 업데이트</string>
+
     <string name="pref_category_extensions">확장 기능</string>
     <string name="logout">로그아웃</string>
     <string name="example_site_url">https://example.com</string>
@@ -446,12 +444,7 @@
     <string name="confirm_exit_dialog">정말 종료하시겠습니까?</string>
     <string name="yes">네</string>
     <string name="no">아니요</string>
-    <string name="update_notification_downloading">앱 업데이트 다운로드 중…</string>
-    <string name="update_notification_installing">앱 업데이트 설치 중…</string>
-    <string name="update_notification_failed">새 버전의 앱을 설치할 수 없습니다</string>
-    <string name="apk_installer_legacy">기본 방식</string>
-    <string name="apk_installer_package_installer">패키지 인스톨러</string>
-    <string name="delayed_update_notice">앱 종료시 업데이트됩니다</string>
+
     <string name="sort_by">정렬 기준</string>
     <string name="sort">정렬</string>
     <string name="sort_updated_new">업데이트 (최신순)</string>
@@ -629,9 +622,7 @@
     <string name="download_time_left_min_sec_format" formatted="true">%1$d분 %2$d초</string>
     <string name="download_time_left_sec_format" formatted="true">%1$d초</string>
     <string name="play_full_series_button">전체 시리즈 재생하기</string>
-    <string name="install_prerelease">출시 전 버전 설치</string>
-    <string name="prerelease_already_installed">출시 전 버전이 이미 설치되어 있습니다.</string>
-    <string name="prerelease_install_failed">출시 전 버전 설치 실패.</string>
+
     <string name="episode_action_play_mirror">재생 소스 목록</string>"
     <string name="show_rating">평가 라벨</string>
     <string name="show_episode_text">에피소드 본문</string>

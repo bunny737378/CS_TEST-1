@@ -21,7 +21,7 @@
     <string name="preview_background_img_des">Parashikim sfondi</string>
     <string name="player_speed_text_format" formatted="true">Shpejtësia (%.2fx)</string>
     <string name="rated_format" formatted="true">Vlerësuar: %.1f</string>
-    <string name="new_update_format" formatted="true">U gjet update i ri!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Filler</string>
     <string name="duration_format" formatted="true">%d min</string>
     <string name="app_name">CloudStream</string>
@@ -75,7 +75,7 @@
     <string name="offline_file">E disponueshme për shikim offline</string>
     <string name="select_all">Zgjidh të gjitha</string>
     <string name="deselect_all">Çzgjidh të gjitha</string>
-    <string name="update_started">Përditësimi filloi</string>
+
     <string name="stream">Transmetim në rrjet</string>
     <string name="open_local_video">Hap video lokale</string>
     <string name="error_loading_links_toast">Gabim gjatë ngarkimit të lidhjeve</string>
@@ -175,7 +175,7 @@
     <string name="search">Kërko</string>
     <string name="library">Bilblioteka</string>
     <string name="category_account">Llogaritë dhe Siguria</string>
-    <string name="category_updates">Përditësime dhe Kopje Rezervë</string>
+
     <string name="settings_info">Informacion</string>
     <string name="advanced_search">Kërkim i avancuar</string>
     <string name="advanced_search_des">Tregon rezultatet e kërkimit të ndara sipas ofruesit</string>
@@ -192,14 +192,9 @@
     <string name="automatic_plugin_download">Shkarkim automatik i shtesave</string>
     <string name="automatic_plugin_download_mode_title">Zgjidh modalitetin për të filtruar shtesat që shkarkohen</string>
     <string name="automatic_plugin_download_summary">Instalo automatikisht të gjitha shtesat që janë shtuar dhe ende nuk janë instaluar nga repository-t.</string>
-    <string name="updates_settings">Shfaq përditësimet e aplikacionit</string>
-    <string name="updates_settings_des">Kërko automatikisht për përditësime të reja kur hapet aplikacioni.</string>
+
     <string name="redo_setup_process">Ribëj procesin e konfigurimit</string>
-    <string name="install_prerelease">Instalo versione beta</string>
-    <string name="prerelease_already_installed">Versioni beta është i instaluar.</string>
-    <string name="prerelease_install_failed">Dështoi instalimi i versionit beta.</string>
-    <string name="apk_installer_settings">Instaluesi i APK-ve</string>
-    <string name="apk_installer_settings_des">Disa pajisje nuk mbështesin instaluesin e ri të paketës. Provoni opsionin e vjetër nëse përditësimet nuk instalohen.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Aplikacioni Light Novel nga të njëjtit developer-a</string>
     <string name="anim">Aplikacioni i Anime-ve nga të njëjtit developer-a</string>
@@ -308,14 +303,13 @@
     <string name="show_title">Titulli</string>
     <string name="show_episode_text">Teksti i episodit</string>
     <string name="poster_ui_settings">Zgjidh elementët e ndërfaqes mbi poster</string>
-    <string name="no_update_found">Nuk u gjet asnjë përditësim</string>
-    <string name="check_for_update">Kontrollo për përditësime</string>
+
     <string name="video_lock">Çelës</string>
     <string name="video_aspect_ratio_resize">Ndrysho madhësinë</string>
     <string name="video_source">Burimi</string>
     <string name="video_skip_op">Kalo Intron</string>
     <string name="dont_show_again">Mos e shfaq përsëri</string>
-    <string name="skip_update">Anashkalo këtë përditësim</string>
+
     <string name="update">Përditëso</string>
     <string name="watch_quality_pref">Cilësia e preferuar e shikimit (WiFi)</string>
     <string name="watch_quality_pref_data">Cilësia e preferuar e shikimit (Mobile Data)</string>
@@ -348,7 +342,7 @@
     <string name="legal_notice">Mohim përgjegjësie</string>
     <string name="pref_category_bypass">Tejkalues ISP-je</string>
     <string name="pref_category_links">Lidhjet</string>
-    <string name="pref_category_app_updates">Përditësimet e aplikacionit</string>
+
     <string name="pref_category_backup">Kopja rezervë</string>
     <string name="pref_category_extensions">Shtesat</string>
     <string name="pref_category_actions">Veprimet</string>
@@ -564,12 +558,7 @@
     <string name="battery_dialog_message">Për të siguruar shkarkime të pandërprera dhe njoftime për serialet e abonuar, CloudStream ka nevojë për leje për të funksionuar në sfond. Duke shtypur OK, do t’ju shfaqet një dialog kërkese. Ju lutem shtypni “Lejo”.\n\nJu lutemi vini re: kjo leje nuk do të thotë që CS3 do të harxhojë baterinë tuaj. Do të funksionojë në sfond vetëm kur është e nevojshme, si p.sh. kur merr njoftime ose shkarkon video nga shtesat zyrtare.</string>
     <string name="app_unrestricted_toast">Përdorimi i baterisë është i vendosur si i pakufizuar</string>
     <string name="app_info_intent_error">Informacioni i aplikacionit CloudStream nuk mund të hapet.</string>
-    <string name="update_notification_downloading">Po shkarkohet përditësimi i aplikacionit…</string>
-    <string name="update_notification_installing">Po instalohet përditësimi i aplikacionit…</string>
-    <string name="update_notification_failed">Instalimi i versionit të ri dështoi</string>
-    <string name="apk_installer_legacy">Version i vjetër</string>
-    <string name="apk_installer_package_installer">Instaluesi i paketës</string>
-    <string name="delayed_update_notice">Aplikacioni do të përditësohet sapo të mbyllet</string>
+
     <string name="sort_by">Rendit nga</string>
     <string name="sort">Rendit</string>
     <string name="sort_rating_desc">Vlerësimi (nga më i larti te më i ulëti)</string>

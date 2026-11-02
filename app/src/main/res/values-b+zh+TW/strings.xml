@@ -19,7 +19,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">速度（%.2fx）</string>
     <string name="rated_format" formatted="true">評分：%.1f</string>
-    <string name="new_update_format" formatted="true">發現新版本！ \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">填充</string>
     <string name="duration_format" formatted="true">%d 分鐘</string>
     <string name="app_name">CloudStream</string>
@@ -146,7 +146,7 @@
     <string name="backup_failed_error_format">備份 %s 錯誤</string>
     <string name="search">搜尋</string>
     <string name="category_account">帳戶和安全</string>
-    <string name="category_updates">更新和備份</string>
+
     <string name="settings_info">資訊</string>
     <string name="advanced_search">進階搜尋</string>
     <string name="advanced_search_des">為您提供按片源分開的搜尋結果</string>
@@ -155,8 +155,7 @@
     <string name="kitsu_settings">顯示來自 Kitsu 的封面</string>
     <string name="pref_filter_search_quality">在搜尋結果中隱藏所選的影片畫質</string>
     <string name="automatic_plugin_updates">自動更新外掛</string>
-    <string name="updates_settings">顯示應用程式更新</string>
-    <string name="updates_settings_des">啟動應用程式後自動搜尋更新。</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">由相同開發者開發的輕小說應用程式</string>
     <string name="anim">由相同開發者開發的動漫應用程式</string>
@@ -244,14 +243,13 @@
     <string name="show_sub">字幕標籤</string>
     <string name="show_title">標題</string>
     <string name="poster_ui_settings">封面內容</string>
-    <string name="no_update_found">未找到更新</string>
-    <string name="check_for_update">檢查更新</string>
+
     <string name="video_lock">鎖定</string>
     <string name="video_aspect_ratio_resize">調整大小</string>
     <string name="video_source">來源</string>
     <string name="video_skip_op">跳過片頭</string>
     <string name="dont_show_again">不再顯示</string>
-    <string name="skip_update">跳過此更新</string>
+
     <string name="update">更新</string>
     <string name="watch_quality_pref">偏好播放畫質 (WiFi)</string>
     <string name="limit_title">影片播放器標題最大字數</string>
@@ -451,23 +449,19 @@
     <string name="confirm_exit_dialog">你確定要離開？</string>
     <string name="automatic_plugin_download_summary">從新增的資源庫自動安裝所有尚未安裝的外掛程式。</string>
     <string name="enable_skip_op_from_database_des">在開始/結束顯示跳過彈出視窗</string>
-    <string name="update_notification_failed">無法安裝新版本的應用程式</string>
-    <string name="apk_installer_settings">APK 安裝器</string>
-    <string name="apk_installer_settings_des">部分裝置不支援新的軟體安裝程式。 如果未安裝更新，請嘗試使用舊版選項。</string>
+
     <string name="clipboard_too_large">文字太多。 無法儲存到剪貼簿。</string>
     <string name="yes">是</string>
-    <string name="update_notification_downloading">正在下載應用程式更新…</string>
-    <string name="update_notification_installing">正在安裝應用程式更新…</string>
-    <string name="apk_installer_package_installer">套件安裝程式</string>
+
     <string name="action_mark_as_watched">標記為已觀看</string>
     <string name="no">否</string>
-    <string name="apk_installer_legacy">傳統</string>
+
     <string name="pref_category_player_features">播放器功能</string>
     <string name="pref_category_subtitles">字幕</string>
     <string name="play_trailer_button">播放預告片</string>
     <string name="redo_setup_process">重設設定過程</string>
     <string name="pref_category_links">連結</string>
-    <string name="pref_category_app_updates">應用程式更新</string>
+
     <string name="pref_category_backup">備份</string>
     <string name="pref_category_extensions">擴充功能</string>
     <string name="pref_category_actions">動作</string>
@@ -483,9 +477,9 @@
     <string name="start">開始</string>
     <string name="android_tv_interface_on_seek_settings">播放器顯示 - 快轉快退秒數</string>
     <string name="open_with">開啟方式</string>
-    <string name="delayed_update_notice">應用程式將在關閉時更新</string>
+
     <string name="sort_rating_asc">評分（從低到高）</string>
-    <string name="update_started">更新開始</string>
+
     <string name="plugin_downloaded">外掛程式已下載</string>
     <string name="action_remove_from_watched">從已觀看清單中刪除</string>
     <string name="sort_by">排序方式</string>
@@ -663,9 +657,7 @@
     <string name="search_suggestions_des">輸入時顯示搜尋建議</string>
     <string name="clear_suggestions">清除建議</string>
     <string name="show_cast_in_details">顯示投影控制板</string>
-    <string name="install_prerelease">安裝提前發行版</string>
-    <string name="prerelease_already_installed">已安裝提前發行版。</string>
-    <string name="prerelease_install_failed">提前發行版安裝失敗。</string>
+
     <string name="episode_action_play_mirror">鏡像播放</string>"
     <string name="show_rating">評分標籤</string>
     <string name="show_episode_text">影劇文本</string>

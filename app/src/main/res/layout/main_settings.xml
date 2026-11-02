@@ -84,21 +84,21 @@
                 style="@style/SettingsItem"
 
                 android:nextFocusUp="@id/settings_providers"
-                android:nextFocusDown="@id/settings_updates"
+                android:nextFocusDown="@id/settings_backup"
                 android:text="@string/category_ui" />
 
             <TextView
-                android:id="@+id/settings_updates"
+                android:id="@+id/settings_backup"
                 style="@style/SettingsItem"
 
                 android:nextFocusUp="@id/settings_ui"
                 android:nextFocusDown="@id/settings_credits"
-                android:text="@string/category_updates" />
+                android:text="@string/pref_category_backup" />
 
             <TextView
                 android:id="@+id/settings_credits"
                 style="@style/SettingsItem"
-                android:nextFocusUp="@id/settings_updates"
+                android:nextFocusUp="@id/settings_backup"
                 android:text="@string/category_account" />
 
             <TextView

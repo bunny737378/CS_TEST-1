@@ -90,8 +90,7 @@
     <string name="settings_info">aauugghh ah</string>
     <string name="advanced_search">aah ouuhhhooo-ahah aaaghh</string>
     <string name="advanced_search_des">aauugghh ahahooo ouuhhhahh ooh oouuhahoooahhaaahhu ohaooh oouuhooo-ahah</string>
-    <string name="updates_settings">haa oohaauugghhooh oh</string>
-    <string name="updates_settings_des">aaaagggoooogg uuuugg aak aah aaaahhh ooogg uuuuuukh aah ooh</string>
+
     <string name="github">aauuhoha</string>
     <string name="lightnovel">ooo-ahahoh ohaaauugghh ahhh haaahooo</string>
     <string name="anim">ooooohaa ohaaaaaaahoooahoooaaaghh</string>
@@ -141,8 +140,7 @@
     <string name="episode_action_auto_download">aaaghhoooohh aaahhu ahooo</string>
     <string name="episode_action_download_mirror">ohooo-ahahaohaohahhhoouuh</string>
     <string name="episode_action_reload_links">ahoooaaahhuahaaahhuoha</string>
-    <string name="no_update_found">oohaaahhu ah ahhaaaaa ooo-ahah</string>
-    <string name="check_for_update">ohaaaahhuhaaahhhaaahhu</string>
+
     <string name="video_lock">ooo-ahah</string>
     <string name="video_aspect_ratio_resize">ohaooo-ahahouuhhh</string>
     <string name="video_source">ahohooh</string>
@@ -185,7 +183,7 @@
     <string name="phone_layout">u ooah uo ahauao huhuu hauu h</string>
     <string name="primary_color_settings">a ou oh ouhuouhoaaha</string>
     <string name="show_fillers_settings">aaooohhouhhha hauauuu</string>
-    <string name="new_update_format">aaaaaaa uuuuuu \n%1$s -&gt; %2$s</string>
+
     <string name="app_dub_sub_episode_text_format" formatted="true">%1$s aaou %2$d</string>
     <string name="cast_format" formatted="true">oouaaahh %s</string>
     <string name="next_episode_format" formatted="true">aaaaaaugh ouh %d uuoogahaaah ooua-h-ha</string>
@@ -203,14 +201,14 @@
     <string name="action_add_to_bookmarks">auugggguuuuuuhhh uuuu hhhhhhhhuhggghggg</string>
     <string name="play_trailer_button">ggaaaahhhhhhh gaauuuuuuuaaaau</string>
     <string name="play_livestream_button">aaauuuuggggguu</string>
-    <string name="update_started">ooo aagg hhhh</string>
+
     <string name="stream">aaaahhh aaaagg</string>
     <string name="sort_copy">uuuuhhhoouuooog ooaaahhhh</string>
     <string name="sort_close">uuu ugggg</string>
     <string name="sort_clear">ooo guggg ooh</string>
     <string name="tracks">auuuooohaaaaagh</string>
     <string name="library">uuuuuuuh aaaoo o</string>
-    <string name="category_updates">uuuuggg uuh aaaagg</string>
+
     <string name="ova">AAAAUUUOH</string>
     <string name="subscription_list_name">aoughoooaaaa</string>
     <string name="movies_singular">oooouuuh</string>
@@ -265,7 +263,7 @@
     <string name="double_tap_to_seek_amount_settings">oooohh oohh oooohh (Seconds)</string>
     <string name="ova_singular">aag</string>
     <string name="android_tv_interface_off_seek_settings_summary">ooh aagg uuuuhh uugg uugg uuh uuuuhh ag uuuuhh</string>
-    <string name="pref_category_app_updates">eek aaaahhh</string>
+
     <string name="category_ui">uuuugg</string>
     <string name="account">aaaaggg</string>
     <string name="logout">oog aag</string>
@@ -289,7 +287,7 @@
     <string name="automatic_plugin_updates">aaaahhhuh aaaagg uuuuhhh</string>
     <string name="automatic_plugin_download">aaaagggaaaahh uuuugggg uuuuggg</string>
     <string name="episode_format" formatted="true">%1$d %2$s</string>
-    <string name="skip_update">aahh oogg uuuuhh</string>
+
     <string name="pref_category_player_features">uuuuhh aaaaaakg</string>
     <string name="pref_category_defaults">uuuugggk</string>
     <string name="category_provider_test">oooohhhg uugg</string>
@@ -359,7 +357,7 @@
     <string name="plugin_downloaded">oooohh oooogggaah</string>
     <string name="sort_rating_asc">oooogg (Low ah High)</string>
     <string name="pref_filter_search_quality">aagg aaaahhhh aaagg aaaaggg ak uuuuhh aaaaggg</string>
-    <string name="apk_installer_settings_des">eeek uuuuhh uh aah aaaaaak aah oog aaaahhh uuuuuukah aah oog oooogg aaaahh ug ooooggg oh ooh aaaaggg</string>
+
     <string name="cartoons_singular">uuuuggg</string>
     <string name="video_buffer_size_settings">aaahh oooohh uuhh</string>
     <string name="video_buffer_length_settings">ooogg uuuuhh aaaahh</string>
@@ -375,7 +373,7 @@
     <string name="other_singular">ooohh</string>
     <string name="next">aagg</string>
     <string name="ok">oh</string>
-    <string name="apk_installer_package_installer">uuuuuukoooohhhah</string>
+
     <string name="sort_rating_desc">aaaahh (High ug Low)</string>
     <string name="sort_alphabetical_a">aaaaaakuuugg (A uh Z)</string>
     <string name="open_with">aagg oogg</string>
@@ -456,11 +454,7 @@
     <string name="action_remove_from_watched">uuuuhh aagg oooohhh</string>
     <string name="confirm_exit_dialog">uug ooh oohh ooh aahh ag exit?</string>
     <string name="yes">ooh</string>
-    <string name="update_notification_downloading">uuuugggaagg aah update…</string>
-    <string name="update_notification_installing">eeeeeekooh aag update…</string>
-    <string name="update_notification_failed">uuugg aag uuuuhhh aag uuh aaaaaak ug aag aak</string>
-    <string name="apk_installer_legacy">aaaahh</string>
-    <string name="delayed_update_notice">aah oohh og uuuuhhh oogg uuhh</string>
+
     <string name="sort_by">uuhh ug</string>
     <string name="sort">uuhh</string>
     <string name="start">uuugg</string>
@@ -531,7 +525,7 @@
     <string name="backup_failed_error_format">uuuhh oooohhh uh %s</string>
     <string name="kitsu_settings">oohh uuuuggg uuhh uuugg</string>
     <string name="delete_message_series_section" formatted="true">uuh oohh oogg aaaahhhuugg uuuugg oog aaaagggh ak uuh uuuuhhhog series: \n \n%s</string>
-    <string name="apk_installer_settings">aak aaaagggah</string>
+
     <string name="delete_files">oooohh uuuhh</string>
     <string name="delete_format" formatted="true">oooogg (%1$d | %2$s)</string>
     <string name="delete_message_multiple" formatted="true">uuh uug oohh uuk aagg oh uuuuggguugg aaaahh uuh aaaagggah items? \n \n%s</string>

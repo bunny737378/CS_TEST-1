@@ -15,7 +15,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Bilis (%.2fx)</string>
     <string name="rated_format" formatted="true">Rated: %.1f</string>
-    <string name="new_update_format" formatted="true">Bagong update! \n%1$s -&gt; %2$s</string>
+
     <string name="app_name">CloudStream</string>
     <string name="title_home">Home</string>
     <string name="title_search">Maghanap</string>
@@ -112,8 +112,7 @@
     <string name="advanced_search">Adbans na maghanap</string>
     <string name="advanced_search_des">Magbibigay ng pinaghiwa-hiwalay na resulta</string>
     <string name="show_fillers_settings">Ipakita ang filler episode sa anime</string>
-    <string name="updates_settings">Ipakita kung may bagong update</string>
-    <string name="updates_settings_des">Awtomatikong mag-check ng bagong update pagbukas ng app</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Light novel app ng parehong devs</string>
     <string name="anim">Anime app ng parehong devs</string>
@@ -169,8 +168,7 @@
     <string name="episode_action_auto_download">Awtomatiking i-download</string>
     <string name="episode_action_download_mirror">Download mirror</string>
     <string name="episode_action_reload_links">Subukan muli</string>
-    <string name="no_update_found">Walang bagong update</string>
-    <string name="check_for_update">Tingnan kung may bagong update</string>
+
     <string name="video_lock">I-lock</string>
     <string name="video_aspect_ratio_resize">Palakihin</string>
     <string name="video_source">Source</string>
@@ -251,7 +249,7 @@
     <string name="add_account">Magdagdag ng Account</string>
     <string name="history">Kasaysayan</string>
     <string name="action_mark_as_watched">I-tanda bilang napanood na</string>
-    <string name="update_started">Nagsimula ang Update</string>
+
     <string name="chromecast_subtitles_settings">Mga Subtitle ng Chromecast</string>
     <string name="chromecast_subtitles_settings_des">Mga setting ng mga subtitle ng Chromecast</string>
     <string name="play_trailer_button">Maglaro ng Trailer</string>

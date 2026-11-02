@@ -13,7 +13,7 @@
     <string name="home_change_provider_img_des">Provayderi dəyişdir</string>
     <string name="preview_background_img_des">Arxaplana ilkin baxış keçir</string>
     <string name="rated_format" formatted="true">Xal: %.1f</string>
-    <string name="new_update_format" formatted="true">Yeniləmə mövcuddur!\n%1$s -&gt; %2$s</string>
+
     <string name="title_home">Ana səhifə</string>
     <string name="title_search">Axtar</string>
     <string name="title_downloads">Yükləmələr</string>
@@ -71,7 +71,7 @@
     <string name="chromecast_subtitles_settings_des">Chromecast subtitr parametrləri</string>
     <string name="eigengraumode_settings">Pleyer oynadılma sürəti</string>
     <string name="settings_info">Məlumat</string>
-    <string name="category_updates">Yeniləmələr və Ehtiyat Nüsxələmə</string>
+
     <string name="pref_filter_search_quality">Seçilmiş video keyfiyyətini axtarış nəticələrində gizlət</string>
     <string name="double_tap_to_pause_settings_des">Dayandırma üçün videonun ortasına iki dəfə toxunun</string>
     <string name="use_system_brightness_settings">Sistem parlaqlığından istifadə et</string>

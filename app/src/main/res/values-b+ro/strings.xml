@@ -19,7 +19,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Viteză (%.2fx)</string>
     <string name="rated_format" formatted="true">Evaluare: %.1f</string>
-    <string name="new_update_format" formatted="true">Actualizare nouă găsită! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Filler</string>
     <string name="duration_format" formatted="true">%d min</string>
     <!-- <string name="app_name">CloudStream</string> -->
@@ -141,15 +141,14 @@
     <string name="backup_failed_error_format">Eroare de backup %s</string>
     <string name="search">Căutare</string>
     <string name="category_account">Conturi și Securitate</string>
-    <string name="category_updates">Actualizări și copii de rezervă</string>
+
     <string name="settings_info">Informații</string>
     <string name="advanced_search">Căutare avansată</string>
     <string name="advanced_search_des">Împărțiți rezultatele căutării în funcție de furnizor</string>
     <string name="show_fillers_settings">Afișează etichetele [filler] pentru anime</string>
     <string name="show_trailers_settings">Arată trailerul</string>
     <string name="kitsu_settings">Arată afișele de la Kitsu</string>
-    <string name="updates_settings">Afișați actualizările aplicației</string>
-    <string name="updates_settings_des">Căutați automat noi actualizări după pornirea aplicației.</string>
+
     <string name="github">GitHub</string>
     <string name="lightnovel">&gt;Aplicație Light Novel realizată de aceiași dezvoltator</string>
     <string name="anim">Aplicație Anime realizată de aceiași dezvoltatorilor</string>
@@ -228,14 +227,13 @@
     <string name="show_sub">Etichetă Sub</string>
     <string name="show_title">Titlu</string>
     <string name="poster_ui_settings">Etichete de pe postere</string>
-    <string name="no_update_found">Nu s-au găsit actualizări</string>
-    <string name="check_for_update">Verifică pentru actualizări</string>
+
     <string name="video_lock">Blocare</string>
     <string name="video_aspect_ratio_resize">Redimensionare</string>
     <string name="video_source">Sursă</string>
     <string name="video_skip_op">Săriți peste intro</string>
     <string name="dont_show_again">Nu se mai arată din nou</string>
-    <string name="skip_update">Treci peste această actualizare</string>
+
     <string name="update">Actualizare</string>
     <string name="watch_quality_pref">Calitatea preferată (WiFi)</string>
     <string name="limit_title">Limitarea caracterelor de titlu în player</string>
@@ -365,7 +363,7 @@
     <string name="autoplay_next_settings">Redă automat următorul episod</string>
     <string name="app_name">CloudStream</string>
     <string name="play_trailer_button">Vizionează trailerul</string>
-    <string name="update_started">Actualizarea a început</string>
+
     <string name="episode_sync_settings">Actualizați progresul ceasului</string>
     <string name="autoplay_next_settings_des">Începe următorul episod când se termină episodul curent</string>
     <string name="pref_filter_search_quality">Ascundeți calitatea video selectată în rezultatele căutării</string>
@@ -392,10 +390,10 @@
     <string name="android_tv_interface_off_seek_settings_summary">Cantitatea de căutare folosită când jucătorul este ascuns</string>
     <string name="watch_quality_pref_data">Calitatea preferată (Date Mobile)</string>
     <string name="other_singular">Video</string>
-    <string name="apk_installer_settings">Instalator APK</string>
+
     <string name="automatic_plugin_download_summary">Instalează automat toate plugin-urile neinstalate din depozite adăugate.</string>
     <string name="season_format">%1$s %2$d%3$s</string>
-    <string name="apk_installer_settings_des">Unele telefoane nu acceptă noul program de instalare a pachetului. Încercați opțiunea veche dacă nu se instalează actualizările.</string>
+
     <string name="redo_setup_process">Refaceți procesul de configurare</string>
     <string name="skip_setup">Treci peste partea de configurare</string>
     <string name="batch_download">Descărcare pe loturi</string>
@@ -414,7 +412,7 @@
     <string name="subscription_deleted">Dezabonat de la %s</string>
     <string name="plugins_not_downloaded" formatted="true">Nu s-a descărcat: %d</string>
     <string name="view_public_repositories_button">Vezi depozite din comunitate</string>
-    <string name="apk_installer_package_installer">Instalator de pachete</string>
+
     <string name="extension_status">Stare</string>
     <string name="plugin_load_fail" formatted="true">Nu se poate încărca %s</string>
     <string name="audio_tracks">Piste audio</string>
@@ -452,7 +450,7 @@
     <string name="single_plugin_disabled" formatted="true">%s (Dezactivat)</string>
     <string name="no">Nu</string>
     <string name="subscription_new">Abonat la %s</string>
-    <string name="delayed_update_notice">Aplicația va fi actualizată la ieșire</string>
+
     <string name="pref_category_bypass">Ocoliri ISP</string>
     <string name="previous">Anterior</string>
     <string name="sort">Sortează</string>
@@ -466,7 +464,7 @@
     <string name="sort_alphabetical_z">Alfabetic (Z la A)</string>
     <string name="error_invalid_url">URL invalid</string>
     <string name="safe_mode_description">Toate extensiile au fost dezactivate din cauza unei defecțiuni pentru a vă ajuta să o găsiți pe cea care cauzează probleme.</string>
-    <string name="update_notification_downloading">Se descarcă actualizarea aplicației…</string>
+
     <string name="blank_repo_message">CloudStream nu are niciun site instalat din start. Trebuie să instalați site-urile din depozite. \n \nAlăturați-vă Discord-ului nostru sau căutați online.</string>
     <string name="batch_download_start_format" formatted="true">A început să descarce %1$d %2$s…</string>
     <string name="safe_mode_title">Mod sigur pornit</string>
@@ -486,7 +484,7 @@
     <string name="pref_category_looks">Aspecturi</string>
     <string name="plugin_deleted">Plugin Șters</string>
     <string name="pref_category_gestures">Gesturi</string>
-    <string name="update_notification_failed">Nu s-a putut instala noua versiune a aplicației</string>
+
     <string name="tracks">Piste</string>
     <string name="restart">Repornește</string>
     <string name="enable_nsfw_on_providers">Activează conținutul pentru adulți pe extensiile suportate</string>
@@ -502,12 +500,12 @@
     <string name="subscription_in_progress_notification">Se actualizează emisiunile abonate</string>
     <string name="subscription_list_name">Abonat</string>
     <string name="view_public_repositories_button_short">Lista publică</string>
-    <string name="apk_installer_legacy">Moştenit</string>
+
     <string name="category_provider_test">Test de furnizor</string>
     <string name="category_providers">Furnizori</string>
     <string name="network_adress_example">https://example.com/example.mp4</string>
     <string name="delete_repository_plugins">Acest lucru va șterge, de asemenea, toate plugin-urile din depozit</string>
-    <string name="update_notification_installing">Se instalează actualizarea aplicației…</string>
+
     <string name="batch_download_finish_format" formatted="true">S-a descărcat %1$d %2$s</string>
     <string name="extension_types">Suportat</string>
     <string name="hls_playlist">Playlist HLS</string>
@@ -521,7 +519,7 @@
     <string name="plugin">plugin-uri</string>
     <string name="extension_install_first">Instalați mai întâi extensia</string>
     <string name="player_pref">Player video preferat</string>
-    <string name="pref_category_app_updates">Actualizări al aplicației</string>
+
     <string name="pref_category_subtitles">Subtitrări</string>
     <string name="disable">Dezactivați</string>
     <string name="quality_profile_help">Aici puteți schimba modul în care sunt ordonate sursele. Dacă un videoclip are o prioritate mai mare, acesta va apărea mai sus în selecția surselor. Suma dintre prioritatea sursei și prioritatea calității reprezintă prioritatea video. \n \nSursa A: 3 \nCalitate B: 7 \nVa avea o prioritate video combinată de 10. \n \nNOTĂ: Dacă suma este 10 sau mai mare, playerul va sări automat peste încărcare atunci când este încărcat link-ul respectiv!</string>
@@ -638,7 +636,5 @@
     <string name="download_time_left_min_sec_format" formatted="true">%1$dm %2$ds</string>
     <string name="download_time_left_sec_format" formatted="true">%1$ds</string>
     <string name="play_full_series_button">Redă întregul serial</string>
-    <string name="install_prerelease">Instalează versiunea preliminară</string>
-    <string name="prerelease_already_installed">Versiunea preliminară este deja instalată.</string>
-    <string name="prerelease_install_failed">Instalarea versiunii preliminare a eșuat.</string>
+
 </resources>

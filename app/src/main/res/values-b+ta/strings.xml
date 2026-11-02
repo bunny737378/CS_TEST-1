@@ -110,7 +110,7 @@
     <string name="browser">உலாவி</string>
     <string name="duration_format" formatted="true">%d நிமி</string>
     <string name="play_with_app_name">CloudStream-உடன் இயக்கு</string>
-    <string name="new_update_format" formatted="true">புதிய புதுப்பிப்பு உள்ளது\n%1$s-&gt;%2$s</string>
+
     <string name="filler" formatted="true">நிரப்பி</string>
     <string name="search_poster_img_des">போச்டர்</string>
     <string name="episode_poster_img_des">எபிசோட்டின் போச்டர்</string>
@@ -156,7 +156,7 @@
     <string name="plugin_downloaded">சொருகி பதிவிறக்கம் செய்யப்பட்டது</string>
     <string name="app_not_found_error">பயன்பாடு கிடைக்கவில்லை</string>
     <string name="android_tv_interface_on_seek_settings">பிளேயர் காட்டப்பட்டுள்ளது - தொகையைத் தேடுங்கள்</string>
-    <string name="update_notification_downloading">பயன்பாட்டு புதுப்பிப்பைப் பதிவிறக்குகிறது…</string>
+
     <string name="jsdelivr_enabled">கிட்அப்பை அடைய முடியவில்லை. Jsdelivr ப்ராக்சியை இயக்குதல்…</string>
     <string name="stop">நிறுத்து</string>
     <string name="episode_action_chromecast_mirror">Chromecast கண்ணாடி</string>
@@ -203,7 +203,7 @@
     <string name="backup_success">தரவு சேமிக்கப்பட்டது</string>
     <string name="backup_failed">சேமிப்பக அனுமதிகள் இல்லை. தயவு செய்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="poster_ui_settings">சுவரொட்டியில் இடைமுகம் கூறுகளை மாற்றவும்</string>
-    <string name="check_for_update">மேம்படுத்தல் சோதிக்க</string>
+
     <string name="video_lock">பூட்டு</string>
     <string name="display_subbed_dubbed_settings">அனிமேசன் டப்பிங்/துணை</string>
     <string name="pref_category_gestures">சைகைகள்</string>
@@ -303,7 +303,7 @@
     <string name="confirm_exit_dialog">நிச்சயமாக நீங்கள் வெளியேற வேண்டுமா?</string>
     <string name="video_buffer_clear_settings">வீடியோ மற்றும் பட தற்காலிக சேமிப்பை அழிக்கவும்</string>
     <string name="action_remove_from_watched">பார்த்ததிலிருந்து அகற்று</string>
-    <string name="apk_installer_settings">APK நிறுவி</string>
+
     <string name="pref_category_android_tv">ஆண்ட்ராய்டு டிவி</string>
     <string name="max">அதிகபட்சம்</string>
     <string name="quality_cam_rip">கேம்</string>
@@ -327,9 +327,7 @@
     <string name="tv_layout">டிவி தளவமைப்பு</string>
     <string name="restore_settings">காப்புப்பிரதியிலிருந்து தரவை மீட்டெடுக்கவும்</string>
     <string name="backup_failed_error_format">பிழை %s</string>
-    <string name="category_updates">புதுப்பிப்புகள் மற்றும் காப்புப்பிரதி</string>
-    <string name="apk_installer_package_installer">PackactionInstaller</string>
-    <string name="delayed_update_notice">வெளியேறியதும் பயன்பாடு புதுப்பிக்கப்படும்</string>
+
     <string name="sort_by">வரிசைப்படுத்தவும்</string>
     <string name="sort_updated_old">புதுப்பிக்கப்பட்டது (பழையது முதல் புதியது)</string>
     <string name="profile_background_des">சுயவிவர பின்னணி</string>
@@ -371,7 +369,7 @@
     <string name="reset_btn">மீட்டமை</string>
     <string name="no_plugins_found_error">களஞ்சியத்தில் செருகுநிரல்கள் எதுவும் காணப்படவில்லை</string>
     <string name="next_season_episode_format" formatted="true">சீசன் %1$d எபிசோட் %2$d வெளியிடப்படும்</string>
-    <string name="update_started">புதுப்பிப்பு தொடங்கியது</string>
+
     <string name="recommendations_tooltip">பரிந்துரைகளைக் காட்டு</string>
     <string name="benene_count_text">டெவ்சுக்கு வழங்கப்பட்ட %d பெனின்கள்</string>
     <string name="speed_setting_summary">பிளேயரில் வேக விருப்பத்தை சேர்க்கிறது</string>
@@ -380,8 +378,7 @@
     <string name="settings_info">செய்தி</string>
     <string name="advanced_search_des">வழங்குநரால் பிரிக்கப்பட்ட தேடல் முடிவுகளை உங்களுக்கு வழங்குகிறது</string>
     <string name="pref_filter_search_quality">தேடல் முடிவுகளில் தேர்ந்தெடுக்கப்பட்ட வீடியோ தரத்தை மறைக்கவும்</string>
-    <string name="updates_settings">பயன்பாட்டு புதுப்பிப்புகளைக் காட்டு</string>
-    <string name="updates_settings_des">பயன்பாட்டைத் தொடங்கிய பின் புதிய புதுப்பிப்புகளைத் தானாகவே தேடுங்கள்.</string>
+
     <string name="redo_setup_process">அமைவு செயல்முறை மீண்டும்</string>
     <string name="lightnovel">அதே தேவ்சின் ஒளி நாவல் பயன்பாடு</string>
     <string name="benene">தேவ்சுக்கு ஒரு பெனீன் கொடுங்கள்</string>
@@ -422,7 +419,7 @@
     <string name="episode_action_download_mirror">கண்ணாடியைப் பதிவிறக்கவும்</string>
     <string name="episode_action_reload_links">இணைப்புகளை மீண்டும் ஏற்றவும்</string>
     <string name="video_skip_op">OP ஐத் தவிர்க்கவும்</string>
-    <string name="skip_update">இந்த புதுப்பிப்பைத் தவிர்க்கவும்</string>
+
     <string name="episode_action_download_subtitle">வசன வரிகள் பதிவிறக்கவும்</string>
     <string name="show_sub">துணை சிட்டை</string>
     <string name="video_aspect_ratio_resize">மறுஅளவிடுங்கள்</string>
@@ -439,7 +436,7 @@
     <string name="resize_fit">திரைக்கு பொருந்தும்</string>
     <string name="legal_notice">மறுப்பு</string>
     <string name="pref_category_links">இணைப்புகள்</string>
-    <string name="pref_category_app_updates">பயன்பாட்டு புதுப்பிப்புகள்</string>
+
     <string name="pref_category_backup">காப்புப்பிரதி</string>
     <string name="pref_category_cache">கேச்</string>
     <string name="pref_category_player_layout">மனையமைவு</string>
@@ -518,7 +515,7 @@
     <string name="biometric_setting_summary">கைரேகை, முகம் ஐடி, முள், முறை மற்றும் கடவுச்சொல் மூலம் பயன்பாட்டைத் திறக்கவும்.</string>
     <string name="biometric_prompt_description">தோல்வியுற்ற சில முயற்சிகளுக்குப் பிறகு, வரியில் மூடப்படும். மீண்டும் முயற்சிக்க பயன்பாட்டை மறுதொடக்கம் செய்யுங்கள்.</string>
     <string name="episode_action_cast_mirror">காச்ட் மிரர்</string>
-    <string name="no_update_found">புதுப்பிப்பு எதுவும் கிடைக்கவில்லை</string>
+
     <string name="example_site_name">செய்தித் பெயர்</string>
     <string name="example_site_url">https://example.com</string>
     <string name="switch_account">கணக்கை மாற்றவும்</string>
@@ -554,12 +551,10 @@
     <string name="update">புதுப்பிப்பு</string>
     <string name="logout">விடுபதிகை</string>
     <string name="quality_webrip">விரலிடைத் தோல்</string>
-    <string name="apk_installer_settings_des">சில சாதனங்கள் புதிய தொகுப்பு நிறுவியை ஆதரிக்கவில்லை. புதுப்பிப்புகள் நிறுவப்படவில்லை என்றால், மரபு விருப்பத்தை முயற்சிக்கவும்.</string>
+
     <string name="battery_dialog_message">சந்தா தொலைக்காட்சி நிகழ்ச்சிகளுக்கான தடையற்ற பதிவிறக்கங்கள் மற்றும் அறிவிப்புகளை உறுதிப்படுத்த, கிளவுட்ச்ட்ரீம் பின்னணியில் இயங்க இசைவு தேவை. சரி என்பதை அழுத்துவதன் மூலம், உங்களுக்கு கோரிக்கை உரையாடல் காண்பிக்கப்படும். தயவுசெய்து \'இசைவு\' என்பதை அழுத்தவும். \n\nதயவுசெய்து கவனிக்கவும், இந்த இசைவு CS3 உங்கள் பேட்டரியை வெளியேற்றும் என்று அர்த்தமல்ல. அறிவிப்புகளைப் பெறும்போது அல்லது உத்தியோகபூர்வ நீட்டிப்புகளிலிருந்து வீடியோக்களைப் பதிவிறக்குவது போன்ற பின்னணியில் மட்டுமே இது செயல்படும்.</string>
     <string name="app_unrestricted_toast">பயன்பாட்டு பேட்டரி பயன்பாடு ஏற்கனவே கட்டுப்பாடற்றதாக அமைக்கப்பட்டுள்ளது</string>
-    <string name="update_notification_installing">பயன்பாட்டு புதுப்பிப்பை நிறுவுகிறது…</string>
-    <string name="update_notification_failed">பயன்பாட்டின் புதிய பதிப்பை நிறுவ முடியவில்லை</string>
-    <string name="apk_installer_legacy">மரபு</string>
+
     <string name="sort">வரிசைப்படுத்து</string>
     <string name="sort_rating_desc">மதிப்பீடு (உயர் முதல் குறைந்த வரை)</string>
     <string name="sort_rating_asc">மதிப்பீடு (குறைந்த முதல் உயர் வரை)</string>
@@ -684,9 +679,7 @@
     <string name="search_suggestions_des">தட்டச்சு செய்யும் போது தேடல் பரிந்துரைகளைக் காட்டு</string>
     <string name="clear_suggestions">தெளிவான பரிந்துரைகள்</string>
     <string name="show_cast_in_details">காச்ட் பேனலைக் காட்டு</string>
-    <string name="install_prerelease">வெளியீட்டிற்கு முந்தைய பதிப்பை நிறுவவும்</string>
-    <string name="prerelease_already_installed">முன் வெளியீடு ஏற்கனவே நிறுவப்பட்டுள்ளது.</string>
-    <string name="prerelease_install_failed">முன் வெளியீட்டை நிறுவுவதில் தோல்வி.</string>
+
     <string name="episode_action_play_mirror">கண்ணாடியை விளையாடு</string>"
     <string name="show_rating">மதிப்பீடு சிட்டை</string>
     <string name="show_episode_text">எபிசோட் உரை</string>

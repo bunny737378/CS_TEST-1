@@ -37,15 +37,6 @@
         <item>8</item>
     </array>
 
-    <array name="apk_installer_pref">
-        <item>@string/apk_installer_package_installer</item>
-        <item>@string/apk_installer_legacy</item>
-    </array>
-    <array name="apk_installer_values">
-        <item>0</item>
-        <item>1</item>
-    </array>
-
     <!-- MainAPI enum: AutoDownloadMode -->
     <array name="auto_download_plugin">
         <item>@string/disable</item>
@@ -65,7 +56,6 @@
         <item>@string/show_resolution_key</item>
         <item>@string/show_media_info_key</item>
     </array>
-
 
     <array name="limit_title_pref_names">
         <item>@string/none</item>

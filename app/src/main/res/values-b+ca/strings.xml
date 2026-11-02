@@ -21,7 +21,7 @@
     <string name="preview_background_img_des">Fons de la previsualització</string>
     <string name="player_speed_text_format" formatted="true">Velocitat (%.2fx)</string>
     <string name="rated_format" formatted="true">Valoració: %.1f</string>
-    <string name="new_update_format" formatted="true">S\'ha trobat una nova actualització!\n%1$s-&gt;%2$s</string>
+
     <string name="filler" formatted="true">Episodi especial</string>
     <string name="duration_format" formatted="true">%d min</string>
     <string name="app_name">CloudStream</string>
@@ -71,7 +71,7 @@
     <string name="offline_file">Disponible fora de línia</string>
     <string name="select_all">Seleccionar tot</string>
     <string name="deselect_all">Deseleccionar tot</string>
-    <string name="update_started">Actualització iniciada</string>
+
     <string name="stream">Transmissió</string>
     <string name="open_local_video">Obre vídeo local</string>
     <string name="error_loading_links_toast">Error carregant els enllaços</string>
@@ -162,14 +162,13 @@
     <string name="show_rating">Etiqueta de valoració</string>
     <string name="show_title">Títol</string>
     <string name="poster_ui_settings">Activa o desactiva elements al cartell</string>
-    <string name="no_update_found">No s\'ha trobat cap actualització</string>
-    <string name="check_for_update">Comprova si hi ha actualitzacions</string>
+
     <string name="video_lock">Bloqueja</string>
     <string name="video_aspect_ratio_resize">Canvia la mida</string>
     <string name="video_source">Font</string>
     <string name="video_skip_op">Omet la obertura</string>
     <string name="dont_show_again">No el tornis a mostrar</string>
-    <string name="skip_update">Omet aquesta actualització</string>
+
     <string name="update">Actualitza</string>
     <string name="watch_quality_pref">Qualitat de vídeo preferida (WiFi)</string>
     <string name="watch_quality_pref_data">Qualitat de vídeo preferida (dades mòbils)</string>

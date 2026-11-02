@@ -125,7 +125,6 @@ import com.lagradost.cloudstream3.ui.settings.Globals.updateTv
 import com.lagradost.cloudstream3.ui.settings.SettingsGeneral
 import com.lagradost.cloudstream3.ui.setup.HAS_DONE_SETUP_KEY
 import com.lagradost.cloudstream3.ui.setup.SetupFragmentExtensions
-import com.lagradost.cloudstream3.utils.ApkInstaller
 import com.lagradost.cloudstream3.utils.AppContextUtils.getApiDubstatusSettings
 import com.lagradost.cloudstream3.utils.AppContextUtils.html
 import com.lagradost.cloudstream3.utils.AppContextUtils.isCastApiAvailable
@@ -157,7 +156,6 @@ import com.lagradost.cloudstream3.utils.DataStoreHelper.accounts
 import com.lagradost.cloudstream3.utils.DataStoreHelper.migrateResumeWatching
 import com.lagradost.cloudstream3.utils.Event
 import com.lagradost.cloudstream3.utils.ImageLoader.loadImage
-import com.lagradost.cloudstream3.utils.InAppUpdater.runAutoUpdate
 import com.lagradost.cloudstream3.utils.SingleSelectionHelper.showBottomDialog
 import com.lagradost.cloudstream3.utils.SnackbarHelper.showSnackbar
 import com.lagradost.cloudstream3.utils.TvChannelUtils
@@ -179,8 +177,6 @@ import com.lagradost.cloudstream3.utils.downloader.DownloadQueueManager
 import com.lagradost.cloudstream3.utils.setText
 import com.lagradost.cloudstream3.utils.setTextHtml
 import com.lagradost.cloudstream3.utils.txt
-import com.lagradost.cloudstream4.compose.CloudStreamThemeAppSettings
-import com.lagradost.cloudstream4.theme.CloudStreamTheme
 import com.lagradost.safefile.SafeFile
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
@@ -512,7 +508,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             R.id.navigation_subtitles,
             R.id.navigation_chrome_subtitles,
             R.id.navigation_settings_player,
-            R.id.navigation_settings_updates,
+            R.id.navigation_settings_backup,
             R.id.navigation_settings_ui,
             R.id.navigation_settings_account,
             R.id.navigation_settings_providers,
@@ -588,7 +584,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                     R.id.navigation_subtitles,
                     R.id.navigation_chrome_subtitles,
                     R.id.navigation_settings_player,
-                    R.id.navigation_settings_updates,
+                    R.id.navigation_settings_backup,
                     R.id.navigation_settings_ui,
                     R.id.navigation_settings_account,
                     R.id.navigation_settings_providers,
@@ -655,10 +651,6 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
     override fun onPause() {
         super.onPause()
 
-        // Start any delayed updates
-        if (ApkInstaller.delayedInstaller?.startInstallation() == true) {
-            Toast.makeText(this, R.string.update_started, Toast.LENGTH_LONG).show()
-        }
         try {
             if (isCastApiAvailable()) {
                 mSessionManager?.removeSessionManagerListener(mSessionManagerListener)
@@ -1300,13 +1292,6 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                 padTop = false
             )
 
-            composeView.apply {
-                setContent {
-                    CloudStreamThemeAppSettings {
-                        MainActivityScreen.Content()
-                    }
-                }
-            }
         }
 
         // overscan
@@ -1988,10 +1973,6 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
         }
 
         handleAppIntent(intent)
-
-        //ioSafe {
-        //    runAutoUpdate()
-        //}
 
         FcastManager().init(this, false)
 

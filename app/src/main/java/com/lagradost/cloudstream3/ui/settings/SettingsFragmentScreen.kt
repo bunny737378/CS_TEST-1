@@ -140,15 +140,14 @@ object SettingsFragmentScreen : Screen {
             )
         ),
         SettingsNavigation(
-            title = R.string.category_updates,
-            navigation = R.id.action_navigation_global_to_navigation_settings_updates,
-            screen = SettingsUpdatesScreen,
-            icon = R.drawable.mobile_arrow_down_24px,
+            title = R.string.pref_category_backup,
+            navigation = R.id.action_navigation_global_to_navigation_settings_backup,
+            screen = SettingsBackupScreen,
+            icon = R.drawable.save_as_24px,
             subtitle = persistentListOf(
-                R.string.pref_category_app_updates,
-                R.string.pref_category_backup,
-                R.string.pref_category_extensions,
-                R.string.pref_category_actions
+                R.string.backup_settings,
+                R.string.automatic_plugin_updates,
+                R.string.show_log_cat
             )
         ),
         SettingsNavigation(

@@ -19,7 +19,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Hız (%.2fx)</string>
     <string name="rated_format" formatted="true">Puan: %.1f</string>
-    <string name="new_update_format" formatted="true">Yeni güncelleme bulundu! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Dolgu</string>
     <string name="duration_format" formatted="true">%d dakika</string>
     <string name="app_name">CloudStream</string>
@@ -146,7 +146,7 @@
     <string name="backup_failed_error_format">%s yedeklenirken hata</string>
     <string name="search">Ara</string>
     <string name="category_account">Hesaplar ve Güvenlik</string>
-    <string name="category_updates">Güncellemeler ve Yedekleme</string>
+
     <string name="settings_info">Bilgi</string>
     <string name="advanced_search">Gelişmiş arama</string>
     <string name="advanced_search_des">Arama sonuçlarını sağlayıcıya göre ayırır</string>
@@ -155,8 +155,7 @@
     <string name="kitsu_settings">Kitsu posterlerini göster</string>
     <string name="pref_filter_search_quality">Seçili video kalitesini arama sonuçlarında gizle</string>
     <string name="automatic_plugin_updates">Otomatik eklenti güncellemeleri</string>
-    <string name="updates_settings">Uygulama güncellemelerini göster</string>
-    <string name="updates_settings_des">Uygulama başlatıldıktan sonra güncellemeleri ara.</string>
+
     <string name="github">GitHub</string>
     <string name="lightnovel">Aynı geliştiricilerin Lightnovel Crawler uygulaması</string>
     <string name="anim">Aynı geliştiricilerin anime uygulaması</string>
@@ -244,14 +243,13 @@
     <string name="show_sub">Altyazı etiketi</string>
     <string name="show_title">Başlık</string>
     <string name="poster_ui_settings">Afiş üzerindeki öğeleri değiştir</string>
-    <string name="no_update_found">Güncelleme bulunamadı</string>
-    <string name="check_for_update">Güncellemeleri denetle</string>
+
     <string name="video_lock">Kilitle</string>
     <string name="video_aspect_ratio_resize">Yeniden boyutlandır</string>
     <string name="video_source">Kaynak</string>
     <string name="video_skip_op">Jeneriği geç</string>
     <string name="dont_show_again">Bir daha gösterme</string>
-    <string name="skip_update">Bu güncellemeyi atla</string>
+
     <string name="update">Güncelle</string>
     <string name="watch_quality_pref">Tercih edilen görüntü kalitesi (WiFi)</string>
     <string name="limit_title">Video oynatıcı başlığı karakter üst sınırı</string>
@@ -438,16 +436,15 @@
     <string name="app_not_found_error">Uygulama bulunamadı</string>
     <string name="history">Geçmiş</string>
     <string name="action_mark_as_watched">İzlendi olarak işaretle</string>
-    <string name="update_notification_installing">Uygulama güncellemesi kuruluyor…</string>
+
     <string name="redo_setup_process">Kurulum işlemini tekrarla</string>
     <string name="play_trailer_button">Fragmanı Oynat</string>
     <string name="automatic_plugin_download_summary">Eklenmiş depolardan henüz kurulmamış tüm eklentileri otomatik olarak kur.</string>
-    <string name="update_started">Güncelleme Başladı</string>
-    <string name="apk_installer_settings_des">Bazı cihazlar yeni paket yükleyiciyi desteklemiyor. Güncellemeler yüklenmezse eski seçeneği deneyin.</string>
+
     <string name="automatic_plugin_download">Eklentileri otomatik olarak indir</string>
-    <string name="apk_installer_settings">APK kurucu</string>
+
     <string name="pref_category_links">Bağlantılar</string>
-    <string name="pref_category_app_updates">Uygulama güncellemeleri</string>
+
     <string name="pref_category_backup">Yedek</string>
     <string name="pref_category_player_features">Oynatıcı özellikleri</string>
     <string name="pref_category_subtitles">Altyazılar</string>
@@ -457,18 +454,16 @@
     <string name="pref_category_cache">Önbellek</string>
     <string name="pref_category_looks">Görünüm</string>
     <string name="pref_category_ui_features">Özellikler</string>
-    <string name="delayed_update_notice">Uygulama çıkışta güncellenecektir</string>
+
     <string name="skip_type_ed">Kapanışı</string>
     <string name="skip_type_op">Açılışı</string>
     <string name="no">Hayır</string>
     <string name="skip_type_recap">Özeti</string>
     <string name="confirm_exit_dialog">Çıkmak istediğinize emin misin?</string>
     <string name="yes">Evet</string>
-    <string name="update_notification_downloading">Uygulama güncellemesi indiriliyor…</string>
-    <string name="update_notification_failed">Uygulamanın yeni sürümü kurulamadı</string>
+
     <string name="clear_history">Geçmişi temizle</string>
-    <string name="apk_installer_package_installer">Paket Kurucu</string>
-    <string name="apk_installer_legacy">Eski</string>
+
     <string name="pref_category_gestures">Hareketler</string>
     <string name="all_languages_preference">Tüm Diller</string>
     <string name="skip_type_format" formatted="true">%s Atla</string>
@@ -716,9 +711,7 @@
     <string name="top_right">Sağ üst</string>
     <string name="subs_subtitle_alignment">Altyazı Hizalama</string>
     <string name="play_full_series_button">Tüm Seriyi Oynat</string>
-    <string name="install_prerelease">Ön sürümünü yükleyin</string>
-    <string name="prerelease_already_installed">Ön sürüm zaten indirilmiş.</string>
-    <string name="prerelease_install_failed">Ön sürüm indirmesi başarısız oldu.</string>
+
     <string name="show_episode_text">Bölüm Başlığı</string>
     <string name="search_suggestions">Arama Önerileri</string>
     <string name="search_suggestions_des">Yazarken arama önerilerini göster</string>

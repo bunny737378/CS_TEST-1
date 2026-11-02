@@ -19,7 +19,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">速度（%.2fx）</string>
     <string name="rated_format" formatted="true">评分：%.1f</string>
-    <string name="new_update_format" formatted="true">发现新版本！ \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">填充</string>
     <string name="duration_format" formatted="true">%d 分钟</string>
     <string name="app_name">CloudStream</string>
@@ -146,7 +146,7 @@
     <string name="backup_failed_error_format">备份 %s 出错</string>
     <string name="search">搜索</string>
     <string name="category_account">账户和安全</string>
-    <string name="category_updates">更新与备份</string>
+
     <string name="settings_info">信息</string>
     <string name="advanced_search">高级搜索</string>
     <string name="advanced_search_des">按片源分割搜索结果</string>
@@ -156,8 +156,7 @@
     <string name="pref_filter_search_quality">在搜索结果中隐藏选中视频画质</string>
     <string name="automatic_plugin_updates">自动更新插件</string>
     <string name="automatic_plugin_download">自动下载插件</string>
-    <string name="updates_settings">显示应用更新</string>
-    <string name="updates_settings_des">启动应用后自动搜索更新。</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">由相同开发者开发的轻小说应用</string>
     <string name="anim">由相同开发者开发的动漫应用</string>
@@ -245,14 +244,13 @@
     <string name="show_sub">字幕标签</string>
     <string name="show_title">标题</string>
     <string name="poster_ui_settings">封面内容</string>
-    <string name="no_update_found">未找到更新</string>
-    <string name="check_for_update">检查更新</string>
+
     <string name="video_lock">锁定</string>
     <string name="video_aspect_ratio_resize">调整画面</string>
     <string name="video_source">来源</string>
     <string name="video_skip_op">跳过片头</string>
     <string name="dont_show_again">不再显示</string>
-    <string name="skip_update">跳过此更新</string>
+
     <string name="update">更新</string>
     <string name="watch_quality_pref">首选播放画质（WiFi）</string>
     <string name="limit_title">视频播放器标题最多字符</string>
@@ -454,14 +452,9 @@
     <string name="confirm_exit_dialog">您确定要离开吗？</string>
     <string name="yes">是</string>
     <string name="no">否</string>
-    <string name="update_notification_downloading">正在下载应用更新…</string>
-    <string name="update_notification_installing">正在安装应用更新…</string>
-    <string name="update_notification_failed">无法安装新版的应用</string>
+
     <string name="automatic_plugin_download_summary">自动安装已添加的仓库内所有未安装的插件。</string>
-    <string name="apk_installer_settings">APK 安装器</string>
-    <string name="apk_installer_settings_des">部分设备不支持新的软件包安装程序。如果未安装更新，请尝试使用传统选项。</string>
-    <string name="apk_installer_legacy">传统</string>
-    <string name="apk_installer_package_installer">软件包安装程序</string>
+
     <string name="play_trailer_button">播放预告片</string>
     <string name="pref_category_ui_features">功能</string>
     <string name="pref_category_defaults">默认</string>
@@ -470,15 +463,14 @@
     <string name="pref_category_links">链接</string>
     <string name="pref_category_extensions">扩展</string>
     <string name="pref_category_subtitles">字幕</string>
-    <string name="pref_category_app_updates">应用更新</string>
+
     <string name="pref_category_backup">备份</string>
     <string name="pref_category_cache">缓存</string>
     <string name="pref_category_gestures">手势</string>
     <string name="pref_category_player_features">播放器功能</string>
     <string name="pref_category_actions">行为</string>
     <string name="pref_category_looks">外观</string>
-    <string name="update_started">更新开始</string>
-    <string name="delayed_update_notice">应用退出后将会更新</string>
+
     <string name="plugin_downloaded">插件已下载</string>
     <string name="action_remove_from_watched">从已观看中移除</string>
     <string name="safe_mode_file">发现安全模式文件！ \n启动时不加载任何扩展，直到文件被删除。</string>
@@ -716,9 +708,7 @@
     <string name="top_center">顶部居中</string>
     <string name="top_right">右上</string>
     <string name="play_full_series_button">播放全剧</string>
-    <string name="install_prerelease">安装预发行版</string>
-    <string name="prerelease_already_installed">已安装预发行版。</string>
-    <string name="prerelease_install_failed">安装预发行版失败。</string>
+
     <string name="show_episode_text">剧集文本</string>
     <string name="search_suggestions">搜索建议</string>
     <string name="search_suggestions_des">输入时显示搜索建议</string>

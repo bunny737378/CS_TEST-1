@@ -81,7 +81,7 @@
     <string name="home_next_random_img_des">次のランダム</string>
     <string name="go_back_img_des">戻り</string>
     <string name="rated_format" formatted="true">評価: %.1f</string>
-    <string name="new_update_format" formatted="true">新しいアップデートを発見! \n%1$s -&gt; %2$s</string>
+
     <string name="duration_format" formatted="true">%d分</string>
     <string name="search_hint_site" formatted="true">%sを検索…</string>
     <string name="pick_source">ソース</string>
@@ -91,14 +91,14 @@
     <string name="action_remove_from_bookmarks">削除</string>
     <string name="home_more_info">詳細情報</string>
     <string name="home_expanded_hide">閉じる</string>
-    <string name="category_updates">アップデートとバックアップ</string>
+
     <string name="app_language">アプリ言語</string>
     <string name="github">GitHub（ギットハブ）</string>
     <string name="go_back_30">-30</string>
     <string name="go_forward_30">+30</string>
     <string name="legal_notice">免責</string>
     <string name="pref_category_extensions">拡張機能</string>
-    <string name="pref_category_app_updates">アプリ更新</string>
+
     <string name="category_providers">提供者</string>
     <string name="pref_category_subtitles">字幕</string>
     <string name="pref_category_ui_features">特徴</string>
@@ -155,7 +155,7 @@
     <string name="download_done">ダウンロード完了</string>
     <string name="download_canceled">ダウンロード終了</string>
     <string name="stream">ネットワークストリーム</string>
-    <string name="update_started">アップデート開始</string>
+
     <string name="no_season">シーズンなし</string>
     <string name="no_subtitles">字幕なし</string>
     <string name="video_aspect_ratio_resize">アスペクト比</string>
@@ -173,9 +173,9 @@
     <string name="search">検索</string>
     <string name="discord">Discordに参加</string>
     <string name="update">アップデート</string>
-    <string name="check_for_update">アップデートを確認</string>
+
     <string name="show_title">作品名</string>
-    <string name="update_notification_installing">アプリのアップデートをインストール中…</string>
+
     <string name="repository_url_hint">リポジトリURLまたはショートコード</string>
     <string name="subtitle_offset_title">字幕ディレイ</string>
     <string name="subscription_list_name">登録済み</string>
@@ -238,7 +238,7 @@
     <string name="show_trailers_settings">トレーラーを表示</string>
     <string name="jsdelivr_proxy">GitHub プロキシ</string>
     <string name="use_system_brightness_settings">システムの明るさを使用</string>
-    <string name="apk_installer_settings">APKインストーラ</string>
+
     <string name="pref_category_security">セキュリティ</string>
     <string name="add_account">アカウントを追加</string>
     <string name="backup_failed">ストレージの権限がありません。もう一度試してください。</string>
@@ -256,7 +256,7 @@
     <string name="episode_action_download_subtitle">字幕をダウンロード</string>
     <string name="show_dub">吹き替えのラベル</string>
     <string name="show_sub">字幕のラベル</string>
-    <string name="skip_update">この更新をスキップする</string>
+
     <string name="video_buffer_disk_settings">ディスク上のビデオキャッシュ</string>
     <string name="video_buffer_size_settings">ビデオバッファサイズ</string>
     <string name="display_subbed_dubbed_settings">字幕付きまたは吹き替え済みのアニメを表示</string>
@@ -283,7 +283,7 @@
     <string name="delete_message" formatted="true">%s は完全に削除されます\n大丈夫ですか？</string>
     <string name="delete_file">ファイルを削除</string>
     <string name="episode_action_auto_download">自動ダウンロード</string>
-    <string name="no_update_found">更新が見つかりません</string>
+
     <string name="dont_show_again">次回から表示しない</string>
     <string name="video_buffer_length_settings">ビデオバッファの長さ</string>
     <string name="add_site_summary">既存のサイトのクローンを異なるURLで追加します</string>
@@ -302,12 +302,12 @@
     <string name="offline_file">オフラインで視聴可能</string>
     <string name="select_all">全選択</string>
     <string name="deselect_all">すべて選択解除</string>
-    <string name="updates_settings">アプリの更新を表示</string>
+
     <string name="copy_link_toast">コピーされました</string>
     <string name="delete_message_multiple" formatted="true">これらのアイテムを完全に削除しますか？\n\n%s</string>
     <string name="nginx_url_pref">NGINXサーバーのURL</string>
     <string name="restore_settings">バックアップからデータを復元</string>
-    <string name="updates_settings_des">アプリ起動後に自動的に更新を探します。</string>
+
     <string name="subs_default_reset_toast">初期値にリセット</string>
     <string name="episode_format" formatted="true">%1$d %2$s</string>
     <string name="no_episodes_found">エピソードが見つかりません</string>
@@ -354,8 +354,7 @@
     <string name="duplicate_add">追加</string>
     <string name="mobile_data">モバイルデータ</string>
     <string name="app_info_intent_error">CloudStreamのアプリ情報を開くことができません.</string>
-    <string name="update_notification_downloading">アプリの更新をダウンロード中…</string>
-    <string name="apk_installer_legacy">レガシー</string>
+
     <string name="profile_background_des">プロフィールの背景</string>
     <string name="pin_error_incorrect">PINが違います。もう一度試してください。</string>
     <string name="pin_error_length">PINは4文字でなければなりません</string>
@@ -394,13 +393,12 @@
     <string name="no_subtitles_loaded">字幕はまだ読み込まれていません</string>
     <string name="backup_path_title">バックアップフォルダの場所</string>
     <string name="custom">カスタム</string>
-    <string name="delayed_update_notice">終了時にアプリが更新されます</string>
-    <string name="apk_installer_package_installer">パッケージインストーラ</string>
+
     <string name="sort_release_date_new">リリース日(新着順)</string>
     <string name="duplicate_title">潜在的な重複が見つかりました</string>
     <string name="plugin_deleted">プラグインが消されました</string>
     <string name="unfavorite">お気に入り解除</string>
-    <string name="update_notification_failed">アプリの新しいバージョンをインストールできませんでした</string>
+
     <string name="backup_frequency">バックアップ頻度</string>
     <string name="picture_in_picture_des">他のアプリの上にミニプレイヤーで再生し続ける</string>
     <string name="downloads_empty">現在ダウンロードはがありません。</string>
@@ -478,7 +476,7 @@
     <string name="benene_des">与えられたベネネ</string>
     <string name="use">使用</string>
     <string name="quality_sd">SD</string>
-    <string name="apk_installer_settings_des">一部のスマートフォンは新しいパッケージインストーラをサポートしていません。アップデートがインストールされない場合はレガシーオプションを試してください。</string>
+
     <string name="episode_action_chromecast_mirror">Chromecastミラー</string>
     <string name="double_tap_to_seek_settings_des">前後にシークするために右側または左側をダブルタップ</string>
     <string name="quality_hdr">HDR</string>
@@ -702,9 +700,7 @@
     <string name="top_center">上中央</string>
     <string name="top_right">右上</string>
     <string name="play_full_series_button">全シリーズを再生</string>
-    <string name="install_prerelease">プレリリース版をインストール</string>
-    <string name="prerelease_already_installed">プレリリース版は既にインストールされています。</string>
-    <string name="prerelease_install_failed">プレリリース版のインストールに失敗しました。</string>
+
     <string name="show_episode_text">エピソードのテキスト</string>
     <string name="search_suggestions">検索候補</string>
     <string name="search_suggestions_des">入力中に検索候補を表示する</string>

@@ -15,7 +15,7 @@
     <string name="filler" formatted="true">Fyllstoff</string>
     <string name="preview_background_img_des">Forhandsvis bakgrunnsbilete</string>
     <string name="rated_format" formatted="true">Vurdert: %.1f</string>
-    <string name="new_update_format" formatted="true">Ny oppdatering tilgjengeleg! \n%1$s -&gt; %2$s</string>
+
     <string name="duration_format" formatted="true">%d minutt</string>
     <string name="result_poster_img_des">Miniatyrbilete</string>
     <string name="next_episode_format" formatted="true">Episode %d vil bli sleppt om</string>
@@ -87,12 +87,12 @@
     <string name="restore_success">Lasta inn sikkerheitkopifil</string>
     <string name="search">Søk</string>
     <string name="category_account">Kontoar</string>
-    <string name="category_updates">Oppdateringar og sikkerheitskopiering av data</string>
+
     <string name="settings_info">Informasjon</string>
     <string name="advanced_search">Avansert søk</string>
     <string name="show_trailers_settings">Vis trailerar</string>
     <string name="kitsu_settings">Vis miniatyrbilete frå Kitsu</string>
-    <string name="updates_settings">Vis programoppdateringar</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Lysnovelleprogram av dei same utviklarane</string>
     <string name="anim">Animeprogram av dei same utviklarane</string>
@@ -148,7 +148,7 @@
     <string name="episode_action_reload_links">Last inn lenker på nytt</string>
     <string name="episode_action_download_subtitle">Last ned undertekstar</string>
     <string name="update">Oppdater</string>
-    <string name="skip_update">Ignorer oppdatering</string>
+
     <string name="dont_show_again">Ikkje vis igjen</string>
     <string name="video_source">Kjelde</string>
     <string name="video_skip_op">Hopp over intro</string>
@@ -160,21 +160,21 @@
     <string name="result_tags">Sjangrar</string>
     <string name="result_share">Dele</string>
     <string name="type_re_watching">Ser om igjen</string>
-    <string name="update_started">Oppdatering starta</string>
+
     <string name="popup_resume_download">Fortsett nedlasting</string>
     <string name="home_more_info">Meir informasjon</string>
     <string name="sort_close">Lukk</string>
     <string name="player_speed_text_format" formatted="true">Avspelinghastigheit (%.2fx)</string>
     <string name="app_name">CloudStream</string>
     <string name="next_episode_time_min_format" formatted="true">%dm</string>
-    <string name="updates_settings_des">Sjå etter nye oppdateringar automatisk ved oppstart</string>
+
     <string name="discord">Bli med i Discord</string>
     <string name="no_chromecast_support_toast">Denne leverandøren støttar ikkje Chromecast</string>
     <string name="season">Sesong</string>
     <string name="episodes">Episodar</string>
     <string name="duration">Varigheit</string>
     <string name="livestreams">Direktesendingar</string>
-    <string name="pref_category_app_updates">Programoppdateringar</string>
+
     <string name="subs_hold_to_reset_to_default">Trykk og hold inne for å nullstille til standardinnstillinger</string>
     <string name="search_provider_text_types">Søk ved bruk av typer</string>
     <string name="subs_auto_select_language">Automatisk språkvalg</string>

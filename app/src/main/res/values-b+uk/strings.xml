@@ -17,7 +17,7 @@
     <string name="home_next_random_img_des">Наступне випадкове</string>
     <string name="preview_background_img_des">Попередній перегляд тла</string>
     <string name="player_speed_text_format" formatted="true">Швидкість (%.2fx)</string>
-    <string name="new_update_format" formatted="true">Знайдено нове оновлення!\n%1$s –&gt; %2$s</string>
+
     <string name="title_search">Пошук</string>
     <string name="title_downloads">Завантаження</string>
     <string name="duration_format" formatted="true">%d хв</string>
@@ -104,7 +104,7 @@
     <string name="download_paused">Завантаження призупинено</string>
     <string name="download_started">Завантаження розпочато</string>
     <string name="download_failed">Не вдалося завантажити</string>
-    <string name="update_started">Оновлення розпочато</string>
+
     <string name="error_loading_links_toast">Помилка завантаження посилань</string>
     <string name="popup_pause_download">Призупинити завантаження</string>
     <string name="popup_play_file">Переглянути файл</string>
@@ -139,7 +139,7 @@
     <string name="backup_failed_error_format">Помилка резервного копіювання %s</string>
     <string name="search">Пошук</string>
     <string name="category_account">Облікові записи та безпека</string>
-    <string name="category_updates">Оновлення та резервне копіювання</string>
+
     <string name="settings_info">Подробиці</string>
     <string name="advanced_search">Розширений пошук</string>
     <string name="advanced_search_des">Показувати результати пошуку, розділені за постачальниками</string>
@@ -147,9 +147,9 @@
     <string name="show_trailers_settings">Показувати трейлери</string>
     <string name="pref_filter_search_quality">Приховати вибрану якість відео у результатах пошуку</string>
     <string name="automatic_plugin_download">Автозавантаження розширень</string>
-    <string name="updates_settings">Показувати оновлення застосунку</string>
+
     <string name="redo_setup_process">Налаштувати повторно процес встановлення</string>
-    <string name="apk_installer_settings">Встановлювач APK</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Застосунок для ранобе від тих самих розробників</string>
     <string name="anim">Застосунок для аніме від тих самих розробників</string>
@@ -203,7 +203,7 @@
     <string name="episode_action_play_in_format">Переглянути в %s</string>
     <string name="episode_action_auto_download">Автозавантаження</string>
     <string name="episode_action_download_mirror">Завантажити дзеркало</string>
-    <string name="check_for_update">Перевірити наявність оновлень</string>
+
     <string name="video_lock">Забл./Розбл.</string>
     <string name="video_skip_op">Пропустити ОП</string>
     <string name="dont_show_again">Не показувати знову</string>
@@ -211,7 +211,7 @@
     <string name="watch_quality_pref">Бажана якість перегляду (Wi-Fi)</string>
     <string name="show_title">Заголовок</string>
     <string name="poster_ui_settings">Перемкнути елементи інтерфейсу на плакаті</string>
-    <string name="no_update_found">Оновлення не знайдено</string>
+
     <string name="double_tap_to_seek_settings_des">Натисніть двічі праворуч або ліворуч, щоби перемотати вперед або назад</string>
     <string name="use_system_brightness_settings_des">Використовувати системну яскравість у програвачі замість темного накладання</string>
     <string name="restore_success">Завантажено файл резервної копії</string>
@@ -221,9 +221,9 @@
     <string name="kitsu_settings">Показувати плакати від Kitsu</string>
     <string name="automatic_plugin_updates">Автооновлення розширень</string>
     <string name="automatic_plugin_download_summary">Автоматично встановлювати всі розширення, які ще не встановлено, з доданих сховищ.</string>
-    <string name="updates_settings_des">Автоматично перевіряти нові оновлення після запуску застосунку.</string>
+
     <string name="copy_link_toast">Посилання скопійовано до буфера обміну</string>
-    <string name="apk_installer_settings_des">Деякі пристрої не підтримують новий встановлювач пакетів. Спробуйте старий варіант, якщо оновлення не встановлюються.</string>
+
     <string name="discord">Приєднуйтеся до Discord</string>
     <string name="benene_des">Дано банани</string>
     <string name="year">Рік</string>
@@ -254,13 +254,13 @@
     <string name="video_source">Джерело</string>
     <string name="episode_action_download_subtitle">Завантажити субтитри</string>
     <string name="show_dub">Мітка дубляжу</string>
-    <string name="skip_update">Пропустити це оновлення</string>
+
     <string name="all">Усе</string>
     <string name="resize_fit">На весь екран</string>
     <string name="resize_fill">Розтягнути</string>
     <string name="resize_zoom">Збільшити</string>
     <string name="tracks">Доріжки</string>
-    <string name="pref_category_app_updates">Оновлення застосунку</string>
+
     <string name="pref_category_cache">Кеш</string>
     <string name="pref_category_gestures">Жести</string>
     <string name="pref_category_player_features">Функції програвача</string>
@@ -446,11 +446,7 @@
     <string name="confirm_exit_dialog">Ви впевнені, що хочете вийти?</string>
     <string name="yes">Так</string>
     <string name="no">Ні</string>
-    <string name="update_notification_installing">Установлення оновлення застосунку…</string>
-    <string name="update_notification_failed">Не вдалося встановити нову версію застосунку</string>
-    <string name="apk_installer_legacy">Застарілий</string>
-    <string name="apk_installer_package_installer">Встановлювач пакунків</string>
-    <string name="delayed_update_notice">Застосунок буде оновлено після виходу</string>
+
     <string name="delete_repository_plugins">Це також призведе до видалення всіх розширень сховища</string>
     <string name="all_languages_preference">Усі мови</string>
     <string name="previous">Назад</string>
@@ -462,7 +458,7 @@
     <string name="player_pref">Бажаний відеопрогравач</string>
     <string name="safe_mode_title">Увімкнено безпечний режим</string>
     <string name="extension_authors">Автори</string>
-    <string name="update_notification_downloading">Завантаження оновлення застосунку…</string>
+
     <string name="safe_mode_description">Усі розширення було вимкнено через збій, щоби допомогти вам знайти те, яке спричиняє проблеми.</string>
     <string name="app_not_found_error">Застосунок не знайдено</string>
     <string name="skip_type_mixed_op">Змішаний опенінґ</string>
@@ -702,9 +698,7 @@
     <string name="top_center">Угорі в центрі</string>
     <string name="top_right">Угорі праворуч</string>
     <string name="play_full_series_button">Відтворити весь серіал</string>
-    <string name="install_prerelease">Встановити передрелізну версію</string>
-    <string name="prerelease_already_installed">Передрелізна версія вже встановлена.</string>
-    <string name="prerelease_install_failed">Не вдалося встановити передрелізну версію.</string>
+
     <string name="show_episode_text">Текст епізоду</string>
     <string name="search_suggestions">Пропозиції пошуку</string>
     <string name="search_suggestions_des">Показувати підказки пошуку під час введення тексту</string>

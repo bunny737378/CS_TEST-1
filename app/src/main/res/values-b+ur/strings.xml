@@ -10,7 +10,7 @@
     <string name="home_change_provider_img_des">ذریعہ تبدیل کریں</string>
     <string name="preview_background_img_des">پس منظر کا دیکھنا</string>
     <string name="rated_format" formatted="true">درجہ بندی: %.1f</string>
-    <string name="new_update_format" formatted="true">نیا update آگیا ہے! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">بھرنے والا</string>
     <string name="duration_format" formatted="true">%d منٹ</string>
     <string name="next_episode_time_day_format" formatted="true">%1$d دن %2$d گھنٹے %3$d منٹ</string>
@@ -125,9 +125,9 @@
     <string name="advanced_search_des">آپ کو فراہم کنندہ کے ذریعہ علیحدہ کردہ تلاش کے نتائج فراہم کرتا ہے</string>
     <string name="pref_filter_search_quality">تلاش کے نتائج میں منتخب ویڈیو کوالٹی چھپائیں</string>
     <string name="automatic_plugin_updates">خودکار پلگ ان اپ ڈیٹس</string>
-    <string name="updates_settings">ایپ کی تازہ کاریاں نمایش کریں</string>
+
     <string name="redo_setup_process">سیٹ اپ کا عمل دوبارہ کریں</string>
-    <string name="apk_installer_settings">APK انسٹالر</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">یہ لائٹ ناول ایپ وہی ڈویلپرز نے تیار کی ہے جو اس ایپ کو ڈویلپ کیا ہے</string>
     <string name="anim">یہ اینمی ایپ وہی ڈویلپرز نے تیار کی ہے جو اس ایپ کو ڈویلپ کیا ہے</string>
@@ -163,14 +163,13 @@
     <string name="backup_failed">سٹوریج کی اجازتیں غائب ہیں، براہ کرم دوبارہ کوشش کریں۔</string>
     <string name="kitsu_settings">کٹسو سے پوسٹر نمایش کریں</string>
     <string name="episode_sync_settings_des">آپ کی حالیہ قسط کی پیش رفت خود بخود مطابقت پذیر کریں</string>
-    <string name="category_updates">اپ ڈیٹس اور بیک اپ</string>
+
     <string name="advanced_search">اعلی درجے کی تلاش</string>
     <string name="show_trailers_settings">ٹریلر نمایش کریں</string>
     <string name="show_fillers_settings">anime کے لیے فلر ایپیسوڈ دکھائیں</string>
     <string name="automatic_plugin_download">پلگ ان خود بخود ڈاؤن لوڈ کریں</string>
     <string name="automatic_plugin_download_summary">شامل کردہ ذخیروں سے خود بخود تمام ابھی تک انسٹال نہیں ہوئے پلگ ان انسٹال کریں۔</string>
-    <string name="updates_settings_des">اپلیکیشن کو شروع کرنے کے بعد خود بخود نئی اپ ڈیٹس کی تلاش کریں۔</string>
-    <string name="apk_installer_settings_des">کچھ فون نئے پیکیج انسٹالر کو سپورٹ نہیں کرتے ہیں. اگر اپ ڈیٹس انسٹال نہیں ہوتے ہیں تو لیگیسی آپشن کو آزمائیں.</string>
+
     <string name="season">سیزن</string>
     <string name="season_format">%1$s %2$d%3$s</string>
     <string name="no_season">کوئی سیزن نہیں</string>
@@ -242,14 +241,13 @@
     <string name="show_sub">Sub لیبل</string>
     <string name="show_title">عنوان</string>
     <string name="poster_ui_settings">پوسٹر پر UI elements کو ٹوگل کریں</string>
-    <string name="no_update_found">کوئی اپ ڈیٹ نہیں ملا</string>
-    <string name="check_for_update">اپ ڈیٹ کے لیے چیک کریں</string>
+
     <string name="video_lock">لاک کریں</string>
     <string name="video_aspect_ratio_resize">سائز تبدیل کریں</string>
     <string name="video_source">Source</string>
     <string name="video_skip_op">Opening چھوڑیں</string>
     <string name="dont_show_again">دوبارہ نہ دکھائیں</string>
-    <string name="skip_update">اس اپ ڈیٹ کو چھوڑ دیں</string>
+
     <string name="update">اپ ڈیٹ</string>
     <string name="watch_quality_pref">ترجیحی ویڈیو کوالٹی (Wifi)</string>
     <string name="limit_title">ویڈیو پلیئر کے عنوان کے زیادہ سے زیادہ حروف</string>
@@ -268,7 +266,7 @@
     <string name="resize_zoom">Zoom</string>
     <string name="legal_notice">دستبرداری</string>
     <string name="pref_category_links">لنکس</string>
-    <string name="pref_category_app_updates">ایپ کی تازہ کاریاں</string>
+
     <string name="pref_category_backup">بیک اپ</string>
     <string name="pref_category_cache">کیسہ</string>
     <string name="pref_category_gestures">اشارے</string>
@@ -357,10 +355,10 @@
     <string name="previous">پچھلا</string>
     <string name="trailer">ٹریلر</string>
     <string name="safe_mode_crash_info">حادثے کی معلومات دیکھیں</string>
-    <string name="delayed_update_notice">باہر نکلنے پر ایپ کو اپ ڈیٹ کر دیا جائے گا</string>
+
     <string name="download_all_plugins_from_repo">اس ذخیرہ سے تمام پلگ ان ڈاؤن لوڈ کریں؟</string>
     <string name="subscription_episode_released">قسط %d ریلیز ہو گئی!</string>
-    <string name="update_notification_failed">ایپ کا نیا ورژن انسٹال نہیں ہو سکا</string>
+
     <string name="recommended">تجویز کردہ</string>
     <string name="restart">دوبارہ شروع کریں</string>
     <string name="player_loaded_subtitles" formatted="true">لوڈ %s</string>
@@ -423,12 +421,10 @@
     <string name="enable_skip_op_from_database_des">کھولنے/ختم کرنے کے لیے سکپ پاپ اپ دکھائیں</string>
     <string name="action_mark_as_watched">دیکھا گیا کے طور پر نشان زد کریں</string>
     <string name="no">نہیں</string>
-    <string name="update_notification_downloading">ایپ اپ ڈیٹ ڈاؤن لوڈ ہو رہا ہے…</string>
-    <string name="apk_installer_legacy">میراث</string>
-    <string name="update_started">اپ ڈیٹ شروع ہو گیا</string>
+
     <string name="plugin_downloaded">پلگ ان ڈاؤن لوڈ ہو گیا</string>
     <string name="action_remove_from_watched">دیکھے گئے سے ہٹا دیں</string>
-    <string name="apk_installer_package_installer">پیکیج انسٹالر</string>
+
     <string name="sort_rating_desc">درجہ بندی (اعلی سے کم)</string>
     <string name="sort_rating_asc">درجہ بندی (کم سے زیادہ)</string>
     <string name="sort_updated_old">اپ ڈیٹ کیا گیا (پرانا سے نیا)</string>
@@ -503,7 +499,7 @@
     <string name="safe_mode_description">تمام ایکسٹینشنز کریش کی وجہ سے آف کر دی گئیں تاکہ آپ کو پریشانی کا باعث تلاش کرنے میں مدد مل سکے۔</string>
     <string name="extension_install_first">پہلے ایکسٹینشن انسٹال کریں</string>
     <string name="clipboard_too_large">بہت زیادہ متن۔ کلپ بورڈ میں محفوظ کرنے سے قاصر۔</string>
-    <string name="update_notification_installing">ایپ اپ ڈیٹ انسٹال ہو رہا ہے…</string>
+
     <string name="empty_library_logged_in_message">یہ فہرست خالی ہے۔ کسی اور پر سوئچ کرنے کی کوشش کریں۔</string>
     <string name="mobile_data">موبائل ڈیٹا</string>
     <string name="profiles">پروفائلز</string>

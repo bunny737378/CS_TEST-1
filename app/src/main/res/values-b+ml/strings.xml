@@ -3,7 +3,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">വേഗം (%.2fx)</string>
     <string name="rated_format" formatted="true">റേറ്റിംഗ്: %.1f</string>
-    <string name="new_update_format" formatted="true">പുതിയ അപ്ഡേറ്റ്! \n%1$s -&gt; %2$s</string>
+
     <string name="app_name">ക്ലൗഡ് സ്ട്രീം</string>
     <string name="title_home">ഹോം</string>
     <string name="title_search">തിരയുക</string>
@@ -92,8 +92,7 @@
     <string name="settings_info">വിവരം</string>
     <!-- <string name="advanced_search">Advanced Search</string> -->
     <string name="advanced_search_des">സ്ട്രോതസായി തിരിച്ച ഫലം തരുക</string>
-    <string name="updates_settings">അപ്ഡേറ്റുകൾ അറിയിക്കുക</string>
-    <string name="updates_settings_des">ആരംഭത്തിൽ അപ്ഡേറ്റുകൾ തിരയുക</string>
+
     <string name="github">ഗിറ്റ്ഹബ്</string>
     <string name="lightnovel">നമ്മുടെ ലൈറ്റ് നോവൽ ആപ്പ്</string>
     <string name="anim">നമ്മുടെ ആനിമേ ആപ്പ്</string>
@@ -146,8 +145,7 @@
     <string name="episode_action_auto_download">ഡൌൺലോഡ് ചെയ്യൂ</string>
     <string name="episode_action_download_mirror">മിറർ ഡൗണ്ലോഡ്</string>
     <string name="episode_action_reload_links">ലിങ്ക്സ് വീണ്ടും ലോഡുചെയ്യുക</string>
-    <string name="no_update_found">അപ്ഡേറ്റ് ലഭ്യമല്ല</string>
-    <string name="check_for_update">അപ്ഡേറ്റിനായി തിരയുക</string>
+
     <string name="video_lock">പൂട്ടുക</string>
     <string name="video_aspect_ratio_resize">വലുപ്പം മാറ്റുക</string>
     <string name="video_source">സ്രോതസ്</string>
@@ -163,7 +161,7 @@
     <string name="app_dub_sub_episode_text_format" formatted="true">%1$sഅധ്യാ%2$d</string>
     <string name="cast_format" formatted="true">കാസ്റ്റ്:%s</string>
     <string name="create_account">അക്കൗണ്ട് ഉണ്ടാക്കുക</string>
-    <string name="delayed_update_notice">പുറത്ത്പോകുന്നതോടുകൂടി ആപ് അപ്ഡേറ്റ് ആവുന്നതാണ്</string>
+
     <string name="select_library">ലൈബ്രറി തിരഞ്ഞെടുക്കുക</string>
     <string name="open_with">ഇത് ഉപയോഗിച്ച് തുറക്കുക</string>
     <string name="play_trailer_button">ട്രെയിലർ പ്ലേ ചെയ്യുക</string>
@@ -173,7 +171,7 @@
     <string name="play_with_app_name">ക്ലൗഡ് സ്ട്രീം ഉപയോഗിച്ച് പ്രവർത്തിപ്പിക്കുക</string>
     <string name="home_next_random_img_des">അടുത്ത ക്രമരഹിതമായ</string>
     <string name="episode_poster_img_des">എപ്പിസോഡ് പോസ്റ്റർ</string>
-    <string name="update_started">അപ്ഡേറ്റ് ആരംഭിച്ചു</string>
+
     <string name="home_main_poster_img_des">പ്രധാന പോസ്റ്റർ</string>
     <string name="search_poster_img_des">പോസ്റ്റർ</string>
     <string name="skip_loading">ലോഡിംഗ് ഒഴിവാക്കുക</string>
@@ -234,7 +232,7 @@
     <string name="picture_in_picture">ചിത്രം-ഇൻ-ചിത്രം</string>
     <string name="sort_updated_old">പുതുക്കിയത് (പഴയത് മുതൽ പുതിയത് വരെ)</string>
     <string name="sort_rating_desc">റേറ്റിംഗ് (ഉയർന്നത് മുതൽ താഴ്ന്നത്)</string>
-    <string name="apk_installer_legacy">പാരമ്പര്യം</string>
+
     <string name="subs_window_color">വിൻഡോ നിറം</string>
     <string name="sort_clear">ക്ലിയർ</string>
     <string name="test_log">ലോഗ്</string>
@@ -245,13 +243,11 @@
     <string name="edit">തിരുത്തുക</string>
     <string name="sort_updated_new">പുതുക്കിയത് (പുതിയത് മുതൽ പഴയത് വരെ)</string>
     <string name="nsfw_singular">NSFW</string>
-    <string name="update_notification_installing">ആപ്പ് അപ്ഡേറ്റ് ഇൻസ്റ്റാൾ ചെയ്യുന്നു…</string>
-    <string name="category_updates">അപ്ഡേറ്റുകളും ഒപ്പം ബാക്കപ്പും</string>
+
     <string name="single_plugin_disabled" formatted="true">%s(അപ്രാപ്തമാക്കി)</string>
     <string name="sort_rating_asc">റേറ്റിംഗ് (താഴ്ന്നത് മുതൽ ഉയർന്നത് വരെ)</string>
     <string name="subs_text_color">വാചക നിറം</string>
-    <string name="update_notification_failed">ആപ്പിൻ്റെ പുതിയ പതിപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാനായില്ല</string>
-    <string name="apk_installer_package_installer">പാക്കേജ് ഇൻസ്റ്റാളർ</string>
+
     <string name="sort_alphabetical_a">അക്ഷരമാലാക്രമം (A മുതൽ Z വരെ)</string>
     <string name="sort_alphabetical_z">അക്ഷരമാലാക്രമം (Z മുതൽ A വരെ)</string>
     <string name="empty_library_logged_in_message">ഈ ലിസ്റ്റ് ശൂന്യമാണ്. മറ്റൊന്നിലേക്ക് മാറാൻ ശ്രമിക്കുക.</string>

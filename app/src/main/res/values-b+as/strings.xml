@@ -22,7 +22,7 @@
     <string name="search">সন্ধান কৰক</string>
     <string name="library">পুথিভঁৰাল</string>
     <string name="category_account">একাউণ্ট আৰু সুৰক্ষা</string>
-    <string name="category_updates">আপডেট আৰু ব্যাকআপ</string>
+
     <string name="automatic_plugin_download">স্বয়ংক্ৰিয়ভাৱে প্লাগইন ডাউনলোড কৰক</string>
     <string name="automatic_plugin_download_mode_title">প্লাগইন ডাউনলোডৰ ম\'ড নিৰ্বাচন কৰক</string>
     <string name="automatic_plugin_download_summary">যোগ কৰা ৰিপ\'জিটৰীৰ পৰা এতিয়ালৈকে ইনষ্টল নকৰা সকলো প্লাগইন স্বয়ংক্ৰিয়ভাৱে ইনষ্টল কৰক।</string>
@@ -39,8 +39,7 @@
     <string name="episode_action_download_subtitle">সাবটাইটেল ডাউনলোড কৰক</string>
     <string name="show_hd">গুণগত মানৰ ছপা</string>
     <string name="show_title">শিৰোনাম</string>
-    <string name="no_update_found">কোনো আপডেট পোৱা নগ\'ল</string>
-    <string name="check_for_update">আপডেটৰ বাবে পৰীক্ষা কৰক</string>
+
     <string name="dont_show_again">আৰো দেখুৱাব নালাগে</string>
     <string name="limit_title">ভিডিঅ\' প্লেয়াৰৰ শিৰোনামৰ সৰ্বাধিক অক্ষৰ</string>
     <string name="add_site_summary">বিদ্যমান চাইটৰ ক্লোন এটা সন্নিবিষ্ট কৰক, ভিন্ন URLৰ সৈতে</string>
@@ -129,7 +128,7 @@
     <string name="download_failed">ডাউনলোড বিফল</string>
     <string name="download_canceled">ডাউনলোড বাতিল</string>
     <string name="download_done">ডাউনলোড সম্পন্ন</string>
-    <string name="update_started">আপডেট আৰম্ভ হৈছে</string>
+
     <string name="stream">নেটৱাৰ্ক ষ্ট্ৰীম</string>
     <string name="error_loading_links_toast">লিংক লোডত ত্ৰুটি</string>
     <string name="links_reloaded_toast">লিংক পুনৰ লোড কৰা হ’ল</string>
@@ -216,10 +215,9 @@
     <string name="kitsu_settings">কিৎসুৰ পৰা প\'ষ্টাৰ দেখুৱাওক</string>
     <string name="pref_filter_search_quality">সন্ধান ফলাফলে নিৰ্বাচিত ভিডিঅ\' গুণমান লুকুৱাওক</string>
     <string name="automatic_plugin_updates">স্বয়ংক্ৰিয় প্লাগইন আপডেট</string>
-    <string name="updates_settings">এপ্‌ আপডেট দেখুৱাওক</string>
+
     <string name="redo_setup_process">পুনৰ চেটআপ প্ৰক্ৰিয়া কৰক</string>
-    <string name="apk_installer_settings">APK ইনষ্টলাৰ</string>
-    <string name="apk_installer_settings_des">কিছুমান ফোনে নতুন পেকেজ ইনষ্টলাৰ সমৰ্থন নকৰে। আপডেটসমূহ ইনষ্টল নকৰিলে লিগেচি বিকল্প পৰীক্ষা কৰক।</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">একেই ডেভেলপাৰৰ দ্বাৰা লাইট নভেল এপ্‌</string>
     <string name="discord">Discordত যোগদান কৰক</string>
@@ -303,7 +301,7 @@
     <string name="update">আপডেট কৰক</string>
     <string name="watch_quality_pref">পচন্দৰ ভিডিঅ\' মান (WiFi)</string>
     <string name="video_skip_op">OP স্কিপ কৰক</string>
-    <string name="skip_update">এই আপডেট স্কিপ কৰক</string>
+
     <string name="watch_quality_pref_data">পচন্দৰ ভিডিঅ\' মান (ম\'বাইল ডাটা)</string>
     <string name="limit_title_rez">ভিডিঅ\' প্লেয়াৰৰ ৰিজল্যুশন</string>
     <string name="video_buffer_size_settings">ভিডিঅ\' বাফাৰ আকাৰ</string>
@@ -331,7 +329,7 @@
     <string name="legal_notice">দায়ৱলী</string>
     <string name="pref_category_bypass">ISP বাইপাছসমূহ</string>
     <string name="resize_zoom">জুম কৰক</string>
-    <string name="pref_category_app_updates">এপ্লিকেশ্বনৰ আপডেটসমূহ</string>
+
     <string name="pref_category_backup">ব্যাকআপ</string>
     <string name="pref_category_extensions">এক্সটেনশ্বনসমূহ</string>
     <string name="pref_category_actions">ক্ৰিয়াসমূহ</string>
@@ -503,12 +501,7 @@
     <string name="app_unrestricted_toast">এপ্‌ৰ বেটাৰী ব্যৱহাৰ ইতিমধ্যে অবাধত সজোৱা হৈছে</string>
     <string name="battery_dialog_message">ক্লাউডষ্ট্ৰিমক পটভূমিত চলাবলৈ অনুমতিৰ প্ৰয়োজন যাতে চাবস্ক্ৰাইব কৰা টিভি শ্ব\'সমূহৰ বাবে নিৰৱচ্ছিন্ন ডাউনলোড আৰু জাননীসমূহ নিশ্চিত কৰিব পাৰি। এটা অনুৰোধ সংলাপ প্ৰদৰ্শন কৰিবলে ঠিক আছে টিপক। তাৰ পিছত, \'Allow\' টিপক।\n\nঅনুগ্ৰহ কৰি মন কৰক, এই অনুমতিৰ অৰ্থ এইটো নহয় যে CS3 এ আপোনাৰ বেটাৰী শেষ কৰিব। ই কেৱল প্ৰয়োজনৰ সময়তহে পটভূমিত কাম কৰিব, যেনে জাননী লাভ কৰাৰ সময়ত বা অফিচিয়েল এক্সটেনচনৰ পৰা ভিডিঅ’ ডাউনলোড কৰাৰ সময়ত।</string>
     <string name="app_info_intent_error">CloudStream-ৰ App Info খুলিব পৰা নগ\'ল।</string>
-    <string name="update_notification_failed">এপ্‌ৰ নতুন সংস্কৰণ স্থাপন কৰিব পৰা নগ\'ল</string>
-    <string name="update_notification_downloading">এপ্‌ আপডেট ডাউনলোড কৰি আছে…</string>
-    <string name="update_notification_installing">এপ্‌ আপডেট স্থাপন কৰি আছে…</string>
-    <string name="apk_installer_legacy">প্ৰাচীন</string>
-    <string name="apk_installer_package_installer">পেকেজ ইন্সটলাৰ</string>
-    <string name="delayed_update_notice">এপ্‌ নিৰ্গমন কৰোতে আপডেট হ\'ব</string>
+
     <string name="sort_by">শ্ৰেণী অনুসাৰে চিহ্নিত কৰক</string>
     <string name="sort">শ্ৰেণী</string>
     <string name="sort_rating_desc">ৰেটিং (উচ্চৰ পৰা নিম্নলৈ)</string>
@@ -567,9 +560,9 @@
     <string name="biometric_prompt_description">কেইবাটাও ভুল চেষ্টা কৰাৰ পিছত, প্ৰম্প্ট বন্ধ হ\'ব। পুনৰ চেষ্টা কৰিবলৈ মাত্ৰ এপ্পটো পুনৰ আৰম্ভ কৰক।</string>
     <string name="biometric_warning">আপোনাৰ CloudStream ডেটা এতিয়া সংৰক্ষণ কৰা হৈছে। এইৰ সম্ভাৱনা অত্যন্ত কম, কিন্তু সকলো ডিভাইচৰ ব্যৱহাৰ ভিন্ন হ\'ব পাৰে। যদি এপ্লিকেচনটোত প্রবেশ কৰিব নোৱাৰা অৱস্থাত পৰাৰ কম সম্ভাৱনাৰ ঘটনা ঘটে, তেন্তে সম্পূৰ্ণভাবে এপ্প ডেটা মচি দিয়ক আৰু সংৰক্ষণৰ পৰা পুনৰুদ্ধাৰ কৰক। কোনো অশান্তিৰ বাবে আমাৰ দুখিত হওক।</string>
     <string name="download">ডাউনলোড</string>
-    <string name="updates_settings_des">এপ্‌ আৰম্ভণিৰ পিছত নতুন আপডেটৰ সন্ধান কৰক।</string>
+
     <string name="anim">একেই ডেভেলপাৰৰ দ্বাৰা এনিম এপ্‌</string>
-    <string name="new_update_format" formatted="true">নতুন আপডেট পোৱা গ’ল! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">ফিলাৰ</string>
     <string name="play_with_app_name">CloudStreamৰে প্লে কৰক</string>
     <string name="title_search">সন্ধান</string>

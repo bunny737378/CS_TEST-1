@@ -16,7 +16,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Rychlost (%.2fx)</string>
     <string name="rated_format" formatted="true">Hodnocení: %.1f</string>
-    <string name="new_update_format" formatted="true">Nalezena nová aktualizace! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Výplň</string>
     <string name="duration_format" formatted="true">%d min</string>
     <string name="app_name">CloudStream</string>
@@ -138,13 +138,12 @@
     <string name="backup_failed_error_format">Chyba při zálohování %s</string>
     <string name="search">Search</string>
     <string name="category_account">Účty a zabezpečení</string>
-    <string name="category_updates">Aktualizace a záloha</string>
+
     <string name="settings_info">Informace</string>
     <string name="advanced_search">Pokročilé hledání</string>
     <string name="advanced_search_des">Zobrazí vám výsledky hledání oddělené poskytovatelem</string>
     <string name="show_fillers_settings">Zobrazit výplňové epizody u anime</string>
-    <string name="updates_settings">Zobrazit aktualizace aplikace</string>
-    <string name="updates_settings_des">Při spuštění aplikace automaticky zkontrolovat nové aktualizace.</string>
+
     <string name="github">GitHub</string>
     <string name="lightnovel">Nenáročná aplikace pro romány od stejných vývojářů</string>
     <string name="anim">Anime aplikace od stejných vývojářů</string>
@@ -223,14 +222,13 @@
     <string name="show_sub">Štítek titulků</string>
     <string name="show_title">Název</string>
     <string name="poster_ui_settings">Přepnout prvky UI na plakátu</string>
-    <string name="no_update_found">Nenalezeny žádné aktualizace</string>
-    <string name="check_for_update">Zkontrolovat aktualizace</string>
+
     <string name="video_lock">Uzamknout</string>
     <string name="video_aspect_ratio_resize">Změnit velikost</string>
     <string name="video_source">Zdroj</string>
     <string name="video_skip_op">Přeskočit OP</string>
     <string name="dont_show_again">Již nezobrazovat</string>
-    <string name="skip_update">Přeskočit tuto aktualizace</string>
+
     <string name="update">Aktualizovat</string>
     <string name="watch_quality_pref">Upřednostněná kvalita sledování (WiFi)</string>
     <string name="limit_title">Maximální počet znaků v názvu přehrávače</string>
@@ -392,9 +390,9 @@
     <string name="kitsu_settings">Zobrazit plakáty z Kitsu</string>
     <string name="automatic_plugin_download">Automaticky stahovat doplňky</string>
     <string name="redo_setup_process">Znovu provést proces nastavení</string>
-    <string name="apk_installer_settings">Instalátor APK</string>
+
     <string name="episode_format" formatted="true">%1$d %2$s</string>
-    <string name="apk_installer_settings_des">Některá zařízení nepodporují nový instalátor balíčků. Pokud se aktualizace nenainstalují, zkuste použít starší možnost.</string>
+
     <string name="pref_category_cache">Mezipaměť</string>
     <string name="next_episode_format" formatted="true">Epizoda %d bude vydána za</string>
     <string name="next_episode_time_hour_format" formatted="true">%1$dh %2$dm</string>
@@ -419,7 +417,7 @@
     <string name="safe_mode_crash_info">Zobrazit informace o pádu</string>
     <string name="extension_rating" formatted="true">Hodnocení: %s</string>
     <string name="action_remove_from_watched">Odebrat ze zhlédnutých</string>
-    <string name="update_notification_installing">Instalace aktualizace aplikace…</string>
+
     <string name="safe_mode_description">Všechna rozšíření byla vypnuta z důvodu pádu, abyste mohli najít to, které způsobuje potíže.</string>
     <string name="extension_version">Verze</string>
     <string name="player_pref">Preferovaný přehrávač videí</string>
@@ -436,11 +434,9 @@
     <string name="skip_type_credits">Poděkování</string>
     <string name="skip_type_intro">Znělka</string>
     <string name="enable_skip_op_from_database_des">Zobrazit vyskakovací okna pro přeskočení úvodu/konce</string>
-    <string name="update_notification_downloading">Stahování aktualizace aplikace…</string>
+
     <string name="confirm_exit_dialog">Opravdu chcete opustit aplikaci?</string>
-    <string name="update_notification_failed">Nepodařilo se nainstalovat novou verzi aplikace</string>
-    <string name="apk_installer_legacy">Původní</string>
-    <string name="delayed_update_notice">Aplikace bude po ukončení aktualizována</string>
+
     <string name="empty_library_no_accounts_message">Vaše knihovna je prázdná :( \nPřihlaste se k účtu v knihovně nebo přidejte pořady do místní knihovny.</string>
     <string name="select_library">Vybrat knihovnu</string>
     <string name="sort_rating_desc">Hodnocení (od nejvyššího)</string>
@@ -469,8 +465,7 @@
     <string name="pref_category_subtitles">Titulky</string>
     <string name="pref_category_player_layout">Rozložení</string>
     <string name="pref_category_defaults">Výchozí hodnoty</string>
-    <string name="apk_installer_package_installer">Instalátor balíčků</string>
-    <string name="pref_category_app_updates">Aktualizace aplikace</string>
+
     <string name="setup_done">Hotovo</string>
     <string name="extension_types">Podporováno</string>
     <string name="season_format">%1$s %2$d%3$s</string>
@@ -480,7 +475,7 @@
     <string name="play_trailer_button">Přehrát trailer</string>
     <string name="next_episode_time_day_format" formatted="true">%1$dd %2$dh %3$dm</string>
     <string name="view_public_repositories_button">Zobrazit komunitní repozitáře</string>
-    <string name="update_started">Aktualizace zahájena</string>
+
     <string name="stream">Síťový stream</string>
     <string name="autoplay_next_settings">Automaticky přehrát další epizodu</string>
     <string name="livestreams">Živé přenosy</string>
@@ -717,9 +712,7 @@
     <string name="top_center">Uprostřed nahoře</string>
     <string name="top_right">Vpravo nahoře</string>
     <string name="play_full_series_button">Přehrát celý seriál</string>
-    <string name="install_prerelease">Nainstalovat předběžnou verzi</string>
-    <string name="prerelease_already_installed">Předběžné vydání je již nainstalováno.</string>
-    <string name="prerelease_install_failed">Nepodařilo se nainstalovat předběžné vydání.</string>
+
     <string name="show_episode_text">Text epizody</string>
     <string name="search_suggestions">Návrhy vyhledávání</string>
     <string name="search_suggestions_des">Zobrazit návrhy vyhledávání během psaní</string>

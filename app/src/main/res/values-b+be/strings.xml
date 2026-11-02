@@ -21,7 +21,7 @@
     <string name="preview_background_img_des">Перадпрагляд фону</string>
     <string name="player_speed_text_format" formatted="true">Хуткасць (%.2fx)</string>
     <string name="rated_format" formatted="true">Ацэнка: %.1f</string>
-    <string name="new_update_format" formatted="true">Знойдзена новае абнаўленне!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Запаўняльнік</string>
     <string name="duration_format" formatted="true">%d хвіл</string>
     <string name="app_name">CloudStream</string>
@@ -73,7 +73,7 @@
     <string name="offline_file">Даступна для прагляду па-за сеткай</string>
     <string name="select_all">Выбраць ўсё</string>
     <string name="deselect_all">Зняць выбар</string>
-    <string name="update_started">Пачалося абнаўленне</string>
+
     <string name="stream">Сеткавая трансляцыя</string>
     <string name="open_local_video">Адкрыць лакальнае відэа</string>
     <string name="error_loading_links_toast">Памылка пры загрузцы спасылак</string>
@@ -170,7 +170,7 @@
     <string name="search">Пошук</string>
     <string name="library">Бібліятэка</string>
     <string name="category_account">Уліковыя запісы і бяспека</string>
-    <string name="category_updates">Абнаўленні і рэзервовае капіраванне</string>
+
     <string name="settings_info">Звесткі</string>
     <string name="advanced_search">Пашыраны пошук</string>
     <string name="advanced_search_des">Паказвае пошукавыя вынікі, падзеленыя па пастаўшчыкам</string>
@@ -180,7 +180,7 @@
     <string name="pref_filter_search_quality">Схаваць выбраную якасць відэа з вынікаў пошуку</string>
     <string name="automatic_plugin_updates">Аўтаматычнае абнаўленне ўбудоў</string>
     <string name="automatic_plugin_download">Аўтаматычная спампоўка ўбудоў</string>
-    <string name="apk_installer_settings_des">Некаторыя прылады не падтрымліваюць новы ўсталёўшчык пакетаў. Калі абнаўленні не ўсталёўваюцца, паспрабуйце ранейшую версію.</string>
+
     <string name="github">Github</string>
     <string name="automatic_plugin_download_mode_title">Выберыце рэжым фільтравання спампоўвання убудоў</string>
     <string name="search_suggestions">Прапановы пошуку</string>
@@ -188,13 +188,9 @@
     <string name="clear_suggestions">Ачысціць прапановы</string>
     <string name="show_cast_in_details">Паказваць склад акцёраў</string>
     <string name="automatic_plugin_download_summary">Аўтаматычна ўсталёўваць усе яшчэ не ўсталяваныя ўбудовы з даданых рэпазіторыяў.</string>
-    <string name="updates_settings">Паказваць абнаўленні праграмы</string>
-    <string name="updates_settings_des">Аўтаматычна правяраць на новыя абнаўленні пасля адкрыцця праграмы.</string>
+
     <string name="redo_setup_process">Паўтарыць наладжванне</string>
-    <string name="install_prerelease">Усталяваць перадфінальную версію</string>
-    <string name="prerelease_already_installed">Перадфінальная версія ўжо ўсталявана.</string>
-    <string name="prerelease_install_failed">Не ўдалося ўсталяваць перадфінальную версію.</string>
-    <string name="apk_installer_settings">Усталёўшчык APK</string>
+
     <string name="lightnovel">Лёгкая праграма для раманаў ад тых жа распрацоўшчыкаў</string>
     <string name="anim">Праграма для анімэ ад тых жа распрацоўшчыкаў</string>
     <string name="discord">Далучайцеся да Discord</string>
@@ -305,14 +301,13 @@
     <string name="show_title">Загаловак</string>
     <string name="show_episode_text">Тэкст серыі</string>
     <string name="poster_ui_settings">Пераключэнне элементаў інтэрфейсу на плакаце</string>
-    <string name="no_update_found">Абнаўленняў не знойдзена</string>
-    <string name="check_for_update">Праверыць на абнаўленні</string>
+
     <string name="video_lock">Блакіроўка</string>
     <string name="video_aspect_ratio_resize">Змена памеру</string>
     <string name="video_source">Крыніца</string>
     <string name="video_skip_op">Прапусціць ОП</string>
     <string name="dont_show_again">Не паказваць зноў</string>
-    <string name="skip_update">Прапусціць гэта абнаўленне</string>
+
     <string name="update">Абнавіць</string>
     <string name="watch_quality_pref">Прыярытэтная якасць прагляду (WiFi)</string>
     <string name="watch_quality_pref_data">Прыярытэтная якасць прагляду (Мабільная перадача дадзеных)</string>
@@ -345,7 +340,7 @@
     <string name="legal_notice">Адмова ад адказнасці</string>
     <string name="pref_category_bypass">Абходы ISP</string>
     <string name="pref_category_links">Спасылкі</string>
-    <string name="pref_category_app_updates">Абнаўленні праграмы</string>
+
     <string name="pref_category_backup">Рэзервовае капіраванне</string>
     <string name="pref_category_extensions">Пашырэнні</string>
     <string name="pref_category_actions">Дзеянні</string>
@@ -557,12 +552,7 @@
     <string name="battery_dialog_message">Каб забяспечыць бесперапынныя спампоўкі і апавяшчэнні аб тэлеперадачах, на якія вы падпісаны, CloudStream патрэбны дазвол на выкананне ў фонавым рэжыме. Па націсканні «ОК», вам пакажацца дыялогавае акно. Націсніце «Дазволіць».\n\nЗвярніце ўвагу — гэта не значыць, што CS3 будзе садзіць вашу батарэю. Праграма будзе працаваць у фоне толькі калі патрэбна, напрыклад пры атрыманні апавяшчэнняў або спампоўванні відэа з афіцыйных пашырэнняў.</string>
     <string name="app_unrestricted_toast">Выкарыстанне батарэі ўжо выстаўлена як неабмежаванае</string>
     <string name="app_info_intent_error">Не ўдалося адкрыць звесткі пра праграму CloudStream.</string>
-    <string name="update_notification_downloading">Спампоўванне абнаўлення праграмы…</string>
-    <string name="update_notification_installing">Усталяванне абнаўлення праграмы…</string>
-    <string name="update_notification_failed">Не ўдалося ўсталяваць новую версію праграмы</string>
-    <string name="apk_installer_legacy">Састарэлая версія</string>
-    <string name="apk_installer_package_installer">Усталёўшчык пакетаў</string>
-    <string name="delayed_update_notice">Праграма будзе абноўлена пасля выхаду</string>
+
     <string name="sort_by">Сартаваць па</string>
     <string name="sort">Сартаваць</string>
     <string name="sort_rating_desc">Рэйтынгу (ад высокага да нізкага)</string>

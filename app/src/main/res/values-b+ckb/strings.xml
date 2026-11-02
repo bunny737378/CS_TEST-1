@@ -20,7 +20,7 @@
     <string name="preview_background_img_des">پێشبینی پاشبنەما</string>
     <string name="player_speed_text_format" formatted="true">خێرای(x%.2f)</string>
     <string name="rated_format" formatted="true">هەڵسەنگاندن:%.1f</string>
-    <string name="new_update_format" formatted="true">نوێکاری نوێ دۆزرایەوە!\n%1$s-&gt;%2$s</string>
+
     <string name="filler" formatted="true">فیلەر</string>
     <string name="duration_format" formatted="true">min%d</string>
     <string name="app_name">کلاود ستریم</string>
@@ -64,7 +64,7 @@
     <string name="offline_file">بەردەستە بۆ سەیرکردنی ئۆفلاین</string>
     <string name="select_all">هەموو هەڵبژێرە</string>
     <string name="deselect_all">هەمووی لابدە</string>
-    <string name="update_started">نوێکردنەوە دەستی پێکرد</string>
+
     <string name="open_local_video">ڤیدیۆی ناوخۆیی بکەرەوە</string>
     <string name="download_storage_text">کۆگای ناوخۆیی</string>
     <string name="app_dubbed_text">دۆبلاژ</string>

@@ -20,8 +20,7 @@ import com.lagradost.cloudstream3.plugins.RepositoryManager.convertRawGitUrl
 import com.lagradost.cloudstream3.plugins.RepositoryManager.parseRepoUrl
 import com.lagradost.cloudstream3.plugins.RepositoryManager.removeRepository
 import com.lagradost.cloudstream3.plugins.SitePlugin
-import com.lagradost.cloudstream3.ui.settings.ApkUpdater
-import com.lagradost.cloudstream3.ui.settings.ApkUpdater.isFileDigest
+import com.lagradost.cloudstream3.plugins.PluginFileTransfer
 import com.lagradost.cloudstream4.viewmodels.DigestPair
 import com.lagradost.cloudstream4.viewmodels.Plugin
 import com.lagradost.cloudstream4.viewmodels.PluginDownloadSource
@@ -180,7 +179,7 @@ object AndroidRepositoryManager : RepositoryManager {
          *
          * Because if the file digest is correct, then why do we need to do a network connection?
          * */
-        if (isFileDigest(file, source.digest)) {
+        if (PluginFileTransfer.isFileDigest(file, source.digest)) {
             return@withContext file.absolutePath
         }
 
@@ -189,7 +188,7 @@ object AndroidRepositoryManager : RepositoryManager {
         tempFile.outputStream().use { writeStream ->
             app.get(convertRawGitUrl(source.pluginUrl)).body.use { body ->
                 val readStream = body.byteStream()
-                ApkUpdater.transfer(
+                PluginFileTransfer.transfer(
                     writeStream = writeStream,
                     readStream = readStream,
                     length = source.size,

@@ -16,7 +16,7 @@
     <string name="search_poster_img_des">پوستر</string>
     <string name="backup_frequency">كلّ قديش بيعمل الآپ نسخة إحتياطية</string>
     <string name="kitsu_settings">فرجي الپوسترات من موقع \"كيتسو\"</string>
-    <string name="updates_settings_des">تلقائيًا نبش على تجديدات جديدة بعد ما ينفتح الآپ.</string>
+
     <string name="show_fillers_settings">فرجي حلقات الفِلِر بال أنمي</string>
     <string name="double_tap_to_pause_settings">كبسو مرتين لتحطو پوز</string>
     <string name="subs_font_size">حجم الكتيبة</string>
@@ -29,7 +29,7 @@
     <string name="show_log_cat">فرجي الـLogcat 🐈</string>
     <string name="go_forward_30">+30</string>
     <string name="continue_watching">كفي حضر</string>
-    <string name="new_update_format" formatted="true">في أپدايت جديدة! \n%1$s ← %2$s</string>
+
     <string name="subs_download_languages">نزل الترجمات مع الڤيديو</string>
     <string name="search_provider_text_providers">عوزو المصادر لَ تنبّشو</string>
     <string name="go_back_img_des">رجاع</string>
@@ -74,7 +74,7 @@
     <string name="automatic_plugin_download_summary">تلقائيًا نَزِل كل الإضافات من الريپويات يللي نزادِت.</string>
     <string name="delete">محي</string>
     <string name="start">بلش</string>
-    <string name="apk_installer_settings_des">فيه أجهزة م فيها تعوز الطريقة الجديدة لتجديد الآپات. جربو \"الطريقة القديمة\" إزا م عم تنزل التجديدات.</string>
+
     <string name="picture_in_picture_des">بعد ما تسكر \"كلود ستريم\"، بكفي الڤيديو بشِباك زغير فوق غير آپ</string>
     <string name="no_chromecast_support_toast">هيدا المصدر م بيدعم \"كروم كاست\"</string>
     <string name="advanced_search">تنبيش منظّم</string>
@@ -86,7 +86,7 @@
     <string name="double_tap_to_seek_settings_des">كبوس مرتين على اليمين أو الشمال حتى تقرب أو ترَجِع الڤيديو</string>
     <string name="normal_no_plot">م نلاقى وصف الأحداث</string>
     <string name="next_episode">الحلقة يللي بَعدها</string>
-    <string name="updates_settings">فرجي تجديدات الآپ</string>
+
     <string name="library">رفّ</string>
     <string name="lightnovel">آپ من نفس المطورين للروايات الخفيفة، بدل من الڤيديوات</string>
     <string name="automatic_plugin_download_mode_title">حدد الوضع لَتفَلتِر تنزيل الإضافات</string>
@@ -136,13 +136,13 @@
     <string name="loading">لودينگ…</string>
     <string name="action_remove_watching">شيل</string>
     <string name="action_open_watching">بَعِد مَعلومات</string>
-    <string name="category_updates">التجديدات وال نسخات الاحتياطية</string>
+
     <string name="pref_filter_search_quality">خبي هيدي الجودات من نتايج التنبيش</string>
     <string name="type_on_hold">موقف موقتًا</string>
     <string name="app_name">كلود ستريم</string>
     <string name="player_size_settings_des">شيل الأسود من الأطراف</string>
     <string name="season_short">ج</string>
-    <string name="apk_installer_settings">طريقة تجديد الآپ</string>
+
     <string name="autoplay_next_settings">تلقائيًا مشّي الحلقة الّي بعدا</string>
     <string name="picture_in_picture">كفي فوق غير آپ</string>
     <string name="player_subtitles_settings_des">سَتِنگز ترجمة الڤيديو</string>
@@ -186,8 +186,7 @@
     <string name="android_tv_interface_off_seek_settings">المشغل متخبى - مدة التقديم</string>
     <string name="movies_singular">فيلم</string>
     <string name="torrent_singular">تورنت</string>
-    <string name="no_update_found">م لقينا تجديد</string>
-    <string name="check_for_update">شوف إزا فيه تجديد</string>
+
     <string name="render_error">في مشكلة بجهاز العرض (Renderer error)</string>
     <string name="show_title">العِنوان</string>
     <string name="jsdelivr_proxy">پروكسي \"گِت هَب\"</string>
@@ -212,7 +211,7 @@
     <string name="unexpected_error">مشكلة مش متوقع بمشغل الڤيديو (Unexpected player error)</string>
     <string name="video_disk_description">بسبِب أعطال إزا نحط على مستوى عالي كتير على الأجهزة يللي م بتساع كتير، متل تلفزيون \"أندرويد\".</string>
     <string name="others">شي غير</string>
-    <string name="skip_update">أفي هيدا التجديد</string>
+
     <string name="episode_action_play_in_app">مَشي بال آپ</string>
     <string name="dns_pref_summary">مفيد لتجاوز المنع من مزود خدمة الإنترنت</string>
     <string name="tv_series_singular">مسلسل</string>
@@ -240,7 +239,7 @@
     <string name="documentaries_singular">فلم وثائقي</string>
     <string name="limit_title">الحد الأعلى للحروف بعنوان الڤيديو</string>
     <string name="pref_category_looks">المظاهر</string>
-    <string name="pref_category_app_updates">تجديدات الآپ</string>
+
     <string name="provider_lang_settings">لغات الإضافات</string>
     <string name="category_general">عام</string>
     <string name="download_path_pref">ممر التنزيل</string>
@@ -279,7 +278,7 @@
     <string name="sort_clear">فضّى</string>
     <string name="example_username">إسم الأكونت</string>
     <string name="filter_bookmarks">فَلتِر الإشارات المرجعية</string>
-    <string name="update_started">بَلَش التجديد</string>
+
     <string name="sort_copy">نسخ</string>
     <string name="home_more_info">بَعد معلومات</string>
     <string name="error_loading_links_toast">في مشكلة بفتح الروابط</string>
@@ -364,13 +363,13 @@
     <string name="skip_type_format" formatted="true">أفّي %s</string>
     <string name="title">العنوان</string>
     <string name="enter_pin_with_name" formatted="true">حطو الأرقام السرية لـ\"%s\"</string>
-    <string name="apk_installer_legacy">الطريقة القديمة</string>
+
     <string name="subtitles_raised">معلى</string>
     <string name="blank_repo_message">\"كلود ستريم\" م بتجي مع مصادر ڤيديوات. لازم تنزلو المصادر من ريپويات. \n \nفيه معلومات على الـ\"ديسكورد\" تبعنا، أو فيكن تنبشو ع معلومات على الإنترنت.</string>
     <string name="add_sync">زبد تتبع</string>
     <string name="mobile_data">3G/4G…</string>
     <string name="player_loaded_subtitles" formatted="true">نفَتح %s</string>
-    <string name="update_notification_failed">م قدرنا ننزل الإصدار الجديد تبع الآپ</string>
+
     <string name="extension_authors">المؤلفين</string>
     <string name="plugin_singular">إضافة</string>
     <string name="duplicate_title">معقول يكون موجود أصلًا</string>
@@ -485,7 +484,7 @@
     <string name="provider_languages_tip">حضار الڤيديوات بهيدي اللغات</string>
     <string name="history">السجل</string>
     <string name="subscription_episode_released">نَزَلو الحلقة %d!</string>
-    <string name="update_notification_downloading">عم ننزل تجديد الآپ…</string>
+
     <string name="plugins_downloaded" formatted="true">نزلت: %d</string>
     <string name="subtitles_example_text">أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ</string>
     <string name="quality_hd">HD</string>
@@ -504,7 +503,7 @@
     <string name="sync_score_format" formatted="true">%d/10</string>
     <string name="clipboard_too_large">النص كبير كتير. مافينا ننسخو.</string>
     <string name="plugins_updated" formatted="true">عدد الإضافيات يللي تجددت: %d</string>
-    <string name="delayed_update_notice">رح يتجدد الآپ وقتا تطلعو مِنو</string>
+
     <string name="hls_playlist">پلاي ليست \"ايش أل أس\"</string>
     <string name="add_repository">زيد ريپو</string>
     <string name="action_mark_as_watched">علم إنو حضرتو</string>
@@ -513,7 +512,7 @@
     <string name="no_repository_found_error">م لقينا ريپو. تأكدو إنو الرابط صح وجربو تعوزو \"ڤي پي أن\" (VPN)</string>
     <string name="authenticated_user_fail" formatted="true">فشل الفوت ع الأكونت \"%s\"</string>
     <string name="max">الحد الأعلى</string>
-    <string name="update_notification_installing">عم نتطبق تجديد الآپ…</string>
+
     <string name="plugin">إضافات</string>
     <string name="plugin_load_fail" formatted="true">م قدرنا نفتح %s</string>
     <string name="extension_rating" formatted="true">رايتينگ: %s</string>
@@ -530,7 +529,7 @@
     <string name="error_invalid_url">رايط مش صالح</string>
     <string name="subtitle_offset_hint">1000 مللي ثانية</string>
     <string name="extension_version">إصدار</string>
-    <string name="apk_installer_package_installer">الطريقة الجديدة (PackageInstaller)</string>
+
     <string name="is_adult">18+</string>
     <string name="single_plugin_disabled" formatted="true">%s (مَنزوعة)</string>
     <string name="quality_dvd">دي ڤي دي</string>
@@ -683,9 +682,7 @@
     <string name="edit_profile_image_hint">ادخل لينك ( عنوان ال URL ) تبع صورة الملف</string>
     <string name="edit_profile_image_success">تم تعديل الصورة بنجاح</string>
     <string name="play_full_series_button">بلّش كل المسلسل</string>
-    <string name="install_prerelease">نزل النسخة التجريبية من الآپ</string>
-    <string name="prerelease_already_installed">أصلًا عندك النسخة التجريبية.</string>
-    <string name="prerelease_install_failed">فشل تنزيل النسخة التجريبية.</string>
+
     <string name="episode_action_play_mirror">ستعمل مصدر بديل</string>"
     <string name="show_episode_text">كتيبة الحلقة</string>
     <string name="edit_profile_image_error_empty">م لقينا الرابط</string>

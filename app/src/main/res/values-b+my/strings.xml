@@ -11,7 +11,7 @@
     <string name="go_back_img_des">နောက်သို့</string>
     <string name="preview_background_img_des">နောက်ခံပုံရိပ်ကို အကြိုကြည့်ရန်</string>
     <string name="rated_format" formatted="true">အဆင့်: %.1f</string>
-    <string name="new_update_format" formatted="true">အပ်ဒိတ်အသစ်! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">စစ်ထုတ်မှု</string>
     <string name="duration_format" formatted="true">%d မိနစ်</string>
     <string name="app_name">CloudStream</string>
@@ -88,7 +88,7 @@
     <string name="backup_failed">သိုလှောင်ရုံခွင့်ပြုချက်မရိှပါ။ပြန်ကြိုးစားပါ။</string>
     <string name="backup_failed_error_format">အရန်သိမ်းနေစဥ်အချို့အယွင်း %s</string>
     <string name="library">လိုက်ဘရီ</string>
-    <string name="category_updates">အပ်ဒိတ်များနှင့်အရန်သိမ်းဆည်းမှု</string>
+
     <string name="advanced_search">နက်နက်ရှိုင်းရှိုင်းရှာခြင်း</string>
     <string name="advanced_search_des">သင့်ကိုဝန်ဆောင်မှုပေးသူအလိုက်ရှာဖွေမှုရလဒ်များပေးမည်</string>
     <string name="show_fillers_settings">anime များအတွက်ဖြည့်စွက်အပိုင်းကိုပြရန်</string>
@@ -96,10 +96,9 @@
     <string name="kitsu_settings">Kitsu မှ ပိုစတာများကိုပြရန်</string>
     <string name="automatic_plugin_updates">အလိုအလျောက် ဖြည့်စွက်လုပ်ဆောင်ချက်များကိုအပ်ဒိတ်တင်ခြင်း</string>
     <string name="automatic_plugin_download_mode_title">အပိုလုပ်ဆောင်ချက်များကိုစစ်ထုတ်ရန်မုဒ်ရွေးပါ</string>
-    <string name="updates_settings">အက်ပ်အပ်ဒိတ်များပြရန်</string>
+
     <string name="redo_setup_process">အစီအစဥ်ချခြင်းကိုပြန်စမည်</string>
-    <string name="apk_installer_settings">အက်ပ်ထည့်သွင်းခြင်း</string>
-    <string name="apk_installer_settings_des">အချို့ဖုန်းတွေက အက်ပ်ထည့်သွင်းခြင်းလုပ်ဆောင်ချက်အသစ်ကို မပံ့ပိုးပါဘူး။အကယ်၍အလုပ်မဖြစ်ပါကသမားရိုးကျနည်းလမ်းကိုအသုံးပြုပါ။</string>
+
     <string name="github">Github</string>
     <string name="no_chromecast_support_toast">ဤဝန်ဆောင်မှုပေးသူသည် Chromecast ကိုမပံ့ပိုးပါ</string>
     <string name="no_links_found_toast">လင့်များမတွေ့ပါ</string>
@@ -159,12 +158,11 @@
     <string name="show_dub">နောက်ခံအသံ အမှတ်အသား</string>
     <string name="show_sub">စာတန်း အမှတ်အသား</string>
     <string name="show_title">ခေါင်းစဥ်</string>
-    <string name="no_update_found">အပ်ဒိတ်မရှိပါ</string>
-    <string name="check_for_update">အပ်ဒိတ်စစ်ရန်</string>
+
     <string name="video_lock">လော့ခ်ခတ်ရန်</string>
     <string name="video_source">ရင်းမြစ်</string>
     <string name="video_skip_op">OPကိုကျော်ရန်</string>
-    <string name="skip_update">ဒီအပ်ဒိတ်ကိုကျော်ပါ</string>
+
     <string name="update">အပ်ဒိတ်</string>
     <string name="limit_title">ခေါင်းစဥ်အတွက်စာလုံးရေပြည့်ခြင်း</string>
     <string name="limit_title_rez">ကြည့်ရှုမှု အရည်အသွေး</string>
@@ -188,7 +186,7 @@
     <string name="legal_notice">ရှင်းလင်းချက်</string>
     <string name="pref_category_bypass">ISP ရှောင်လွှဲမှုများ</string>
     <string name="pref_category_links">လင့်များ</string>
-    <string name="pref_category_app_updates">အက်ပ်အပ်ဒိတ်များ</string>
+
     <string name="pref_category_extensions">Extensions</string>
     <string name="pref_category_actions">ဆောင်ရွက်ချက်များ</string>
     <string name="pref_category_cache">Cache</string>
@@ -226,7 +224,7 @@
     <string name="download_failed">ဒေါင်းလုဒ် မအောင်မြင်</string>
     <string name="download_canceled">ဒေါင်းလုဒ် ပယ်ဖျက်ပြီး</string>
     <string name="download_done">ဒေါင်းလုဒ်ပြီးစီး</string>
-    <string name="update_started">အပ်ဒိတ်စတင်</string>
+
     <string name="stream">တိုက်ရိုက်ကြည့်မည်</string>
     <string name="app_dubbed_text">နောက်ခံအသံ</string>
     <string name="pref_filter_search_quality">ရှာဖွေမှုရလဒ်များတွင်ရွေးချယ်ထားသောဗီဒီယိုအရည်အသွေးကိုဝှက်ထားရန်</string>
@@ -253,7 +251,7 @@
     <string name="automatic_plugin_download_summary">ရီပိုစစ်ထရီများမှမထည့်သွင်းရသေးသောဖြည့်စွက်လုပ်ဆောင်ချက်များအားလုံးကိုထည့်သွင်းပါ။</string>
     <string name="picture_in_picture_des">ပြန်ကြည့်ခြင်းကိုအသေးစား ကြည့်ရှုမှုတွင်ဆက်ပြပါ</string>
     <string name="player_size_settings_des">အနက်ရောင်ဘောင်များကို ဖယ်ရှားရန်</string>
-    <string name="updates_settings_des">အက်ပ်ထဲဝင်လိုက်သည့်နှင့်အက်ပ်အပ်ဒိတ်ကိုစစ်ဆေးပါ။</string>
+
     <string name="chromecast_subtitles_settings">Chromecast စာတန်းထိုးများ</string>
     <string name="chromecast_subtitles_settings_des">Chromecast စာတန်းထိုး ပြုပြင်ရန်</string>
     <string name="swipe_to_change_settings_des">အသံအတိုးအကျယ်နှင့်အလင်းအမှောင်များကိုချိန်ညိှရန် ဘယ် သို့ ညာ ဘက်တွင် အပေါ်အောက်ဆွဲပါ</string>
@@ -336,9 +334,7 @@
     <string name="skip_type_credits">ခရက်ဒစ်များ</string>
     <string name="skip_type_intro">အစ</string>
     <string name="yes">သေချာသည်</string>
-    <string name="apk_installer_legacy">သမားရိုးကျ</string>
-    <string name="apk_installer_package_installer">ထည့်သွင်းသူ</string>
-    <string name="delayed_update_notice">ထွက်ချိန်တွင် အက်ပ်ကို အပ်ဒိတ်လုပ်ပါမည်</string>
+
     <string name="blank_repo_message">CloudStream တွင် မူရင်းအတိုင်း ထည့်သွင်းထားသည့်ဆိုက်များ မရှိပါ။ ရီပိုစစ်ထရီများ မှ ဆိုဒ် များကို ထည့်သွင်းရန်လိုအပ်သည်။ \n \nSky UK Limited မှ ဦးနှောက်မဲ့ DMCA ကို ဖယ်ရှားလိုက်ခြင်းကြောင့် 🤮 ကျွန်ုပ်တို့သည် ရီပိုစစ်ထရီဆိုဒ်ကို အက်ပ်တွင် ချိတ်ဆက်၍မရပါ။ \n \nကျွန်ုပ်တို့၏ Discord တွင်ပါဝင်ပါ သို့မဟုတ် အွန်လိုင်းတွင်ရှာဖွေပါ။</string>
     <string name="view_public_repositories_button">အခြားသူများ၏ရီပိုစစ်ထရီများကိုရှာဖွေမည်</string>
     <string name="tracks">အသံများ</string>
@@ -359,7 +355,7 @@
     <string name="extension_authors">ရေးသားသူများ</string>
     <string name="hls_playlist">HLS ဖွင့်စဥ်</string>
     <string name="history">ကြည့်ရှုခဲ့သည်များ</string>
-    <string name="update_notification_failed">အက်ပ်၏ ဗားရှင်းအသစ်ကို ထည့်သွင်း၍မရပါ</string>
+
     <string name="enable_skip_op_from_database_des">အစပိုင်း/အဆုံးပိုင်းအတွက် ကျော်နိုင်သော ပေါ့ပ်အပ်များကို ပြပါ</string>
     <string name="clipboard_too_large">စာသားအလွန်များသဖြင့်ကလစ်ဘုတ်တွင် သိမ်းဆည်း၍မရပါ။</string>
     <string name="category_providers">ပံ့ပိုးပေးသူများ</string>
@@ -412,8 +408,7 @@
     <string name="action_remove_from_watched">ကြည့်ပြီးသည်မှဖယ်ရှားရန်</string>
     <string name="confirm_exit_dialog">သင်ထွက်ရန်သေချာပြီလား</string>
     <string name="no">မသေချာပါ</string>
-    <string name="update_notification_downloading">အက်ပ်အပ်ဒိတ်အားဒေါင်းလုဒ်လုပ်နေသည်…</string>
-    <string name="update_notification_installing">အက်ပ်အပ်ဒိတ်အားသွင်းနေသည်…</string>
+
     <string name="sort_updated_new">အပ်ဒိတ်ဖြစ်မှု (အသစ် မှ အဟောင်း)</string>
     <string name="empty_library_no_accounts_message">သင့်လိုက်ဘရီသည် ဗလာဖြစ်နေသည် :( \nအကောင့်ဝင်ပါ သို့မဟုတ် သင့်ဖုန်းလိုက်ဘရီတွင် ကြည့်စရာများထည့်ပါ။</string>
     <string name="use">သုံးရန်</string>

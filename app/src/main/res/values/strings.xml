@@ -24,7 +24,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Speed (%.2fx)</string>
     <string name="rated_format" formatted="true">Rated: %.1f</string>
-    <string name="new_update_format" formatted="true">New update found!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Filler</string>
     <string name="duration_format" formatted="true">%d min</string>
     <string name="app_name">CloudStream</string>
@@ -79,7 +79,7 @@
     <string name="offline_file">Available for watching offline</string>
     <string name="select_all">Select All</string>
     <string name="deselect_all">Deselect All</string>
-    <string name="update_started">Update Started</string>
+
     <string name="stream">Network stream</string>
     <string name="open_local_video">Open local video</string>
     <string name="error_loading_links_toast">Error Loading Links</string>
@@ -186,7 +186,7 @@
     <string name="search">Search</string>
     <string name="library">Library</string>
     <string name="category_account">Accounts and Security</string>
-    <string name="category_updates">Updates and Backup</string>
+
     <string name="settings_info">Info</string>
     <string name="advanced_search">Advanced Search</string>
     <string name="advanced_search_des">Gives you the search results separated by provider</string>
@@ -203,14 +203,9 @@
     <string name="automatic_plugin_download">Automatically download plugins</string>
     <string name="automatic_plugin_download_mode_title">Select mode to filter plugins download</string>
     <string name="automatic_plugin_download_summary">Automatically install all not yet installed plugins from added repositories.</string>
-    <string name="updates_settings">Show app updates</string>
-    <string name="updates_settings_des">Automatically search for new updates after starting the app.</string>
+
     <string name="redo_setup_process">Redo setup process</string>
-    <string name="install_prerelease">Install pre-release version</string>
-    <string name="prerelease_already_installed">Pre-release is already installed.</string>
-    <string name="prerelease_install_failed">Failed to install pre-release.</string>
-    <string name="apk_installer_settings">APK Installer</string>
-    <string name="apk_installer_settings_des">Some devices do not support the new package installer. Try the legacy option if updates do not install.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Light novel app by the same devs</string>
     <string name="anim">Anime app by the same devs</string>
@@ -322,14 +317,13 @@
     <string name="show_title">Title</string>
     <string name="show_episode_text">Episode Text</string>
     <string name="poster_ui_settings">Toggle UI elements on poster</string>
-    <string name="no_update_found">No Update Found</string>
-    <string name="check_for_update">Check for Update</string>
+
     <string name="video_lock">Lock</string>
     <string name="video_aspect_ratio_resize">Resize</string>
     <string name="video_source">Source</string>
     <string name="video_skip_op">Skip OP</string>
     <string name="dont_show_again">Don\'t show again</string>
-    <string name="skip_update">Skip this Update</string>
+
     <string name="update">Update</string>
     <string name="watch_quality_pref">Preferred watch quality (WiFi)</string>
     <string name="watch_quality_pref_data">Preferred watch quality (Mobile Data)</string>
@@ -362,7 +356,7 @@
     <string name="legal_notice">Disclaimer</string>
     <string name="pref_category_bypass">ISP Bypasses</string>
     <string name="pref_category_links">Links</string>
-    <string name="pref_category_app_updates">App updates</string>
+
     <string name="pref_category_backup">Backup</string>
     <string name="pref_category_extensions">Extensions</string>
     <string name="pref_category_actions">Actions</string>
@@ -603,12 +597,7 @@
         when receiving notifications or downloading videos from official extensions.</string>
     <string name="app_unrestricted_toast">App battery usage is already set to unrestricted</string>
     <string name="app_info_intent_error">Unable to open CloudStream\'s App info.</string>
-    <string name="update_notification_downloading">Downloading app update…</string>
-    <string name="update_notification_installing">Installing app update…</string>
-    <string name="update_notification_failed">Could not install the new version of the app</string>
-    <string name="apk_installer_legacy">Legacy</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
-    <string name="delayed_update_notice">App will be updated upon exit</string>
+
     <string name="sort_by">Sort by</string>
     <string name="sort">Sort</string>
     <string name="sort_rating_desc">Rating (High to Low)</string>

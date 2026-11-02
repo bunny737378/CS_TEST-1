@@ -16,7 +16,7 @@
     <string name="preview_background_img_des">Визуализация на фона</string>
     <string formatted="true" name="player_speed_text_format">Скорост (%.2fx)</string>
     <string formatted="true" name="rated_format">Оценка: %.1f</string>
-    <string formatted="true" name="new_update_format">Намерена е нова актуализация! \n%1$s -&gt; %2$s</string>
+
     <string formatted="true" name="filler">Шаблон</string>
     <string formatted="true" name="duration_format">%d мин</string>
     <string name="app_name">CloudStream</string>
@@ -142,7 +142,7 @@
     <string name="backup_failed_error_format">Грешка при архивирането на %s</string>
     <string name="search">Търсене</string>
     <string name="category_account">Акаунти и сигурност</string>
-    <string name="category_updates">Актуализации и архивиране</string>
+
     <string name="settings_info">Информация</string>
     <string name="advanced_search">Подробно търсене</string>
     <string name="advanced_search_des">Дава ви резултатите от търсенето, разделени по доставчик</string>
@@ -151,8 +151,7 @@
     <string name="kitsu_settings">Покажете плакати от Kitsu</string>
     <string name="pref_filter_search_quality">Скрий избраното видео качество в резултатите от търсенето</string>
     <string name="automatic_plugin_updates">Автоматични актуализации на плъгини</string>
-    <string name="updates_settings">Показвай актуализации на приложението</string>
-    <string name="updates_settings_des">Автоматично търси нови актуализации при стартиране на приложението.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Light novel - приложение от същите разработчици</string>
     <string name="anim">Приложение за аниме от същите разработчици</string>
@@ -238,14 +237,13 @@
     <string name="show_sub">Покажи субтитри</string>
     <string name="show_title">Заглавие</string>
     <string name="poster_ui_settings">Превключване на елементите на потребителския интерфейс на плаката</string>
-    <string name="no_update_found">Няма намерена актуализация</string>
-    <string name="check_for_update">Проверка за актуализация</string>
+
     <string name="video_lock">Заключен</string>
     <string name="video_aspect_ratio_resize">Преоразмеряване</string>
     <string name="video_source">Източник</string>
     <string name="video_skip_op">Пропусни</string>
     <string name="dont_show_again">Не показвай отново</string>
-    <string name="skip_update">Пропуснете тази актуализация</string>
+
     <string name="update">Актуализация</string>
     <string name="watch_quality_pref">Предпочитано качество за гледане (през WiFi)</string>
     <string name="limit_title">Максимален брой знаци за заглавие във видеоплейъра</string>
@@ -440,25 +438,22 @@
     <string name="confirm_exit_dialog">Сигурни ли сте, че искате да излезете?</string>
     <string name="yes">Да</string>
     <string name="no">Не</string>
-    <string name="update_notification_installing">Инсталиране на актуализация на приложението…</string>
-    <string name="update_notification_failed">Не можа да се инсталира новата версия на приложението</string>
+
     <string name="enable_skip_op_from_database_des">Покажи изскачащи прозорци при отваряне/затваряне</string>
-    <string name="update_notification_downloading">Изтегля се актуализация на приложението…</string>
+
     <string name="skip_type_mixed_op">Смесено отваряне</string>
     <string name="skip_type_mixed_ed">Смесено затваряне</string>
     <string name="skip_type_credits">Кредити</string>
     <string name="skip_type_intro">въведение</string>
     <string name="clear_history">Изчистване на историята</string>
     <string name="automatic_plugin_download_summary">Автоматично инсталиране на всички все още неинсталирани добавки от добавени хранилища.</string>
-    <string name="apk_installer_settings">APK Инсталатор</string>
-    <string name="apk_installer_settings_des">Някои устройства не поддържат новия пакет за инсталиране. Опитайте предпоследената опция, ако актуализациите не се инсталират.</string>
+
     <string name="play_trailer_button">Пусни трейлър</string>
     <string name="pref_category_links">Връзки</string>
-    <string name="pref_category_app_updates">Актуализации на приложението</string>
+
     <string name="pref_category_extensions">Разширения</string>
     <string name="pref_category_actions">Действия</string>
-    <string name="apk_installer_legacy">Предишна версия</string>
-    <string name="apk_installer_package_installer">Пакетен инсталатор</string>
+
     <string name="pref_category_player_features">Възможности на плеъра</string>
     <string name="pref_category_defaults">По подразбиране</string>
     <string name="pref_category_looks">Изгледи</string>
@@ -470,8 +465,7 @@
     <string name="pref_category_gestures">Жестове</string>
     <string name="pref_category_player_layout">Шаблон</string>
     <string name="plugin_downloaded">Приставката е изтеглена</string>
-    <string name="delayed_update_notice">Приложението ще се актуализира при изход от него</string>
-    <string name="update_started">Започна Актуализация</string>
+
     <string name="action_remove_from_watched">Премахване от гледани</string>
     <string name="search_poster_img_des">Постер</string>
     <string name="browser">Браузър</string>
@@ -690,9 +684,7 @@
     <string name="search_suggestions_des">Показвай предложения за търсене по време на писане</string>
     <string name="clear_suggestions">Изтрий предложения</string>
     <string name="show_cast_in_details">Покажи панела за излъчване</string>
-    <string name="install_prerelease">Инсталирай предварителна версия</string>
-    <string name="prerelease_already_installed">Предварителна версия вече е изтеглена.</string>
-    <string name="prerelease_install_failed">Неуспешна инсталация на предварителната версия.</string>
+
     <string name="show_rating">Етикет за рейтинг</string>
     <string name="show_episode_text">Текст на епизода</string>
     <string name="video_info">Информация за медията</string>

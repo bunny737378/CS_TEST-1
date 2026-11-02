@@ -15,7 +15,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Kecepatan (%.2fx)</string>
     <string name="rated_format" formatted="true">Nilai: %.1f</string>
-    <string name="new_update_format" formatted="true">Pembaruan ditemukan!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Filler</string>
     <string name="duration_format" formatted="true">%d mnt</string>
     <string name="app_name">CloudStream</string>
@@ -136,13 +136,12 @@
     <string name="backup_failed_error_format">Gagal mencadangkan %s</string>
     <string name="search">Cari</string>
     <string name="category_account">Akun dan Keamanan</string>
-    <string name="category_updates">Update dan Cadangan</string>
+
     <string name="settings_info">Info</string>
     <string name="advanced_search">Pencarian Lanjutan</string>
     <string name="advanced_search_des">Memberikan hasil pencarian yang dipisahkan berdasarkan penyedia</string>
     <string name="show_fillers_settings">Tampilkan episode filler untuk anime</string>
-    <string name="updates_settings">Tampilkan pembaruan aplikasi</string>
-    <string name="updates_settings_des">Secara otomatis mencari pembaruan baru setelah aplikasi dibuka.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Aplikasi novel ringan dari developer yang sama</string>
     <string name="anim">Aplikasi anime dari developer yang sama</string>
@@ -221,14 +220,13 @@
     <string name="show_sub">Label sub</string>
     <string name="show_title">Judul</string>
     <string name="poster_ui_settings">Aktifkan atau nonaktifkan elemen UI pada poster</string>
-    <string name="no_update_found">Tidak Ada Update Yang Ditemukan</string>
-    <string name="check_for_update">Periksa pembaruan</string>
+
     <string name="video_lock">Kunci</string>
     <string name="video_aspect_ratio_resize">Ubah Ukuran</string>
     <string name="video_source">Sumber</string>
     <string name="video_skip_op">Skip OP</string>
     <string name="dont_show_again">Jangan tunjukkan lagi</string>
-    <string name="skip_update">Skip Update ini</string>
+
     <string name="update">Update</string>
     <string name="watch_quality_pref">Kualitas nonton yang diinginkan (WiFi)</string>
     <string name="limit_title">Karakter maksimal judul pemutar video</string>
@@ -369,7 +367,7 @@
     <string name="add_site_pref">Duplikasi Website</string>
     <string name="add_site_summary">Duplikasi website yang telah ada, dengan alamat berbeda</string>
     <string name="pref_category_links">Tautan</string>
-    <string name="pref_category_app_updates">Perbarui aplikasi</string>
+
     <string name="pref_category_backup">Cadangkan</string>
     <string name="pref_category_extensions">Ekstensi</string>
     <string name="play_with_app_name">Putar di CloudStream</string>
@@ -449,10 +447,10 @@
     <string name="video_tracks">Video Trek</string>
     <string name="extension_types">Dukungan</string>
     <string name="hls_playlist">Daftar putar HLS</string>
-    <string name="apk_installer_settings">Penginstal APK</string>
+
     <string name="subtitles_encoding">Enkode subtitel</string>
     <string name="pref_category_gestures">Gestur</string>
-    <string name="apk_installer_settings_des">Beberapa perangkat tidak mendukung penginstal paket mode baru. Coba mode lama jika pembaruan tidak dapat diinstal.</string>
+
     <string name="pref_category_actions">Aksi</string>
     <string name="referer">Memberi referensi (opsional)</string>
     <string name="yes">Ya</string>
@@ -468,18 +466,15 @@
     <string name="clipboard_too_large">Terlalu banyak teks. Tidak dapat menyalin ke papan klip.</string>
     <string name="confirm_exit_dialog">Yakin ingin keluar?</string>
     <string name="no">Tidak</string>
-    <string name="update_notification_installing">Memasang pembaruan…</string>
-    <string name="update_notification_failed">Tidak dapat memasang versi terbaru</string>
+
     <string name="app_not_found_error">Aplikasi tidak ditemukan</string>
     <string name="clear_history">Hapus riwayat</string>
     <string name="enable_skip_op_from_database_des">Tampilkan popup untuk skip sesi pembuka/akhir</string>
-    <string name="update_notification_downloading">Mengunduh pembaruan…</string>
-    <string name="apk_installer_legacy">Versi lama</string>
+
     <string name="skip_type_mixed_op">Sesi pembuka ganda</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
+
     <string name="plugin_downloaded">Plugin terunduh</string>
-    <string name="delayed_update_notice">Aplikasi akan diperbarui setelah keluar</string>
-    <string name="update_started">Pembaruan Dimulai</string>
+
     <string name="action_remove_from_watched">Hapus dari tontonan</string>
     <string name="browser">Peramban</string>
     <string name="select_library">Pilih pustaka</string>
@@ -716,9 +711,7 @@
     <string name="top_center">Atas tengah</string>
     <string name="top_right">Atas kanan</string>
     <string name="play_full_series_button">Putar Seri Penuh</string>
-    <string name="install_prerelease">Pasang versi pra-rilis</string>
-    <string name="prerelease_already_installed">Versi pra-rilis sudah terpasang.</string>
-    <string name="prerelease_install_failed">Gagal memasang versi pra-rilis.</string>
+
     <string name="show_episode_text">Teks Episode</string>
     <string name="extra_brightness_settings">Kecerahan ekstra</string>
     <string name="extra_brightness_settings_des">Aktifkan filter kecerahan saat kecerahan layar melebihi 100%</string>

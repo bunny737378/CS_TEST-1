@@ -12,7 +12,7 @@
     <string name="preview_background_img_des">Apskatīt background</string>
     <string name="player_speed_text_format" formatted="true">Ātrums (%.2fx)</string>
     <string name="rated_format" formatted="true">Lidzīgi: %.1f</string>
-    <string name="new_update_format" formatted="true">Jauns atjauninājums atrasts! \n%1$s -&gt; %2$s</string>
+
     <string name="duration_format" formatted="true">%d galvenais</string>
     <string name="app_name">CloudStream</string>
     <string name="play_with_app_name">Atskaņo ar cloudstream</string>
@@ -46,7 +46,7 @@
     <string name="download_failed">Lejupielāde neizdevās</string>
     <string name="download_canceled">Lejupielāde atcelta</string>
     <string name="download_done">Lejupielāde pabeigta</string>
-    <string name="update_started">Atjaunināšana sākta</string>
+
     <string name="stream">Tīkla plūsma</string>
     <string name="error_loading_links_toast">Kļūda, ielādējot saites</string>
     <string name="download_storage_text">Iekšējā atmiņa</string>
@@ -147,7 +147,7 @@
     <string name="search">Meklēt</string>
     <string name="library">Library</string>
     <string name="category_account">Konti un drošība</string>
-    <string name="category_updates">Atjauninājumi un dublēšana</string>
+
     <string name="settings_info">Informācija</string>
     <string name="advanced_search">Advancēta meklēšana</string>
     <string name="advanced_search_des">Sniedz meklēšanas rezultātus, kas sagrupēti pēc pakalpojumu sniedzēja</string>
@@ -158,10 +158,9 @@
     <string name="automatic_plugin_updates">Automātiska papildinājumu atjaunināšana</string>
     <string name="automatic_plugin_download">Automātiski lejupielādēt papildinājumus</string>
     <string name="automatic_plugin_download_summary">Automātiski uzstāda visus vēl neuzstādītos papildinājumus no pievienotajiem repozitorijiem.</string>
-    <string name="updates_settings">Rādīt lietotņu atjauninājumus</string>
-    <string name="updates_settings_des">Automātiski pārbauda atjauninājumus, kad atver lietotni.</string>
+
     <string name="redo_setup_process">Atsākt uzstādīšanas procesu</string>
-    <string name="apk_installer_settings_des">Dažas ierīces neatbalsta jauno pakotnes uzstādītāju. Izmantojiet legacy (veco) uzstādītāju, ja atjauninājumus nevar uzstādīt.</string>
+
     <string name="lightnovel">Viegla romānu lietotne no šiem pašiem izstrādātājiem</string>
     <string name="anim">Anime lietotne no šiem pašiem izstrādātājiem</string>
     <string name="discord">Ienāc discordā</string>
@@ -243,13 +242,13 @@
     <string name="show_sub">Subtirti</string>
     <string name="show_title">Nosaukums</string>
     <string name="render_error">Render kļūda</string>
-    <string name="check_for_update">Pārbaudīt atjauninājumus</string>
+
     <string name="video_lock">Slēgt</string>
     <string name="video_aspect_ratio_resize">Mainīt lielumu</string>
     <string name="video_source">Devējs</string>
     <string name="video_skip_op">Izlaist OP</string>
     <string name="dont_show_again">Nerādīt atkal</string>
-    <string name="skip_update">Izlaist šo atjauninājumu</string>
+
     <string name="update">Atjauninājums</string>
     <string name="watch_quality_pref">Izvēlētā skatīšanās kvalitāte (WiFi)</string>
     <string name="limit_title">Video players nosaukuma maksimālie burti</string>
@@ -274,7 +273,7 @@
     <string name="legal_notice">Atruna</string>
     <string name="pref_category_bypass">ISP Izlaists</string>
     <string name="pref_category_links">Links</string>
-    <string name="pref_category_app_updates">Lietotnes atjauninājumi</string>
+
     <string name="pref_category_backup">Dublējums</string>
     <string name="pref_category_extensions">Papildinājumi</string>
     <string name="pref_category_actions">Akcijas</string>
@@ -440,12 +439,7 @@
     <string name="clipboard_too_large">Pārāk daudz teksta. Nevar saglabāt starpliktuvē.</string>
     <string name="yes">Jā</string>
     <string name="no">Nē</string>
-    <string name="update_notification_downloading">Notiek lietotnes atjauninājuma lejupielāde…</string>
-    <string name="update_notification_installing">Notiek lietotnes atjauninājuma instalēšana…</string>
-    <string name="update_notification_failed">Nevarēja instalēt jauno lietotnes versiju</string>
-    <string name="apk_installer_legacy">Mantojums</string>
-    <string name="apk_installer_package_installer">Insteletājs</string>
-    <string name="delayed_update_notice">Lietotne tiks atjaunināta pēc iziešanas</string>
+
     <string name="sort_by">Kārtot pēc</string>
     <string name="sort">Kārtot</string>
     <string name="sort_rating_desc">Vērtējums (no augsta līdz zemam)</string>
@@ -459,7 +453,7 @@
     <string name="revert">Atgriest</string>
     <string name="subscription_deleted">Anulēts %s abonements</string>
     <string name="subscription_episode_released">%d sērija izlaista!</string>
-    <string name="apk_installer_settings">Apk insteletājs</string>
+
     <string name="github">GitHub</string>
     <string name="no_subtitles">Nav subtitru</string>
     <string name="play_episode_toast">Atskaņot epizodi</string>
@@ -467,7 +461,7 @@
     <string name="free_storage">Bezmaksas</string>
     <string name="poster_ui_settings">Ieslēgt elementus uz plakātiem</string>
     <string name="action_default">Parastais</string>
-    <string name="no_update_found">Nav atjauninājumi atrasti</string>
+
     <string name="video_buffer_clear_settings">Izdzēst video un bildes atkritne</string>
     <string name="watch_quality_pref_data">Izvēlētā skatīšanās kvalitāte (Mobilie Dati)</string>
     <string name="video_disk_description">Rada problēmas, ja ierīcēs ar maz vietas krātuvē ir iestatīts pārāk augsts, piemēram, Android TV.</string>

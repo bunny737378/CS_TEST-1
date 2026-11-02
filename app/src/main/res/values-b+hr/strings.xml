@@ -19,7 +19,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Brzina (%.2f×)</string>
     <string name="rated_format" formatted="true">Ocjena: %.1f</string>
-    <string name="new_update_format" formatted="true">Pronađeno je novo ažuriranje! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Umetak</string>
     <string name="duration_format" formatted="true">%d min</string>
     <string name="app_name">CloudStream</string>
@@ -146,7 +146,7 @@
     <string name="backup_failed_error_format">Pogreška pri sigurnosnom kopiranju %s</string>
     <string name="search">Traži</string>
     <string name="category_account">Računi i sigurnost</string>
-    <string name="category_updates">Ažuriranja i sigurnosna kopija</string>
+
     <string name="settings_info">Informacije</string>
     <string name="advanced_search">Napredna pretraga</string>
     <string name="advanced_search_des">Daje rezultate pretrage odvojene prema pružatelju usluga</string>
@@ -155,8 +155,7 @@
     <string name="kitsu_settings">Prikaži postere iz Kitsua</string>
     <string name="pref_filter_search_quality">Sakrij odabranu kvalitetu videa u rezultatima pretrage</string>
     <string name="automatic_plugin_updates">Automatsko ažuriranje dodataka</string>
-    <string name="updates_settings">Prikaži ažuriranja aplikacije</string>
-    <string name="updates_settings_des">Automatski traži nova ažuriranja nakon pokretanja aplikacije.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Aplikacija za romane od istih programera</string>
     <string name="anim">Anime aplikacija od istih programera</string>
@@ -243,14 +242,13 @@
     <string name="show_sub">Oznaka za titlove</string>
     <string name="show_title">Naslov</string>
     <string name="poster_ui_settings">Uključi/isključi elemente korisničkog sučelja na posteru</string>
-    <string name="no_update_found">Nije pronađeno ažuriranje</string>
-    <string name="check_for_update">Provjeri ažuriranja</string>
+
     <string name="video_lock">Zaključaj</string>
     <string name="video_aspect_ratio_resize">Promijeni veličinu</string>
     <string name="video_source">Izvor</string>
     <string name="video_skip_op">Preskoči OP</string>
     <string name="dont_show_again">Nemoj više prikazivati</string>
-    <string name="skip_update">Preskoči ovo ažuriranje</string>
+
     <string name="update">Ažuriraj</string>
     <string name="watch_quality_pref">Preferirana kvaliteta gledanja (WiFi)</string>
     <string name="limit_title">Maksimalni broj znakova u naslovu video playera</string>
@@ -442,20 +440,17 @@
     <string name="action_mark_as_watched">Označi kao gledano</string>
     <string name="enable_skip_op_from_database_des">Prikaži skočni prozor za uvod/kraj</string>
     <string name="yes">Da</string>
-    <string name="update_notification_downloading">Preuzimanje ažuriranja aplikacije …</string>
+
     <string name="confirm_exit_dialog">Jeste li sigurni da želite izaći?</string>
     <string name="no">Ne</string>
-    <string name="update_notification_installing">Instaliranje ažuriranja aplikacije …</string>
-    <string name="update_notification_failed">Nije moguće instalirati novu verziju aplikacije</string>
+
     <string name="plugins_updated" formatted="true">Ažurirani dodaci: %d</string>
     <string name="skip_type_mixed_op">Mješoviti uvod</string>
     <string name="skip_type_intro">Uvod</string>
     <string name="pref_category_links">Poveznice</string>
     <string name="play_trailer_button">Pokreni trailer</string>
     <string name="redo_setup_process">Ponovi postupak postavljanja</string>
-    <string name="apk_installer_settings_des">Neki uređaji ne podržavaju novi program za instaliranje paketa. Pokušaj sa starijom opcijom ako se ažuriranja ne instaliraju.</string>
-    <string name="apk_installer_settings">Instalator APK-a</string>
-    <string name="pref_category_app_updates">Ažuriranja aplikacije</string>
+
     <string name="pref_category_backup">Sigurnosna kopija</string>
     <string name="pref_category_extensions">Proširenja</string>
     <string name="pref_category_actions">Radnje</string>
@@ -473,12 +468,11 @@
     <string name="skip_type_mixed_ed">Mješoviti kraj</string>
     <string name="clear_history">Izbriši povijest</string>
     <string name="history">Povijest</string>
-    <string name="apk_installer_legacy">Legacy</string>
+
     <string name="skip_type_op">Uvod</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
+
     <string name="season_format">%1$s %2$d%3$s</string>
-    <string name="update_started">Aktualiziranje započeto</string>
-    <string name="delayed_update_notice">Aplikacija će se ažurirati tijekom zatvaranja</string>
+
     <string name="plugin_downloaded">Dodatak preuzet</string>
     <string name="action_remove_from_watched">Ukloni iz pogledanog</string>
     <string name="browser">Preglednik</string>
@@ -703,9 +697,7 @@
     <string name="action_reload">Ponovo učitano</string>
     <string name="reload_provider">Usluga ponovnog učitavanja</string>
     <string name="play_full_series_button">Reproduciraj cijelu seriju</string>
-    <string name="install_prerelease">Instaliraj predizdanje</string>
-    <string name="prerelease_already_installed">Predizdanje je već instalirano.</string>
-    <string name="prerelease_install_failed">Instalacija predizdanja nije uspjela.</string>
+
     <string name="episode_action_play_mirror">Pokreni duplikat</string>"
     <string name="show_episode_text">Tekst epizode</string>
     <string name="name">Ime</string>

@@ -73,18 +73,18 @@
     <string name="movies">ଚଳଚ୍ଚିତ୍ର</string>
     <string name="livestreams">ସିଧାପ୍ରସାରଣ</string>
     <string name="video_source">ଉତ୍ସ</string>
-    <string name="no_update_found">କୌଣସି ଅଦ୍ୟତନ ମିଳିଲା ନାହିଁ</string>
+
     <string name="category_general">ସାଧାରଣ</string>
     <string name="dont_show_again">ପୁନଃ ଦେଖାଅନି</string>
     <string name="automatic">ସ୍ୱତଃ</string>
     <string name="error">ତ୍ରୁଟି</string>
     <string name="restore_settings">ବ୍ୟାକଅପ୍‌ରୁ ତଥ୍ୟ ପୁନରୁଦ୍ଧାର କରିବା</string>
     <string name="backup_failed">ଷ୍ଟୋରେଜ୍ ଅନୁମତି ଦିଆଯାଇ ନାହିଁ। ଦୟାକରି ପୁଣିଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।</string>
-    <string name="category_updates">ଅଦ୍ୟତନ ଏଵଂ ବ୍ୟାକଅପ୍</string>
+
     <string name="pref_category_backup">ବ୍ୟାକଅପ୍</string>
     <string name="pref_category_android_tv">ଆଣ୍ଡ୍ରଏଡ୍ ଟିଵି</string>
     <string name="pref_category_gestures">ଅଙ୍ଗଭଙ୍ଗୀ</string>
-    <string name="new_update_format" formatted="true">ନୂଆ ଅଦ୍ୟତନ ମିଳିଲା! \n%1$s -&gt; %2$s</string>
+
     <string name="duration">ଅଵଧି</string>
     <string name="app_storage">ଆପ୍</string>
     <string name="restore_success">ବ୍ୟାକଅପ୍ ଫାଇଲ୍ ଧାରଣ ହେଲା</string>
@@ -104,10 +104,10 @@
     <string name="source_error">ଉତ୍ସ ତ୍ରୁଟି</string>
     <string name="unexpected_error">ଅପ୍ରତ୍ୟାଶିତ ଚାଳକ ତ୍ରୁଟି</string>
     <string name="show_title">ଆଖ୍ୟା</string>
-    <string name="check_for_update">ଅଦ୍ୟତନ ପାଇଁ ଯାଞ୍ଚ କରିବା</string>
+
     <string name="video_lock">ତାଲା</string>
     <string name="video_aspect_ratio_resize">ଆକାର ଠିକ୍ କରିବା</string>
-    <string name="skip_update">ଏହି ଅଦ୍ୟତନଟିକୁ ବାଦ୍ ଦିଅ</string>
+
     <string name="pref_category_actions">କୃତ୍ୟ</string>
     <string name="pref_category_subtitles">ଉପଶୀର୍ଷକ</string>
     <string name="pref_category_ui_features">ଵୈଶିଷ୍ଟ୍ୟସବୁ</string>
@@ -117,9 +117,7 @@
     <string name="added_sync_format" formatted="true">%s ଯୋଡ଼ାଗଲା</string>
     <string name="title">ଆଖ୍ୟା</string>
     <string name="setup_done">ହେଲା</string>
-    <string name="update_notification_downloading">ଆପ୍ ଅଦ୍ୟତନ ଡାଉନଲୋଡ୍ ଚାଲିଛି…</string>
-    <string name="update_notification_installing">ଆପ୍ ଅଦ୍ୟତନ ଅଧିସ୍ଥାପନ ଚାଲିଛି…</string>
-    <string name="update_notification_failed">ଆପ୍‌ର ନୂଆ ସଂସ୍କରଣ ଅଧିସ୍ଥାପନ କରିହେଲା ନାହିଁ</string>
+
     <string name="test_failed">ଵିଫଳ ହେଲା</string>
     <string name="category_player">ଚାଳକ</string>
     <string name="backup_settings">ତଥ୍ୟର ବ୍ୟାକଅପ୍ ନେବା</string>
@@ -144,8 +142,7 @@
     <string name="home_change_provider_img_des">ପ୍ରଦାତା ବଦଳାଅ</string>
     <string name="search_provider_text_providers">ପ୍ରଦାତା ଵ୍ୟଵହାର କରି ଖୋଜିବା</string>
     <string name="coming_soon">ଶୀଘ୍ର ଆସୁଅଛି…</string>
-    <string name="updates_settings">ଆପ୍ ଅଦ୍ୟତନ ଦେଖାଇବା</string>
-    <string name="update_started">ଅଦ୍ୟତନ ଆରମ୍ଭ ହୋଇଛି</string>
+
     <string name="search_hint">ସନ୍ଧାନ କରିବା…</string>
     <string name="skip_type_recap">ସଂକ୍ଷିପ୍ତବୃତ୍ତି</string>
     <string name="play_movie_button">ଚଳଚ୍ଚିତ୍ର ଚଲାଅ</string>

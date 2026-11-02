@@ -13,7 +13,7 @@
     <string name="episode_poster_img_des">Póster do Episodio</string>
     <string name="go_back_img_des">Regresar</string>
     <string name="home_change_provider_img_des">Cambiar provedor</string>
-    <string name="new_update_format" formatted="true">Nova actualización atopada! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Recheo</string>
     <string name="duration_format" formatted="true">%d min</string>
     <string name="title_settings">Configuración</string>
@@ -69,7 +69,7 @@
     <string name="download_failed">Descarga Fallida</string>
     <string name="download_canceled">Descarga Cancelada</string>
     <string name="download_done">Descarga rematada</string>
-    <string name="update_started">Actualización Comezada</string>
+
     <string name="app_subbed_text">Subtitulado</string>
     <string name="popup_delete_file">Borrar Arquivo</string>
     <string name="popup_play_file">Reproducir Arquivo</string>
@@ -142,7 +142,7 @@
     <string name="search">Procurar</string>
     <string name="library">Biblioteca</string>
     <string name="category_account">Contas e seguridade</string>
-    <string name="category_updates">Actualizacións e copias de seguridade</string>
+
     <string name="settings_info">Info</string>
     <string name="advanced_search">Procura Avanzada</string>
     <string name="advanced_search_des">Da os resultados da procura separados por proveedor</string>
@@ -159,7 +159,7 @@
     <string name="automatic_plugin_download">Descarga automática de complementos</string>
     <string name="automatic_plugin_download_mode_title">Selecciona o modo para filtrar a descarga dos complementos</string>
     <string name="automatic_plugin_download_summary">Instala automáticamente todos os complementos aínda non instalados dos repositorios engadidos.</string>
-    <string name="updates_settings">Mostrar actualizacións da aplicación</string>
+
     <string name="subs_default_reset_toast">Reiniciar aos valores predefinidos</string>
     <string name="go_back_30">-30</string>
     <string name="audio_book_singular">Audiolibro</string>
@@ -175,13 +175,11 @@
     <string name="resume">Continuar</string>
     <string name="anime">Anime</string>
     <string name="torrent">Torrents</string>
-    <string name="no_update_found">Non se atoparon actualizacións</string>
-    <string name="check_for_update">Buscar actualizacións</string>
+
     <string name="video_lock">Bloquear</string>
     <string name="episode_action_download_subtitle">Descargar subtítulos</string>
     <string name="links_reloaded_toast">Ligazóns recargadas</string>
-    <string name="updates_settings_des">Busque de forma automática novas actualizacións despois de iniciar o aplicativo.</string>
-    <string name="apk_installer_settings_des">Algúns dispositivos non soportan o novo instalador de paquetes. Probe a opción antiga se as actualizacións non se instalan.</string>
+
     <string name="delete_message_multiple" formatted="true">Está seguro de querer borrar permanentemente os seguintes elementos?\n\n%s</string>
     <string name="delete_message" formatted="true">Esto borrarase %s permanentemente\nEstás seguro?</string>
     <string name="cartoons_singular">Debuxo animado</string>
@@ -226,7 +224,7 @@
     <string name="repo_copy_label">Nome do repositorio e a sua URL</string>
     <string name="play_from_beginning_img_des">Reproducir dende o comezo</string>
     <string name="open_local_video">Abrir vídeo localmente</string>
-    <string name="apk_installer_settings">Instalador de APK</string>
+
     <string name="next_season_episode_format" formatted="true">A temporada %1$d e o capítulo %2$d se estrearán en</string>
     <string name="downloads_delete_select">Escolla os elementos para eliminar</string>
     <string name="offline_file">Dispoñibel para visualizar sen conexión</string>

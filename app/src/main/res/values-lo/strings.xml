@@ -21,7 +21,7 @@
     <string name="preview_background_img_des">ຕົວຢ່າງພື້ນຫຼັງ</string>
     <string name="player_speed_text_format" formatted="true">ຄວາມໄວ (%.2fx)</string>
     <string name="rated_format" formatted="true">ຄະແນນ: %.1f</string>
-    <string name="new_update_format" formatted="true">ພົບການອັບເດດໃໝ່!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">ເນື້ອຫາເສີມ (Filler)</string>
     <string name="duration_format" formatted="true">%d ນາທີ</string>
     <string name="app_name">CloudStream</string>
@@ -75,7 +75,7 @@
     <string name="offline_file">ສາມາດເບິ່ງແບບອອຟໄລໄດ້</string>
     <string name="select_all">ເລືອກທັງໝົດ</string>
     <string name="deselect_all">ຍົກເລີກການເລືອກທັງໝົດ</string>
-    <string name="update_started">ເລີ່ມການອັບເດດ</string>
+
     <string name="stream">ສະຕຣີມຜ່ານເຄືອຂ່າຍ</string>
     <string name="open_local_video">ເປີດວິດີໂອໃນເຄື່ອງ</string>
     <string name="error_loading_links_toast">ເກີດຂໍ້ຜິດພາດໃນການໂຫຼດລິ້ງ</string>
@@ -175,7 +175,7 @@
     <string name="search">ຄົ້ນຫາ</string>
     <string name="library">ຄັງເກັບ</string>
     <string name="category_account">ບັນຊີ ແລະ ຄວາມປອດໄພ</string>
-    <string name="category_updates">ອັບເດດ ແລະ ສຳຮອງຂໍ້ມູນ</string>
+
     <string name="settings_info">ຂໍ້ມູນ</string>
     <string name="advanced_search">ການຄົ້ນຫາຂັ້ນສູງ</string>
     <string name="advanced_search_des">ສະແດງຜົນການຄົ້ນຫາແຍກຕາມຜູ້ໃຫ້ບໍລິການ</string>
@@ -192,14 +192,9 @@
     <string name="automatic_plugin_download">ດາວໂຫຼດປລັກອິນອັດຕະໂນມັດ</string>
     <string name="automatic_plugin_download_mode_title">ເລືອກໂໝດການກັ່ນຕອງການດາວໂຫຼດປລັກອິນ</string>
     <string name="automatic_plugin_download_summary">ຕິດຕັ້ງປລັກອິນທັງໝົດທີ່ຍັງບໍ່ໄດ້ຕິດຕັ້ງຈາກ repository ທີ່ເພີ່ມໄວ້ໂດຍອັດຕະໂນມັດ.</string>
-    <string name="updates_settings">ສະແດງການອັບເດດແອັບຯ</string>
-    <string name="updates_settings_des">ຄົ້ນຫາການອັບເດດໃໝ່ໂດຍອັດຕະໂນມັດຫຼັງຈາກເປີດແອັບຯ.</string>
+
     <string name="redo_setup_process">ຕັ້ງຄ່າໃໝ່ທັງໝົດ</string>
-    <string name="install_prerelease">ຕິດຕັ້ງເວີຊັນທົດລອງ (Pre-release)</string>
-    <string name="prerelease_already_installed">ຕິດຕັ້ງເວີຊັນທົດລອງແລ້ວ.</string>
-    <string name="prerelease_install_failed">ບໍ່ສາມາດຕິດຕັ້ງເວີຊັນທົດລອງໄດ້.</string>
-    <string name="apk_installer_settings">ຕົວຕິດຕັ້ງ APK</string>
-    <string name="apk_installer_settings_des">ບາງອຸປະກອນບໍ່ຮອງຮັບຕົວຕິດຕັ້ງແພັກເກດແບບໃໝ່. ລອງໃຊ້ຕົວເລືອກແບບເກົ່າ (Legacy) ຖ້າບໍ່ສາມາດອັບເດດໄດ້.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">ແອັບຯ Light novel ໂດຍຜູ້ພັດທະນາດຽວກັນ</string>
     <string name="anim">ແອັບຯ Anime ໂດຍຜູ້ພັດທະນາດຽວກັນ</string>
@@ -309,14 +304,13 @@
     <string name="show_title">ຊື່ເລື່ອງ</string>
     <string name="show_episode_text">ຂໍ້ຄວາມບອກຕອນ</string>
     <string name="poster_ui_settings">ເປີດ/ປິດ ອົງປະກອບ UI ເທິງໂປສເຕີ</string>
-    <string name="no_update_found">ບໍ່ພົບການອັບເດດ</string>
-    <string name="check_for_update">ກວດສອບການອັບເດດ</string>
+
     <string name="video_lock">ລັອກ</string>
     <string name="video_aspect_ratio_resize">ປັບຂະໜາດ</string>
     <string name="video_source">ແຫຼ່ງວິດີໂອ</string>
     <string name="video_skip_op">ຂ້າມ OP</string>
     <string name="dont_show_again">ບໍ່ຕ້ອງສະແດງອີກ</string>
-    <string name="skip_update">ຂ້າມການອັບເດດນີ້</string>
+
     <string name="update">ອັບເດດ</string>
     <string name="watch_quality_pref">ຄຸນນະພາບການເບິ່ງທີ່ຕ້ອງການ (WiFi)</string>
     <string name="watch_quality_pref_data">ຄຸນນະພາບການເບິ່ງທີ່ຕ້ອງການ (ເນັດມືຖື)</string>
@@ -349,7 +343,7 @@
     <string name="legal_notice">ຂໍ້ຄວາມປະຕິເສດຄວາມຮັບຜິດຊອບ</string>
     <string name="pref_category_bypass">ການຂ້າມ ISP</string>
     <string name="pref_category_links">ລິ້ງ</string>
-    <string name="pref_category_app_updates">ອັບເດດແອັບຯ</string>
+
     <string name="pref_category_backup">ສຳຮອງຂໍ້ມູນ</string>
     <string name="pref_category_extensions">ສ່ວນເສີມ</string>
     <string name="pref_category_actions">ການກະທຳ</string>
@@ -564,12 +558,7 @@
     <string name="battery_dialog_message">ເພື່ອໃຫ້ການດາວໂຫຼດ ແລະ ການແຈ້ງເຕືອນລາຍການທີ່ຕິດຕາມບໍ່ຖືກຂັດຈັງຫວະ, CloudStream ຕ້ອງການການອະນຸຍາດໃຫ້ເຮັດວຽກຢູ່ພື້ນຫຼັງ. ເມື່ອກົດ ຕົກລົງ, ເຈົ້າຈະເຫັນໜ້າຕ່າງຂໍອະນຸຍາດ, ກະລຸນາກົດ \'ອະນຸຍາດ\'.\n\nໝາຍເຫດ: ການອະນຸຍາດນີ້ບໍ່ໄດ້ໝາຍຄວາມວ່າແອັບຈະກິນແບັດເຕີຣີ. ມັນຈະເຮັດວຽກຢູ່ພື້ນຫຼັງສະເພາະເວລາທີ່ຈຳເປັນ ເຊັ່ນ: ເວລາຮັບການແຈ້ງເຕືອນ ຫຼື ດາວໂຫຼດວິດີໂອ.</string>
     <string name="app_unrestricted_toast">ການໃຊ້ແບັດເຕີຣີຂອງແອັບຖືກຕັ້ງເປັນແບບບໍ່ຈຳກັດແລ້ວ</string>
     <string name="app_info_intent_error">ບໍ່ສາມາດເປີດຂໍ້ມູນແອັບ CloudStream ໄດ້.</string>
-    <string name="update_notification_downloading">ກຳລັງດາວໂຫຼດອັບເດດແອັບ…</string>
-    <string name="update_notification_installing">ກຳລັງຕິດຕັ້ງອັບເດດແອັບ…</string>
-    <string name="update_notification_failed">ບໍ່ສາມາດຕິດຕັ້ງເວີຊັນໃໝ່ຂອງແອັບໄດ້</string>
-    <string name="apk_installer_legacy">ແບບເກົ່າ</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
-    <string name="delayed_update_notice">ແອັບຈະຖືກອັບເດດເມື່ອທ່ານອອກ</string>
+
     <string name="sort_by">ຈັດຮຽງຕາມ</string>
     <string name="sort">ຈັດຮຽງ</string>
     <string name="sort_rating_desc">ຄະແນນ (ສູງ ຫາ ຕ່ຳ)</string>

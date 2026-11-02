@@ -12,7 +12,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Avspillingshastighet (%.2fx)</string>
     <string name="rated_format" formatted="true">Vurdert: %.1f</string>
-    <string name="new_update_format" formatted="true">Ny oppdatering funnet! \n%1$s -&gt; %2$s</string>
+
     <string name="app_name">CloudStream</string>
     <string name="title_home">Hjem</string>
     <string name="title_search">Søk</string>
@@ -109,8 +109,7 @@
     <string name="advanced_search">Avansert søk</string>
     <string name="advanced_search_des">Gir deg søkeresultatene atskilt etter leverandør</string>
     <string name="show_fillers_settings">Vis filler-episode til anime</string>
-    <string name="updates_settings">Vis appoppdateringer</string>
-    <string name="updates_settings_des">Søk automatisk etter nye oppdateringer etter at appen har startet.</string>
+
     <string name="github">Github</string>
     <string name="lightnovel">Light novel app av samme devs</string>
     <string name="anim">Anime app av samme devs</string>
@@ -166,8 +165,7 @@
     <string name="episode_action_auto_download">Automatisk nedlasting</string>
     <string name="episode_action_download_mirror">Last ned speil</string>
     <string name="episode_action_reload_links">Last inn lenker på nytt</string>
-    <string name="no_update_found">Ingen oppdatering funnet</string>
-    <string name="check_for_update">Se etter oppdatering</string>
+
     <string name="video_lock">Låse</string>
     <string name="video_aspect_ratio_resize">Endre størrelse</string>
     <string name="video_source">Kilde</string>
@@ -388,7 +386,7 @@
     <string name="automatic_plugin_download_summary">Installer automatisk alle plugins som ikke er installert fra de tilføyde depotene.</string>
     <string name="show_hd">Kvalitetsetikett</string>
     <string name="poster_ui_settings">Slå av/på grensesnittselementer på plakat</string>
-    <string name="skip_update">Hopp over denne oppdateringen</string>
+
     <string name="video_ram_description">Kan forårsake krasj hvis satt for høyt på enheter med lite minne, for eksempel en Android TV.</string>
     <string name="action_open_play">@string/home_play</string>
     <string name="backup_settings">Sikkerhetskopier data</string>
@@ -402,14 +400,12 @@
     <string name="anime_singular">@string/anime</string>
     <string name="pref_filter_search_quality">Skjul valgt videokvalitet i søkeresultater</string>
     <string name="restore_success">Lastet inn sikkerhetkopifil</string>
-    <string name="category_updates">Oppdateringer og sikkerhetskopier</string>
+
     <string name="ova_singular">@string/ova</string>
     <string name="confirm_exit_dialog">Avslutt?</string>
     <string name="nsfw_singular">Sensurerbart</string>
     <string name="batch_download_nothing_to_download_format" formatted="true">Alle %s er allerede nedlastet</string>
-    <string name="update_notification_failed">Kunne ikke installere den nye versjonen av programmet</string>
-    <string name="update_notification_installing">Installerer appoppdatering…</string>
-    <string name="update_notification_downloading">Laster ned ny versjon av programmet …</string>
+
     <string name="upload_sync">Synkroniser</string>
     <string name="authenticated_user" formatted="true">%s innlogget</string>
     <string name="video_disk_description">Forårsaker problemer hvis satt for høyt på enheter med lite lagringsplass, som f.eks. Android TV.</string>
@@ -448,7 +444,7 @@
     <string name="safe_mode_description">Alle utvidelser ble skrudd av som følge av et krasj for å hjelpe deg å finne det som lager trøbbel.</string>
     <string name="play_trailer_button">Spill forfilm</string>
     <string name="pref_category_links">Lenker</string>
-    <string name="pref_category_app_updates">Programoppgraderinger</string>
+
     <string name="pref_category_extensions">Utvidelser</string>
     <string name="pref_category_actions">Handlinger</string>
     <string name="pref_category_cache">Hurtiglager</string>
@@ -458,16 +454,13 @@
     <string name="pref_category_defaults">Forvalg</string>
     <string name="pref_category_looks">Utseende</string>
     <string name="pref_category_ui_features">Funksjoner</string>
-    <string name="apk_installer_legacy">Gammeldags</string>
-    <string name="apk_installer_package_installer">PakkeInstallatør</string>
+
     <string name="redo_setup_process">Gjenta oppsettsprosess</string>
     <string name="pref_category_subtitles">Undertekster</string>
     <string name="pref_category_backup">Sikkerhetskopi</string>
-    <string name="apk_installer_settings">APK-installatør</string>
-    <string name="apk_installer_settings_des">Noen telefoner støtter ikke den nye pakkeinstallatøren. Prøv det eldre alternativet hvis oppdateringer ikke blir installert.</string>
-    <string name="update_started">Oppdatering startet</string>
+
     <string name="plugin_downloaded">Programtillegg nedlastet</string>
-    <string name="delayed_update_notice">Programmet vil oppgraderes når du avslutter det</string>
+
     <string name="android_tv_interface_on_seek_settings_summary">Blafringsmengde med synlig avspiller</string>
     <string name="restart">Start på ny</string>
     <string name="jsdelivr_proxy">raw.githubusercontent.com-mellomtjener</string>

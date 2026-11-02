@@ -100,8 +100,7 @@
     <string name="settings_info">Πληροφορίες</string>
     <string name="advanced_search">Προχωρημένη Αναζήτηση</string>
     <string name="advanced_search_des">Δίνει τα αποτελέσματα αναζήτησης ταξινομημένα ανά πάροχο</string>
-    <string name="updates_settings">Εμφάνιση ενημερώσεων</string>
-    <string name="updates_settings_des">Αυτόματη αναζήτηση νέων ενημερώσεων κατά την εκκίνηση της εφαρμογής.</string>
+
     <string name="github">GitHub</string>
     <string name="lightnovel">Εφαρμογή βιβλίων από τους ίδιους προγραμματιστές</string>
     <string name="anim">Εφαρμογή άνιμε από τους ίδιους προγραμματιστές</string>
@@ -110,7 +109,7 @@
     <string name="benene_des">Μπανάνα δόθηκε</string>
     <string name="player_speed_text_format" formatted="true">Ταχύτητα (%.2fx)</string>
     <string name="rated_format" formatted="true">Βαθμολογία: %.1f</string>
-    <string name="new_update_format" formatted="true">Νέα διαθέσιμη ενημέρωση! \n%1$s -&gt; %2$s</string>
+
     <string name="double_tap_to_pause_settings_des">Πατήστε δύο φορές στη μέση για παύση</string>
     <string name="use_system_brightness_settings">Χρήση φωτεινότητας συστήματος</string>
     <string name="use_system_brightness_settings_des">Χρήση φωτεινότητας συστήματος στο ενσωματωμένο πρόγραμμα αναπαραγωγής, αντί εφαρμογής προεπιλεγμένου σκούρου επικαλύμματος</string>
@@ -124,7 +123,7 @@
     <string name="backup_failed">Δεν έχει δοθεί άδεια για πρόσβαση στον αποθηκευτικό χώρο. Παρακαλώ προσπαθήστε ξανά.</string>
     <string name="backup_failed_error_format">Σφάλμα δημιουργίας αντιγράφων ασφαλείας %s</string>
     <string name="category_account">Λογαριασμοί και Ασφάλεια</string>
-    <string name="category_updates">Ενημερώσεις και αντίγραφα ασφαλείας</string>
+
     <string name="show_fillers_settings">Εμφάνιση filler επεισοδίου για άνιμε</string>
     <string name="show_trailers_settings">Εμφάνιση trailer</string>
     <string name="kitsu_settings">Εμφάνιση αφισών από Kitsu</string>
@@ -199,7 +198,7 @@
     <string name="video_source">Πηγή</string>
     <string name="video_skip_op">Παράλειψη OP</string>
     <string name="dont_show_again">Να μην εμφανιστεί ξανά</string>
-    <string name="skip_update">Παράλειψη της τρέχουσας ενημέρωσης</string>
+
     <string name="update">Ενημέρωση</string>
     <string name="watch_quality_pref">Προτιμώμενη ποιότητας παρακολούθησης (WiFi)</string>
     <string name="limit_title">Μέγιστος αριθμός χαρακτήρων τίτλου</string>
@@ -402,17 +401,14 @@
     <string name="clipboard_too_large">Υπερβολικά μεγάλο μέγεθος κειμένου. Αδύνατη η αποθήκευση στο πρόχειρο.</string>
     <string name="yes">Ναι</string>
     <string name="no">Όχι</string>
-    <string name="update_notification_downloading">Λήψη ενημέρωσης εφαρμογής…</string>
-    <string name="update_notification_installing">Εγκατάσταση ενημέρωσης εφαρμογής…</string>
-    <string name="update_notification_failed">Αδύνατη η εγκατάσταση της νέας έκδοσης της εφαρμογής</string>
+
     <string name="type_re_watching">Ξαναβλέπει</string>
     <string name="stream">Μετάδοση</string>
     <string name="download_done">Η λήψη ολοκληρώθηκε</string>
     <string name="autoplay_next_settings">Αυτόματη αναπαραγωγή επόμενου επεισοδίου</string>
     <string name="automatic_plugin_download_summary">Αυτόματη εγκατάσταση όλων των μη-εγκατεστημένων plugin από τους προστιθεμένους παρόχους.</string>
     <string name="anime">Άνιμε</string>
-    <string name="no_update_found">Δεν βρέθηκε ενημέρωση</string>
-    <string name="check_for_update">Έλεγχος για ενημέρωση</string>
+
     <string name="example_password">κωδικός123</string>
     <string name="example_username">ΤοΚουλΟνομαΜου</string>
     <string name="example_email">γειασου@κόσμε.com</string>
@@ -431,7 +427,7 @@
     <string name="go_back_30">-30</string>
     <string name="rating">Κριτική</string>
     <string name="ova_singular">OVA</string>
-    <string name="pref_category_app_updates">Ενημερώσεις εφαρμογής</string>
+
     <string name="pref_category_backup">Αντίγραφο ασφαλείας</string>
     <string name="pref_category_extensions">Extensions</string>
     <string name="pref_category_actions">Δράσεις</string>
@@ -449,16 +445,14 @@
     <string name="example_ip">127.0.0.1</string>
     <string name="all_languages_preference">Όλες οι γλώσσες</string>
     <string name="skip_type_format" formatted="true">Παράλειψη %s</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
-    <string name="apk_installer_legacy">Legacy</string>
+
     <string name="play_trailer_button">Αναπαραγωγή τρέιλερ</string>
     <string name="action_add_to_bookmarks">Ορισμός κατάστασης θέασης</string>
     <string name="sort_copy">Αντιγραφή</string>
     <string name="sort_save">Αποθήκευση</string>
     <string name="subs_import_text" formatted="true">Εισάγετε γραμματοσειρές τοποθετώντας \'τες στο %s</string>
     <string name="autoplay_next_settings_des">Αναπαραγωγή του επόμενου επεισοδίου με το τέλος του τρέχοντος</string>
-    <string name="apk_installer_settings">Εγκαταστάτης APK</string>
-    <string name="apk_installer_settings_des">Ορισμένες συσκευές δεν υποστηρίζουν τον νέο εγκαταστάτη πακέτων. Δοκιμάστε την επιλογή Legacy εάν δεν εγκαθίστανται οι ενημερώσεις.</string>
+
     <string name="ova">OVA</string>
     <string name="torrent_singular">Torrent</string>
     <string name="pref_category_gestures">Χειρονομίες</string>
@@ -466,8 +460,7 @@
     <string name="confirm_exit_dialog">Είστε σίγουροι πως θέλετε να βγείτε;</string>
     <string name="redo_setup_process">Επανάληψη διαδικασίας διαμόρφωσης της εφαρμογής</string>
     <string name="plugin_downloaded">Το πρόσθετο κατέβει</string>
-    <string name="update_started">Ενημέρωση ξεκίνησε</string>
-    <string name="delayed_update_notice">Η εφαρμογή θα ενημερωθεί κατά την έξοδο</string>
+
     <string name="sort_alphabetical_z">Αλφαβητικά (Ω προς Α)</string>
     <string name="sort">Ταξινόμηση</string>
     <string name="sort_rating_asc">Κριτική (Χαμηλή προς Υψηλή)</string>

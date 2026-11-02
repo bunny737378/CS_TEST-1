@@ -69,7 +69,7 @@
     <string name="preview_background_img_des">Background ng Pasilip</string>
     <string name="player_speed_text_format" formatted="true">Bilis (%.2fx)</string>
     <string name="rated_format" formatted="true">Na-rate: %.1f</string>
-    <string name="new_update_format" formatted="true">May nakitang bagong update!\n%1$s -&gt; %2$s</string>
+
     <string name="duration_format" formatted="true">%d min</string>
     <string name="play_with_app_name">Ipatugtog sa CloudStream</string>
     <string name="title_home">Bahay</string>
@@ -112,7 +112,7 @@
     <string name="download_canceled">Kinansela ang pag-download</string>
     <string name="download_done">Natapos ang pag-download</string>
     <string name="queue_empty_message">Kasalukuyang walang nakapilang mga download.</string>
-    <string name="update_started">Sinimulan ang pag-update</string>
+
     <string name="open_local_video">Buksan ang local video</string>
     <string name="error_loading_links_toast">Nagkamali sa paglo-load ng mga link</string>
     <string name="links_reloaded_toast">Ini-load muli ang mga link</string>

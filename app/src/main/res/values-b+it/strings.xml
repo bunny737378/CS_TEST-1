@@ -19,7 +19,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Velocità (%.2fx)</string>
     <string name="rated_format" formatted="true">Valutato: %.1f</string>
-    <string name="new_update_format" formatted="true">Nuovo aggiornamento trovato! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Filler</string>
     <string name="duration_format" formatted="true">%d min</string>
     <!-- <string name="app_name">CloudStream</string> -->
@@ -145,7 +145,7 @@
     <string name="backup_failed_error_format">Errore nel backup %s</string>
     <string name="search">Cerca</string>
     <string name="category_account">Account e sicurezza</string>
-    <string name="category_updates">Aggiornamenti e Backup</string>
+
     <string name="settings_info">Info</string>
     <string name="advanced_search">Ricerca avanzata</string>
     <string name="advanced_search_des">Dividi i risultati della ricerca per provider</string>
@@ -154,8 +154,7 @@
     <string name="kitsu_settings">Mostra poster da Kitsu</string>
     <string name="pref_filter_search_quality">Nascondi la qualità video selezionata dai risultati di ricerca</string>
     <string name="automatic_plugin_updates">Aggiorna automaticamente i plugin</string>
-    <string name="updates_settings">Mostra gli aggiornamenti dell\'app</string>
-    <string name="updates_settings_des">Cerca automaticamente nuovi aggiornamenti dopo aver avviato l\'app.</string>
+
     <string name="github">GitHub</string>
     <string name="lightnovel">App per Light Novel degli stessi sviluppatori</string>
     <string name="anim">App per Anime degli stessi sviluppatori</string>
@@ -243,14 +242,13 @@
     <string name="show_sub">Etichetta sub</string>
     <string name="show_title">Titolo</string>
     <string name="poster_ui_settings">Attiva/disattiva elementi dell\'UI sul poster</string>
-    <string name="no_update_found">Nessun aggiornamento trovato</string>
-    <string name="check_for_update">Controlla aggiornamenti</string>
+
     <string name="video_lock">Blocca</string>
     <string name="video_aspect_ratio_resize">Ridimensiona</string>
     <string name="video_source">Fonte</string>
     <string name="video_skip_op">Salta OP</string>
     <string name="dont_show_again">Non mostrare di nuovo</string>
-    <string name="skip_update">Salta questo aggiornamento</string>
+
     <string name="update">Aggiorna</string>
     <string name="watch_quality_pref">Qualità di visualizzazione preferita (WiFi)</string>
     <string name="limit_title">Limita i caratteri del titolo nel lettore</string>
@@ -450,10 +448,10 @@
     <string name="clipboard_too_large">Testo troppo lungo. Impossibile salvare negli appunti.</string>
     <string name="app_name">CloudStream</string>
     <string name="automatic_plugin_download">Scarica automaticamente i plugins</string>
-    <string name="update_notification_failed">Impossibile installare la nuova versione dell\'app</string>
+
     <string name="episode_sync_settings">Aggiorna progresso di visione</string>
     <string name="skip_type_mixed_op">Opening misto</string>
-    <string name="update_notification_installing">Installazione aggiornamento dell\'app…</string>
+
     <string name="subtitles_remove_captions">Rimuovi le didascalie chiuse dai sottotitoli</string>
     <string name="subtitles_remove_bloat">Rimuovere gli annunci dai sottotitoli</string>
     <string name="skip_type_op">Opening</string>
@@ -464,16 +462,13 @@
     <string name="confirm_exit_dialog">Sei sicuro di voler uscire?</string>
     <string name="yes">Sì</string>
     <string name="no">No</string>
-    <string name="update_notification_downloading">Download aggiornamento dell\'app…</string>
+
     <string name="automatic_plugin_download_summary">Installa automaticamente tutti i plugin non ancora installati dai repository aggiunti.</string>
-    <string name="apk_installer_package_installer">ProgrammaInstallazionePacchetti</string>
-    <string name="apk_installer_settings_des">Alcuni dispositivi non supportano il nuovo programma di installazione dei pacchetti. Se gli aggiornamenti non vengono installati, prova l\'opzione legacy.</string>
-    <string name="apk_installer_settings">Installer APK</string>
-    <string name="apk_installer_legacy">Legacy</string>
+
     <string name="play_trailer_button">Riproduci trailer</string>
     <string name="redo_setup_process">Ripeti il processo di configurazione</string>
     <string name="pref_category_links">Link</string>
-    <string name="pref_category_app_updates">Aggiornamenti app</string>
+
     <string name="pref_category_backup">Backup</string>
     <string name="pref_category_extensions">Estensioni</string>
     <string name="pref_category_actions">Azioni</string>
@@ -485,8 +480,7 @@
     <string name="pref_category_defaults">Predefiniti</string>
     <string name="pref_category_looks">Aspetto</string>
     <string name="pref_category_ui_features">Funzionalità</string>
-    <string name="delayed_update_notice">L\'app verrà aggiornata all\'uscita</string>
-    <string name="update_started">Aggiornamento avviato</string>
+
     <string name="plugin_downloaded">Plugin scaricato</string>
     <string name="action_remove_from_watched">Rimuovi dai già visti</string>
     <string name="browser">Browser</string>
@@ -724,9 +718,7 @@
     <string name="top_right">In alto a destra</string>
     <string name="middle_left">In centro a sinistra</string>
     <string name="play_full_series_button">Riproduci serie completa</string>
-    <string name="install_prerelease">Installa la versione pre-release</string>
-    <string name="prerelease_already_installed">La versione pre-release è già installata.</string>
-    <string name="prerelease_install_failed">Impossibile installare la versione pre-release.</string>
+
     <string name="show_episode_text">Testo dell\'episodio</string>
     <string name="search_suggestions">Suggerimenti per la ricerca</string>
     <string name="search_suggestions_des">Mostra suggerimenti di ricerca durante la digitazione</string>

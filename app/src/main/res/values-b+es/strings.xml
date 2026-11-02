@@ -61,7 +61,7 @@
     <string name="autoplay_next_settings_des">Iniciar el siguiente episodio cuando el actual termine</string>
     <string name="video_skip_op">Omitir Intro</string>
     <string name="skip_type_op">Apertura</string>
-    <string name="skip_update">Omitir esta actualización</string>
+
     <string name="skip_type_format" formatted="true">Omitir %s</string>
     <string name="skip_type_ed">Final</string>
     <string name="skip_type_mixed_op">Apertura mixta</string>
@@ -94,7 +94,7 @@
     <string name="home_change_provider_img_des">Cambiar proveedor</string>
     <string name="preview_background_img_des">Previsualizar fondo</string>
     <string name="rated_format" formatted="true">Nota:%.1f</string>
-    <string name="new_update_format" formatted="true">Se encontró una actualización nueva:\n%1$s → %2$s</string>
+
     <string name="download">Descargar</string>
     <string name="popup_pause_download">Pausar Descarga</string>
     <string name="subs_font">Formato de fuente</string>
@@ -203,7 +203,7 @@
     <string name="restore_settings">Restaurar datos desde el backup</string>
     <string name="backup_settings">Hacer copia de los datos (backup)</string>
     <string name="restore_success">Archivo de backup cargado</string>
-    <string name="updates_settings_des">Busque automáticamente nuevas actualizaciones después de iniciar la aplicación.</string>
+
     <string name="redo_setup_process">Rehacer el proceso de configuración inicial</string>
     <string name="show_fillers_settings">Mostrar episodio de relleno para Anime</string>
     <string name="play_episode_toast">Reproducir Episodio</string>
@@ -218,7 +218,7 @@
     <string name="backup_failed_error_format">Error de backup de %s</string>
     <string name="search">Buscar</string>
     <string name="category_account">Cuentas y seguridad</string>
-    <string name="category_updates">Actualizaciones y copias de seguridad</string>
+
     <string name="settings_info">Información</string>
     <string name="advanced_search">Búsqueda Avanzada</string>
     <string name="advanced_search_des">Mostrar los resultados de la búsqueda por proveedor</string>
@@ -253,7 +253,7 @@
     <string name="status_completed">Completado</string>
     <string name="status">Estado</string>
     <string name="limit_title">Máxima cantidad de caracteres en el título del reproductor</string>
-    <string name="pref_category_app_updates">Actualizaciones de la aplicación</string>
+
     <string name="automatic">Automático</string>
     <string name="pref_category_actions">Acciones</string>
     <string name="enable_nsfw_on_providers">Activar NSFW en las extensiones compatibles</string>
@@ -270,13 +270,10 @@
     <string name="apply_on_restart">Se aplicarán los cambios al reiniciar la App.</string>
     <string name="player_settings_play_in_app">Reproductor interno</string>
     <string name="extension_language">Idioma</string>
-    <string name="apk_installer_legacy">Tradicional</string>
-    <string name="apk_installer_package_installer">Instalador de programas</string>
+
     <string name="blank_repo_message">CloudStream no tiene sitios instalados por defecto. Necesitas instalar los sitios desde los repositorios. \n \nÚnete a nuestro Discord o busca en línea.</string>
     <string name="download_all_plugins_from_repo">Advertencia: ¡CloudStream 3 no asume ninguna responsabilidad por el uso de extensiones de terceros y no brinda ningún soporte para ellas!</string>
-    <string name="updates_settings">Mostrar actualizaciones de la aplicación</string>
-    <string name="apk_installer_settings">Instalador de APK</string>
-    <string name="apk_installer_settings_des">Algunos dispositivos no soportan el nuevo instalador de paquetes. Pruebe la opción antigua (legacy) si las actualizaciones no se instalan.</string>
+
     <string name="episode_sync_settings_des">Sincronizar automáticamente el progreso de su episodio actual</string>
     <string name="automatic_plugin_updates">Actualización automática de plugins</string>
     <string name="pref_category_player_features">Características del reproductor</string>
@@ -320,7 +317,7 @@
     <string name="cartoons">Dibujos animados</string>
     <string name="show_title">Título</string>
     <string name="poster_ui_settings">Alternar elementos de la interfaz de usuario en el póster</string>
-    <string name="no_update_found">No se encontró ninguna actualización</string>
+
     <string name="category_general">General</string>
     <string name="primary_color_settings">Color principal</string>
     <string name="app_theme_settings">Tema de la aplicación</string>
@@ -354,7 +351,7 @@
     <string name="show_hd">Etiqueta de calidad</string>
     <string name="show_dub">Etiqueta de doblaje</string>
     <string name="show_sub">Etiqueta de subtitulado</string>
-    <string name="check_for_update">Buscar actualizaciones</string>
+
     <string name="display_subbed_dubbed_settings">Mostrar anime doblado/subtitulado</string>
     <string name="video_lock">Bloquear</string>
     <string name="video_aspect_ratio_resize">Redimensionar</string>
@@ -453,9 +450,7 @@
     <string name="action_mark_as_watched">Marcar como visto</string>
     <string name="clipboard_too_large">Demasiado texto. No se puede guardar en el portapapeles.</string>
     <string name="no">No</string>
-    <string name="update_notification_downloading">Descargando actualización de la aplicación…</string>
-    <string name="update_notification_installing">Instalando actualización de la aplicación…</string>
-    <string name="update_notification_failed">No se pudo instalar la nueva versión de la aplicación</string>
+
     <string name="app_not_found_error">App no encontrada</string>
     <string name="plugin_deleted">Plugin Borrado</string>
     <string name="plugin_load_fail" formatted="true">No puede cargar %s</string>
@@ -463,8 +458,7 @@
     <string name="skip_type_intro">Intro</string>
     <string name="enable_skip_op_from_database_des">Muestrar botones emergentes para saltar apertura/finalización del video</string>
     <string name="yes">Si</string>
-    <string name="delayed_update_notice">La aplicación se actualizará al salir</string>
-    <string name="update_started">Actualización iniciada</string>
+
     <string name="plugin_downloaded">Plugin descargado</string>
     <string name="action_remove_from_watched">Quitar de visto</string>
     <string name="sort_by">Ordenar por</string>
@@ -697,9 +691,7 @@
     <string name="top_center">Arriba centrado</string>
     <string name="top_right">Arriba derecha</string>
     <string name="play_full_series_button">Reproducir toda la serie</string>
-    <string name="install_prerelease">Instalar version pre-lanzamiento</string>
-    <string name="prerelease_already_installed">Pre-lanzamiento ya está instalada.</string>
-    <string name="prerelease_install_failed">La instalación pre-lanzamiento ha fallado.</string>
+
     <string name="show_episode_text">Texto del episodio</string>
     <string name="speedup_title">Alternar velocidad de pulsación larga</string>
     <string name="middle_left">Medio izquierda</string>

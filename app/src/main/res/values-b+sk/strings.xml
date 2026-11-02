@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="new_update_format" formatted="true">Našla sa nová aktualizácia! \n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Výplň</string>
     <string name="next_episode_time_hour_format" formatted="true">%1$dh %2$dm</string>
     <string name="next_episode_format" formatted="true">Epizóda %d bude vydaná za</string>
@@ -44,7 +44,7 @@
     <string name="download_paused">Sťahovanie pozastavené</string>
     <string name="download_done">Sťahovanie dokončené</string>
     <string name="error_loading_links_toast">Chyba pri načítavaní odkazov</string>
-    <string name="update_started">Aktualizácia spustená</string>
+
     <string name="download_storage_text">Interné úložisko</string>
     <string name="loading">Načítavanie…</string>
     <string name="type_completed">Dokončené</string>
@@ -117,15 +117,14 @@
     <string name="browser">Prehliadač</string>
     <string name="normal_no_plot">Zhrnutie sa nenašlo</string>
     <string name="double_tap_to_pause_settings">Dvojitým ťuknutím pozastaviť</string>
-    <string name="category_updates">Aktualizácie a Zálohovanie</string>
+
     <string name="settings_info">Informácie</string>
     <string name="advanced_search">Rozšírené vyhľadávanie</string>
     <string name="kitsu_settings">Zobraziť plagáty z Kitsu</string>
     <string name="automatic_plugin_updates">Automatická aktualizácia doplnkov</string>
     <string name="pref_filter_search_quality">Skryť vybranú kvalitu videa vo výsledkoch vyhľadávania</string>
     <string name="show_fillers_settings">Zobraziť výplňovú epizódu pre anime</string>
-    <string name="apk_installer_settings">APK inštalátor</string>
-    <string name="apk_installer_settings_des">Niektoré zariadenia nepodporujú nový inštalátor balíčkov. Ak sa aktualizácie nenainštalujú, skúste použiť staršiu možnosť.</string>
+
     <string name="lightnovel">Nenáročná aplikácia pre romány od rovnakých vývojárov</string>
     <string name="app_language">Jazyk aplikácie</string>
     <string name="no_links_found_toast">Nenašli sa žiadne odkazy</string>
@@ -150,7 +149,7 @@
     <string name="automatic_plugin_download">Automaticky sťahovať doplnky</string>
     <string name="discord">Pripojte sa na Discord</string>
     <string name="player_size_settings_des">Odstrániť čierne okraje</string>
-    <string name="updates_settings_des">Automaticky vyhľadať nové aktualizácie po spustení aplikácie.</string>
+
     <string name="play_episode_toast">Prehrať epizódu</string>
     <string name="backup_failed">Chýbajú povolenia k úložisku. Skúste to prosím znova.</string>
     <string name="player_subtitles_settings_des">Nastavenia titulkov prehrávača</string>
@@ -173,7 +172,7 @@
     <string name="restore_failed_format" formatted="true">Nepodarilo sa obnoviť dáta zo súboru %s</string>
     <string name="backup_failed_error_format">Chyba pri zálohovaní %s</string>
     <string name="advanced_search_des">Poskytne vám výsledky vyhľadávania rozdelené podľa poskytovateľa</string>
-    <string name="updates_settings">Zobraziť aktualizácie aplikácie</string>
+
     <string name="subs_default_reset_toast">Obnoviť predvolenú hodnotu</string>
     <string name="season">Sezóna</string>
     <string name="synopsis">Synopsa</string>
@@ -184,8 +183,7 @@
     <string name="episode_action_auto_download">Automaticky stiahnuť</string>
     <string name="episode_action_download_mirror">Zrkadlo sťahovania</string>
     <string name="video_lock">Zamknúť</string>
-    <string name="no_update_found">Nenašla sa žiadna aktualizácia</string>
-    <string name="check_for_update">Skontrolovať aktualizáciu</string>
+
     <string name="video_aspect_ratio_resize">Zmeniť veľkosť</string>
     <string name="dns_pref">DNS cez HTTPS</string>
     <string name="remove_site_pref">Odstrániť stránku</string>
@@ -211,7 +209,7 @@
     <string name="video_source">Zdroj</string>
     <string name="free_storage">Voľné</string>
     <string name="video_buffer_size_settings">Veľkosť vyrovnávacej pamäte videa</string>
-    <string name="pref_category_app_updates">Aktualizácie aplikácie</string>
+
     <string name="bottom_title_settings">Umiestnenie názvu plagátu</string>
     <string name="live_singular">Živý prenos</string>
     <string name="example_password">heslo123</string>
@@ -274,7 +272,7 @@
     <string name="rating">Hodnotenie</string>
     <string name="torrent_singular">Torrent</string>
     <string name="ova_singular">OVA</string>
-    <string name="skip_update">Preskočiť túto aktualizáciu</string>
+
     <string name="sync_total_episodes_none">/??</string>
     <string name="movies_singular">Film</string>
     <string name="example_ip">127.0.0.1</string>
@@ -347,8 +345,7 @@
     <string name="delete_repository_plugins">Toto tiež odstráni všetky doplnky repozitára</string>
     <string name="next_season_episode_format" formatted="true">Sezóna %1$d Epizóda %2$d bude vydaná za</string>
     <string name="no_plugins_found_error">V repozitári neboli nájdené žiadne doplnky</string>
-    <string name="update_notification_downloading">Sťahuje sa aktualizácia aplikácie…</string>
-    <string name="update_notification_installing">Inštaluje sa aktualizácia aplikácie…</string>
+
     <string name="toast_copied">skopírované!</string>
     <string name="repo_copy_label">Názov a URL repozitára</string>
     <string name="subscription_in_progress_notification">Aktualizujú sa odoberané relácie</string>
@@ -359,7 +356,7 @@
     <string name="repository_url_hint">URL adresa repozitára</string>
     <string name="view_public_repositories_button_short">Verejný zoznam</string>
     <string name="blank_repo_message">CloudStream nemá nainštalované žiadne stránky v predvolenom nastavení. Musíte nainštalovať stránky z repozitára. \n \nPripojte sa k nášmu Discord alebo vyhľadajte online.</string>
-    <string name="update_notification_failed">Nepodarilo sa nainštalovať novú verziu aplikácie</string>
+
     <string name="download_all_plugins_from_repo">Upozornenie: CloudStream 3 nenesie žiadnu zodpovednosť za používanie rozšírenia tretích strán a neposkytuje žiadnu podporu pre nich!</string>
     <string name="add_repository">Pridať repozitár</string>
     <string name="repository_name_hint">Názov repozitára</string>
@@ -466,9 +463,7 @@
     <string name="search_suggestions">Návrhy vyhľadávania</string>
     <string name="search_suggestions_des">Zobraziť návrhy vyhľadávania pri písaní</string>
     <string name="clear_suggestions">Vyčistiť Návrhy</string>
-    <string name="install_prerelease">Nainštalujte pre-release verziu</string>
-    <string name="prerelease_already_installed">Pre-release je už nainštalovaný.</string>
-    <string name="prerelease_install_failed">Nepodarilo sa nainštalovať pre-release.</string>
+
     <string name="unsupported_error">Nepodporovaná chyba</string>
     <string name="show_episode_text">Text Epizódy</string>
     <string name="auth_locally">Lokálna verifikácia</string>
