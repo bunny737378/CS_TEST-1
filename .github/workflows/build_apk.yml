@@ -2,16 +2,24 @@ name: Build APK
 
 on:
   push:
-    branches: [ master, main ]
+    branches:
+      - master
+      - main
+      - 'arena/**'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 concurrency:
-  group: "build-apk"
+  group: build-apk-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -19,36 +27,47 @@ jobs:
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '21'
 
-      - name: Inspect files and grant execute permission
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install required Android SDK packages
         run: |
-          echo "=== Repository root files ==="
-          ls -la
-          if [ ! -f "gradlew" ]; then
-            echo "gradlew not found in root, searching subdirectories..."
-            GRADLEW_PATH=$(find . -maxdepth 3 -name "gradlew" -not -path "*/.*" | head -n 1)
-            if [ -n "$GRADLEW_PATH" ]; then
-              SUBDIR=$(dirname "$GRADLEW_PATH")
-              echo "Found gradlew in $SUBDIR. Moving files to repository root..."
-              cp -r "$SUBDIR"/* . 2>/dev/null || true
-            fi
-          fi
-          if [ ! -f "gradlew" ]; then
-            echo "::error::gradlew not found! Your repository does not contain the project files yet. Please make sure to push the full project from AI Studio (Settings > Push to GitHub) into this repository."
-            exit 1
-          fi
-          chmod +x gradlew
+          yes | sdkmanager --licenses > /dev/null || true
+          sdkmanager --install "platforms;android-36" "build-tools;36.0.0" "platform-tools"
+
+      # app/build.gradle.kts signs both build types with this repository-local
+      # debug key. Generate it on the runner instead of committing a keystore.
+      - name: Generate debug keystore
+        run: |
+          keytool -genkeypair \
+            -alias androiddebugkey \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storetype JKS \
+            -keystore debug.keystore \
+            -storepass android \
+            -keypass android \
+            -dname "CN=Android Debug,O=Android,C=US" \
+            -noprompt
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon
+        run: ./gradlew assembleDebug --no-daemon --no-configuration-cache --stacktrace
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: CloudStream-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
