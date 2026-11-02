@@ -22,8 +22,24 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Inspect files and grant execute permission
+        run: |
+          echo "=== Repository root files ==="
+          ls -la
+          if [ ! -f "gradlew" ]; then
+            echo "gradlew not found in root, searching subdirectories..."
+            GRADLEW_PATH=$(find . -maxdepth 3 -name "gradlew" -not -path "*/.*" | head -n 1)
+            if [ -n "$GRADLEW_PATH" ]; then
+              SUBDIR=$(dirname "$GRADLEW_PATH")
+              echo "Found gradlew in $SUBDIR. Moving files to repository root..."
+              cp -r "$SUBDIR"/* . 2>/dev/null || true
+            fi
+          fi
+          if [ ! -f "gradlew" ]; then
+            echo "::error::gradlew not found! Your repository does not contain the project files yet. Please make sure to push the full project from AI Studio (Settings > Push to GitHub) into this repository."
+            exit 1
+          fi
+          chmod +x gradlew
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
