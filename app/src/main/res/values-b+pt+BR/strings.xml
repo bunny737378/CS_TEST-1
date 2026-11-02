@@ -94,8 +94,7 @@
     <string name="subs_font_size">Tamanho da fonte</string>
     <string name="search_provider_text_providers">Pesquisar usando fornecedor</string>
     <string name="search_provider_text_types">Pesquisar usando tipos</string>
-    <string name="benene_count_text">%d Benenes doados aos desenvolvedores</string>
-    <string name="benene_count_text_none">Nenhuma Benenes doada</string>
+
     <string name="subs_auto_select_language">Escolher automaticamente idioma</string>
     <string name="subs_download_languages">Salvar idiomas ao baixar</string>
     <string name="subs_subtitle_languages">Idioma da legenda</string>
@@ -154,11 +153,11 @@
     <string name="automatic_plugin_updates">Atualização automática de plugins</string>
 
     <string name="github">GitHub</string>
-    <string name="lightnovel">App de Light novel criado pelos mesmos desenvolvedores</string>
+
     <string name="anim">App de Anime criado pelos mesmos desenvolvedores</string>
     <string name="discord">Entre no servidor do Discord</string>
     <string name="benene">Dar um benene aos desenvolvedores</string>
-    <string name="benene_des">Benene dada</string>
+
     <string name="app_language">Idioma do aplicativo</string>
     <string name="no_chromecast_support_toast">Esse fornecedor não possui suporte para Chromecast</string>
     <string name="no_links_found_toast">Nenhum link encontrado</string>
@@ -262,7 +261,7 @@
     <string name="resize_fit">Ajustar para a Tela</string>
     <string name="resize_fill">Esticar</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">Aviso Legal</string>
+
     <string name="category_general">Geral</string>
     <string name="random_button_settings">Botão Aleatório</string>
     <string name="random_button_settings_desc">Mostrar botão aleatório na página inicial e na biblioteca</string>
@@ -512,7 +511,7 @@
     <string name="video_tracks">Faixas de video</string>
     <string name="pref_category_subtitles">Legendas</string>
     <string name="is_adult">18+</string>
-    <string name="pref_category_links">Links</string>
+
     <string name="pref_category_player_features">Funcionalidades do Player</string>
 
     <string name="pref_category_looks">Aparência</string>
@@ -521,7 +520,7 @@
     <string name="network_adress_example">https://example.com/example.mp4</string>
     <string name="pref_category_gestures">Gestos</string>
     <string name="plugin_downloaded">Plugin baixado</string>
-    <string name="jsdelivr_enabled">Não foi possível se conectar ao GitHub. Ativando proxy JsDelivr…</string>
+
     <string name="pref_category_cache">Cache</string>
     <string name="other_singular">Vídeo</string>
     <string name="pref_category_android_tv">Android TV</string>
@@ -599,7 +598,7 @@
     <string name="next_season_episode_format" formatted="true">%2$dº episódio da %1$dª temporada estreia em</string>
     <string name="player_settings_select_cast_device">Selecione o dispositivo de transmissão</string>
     <string name="episode_action_cast_mirror">Espelhar transmissão</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="pref_category_security">Segurança</string>
     <string name="pref_category_accounts">Contas</string>
     <string name="auth_locally">Autenticação local</string>

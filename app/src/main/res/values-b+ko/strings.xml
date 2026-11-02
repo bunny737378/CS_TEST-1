@@ -140,11 +140,10 @@
     <string name="automatic_plugin_updates">플러그인 자동 업데이트</string>
     <string name="automatic_plugin_download_summary">추가된 저장소에서 아직 설치되지 않은 모든 플러그인을 자동으로 설치합니다.</string>
 
-    <string name="lightnovel">같은 개발자가 만든 라이트 노벨 앱</string>
     <string name="anim">같은 개발자가 만든 애니메이션 앱</string>
     <string name="discord">Discord에 참여하기</string>
     <string name="benene">개발자에게 바나나 주기</string>
-    <string name="benene_des">바나나 줌</string>
+
     <string name="app_language">앱 언어</string>
     <string name="no_links_found_toast">링크를 찾을 수 없음</string>
     <string name="copy_link_toast">클립보드에 링크 복사함</string>
@@ -197,7 +196,7 @@
     <string name="video_buffer_size_settings">동영상 버퍼 크기</string>
     <string name="video_buffer_clear_settings">비디오 및 이미지 캐시 삭제</string>
     <string name="dns_pref">DNS over HTTPS</string>
-    <string name="jsdelivr_enabled">GitHub에 연결할 수 없습니다. jsDelivr 프록시를 켜는 중…</string>
+
     <string name="jsdelivr_proxy_summary">jsDelivr를 사용하여 차단된 GitHub 주소를 우회합니다. 단, 업데이트 반영이 며칠 정도 늦어질 수 있습니다.</string>
     <string name="add_site_pref">복제 사이트</string>
     <string name="remove_site_pref">사이트 삭제</string>
@@ -379,11 +378,11 @@
     <string name="video_disk_description">Android TV와 같이 저장 공간이 부족한 기기에서 너무 높게 설정하면 문제가 발생할 수 있습니다.</string>
     <string name="nginx_url_pref">NGINX 서버 URL</string>
     <string name="resize_zoom">확대</string>
-    <string name="pref_category_links">링크</string>
+
     <string name="dns_pref_summary">ISP 차단을 우회하는 데 유용합니다</string>
     <string name="resize_fit">화면 맞춤</string>
     <string name="display_subbed_dubbed_settings">더빙/자막 애니메이션 표시</string>
-    <string name="legal_notice">거부</string>
+
     <string name="pref_category_bypass">ISP 우회</string>
 
     <string name="pref_category_extensions">확장 기능</string>
@@ -463,8 +462,7 @@
     <string name="play_livestream_button">라이브 스트리밍 재생</string>
     <string name="stream">네트워크 스트림</string>
     <string name="search_provider_text_types">유형을 사용하여 검색</string>
-    <string name="benene_count_text">개발자에게 %d 바나나 줌</string>
-    <string name="benene_count_text_none">바나나를 주지 않음</string>
+
     <string name="action_open_watching">상세 정보</string>
     <string name="action_open_play">@string/home_play</string>
     <string name="normal_no_plot">플롯을 찾을 수 없음</string>
@@ -504,7 +502,7 @@
     <string name="toast_copied">복사 완료!</string>
     <string name="repo_copy_label">레포지토리 이름 및 URL</string>
     <string name="test_extensions_summary">본 테스트는 개발자만을 대상으로 하며, 확장자의 작업을 확인하거나 거부하지 않습니다.</string>
-    <string name="cs3wiki">CloudStream 위키</string>
+
     <string name="links_reloaded_toast">링크 초기화 완료</string>
     <string name="backup_frequency">백업 빈도</string>
     <string name="favorites_list_name">즐겨찾기</string>

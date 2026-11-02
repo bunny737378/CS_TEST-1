@@ -95,9 +95,9 @@
     <string name="continue_watching">መመልከትዎን ይቀጥሉ</string>
     <string name="subs_download_languages">ቋንቋዎችን ያውርዱ</string>
     <string name="search_provider_text_providers">አቅራቢዎችን በመጠቀም ይፈልጉ</string>
-    <string name="benene_count_text">%d ሙዝ ለዴቭሎፐሮቹ ተሰጥቷል</string>
+
     <string name="vpn_might_be_needed">ይህ አቅራቢ በትክክል እንዲሰራ ቪፒኤን ሊያስፈልግ ይችላል</string>
-    <string name="benene_count_text_none">ምንም ሙዝ አልተሰጠም</string>
+
     <string name="subs_subtitle_languages">የትርጉም ጽሑፍ ቋንቋ</string>
     <string name="provider_info_meta">ሜታዳታ በድረ-ገጹ ላይ አይገኝም፣ ቪድዮ መጫን ሜታዳታ ድረ-ገጹ ላይ ከሌለ አይሳካም።</string>
     <string name="vpn_torrent">ይህ አቅራቢ ቶረንት ነው፣ ቪፒኤን ይመከራል</string>

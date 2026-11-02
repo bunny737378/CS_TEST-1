@@ -152,8 +152,7 @@
     <string name="subs_font_size">Laki ng Font</string>
     <string name="search_provider_text_providers">Maghanap gamit ang mga tagatustos</string>
     <string name="search_provider_text_types">Maghanap gamit ang mga uri</string>
-    <string name="benene_count_text">%d Benenes naibigay sa mga dev</string>
-    <string name="benene_count_text_none">Walang Benenes na binigay</string>
+
     <string name="subs_auto_select_language">Awtomatikong Piliin ang Wika</string>
     <string name="subs_download_languages">Mag-download ng Mga Wika</string>
 </resources>

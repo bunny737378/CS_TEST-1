@@ -92,8 +92,7 @@
     <string name="subs_font_size">Dimensiune</string>
     <string name="search_provider_text_providers">Căutare în funcție de furnizor</string>
     <string name="search_provider_text_types">Căutare în funcție de tip</string>
-    <string name="benene_count_text">%d banane oferite dezvoltatorilor</string>
-    <string name="benene_count_text_none">Nu s-au oferit banane</string>
+
     <string name="subs_auto_select_language">Selectare automată a limbii</string>
     <string name="subs_download_languages">Descarcă limbi străine</string>
     <string name="subs_subtitle_languages">Limba subtitrării</string>
@@ -150,11 +149,11 @@
     <string name="kitsu_settings">Arată afișele de la Kitsu</string>
 
     <string name="github">GitHub</string>
-    <string name="lightnovel">&gt;Aplicație Light Novel realizată de aceiași dezvoltator</string>
+
     <string name="anim">Aplicație Anime realizată de aceiași dezvoltatorilor</string>
     <string name="discord">Alăturați-vă pe Discord</string>
     <string name="benene">Oferiți dezvoltatorilor o banană</string>
-    <string name="benene_des">Oferă o banană</string>
+
     <string name="app_language">Limba aplicației</string>
     <string name="no_chromecast_support_toast">Acest furnizor nu are suport pentru Chromecast</string>
     <string name="no_links_found_toast">Nu s-au găsit link-uri</string>
@@ -255,7 +254,7 @@
     <string name="resize_fit">Adaptare la ecran</string>
     <string name="resize_fill">Întindere</string>
     <string name="resize_zoom">Mărire</string>
-    <string name="legal_notice">Aviz juridic (declinarea responsabilității și drepturi de autor)</string>
+
     <string name="category_general">General</string>
     <string name="random_button_settings">Aleatoriu</string>
     <string name="random_button_settings_desc">Afișează butonul pentru aleatoriu pe Pagina Principală și în Bibliotecă</string>
@@ -421,7 +420,7 @@
     <string name="pref_category_extensions">Extensii</string>
     <string name="pref_category_player_layout">Layout</string>
     <string name="clipboard_too_large">Prea mult text. Nu s-a putut salva în clipboard.</string>
-    <string name="pref_category_links">Linkuri</string>
+
     <string name="pref_category_ui_features">Funcții</string>
     <string name="extension_authors">Autori</string>
     <string name="add_repository">Adaugă depozit</string>
@@ -488,7 +487,7 @@
     <string name="tracks">Piste</string>
     <string name="restart">Repornește</string>
     <string name="enable_nsfw_on_providers">Activează conținutul pentru adulți pe extensiile suportate</string>
-    <string name="jsdelivr_enabled">Nu s-a putut ajunge la GitHub. Se activează proxy-ul jsDelivr…</string>
+
     <string name="jsdelivr_proxy">Proxy GitHub</string>
     <string name="jsdelivr_proxy_summary">Ocolește blocarea URL-urilor brute de pe GitHub folosind jsDelivr. Poate cauza întârzieri în actualizări cu câteva zile.</string>
     <string name="next">Următorul</string>
@@ -600,7 +599,7 @@
     <string name="biometric_setting">Blocare cu biometrie</string>
     <string name="resume_remaining" formatted="true">%s \nrămase</string>
     <string name="episode_upcoming_format" formatted="true">Următorul în %s</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="next_season_episode_format" formatted="true">Sezonul %1$d Episod %2$d va fi lansat în</string>
     <string name="player_settings_select_cast_device">Selectați divece-ul pe care doriți să faceți cast</string>
     <string name="episode_action_cast_mirror">Cast mirror</string>

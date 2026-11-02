@@ -76,8 +76,7 @@
     <string name="subs_font_size">Skriftstørrelse</string>
     <string name="search_provider_text_providers">Søk med leverandører</string>
     <string name="search_provider_text_types">Søk med typer</string>
-    <string name="benene_count_text">%d Benenes gitt til utvikler</string>
-    <string name="benene_count_text_none">Nei Benenes gitt</string>
+
     <string name="subs_auto_select_language">Velg språk automatisk</string>
     <string name="subs_download_languages">Last ned språk</string>
     <string name="subs_hold_to_reset_to_default">Hold inne for å tilbakestille</string>
@@ -111,11 +110,11 @@
     <string name="show_fillers_settings">Vis filler-episode til anime</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Light novel app av samme devs</string>
+
     <string name="anim">Anime app av samme devs</string>
     <string name="discord">Bli med Discord</string>
     <string name="benene">Gi en benene til devs</string>
-    <string name="benene_des">Gitt benene</string>
+
     <string name="app_language">appspråk</string>
     <string name="no_chromecast_support_toast">Denne leverandøren har ingen Chromecast-støtte</string>
     <string name="no_links_found_toast">Ingen lenker funnet</string>
@@ -443,7 +442,6 @@
     <string name="quality_sdr">SDR</string>
     <string name="safe_mode_description">Alle utvidelser ble skrudd av som følge av et krasj for å hjelpe deg å finne det som lager trøbbel.</string>
     <string name="play_trailer_button">Spill forfilm</string>
-    <string name="pref_category_links">Lenker</string>
 
     <string name="pref_category_extensions">Utvidelser</string>
     <string name="pref_category_actions">Handlinger</string>
@@ -469,7 +467,7 @@
     <string name="sort_rating_desc">Vurdering (høy til lav)</string>
     <string name="start">Start</string>
     <string name="sort_alphabetical_a">Alfabetisk (A-Å)</string>
-    <string name="jsdelivr_enabled">Kunne ikke nå GitHub. Skrur på jsDelivr-mellomtjener …</string>
+
     <string name="category_provider_test">Tilbyder-test</string>
     <string name="library">Bibliotek</string>
     <string name="browser">Nettleser</string>

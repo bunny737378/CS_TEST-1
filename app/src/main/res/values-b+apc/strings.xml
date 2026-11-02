@@ -22,7 +22,7 @@
     <string name="subs_font_size">حجم الكتيبة</string>
     <string name="no_links_found_toast">م لقينا روابط</string>
     <string name="type_plan_to_watch">ناوي إحضر</string>
-    <string name="benene_des">الموزززات المنعطية</string>
+
     <string name="subs_auto_select_language">تحديد اللغة تلقائيًا</string>
     <string name="double_tap_to_seek_amount_settings">كم ثانية بتقدم وبترجع</string>
     <string name="subs_edge_type">نوع حدود الكتيبة</string>
@@ -36,7 +36,7 @@
     <string name="discord">انضم لگروپ \"كلود ستريم\" ع الـ\"ديسكورد\"</string>
     <string name="episode_more_options_des">بعد خيارات</string>
     <string name="backup_success">تسيّڤة النسخة الإحتياطية</string>
-    <string name="benene_count_text">صرتو عاطين %d موزززة للمطورين</string>
+
     <string name="swipe_to_seek_settings">سحابو لتقدمو وترجعو</string>
     <string name="backup_failed">إذن الوصول لذاكرة التخزين مفقود. پليز جرب بعد مرّة.</string>
     <string name="type_watching">عم إحضر</string>
@@ -53,7 +53,7 @@
     <string name="github">\"گِت هَب\"</string>
     <string name="episode_sync_settings">سيّڤ تاريخ المشاهدة</string>
     <string name="filler" formatted="true">فيلير</string>
-    <string name="benene_count_text_none">مش عاطين ولا موزززة</string>
+
     <string name="backup_settings">عمول نسخة إحتياطية</string>
     <string name="restore_success">رجِعِت ع النسخة الإحتياطية</string>
     <string name="subs_subtitle_languages">لغة الترجمة</string>
@@ -88,7 +88,7 @@
     <string name="next_episode">الحلقة يللي بَعدها</string>
 
     <string name="library">رفّ</string>
-    <string name="lightnovel">آپ من نفس المطورين للروايات الخفيفة، بدل من الڤيديوات</string>
+
     <string name="automatic_plugin_download_mode_title">حدد الوضع لَتفَلتِر تنزيل الإضافات</string>
     <string name="episode">حلقة</string>
     <string name="autoplay_next_settings_des">مَشّي الحلقة يللي بعدا تلقائيًا بعد ما تُخلَص الحلقة</string>
@@ -222,7 +222,7 @@
     <string name="episode_action_auto_download">التنزيل التلقائي</string>
     <string name="episode_action_chromecast_mirror">مراية \"كروم كاست\"</string>
     <string name="poster_ui_settings">شيل العناصر من الپوستر</string>
-    <string name="jsdelivr_enabled">م قدرنا نوصل ل \"گِت هَب\". عم ندَوِر پروكسي JSDelivr …</string>
+
     <string name="android_tv_interface_off_seek_settings_summary">مدة التقديم لم ما يكون مشغل الڤيديو مش مبين</string>
     <string name="video_lock">قفل</string>
     <string name="storage_error">مشكلة بال تنزيل. شوف إذن التخزين (storage permission)</string>
@@ -243,7 +243,7 @@
     <string name="provider_lang_settings">لغات الإضافات</string>
     <string name="category_general">عام</string>
     <string name="download_path_pref">ممر التنزيل</string>
-    <string name="legal_notice">إخلاء مسؤولية</string>
+
     <string name="nginx_url_pref">رابط سيرڤر \"أنجن أكس\" (Nginx)</string>
     <string name="add_site_pref">نسوخ موقع (clone site)</string>
     <string name="random_button_settings">زر العشوائي</string>
@@ -261,7 +261,7 @@
     <string name="pref_category_subtitles">الترجمة</string>
     <string name="pref_category_cache">الذاكرة الموقتة</string>
     <string name="pref_category_extensions">الإضافات</string>
-    <string name="pref_category_links">الروابط</string>
+
     <string name="resize_zoom">زوم</string>
     <string name="resize_fit">سيعه بال شاشة</string>
     <string name="pref_category_defaults">الإفتراضات</string>
@@ -586,7 +586,7 @@
     <string name="next_season_episode_format" formatted="true">الحلقة ال %2$d من الجزء ال%1$d رح تنزل ب</string>
     <string name="episode_action_cast_mirror">كاست مراية</string>
     <string name="player_settings_select_cast_device">نقي جهاز الكاست</string>
-    <string name="cs3wiki">ويكي \"كلود ستريم\"</string>
+
     <string name="pref_category_accounts">أكونتات</string>
     <string name="pref_category_security">سكوريتي</string>
     <string name="qr_image">صورة الـ\"كيو آر\" كود</string>

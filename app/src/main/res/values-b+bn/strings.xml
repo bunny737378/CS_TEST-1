@@ -79,8 +79,7 @@
     <string name="subs_subtitle_elevation">সাবটাইটেল এর উচ্চতা</string>
     <string name="search_provider_text_providers">প্রভাইডার অনুযায়ি খুঁজুন</string>
     <string name="search_provider_text_types">ধরণ অনুযায়ি খুঁজুন</string>
-    <string name="benene_count_text">%d টা বেনেনা ডেভদের দেয়া হয়েছে</string>
-    <string name="benene_count_text_none">কোন বেনেনা দেয়া হয়নি</string>
+
     <string name="subs_download_languages">ভাষা ডাউনলোড</string>
     <string name="subs_subtitle_languages">সাবটাইটেল ভাষা</string>
     <string name="subs_hold_to_reset_to_default">প্রাথমিক সেটিংসে নিতে চেপে রাখুন</string>
@@ -152,7 +151,7 @@
     <string name="show_fillers_settings">অ্যানিমে ফিলার পর্ব প্রদর্শন</string>
     <string name="tv_series">টিভি সিরিজ</string>
     <string name="no_links_found_toast">লিংক পাওয়া যায়নি</string>
-    <string name="benene_des">চা খাওয়ানো হয়েছে</string>
+
     <string name="go_forward_30">+৩০</string>
     <string name="movies">মুভিসমূহ</string>
     <string name="discord">ডিসকর্ডে যোগ দিন</string>
@@ -180,7 +179,7 @@
     <string name="synopsis">সারমর্ম</string>
     <string name="used_storage">ব্যবহৃত</string>
     <string name="library">লাইব্রেরী</string>
-    <string name="lightnovel">আমাদের তৈরি ছোট উপন্যাস পড়ার অ্যাপ্লিকেশন</string>
+
     <string name="resume_time_left" formatted="true">%d মি \nবাকি</string>
     <string name="others">অন্যান্য</string>
     <string name="status_ongoing">চলমান</string>
@@ -220,11 +219,11 @@
     <string name="automatic_plugin_download_mode_title">প্লাগইন ডাউনলোড ফিল্টার করতে মোড নির্বাচন করুন</string>
     <string name="links_reloaded_toast">লিঙ্ক পুনরায় লোড হয়েছে</string>
     <string name="switch_account">অ্যাকাউন্ট পরিবর্তন</string>
-    <string name="legal_notice">দাবিত্যাগ</string>
+
     <string name="asian_drama_singular">এশিয়ান ড্রামা</string>
     <string name="video_source">উৎস</string>
     <string name="pref_category_extensions">এক্সটেনশন</string>
-    <string name="pref_category_links">লিংকস</string>
+
     <string name="nsfw_singular">এনএসএফডব্লিউ</string>
     <string name="episode_action_download_mirror">ডাউনলোড মিরর</string>
     <string name="unexpected_error">অপ্রত্যাশিত প্লেয়ার এর সমস্যা</string>
@@ -391,7 +390,7 @@
     <string name="show_episode_text">পর্বের বিবরণ</string>
     <string name="android_tv_interface_on_seek_settings">প্লেয়ারে প্রদর্শিত - স্কিপের পরিমাণ</string>
     <string name="android_tv_interface_on_seek_settings_summary">প্লেয়ার দৃশ্যমান থাকলে যে সময় পরিমাণ স্কিপ করা হয়</string>
-    <string name="jsdelivr_enabled">GitHub-এর সাথে সংযোগ করা যায়নি। jsDelivr প্রক্সি চালু করা হচ্ছে…</string>
+
     <string name="jsdelivr_proxy_summary">jsDelivr ব্যবহার করে GitHub-এর সরাসরি লিংক ব্লক করা এড়িয়ে যান। এতে আপডেট কয়েকদিন বিলম্বিত হতে পারে।</string>
     <string name="pref_category_security">নিরাপত্তা</string>
     <string name="pref_category_accounts">অ্যাকাউন্টসমূহ</string>
@@ -670,7 +669,7 @@
     <string name="biometric_prompt_description">কয়েকবার ব্যর্থ প্রচেষ্টার পর প্রম্পটটি বন্ধ হয়ে যাবে। পুনরায় চেষ্টা করতে কেবল অ্যাপটি রিস্টার্ট করুন।</string>
     <string name="biometric_warning">আপনার CloudStream ডেটা এখন ব্যাকআপ করা হয়েছে। এমনটি ঘটার সম্ভাবনা অত্যন্ত কম হলেও প্রতিটি ডিভাইস ভিন্নভাবে আচরণ করতে পারে। বিরল ক্ষেত্রে যদি অ্যাপ অ্যাক্সেস করা থেকে লক হয়ে যান, তবে সম্পূর্ণ অ্যাপ ডেটা পরিষ্কার করুন এবং ব্যাকআপ থেকে পুনরুদ্ধার করুন। এর ফলে উদ্ভূত যেকোনো অসুবিধার জন্য আমরা আন্তরিকভাবে দুঃখিত।</string>
     <string name="reset_btn">রিসেট</string>
-    <string name="cs3wiki">CloudStream উইকি</string>
+
     <string name="device_pin_url_message">ভিজিট করুন</string>
     <string name="device_pin_error_message">ডিভাইসের PIN কোড পাওয়া যাচ্ছে না, স্থানীয় প্রমাণীকরণ চেষ্টা করুন</string>
     <string name="device_pin_expired_message">PIN কোডের মেয়াদ শেষ হয়েছে!</string>

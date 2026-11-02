@@ -113,8 +113,7 @@
     <string name="subs_font_size">Tamany de la lletra</string>
     <string name="search_provider_text_providers">Cerca amb proveïdors</string>
     <string name="search_provider_text_types">Cerca per tipus</string>
-    <string name="benene_count_text">%d bananes donades als desenvolupadors</string>
-    <string name="benene_count_text_none">No s\'han donat bananes</string>
+
     <string name="subs_auto_select_language">Selecciona l\'idioma automàticament</string>
     <string name="subs_download_languages">Descarrega els idiomes</string>
     <string name="subs_subtitle_languages">Idioma dels subtítols</string>

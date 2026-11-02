@@ -49,7 +49,7 @@
     <string name="subs_font">ဖောင့်</string>
     <string name="subs_font_size">ဖောင့် အရွယ်အစား</string>
     <string name="search_provider_text_types">အမျိုးအစားများအသုံးပြု၍ရှာရန်</string>
-    <string name="benene_count_text">%d အက်ပ်ဖန်တီးသူတွေကိုကျေးဇူးတင်ကြောင်းပို့မည်</string>
+
     <string name="subs_auto_select_language">အလိုအလျောက် ဘာသာစကားရွေးချယ်ခြင်း</string>
     <string name="subs_download_languages">ဒေါင်းလုဒ် လုပ်ထားသော ဘာသာစကားများ</string>
     <string name="subs_hold_to_reset_to_default">မူရင်းပုံစံအတိုင်းပြန်ထားရန်ဖိထားပါ</string>
@@ -173,7 +173,7 @@
     <string name="video_ram_description">Android TV ကဲ့သို့သော မမ်မိုရီနည်းသော စက်ပစ္စည်းများတွင် သတ်မှတ်နှုန်း အလွန်မြင့်မားပါက ပျက်စီးမှုများ ဖြစ်စေသည်။</string>
     <string name="dns_pref">DNS over HTTPS</string>
     <string name="jsdelivr_proxy">raw.githubusercontent.com ပရောက်စီ</string>
-    <string name="jsdelivr_enabled">GitHub သို့ မရောက်ရှိနိုင်ပါ။ jsDelivr ပရောက်စီကို ဖွင့်နေသည်…</string>
+
     <string name="add_site_pref">ကလုန်း ဆိုဒ်</string>
     <string name="remove_site_pref">ဆိုဒ်ကိုဖယ်ရှားရန်</string>
     <string name="add_site_summary">မတူညီသော URL တစ်ခုဖြင့် ရှိပြီးသား ဝဘ်ဆိုက်တစ်ခု၏ ပုံတူတစ်ခုကို ထည့်ပါ</string>
@@ -183,9 +183,8 @@
     <string name="resize_fit">မျက်နှာပြင်နှင့် အံကိုက်</string>
     <string name="resize_fill">ဆန့်သည်</string>
     <string name="resize_zoom">ချဲ့သည်</string>
-    <string name="legal_notice">ရှင်းလင်းချက်</string>
+
     <string name="pref_category_bypass">ISP ရှောင်လွှဲမှုများ</string>
-    <string name="pref_category_links">လင့်များ</string>
 
     <string name="pref_category_extensions">Extensions</string>
     <string name="pref_category_actions">ဆောင်ရွက်ချက်များ</string>
@@ -236,7 +235,7 @@
     <string name="home_more_info">ပိုမို၍</string>
     <string name="search_provider_text_providers">ပ့ံပိုးပေးသောဝန်ဆောင်မှုများအသုံးပြု၍ရှာရန်</string>
     <string name="home_expanded_hide">ဝုက်ရန်</string>
-    <string name="benene_count_text_none">ကျေးဇူးတင်ကြောင်းမပို့ရသေး</string>
+
     <string name="home_play">ကြည့်မည်</string>
     <string name="home_info">အချက်အလက်</string>
     <string name="subs_subtitle_languages">စာတန်းထိုး ဘာသာစကား</string>
@@ -270,11 +269,11 @@
     <string name="pref_category_player_layout">အပြင်အဆင်</string>
     <string name="pref_category_ui_features">လုပ်ဆောင်ချက်များ</string>
     <string name="random_button_settings">ကျပန်းခလုတ်</string>
-    <string name="lightnovel">တူညီသောအက်ပ်ရေးသားသူများ၏ ဝတ္ထုရှည်များဖတ်နိုင်သည့် အက်ပ်</string>
+
     <string name="anim">တူညီသောအက်ပ်ရေးသားသူများ၏ Anime အက်ပ်</string>
     <string name="discord">Discord ကိုဝင်ရန်</string>
     <string name="benene">အက်ပ်ရေးသားသူများထံ ကျေးဇူးတင်စာပို့မည်</string>
-    <string name="benene_des">ပေးခဲ့သောစာအရေအတွက်</string>
+
     <string name="app_language">အက်ပ်ဘာသာစကား</string>
     <string name="subs_default_reset_toast">မူလအခြေအနေများကိုပြန်ထားပါ</string>
     <string name="season_format">%1$s %2$d%3$s</string>

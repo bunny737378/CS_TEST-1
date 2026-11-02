@@ -79,8 +79,7 @@
     <string name="subs_font_size">Laki ng Font</string>
     <string name="search_provider_text_providers">Search using providers</string>
     <string name="search_provider_text_types">Search using types</string>
-    <string name="benene_count_text">%d Benenes na ibinigay sa mga devs</string>
-    <string name="benene_count_text_none">Walang Benenes na binigay</string>
+
     <string name="subs_auto_select_language">Awtomatikong magpili ng lenggwahe</string>
     <string name="subs_download_languages">I-download ang mga Wika</string>
     <string name="subs_hold_to_reset_to_default">Pindutin nang matagal upang i-reset sa default</string>
@@ -114,11 +113,11 @@
     <string name="show_fillers_settings">Ipakita ang filler episode sa anime</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Light novel app ng parehong devs</string>
+
     <string name="anim">Anime app ng parehong devs</string>
     <string name="discord">Sumali sa Discord</string>
     <string name="benene">Magbigay ng benene sa ang devs</string>
-    <string name="benene_des">Sumali benene</string>
+
     <string name="app_language">Wika</string>
     <string name="no_chromecast_support_toast">Walang chromecast support ang provider na ito</string>
     <string name="no_links_found_toast">Walang link na nakita</string>

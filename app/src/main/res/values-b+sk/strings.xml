@@ -87,9 +87,9 @@
     <string name="subs_auto_select_language">Automaticky vybrať jazyk</string>
     <string name="subs_subtitle_languages">Jazyk titulkov</string>
     <string name="subs_font_size">Veľkosť písma</string>
-    <string name="benene_count_text_none">Nedarovali ste žiadne benény</string>
+
     <string name="subs_hold_to_reset_to_default">Podržaním obnovíte predvolené nastavenia</string>
-    <string name="benene_count_text">%d benénov darovaných vývojárom</string>
+
     <string name="subs_download_languages">Stiahnuť jazyky</string>
     <string name="action_remove_watching">Odstrániť</string>
     <string name="vpn_torrent">Tento poskytovateľ je torrent, odporúča sa VPN</string>
@@ -125,11 +125,10 @@
     <string name="pref_filter_search_quality">Skryť vybranú kvalitu videa vo výsledkoch vyhľadávania</string>
     <string name="show_fillers_settings">Zobraziť výplňovú epizódu pre anime</string>
 
-    <string name="lightnovel">Nenáročná aplikácia pre romány od rovnakých vývojárov</string>
     <string name="app_language">Jazyk aplikácie</string>
     <string name="no_links_found_toast">Nenašli sa žiadne odkazy</string>
     <string name="benene">Darujte benén vývojárom</string>
-    <string name="benene_des">Benén darovaný</string>
+
     <string name="no_chromecast_support_toast">Tento poskytovateľ nepodporuje Chromecast</string>
     <string name="restore_success">Súbor zálohy načítaný</string>
     <string name="episode_sync_settings_des">Automaticky synchronizovať priebeh sledovania súčasnej epizódy</string>
@@ -298,13 +297,13 @@
     <string name="dont_show_again">Nezobrazovať znova</string>
     <string name="remote_error">Vzdialená chyba</string>
     <string name="dns_pref_summary">Užitočné na obchádzanie blokácií ISP</string>
-    <string name="pref_category_links">Odkazy</string>
+
     <string name="add_site_pref">Klonovať stránku</string>
     <string name="ova">OVA</string>
     <string name="movies">Filmy</string>
     <string name="example_site_url">https://example.com</string>
     <string name="pref_category_cache">Vyrovnávacia pamäť</string>
-    <string name="jsdelivr_enabled">Nepodarilo sa pripojiť na GitHub. Zapína sa proxy jsDelivr…</string>
+
     <string name="no_episodes_found">Nenašli sa žiadne epizódy</string>
     <string name="go_forward_30">+30</string>
     <string name="asian_drama">Ázijské drámy</string>
@@ -327,7 +326,7 @@
     <string name="example_lang_name">Kód jazyka (sk)</string>
     <string name="example_site_name">NovyNazovWebu</string>
     <string name="login_format" formatted="true">%1$s %2$s</string>
-    <string name="legal_notice">Vylúčenie zodpovednosti</string>
+
     <string name="nsfw">NSFW</string>
     <string name="delete_message" formatted="true">Týmto sa natrvalo vymaže %s \nSte si istý?</string>
     <string name="resume_time_left" formatted="true">%dm \nzostáva</string>

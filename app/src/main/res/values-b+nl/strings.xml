@@ -95,8 +95,7 @@
     <string name="subs_font_size">Lettergrootte</string>
     <string name="search_provider_text_providers">Zoeken met providers</string>
     <string name="search_provider_text_types">Zoeken met types</string>
-    <string name="benene_count_text">%d Bananen gegeven aan ontwikkelaars</string>
-    <string name="benene_count_text_none">Geen Bananen gegeven</string>
+
     <string name="subs_auto_select_language">Taal automatisch selecteren</string>
     <string name="subs_download_languages">Talen downloaden</string>
     <string name="subs_subtitle_languages">Ondertiteltaal</string>
@@ -153,11 +152,11 @@
     <string name="kitsu_settings">Toon posters van Kitsu</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Light novel app van dezelfde ontwikkelaars</string>
+
     <string name="anim">Anime app by the same devs</string>
     <string name="discord">Word lid van ons Discord kanaal</string>
     <string name="benene">Geef een banaan aan de ontwikkelaars</string>
-    <string name="benene_des">Gegeven banaan</string>
+
     <string name="app_language">App Taal</string>
     <string name="no_chromecast_support_toast">Deze provider heeft geen Chromecast-ondersteuning</string>
     <string name="no_links_found_toast">Geen links gevonden</string>
@@ -262,7 +261,7 @@
     <string name="resize_fit">Pas aan het scherm</string>
     <string name="resize_fill">Uitgerekt</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">Disclaimer</string>
+
     <string name="category_general">Algemeen</string>
     <string name="random_button_settings">Willekeurige knop</string>
     <string name="random_button_settings_desc">Toon willekeurige knop op Homepage en Bibliotheek</string>
@@ -388,7 +387,6 @@
     <string name="batch_download_nothing_to_download_format" formatted="true">Alle %s reeds gedownload</string>
     <string name="plugin_singular">plugin</string>
     <string name="skip_type_format" formatted="true">Sla %s over</string>
-    <string name="pref_category_links">Links</string>
 
     <string name="pref_category_gestures">Handelingen</string>
     <string name="nsfw_singular">NSFW</string>
@@ -415,7 +413,6 @@
     <string name="extension_install_first">Installeer eerst de uitbreiding</string>
     <string name="all_languages_preference">Alle Talen</string>
     <string name="automatic_plugin_download_summary">Installeer automatisch alle nog niet geïnstalleerde plugins uit toegevoegde repositories.</string>
-    <string name="jsdelivr_enabled">Kan GitHub niet bereiken, schakel jsDelivr proxy in…</string>
 
     <string name="automatic_plugin_download">Download plugins automatisch</string>
     <string name="extensions">Uitbreidingen</string>
@@ -629,7 +626,7 @@
     <string name="password_pin_authentication_title">Wachtwoord/PIN-authenticatie</string>
     <string name="biometric_unsupported">Biometrische authenticatie is niet ondersteund op dit apparaat</string>
     <string name="biometric_prompt_description">Na enige mislukte pogingen zal de prompt sluiten. Herstart de app om het opnieuw te proberen.</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="device_pin_url_message">Ga naar <b>%s</b> op je smartphone of computer en voeren de bovenstaande code in</string>
     <string name="device_pin_expired_message">PIN-code is nu verlopen!</string>
     <string name="device_pin_counter_text">Code verloopt in %1$dm %2$ds</string>

@@ -95,8 +95,7 @@
     <string name="subs_font_size">Veličina fonta</string>
     <string name="search_provider_text_providers">Traži koristeći pružatelje usluga</string>
     <string name="search_provider_text_types">Traži koristeći vrste</string>
-    <string name="benene_count_text">%d banana dano programerima</string>
-    <string name="benene_count_text_none">Nisi dao ni jednu bananu</string>
+
     <string name="subs_auto_select_language">Automatski odabir jezika</string>
     <string name="subs_download_languages">Preuzmi jezike</string>
     <string name="subs_subtitle_languages">Jezik titlova</string>
@@ -157,11 +156,11 @@
     <string name="automatic_plugin_updates">Automatsko ažuriranje dodataka</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Aplikacija za romane od istih programera</string>
+
     <string name="anim">Anime aplikacija od istih programera</string>
     <string name="discord">Pridruži se Discordu</string>
     <string name="benene">Daj bananu programerima</string>
-    <string name="benene_des">Dane banane</string>
+
     <string name="app_language">Jezik aplikacije</string>
     <string name="no_chromecast_support_toast">Ovaj pružatelj usluga nema podršku za Chromecast</string>
     <string name="no_links_found_toast">Nisu pronađene poveznice</string>
@@ -270,7 +269,7 @@
     <string name="resize_fit">Prilagodi veličini ekrana</string>
     <string name="resize_fill">Rastegni</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">Pravna obavijest</string>
+
     <string name="category_general">Općenito</string>
     <string name="random_button_settings">Gumb za slučajni odabir</string>
     <string name="random_button_settings_desc">Prikaži gumb za slučajni odabir na početnoj stranici i biblioteci</string>
@@ -447,7 +446,7 @@
     <string name="plugins_updated" formatted="true">Ažurirani dodaci: %d</string>
     <string name="skip_type_mixed_op">Mješoviti uvod</string>
     <string name="skip_type_intro">Uvod</string>
-    <string name="pref_category_links">Poveznice</string>
+
     <string name="play_trailer_button">Pokreni trailer</string>
     <string name="redo_setup_process">Ponovi postupak postavljanja</string>
 
@@ -510,7 +509,7 @@
     <string name="revert">Vraćanje</string>
     <string name="pref_category_bypass">ISP zaobilaznice</string>
     <string name="jsdelivr_proxy">GitHub Proxy</string>
-    <string name="jsdelivr_enabled">Neuspješno dohvaćanje GitHuba. Uključuje se jsdelivr proxy …</string>
+
     <string name="jsdelivr_proxy_summary">Zaobilazi blokiranje neobrađenih GitHub URL-ova koristeći jsDelivr. Može uzrokovati kašnjenje ažuriranja nekoliko dana.</string>
     <string name="watch_quality_pref_data">Preferirana kvaliteta gledanja (mobilni podaci)</string>
     <string name="profile_number">Profil %d</string>
@@ -595,7 +594,7 @@
     <string name="next_season_episode_format" formatted="true">Sezona %1$d epizoda %2$d izlazi za</string>
     <string name="episode_action_cast_mirror">Cast duplikat</string>
     <string name="player_settings_select_cast_device">Odaberi uređaj za emitiranje</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="pref_category_accounts">Računi</string>
     <string name="pref_category_security">Sigurnost</string>
     <string name="auth_locally">Lokalna autentifikacija</string>

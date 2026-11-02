@@ -96,8 +96,7 @@
     <string name="subs_font_size">Kích thước chữ</string>
     <string name="search_provider_text_providers">Tìm kiếm theo nguồn phim</string>
     <string name="search_provider_text_types">Tìm kiếm theo thể loại</string>
-    <string name="benene_count_text">%d lượt ủng hộ đã gửi đến nhà phát triển</string>
-    <string name="benene_count_text_none">Không có lượt ủng hộ đã nhận</string>
+
     <string name="subs_auto_select_language">Tự động chọn ngôn ngữ</string>
     <string name="subs_download_languages">Ngôn ngữ tải xuống</string>
     <string name="subs_subtitle_languages">Ngôn ngữ phụ đề</string>
@@ -157,11 +156,11 @@
     <string name="automatic_plugin_updates">Tự động cập nhật tiện ích mở rộng</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Ứng dụng đọc tiểu thuyết của cùng nhà phát triển</string>
+
     <string name="anim">Ứng dụng xem Anime của cùng nhà phát triển</string>
     <string name="discord">Tham gia cộng đồng trên Discord</string>
     <string name="benene">Gửi ủng hộ tới nhà phát triển</string>
-    <string name="benene_des">Gửi ủng hộ</string>
+
     <string name="app_language">Ngôn ngữ ứng dụng</string>
     <string name="no_chromecast_support_toast">Nguồn phim này chưa hỗ trợ Chromecast</string>
     <string name="no_links_found_toast">Không tìm thấy liên kết</string>
@@ -270,7 +269,7 @@
     <string name="resize_fit">Vừa màn hình</string>
     <string name="resize_fill">Kéo dãn</string>
     <string name="resize_zoom">Phóng to</string>
-    <string name="legal_notice">Tuyên bố miễn trừ trách nhiệm</string>
+
     <string name="category_general">Tổng quan</string>
     <string name="random_button_settings">Nút ngẫu nhiên</string>
     <string name="random_button_settings_desc">Hiện nút ngẫu nhiên trên Trang chủ và Thư viện</string>
@@ -428,7 +427,6 @@
     <string name="play_trailer_button">Phát Trailer</string>
     <string name="automatic_plugin_download_summary">Tự động cài đặt tất cả tiện ích mở rộng chưa được cài đặt từ những kho nguồn phim đã thêm.</string>
 
-    <string name="pref_category_links">Liên kết</string>
     <string name="hls_playlist">Danh sách HLS</string>
     <string name="player_pref">Trình phát ưu tiên</string>
     <string name="player_settings_play_in_app">Trình phát tích hợp</string>
@@ -497,7 +495,7 @@
     <string name="start">Bắt đầu</string>
     <string name="category_provider_test">Kiểm tra nguồn phim</string>
     <string name="jsdelivr_proxy">GitHub Proxy</string>
-    <string name="jsdelivr_enabled">Không thể kết nối được tới GitHub. Đang bật jsDelivr proxy…</string>
+
     <string name="pref_category_android_tv">Android TV</string>
     <string name="restart">Phát từ đầu</string>
     <string name="subscription_new">Đã đăng kí %s</string>
@@ -600,7 +598,7 @@
     <string name="qr_image">Mã QR</string>
     <string name="dismiss">Bỏ qua</string>
     <string name="open_downloaded_repo">Mở kho nguồn phim</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="device_pin_url_message">Truy cập <b>%s</b> trên điện thoại hoặc máy tính và nhập mã bên trên</string>
     <string name="device_pin_expired_message">Mã PIN đã hết hạn!</string>
     <string name="device_pin_counter_text">Mã sẽ hết hạn trong %1$d phút %2$d giây</string>

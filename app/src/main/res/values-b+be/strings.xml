@@ -115,8 +115,7 @@
     <string name="subs_font_size">Памер шрыфту</string>
     <string name="search_provider_text_providers">Пошук праз пастаўшчыкоў</string>
     <string name="search_provider_text_types">Пошук праз тыпы</string>
-    <string name="benene_count_text">%d бенена(ў) дадзена распрацоўшчыкам</string>
-    <string name="benene_count_text_none">Бененаў не дадзена</string>
+
     <string name="subs_auto_select_language">Выбраць мову аўтаматычна</string>
     <string name="subs_download_languages">Спампаваць мовы</string>
     <string name="subs_subtitle_languages">Мова субцітраў</string>
@@ -191,11 +190,10 @@
 
     <string name="redo_setup_process">Паўтарыць наладжванне</string>
 
-    <string name="lightnovel">Лёгкая праграма для раманаў ад тых жа распрацоўшчыкаў</string>
     <string name="anim">Праграма для анімэ ад тых жа распрацоўшчыкаў</string>
     <string name="discord">Далучайцеся да Discord</string>
     <string name="benene">Даць распрацоўшчыкам бенен</string>
-    <string name="benene_des">Дадзена бененаў</string>
+
     <string name="app_language">Мова праграмы</string>
     <string name="no_chromecast_support_toast">У гэтага пастаўшчыка няма падтрымкі Chromecast</string>
     <string name="no_links_found_toast">Спасылак не знойдзена</string>
@@ -326,7 +324,7 @@
     <string name="dns_pref">DNS праз HTTPS</string>
     <string name="dns_pref_summary">Карысна для абходу блакіровак</string>
     <string name="jsdelivr_proxy">Проксі GitHub</string>
-    <string name="jsdelivr_enabled">Не ўдалося дасягнуць GitHub. Уключэнне проксі jsDelivr…</string>
+
     <string name="jsdelivr_proxy_summary">Абыходзьце блакіроўкі спасылак GitHub з дапамогай jsDelivr. Можа затрымаць абнаўленні на некалькі дзён.</string>
     <string name="add_site_pref">Кланіраваць вэб-сайт</string>
     <string name="remove_site_pref">Выдаліць вэб-сайт</string>
@@ -337,9 +335,8 @@
     <string name="resize_fit">Умясціць у экран</string>
     <string name="resize_fill">Запоўніць</string>
     <string name="resize_zoom">Маштабаваць</string>
-    <string name="legal_notice">Адмова ад адказнасці</string>
+
     <string name="pref_category_bypass">Абходы ISP</string>
-    <string name="pref_category_links">Спасылкі</string>
 
     <string name="pref_category_backup">Рэзервовае капіраванне</string>
     <string name="pref_category_extensions">Пашырэнні</string>
@@ -635,7 +632,7 @@
     <string name="biometric_prompt_description">Праз некалькі няўдалых спроб акно з запытам закрыецца. Проста перазапусціце праграму, каб паўтарыць спробу.</string>
     <string name="biometric_warning">Вашы дадзеныя CloudStream былібылі толькі што зарэзерваваныя. Нягледзячы на тое, што магчымасць вельмі маленькая, усе прылады могуць паводзіць сябе па-рознаму. У рэдкасным выпадку, калі вы страціце доступ да праграмы, поўнасцю ачысціце даныя і аднавіце іх праз рэзервовую копію. Выбачайце за любую нязручнасць, якая можа з гэтага атрымацца.</string>
     <string name="reset_btn">Скінуць</string>
-    <string name="cs3wiki">CloudStream-Вікі</string>
+
     <string name="device_pin_url_message">Наведайце <b>%s</b> на вашым смартфоне або камп\'ютары і ўвядзіце код вышэй</string>
     <string name="device_pin_error_message">Не ўдалося атрымаць PIN-код прылады, паспрабуйце лакальную праверку сапраўднасці</string>
     <string name="device_pin_expired_message">PIN-код састарэў!</string>

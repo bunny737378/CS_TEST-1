@@ -102,7 +102,7 @@
     <string name="subs_font">Betűtípus</string>
     <string name="search_provider_text_types">Keresés típusok szerint</string>
     <string name="search_provider_text_providers">Keresés szolgáltatók szerint</string>
-    <string name="benene_count_text">%d Banán adva a fejlesztőknek</string>
+
     <string name="subs_download_languages">Nyelvek letöltése</string>
     <string name="subs_hold_to_reset_to_default">Tartsa lenyomva az alapértelmezett érték visszaállításához</string>
     <string name="subs_import_text" formatted="true">Betűtípusok importálása %s</string>
@@ -137,7 +137,7 @@
     <string name="show_trailers_settings">Előzetesek megjelenítése</string>
     <string name="redo_setup_process">Telepítési folyamat megismétlése</string>
     <string name="anim">Anime applikáció ugyanazoktól a fejlesztőktől</string>
-    <string name="lightnovel">Light novel applikáció ugyanazoktól a fejlesztőktől</string>
+
     <string name="app_language">Alkalmazás nyelve</string>
     <string name="episode">Epizód</string>
     <string name="episodes">Epizódok</string>
@@ -223,7 +223,7 @@
     <string name="swipe_to_change_settings">Csúsztassa ujját a beállítások módosításához</string>
     <string name="swipe_to_change_settings_des">Csúsztassa felf/le az ujját a bal/jobb oldalon a fényerő vagy a hangerő megváltoztatásához</string>
     <string name="backup_settings">Biztonsági mentés</string>
-    <string name="benene_count_text_none">0 Banán a fejlesztőknek</string>
+
     <string name="swipe_to_seek_settings">Húzd el, hogy beless</string>
     <string name="autoplay_next_settings">Következő epizód automatikus lejátszása</string>
     <string name="autoplay_next_settings_des">Következő epizód lejátszása amikor az aktuális epizód véget ér</string>
@@ -245,7 +245,6 @@
     <string name="restore_failed_format" formatted="true">Nem sikerült visszaállítani az adatokat a %s fájlból</string>
     <string name="backup_failed">Tárolási engedélyek hiányoznak. Kérjük próbálja újra.</string>
 
-    <string name="benene_des">Banán adva</string>
     <string name="poster_ui_settings">A felhasználói felület elemeinek bekapcsolása a poszteren</string>
 
     <string name="video_lock">Zárolás</string>
@@ -270,7 +269,7 @@
     <string name="pref_category_ui_features">Funkciók</string>
     <string name="watch_quality_pref_data">Előnyben részesített videóminőség (mobilinternet)</string>
     <string name="limit_title">Videolejátszó cím max karakterek</string>
-    <string name="jsdelivr_enabled">Nem sikerült elérni a GitHubot, a jsdelivr proxy bekapcsolva…</string>
+
     <string name="pref_category_extensions">Bővítmények</string>
     <string name="category_general">Általános</string>
     <string name="subtitles_encoding">Felirat kódolása</string>
@@ -304,7 +303,7 @@
     <string name="pref_category_backup">Biztonsági mentés</string>
     <string name="pref_category_subtitles">Feliratok</string>
     <string name="preferred_media_settings">Előnyben részesített média</string>
-    <string name="pref_category_links">Hivatkozások</string>
+
     <string name="video_buffer_clear_settings">Videó és kép gyorsítótár törlése</string>
     <string name="jsdelivr_proxy_summary">A jsDelivr használatával a tiszta GitHub blokkolása megkerülhető. Néhány nappal késleltetheti a frissítéseket.</string>
     <string name="video_ram_description">Összeomlást okoz, ha túl magasra van állítva a kevés memóriával rendelkező eszközökön, például az Android TV-n.</string>
@@ -475,7 +474,7 @@
     <string name="bottom_title_settings">Poszter cím helye</string>
     <string name="bottom_title_settings_des">Tegye a címet a poszter alá</string>
     <string name="android_tv_interface_off_seek_settings_summary">Az átugrás mértéke, amikor a lejátszó el van rejtve</string>
-    <string name="legal_notice">Jogi nyilatkozat</string>
+
     <string name="android_tv_interface_on_seek_settings">Lejátszó megjelenítve - Ugrási Érték</string>
     <string name="android_tv_interface_off_seek_settings">Lejátszó Elrejtve - Ugrási Érték</string>
     <string name="add_site_pref">Klónozott oldal</string>
@@ -620,7 +619,7 @@
     <string name="biometric_setting_summary">Az alkalmazás feloldása ujjlenyomat, arcfelismerés, PIN-kód, minta vagy jelszó segítségével.</string>
     <string name="biometric_prompt_description">Néhány sikertelen kísérlet után a parancssor bezárul. Egyszerűen indítsa újra az alkalmazást, és próbálja meg újra.</string>
     <string name="reset_btn">Visszaállítás</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="device_pin_url_message">Látogasson el <b>%s</b> okostelefonján vagy számítógépén, és írja be a fenti kódot</string>
     <string name="device_pin_error_message">Nem működik az eszköz PIN-kódja, próbálkozzon helyi hitelesítéssel</string>
     <string name="device_pin_expired_message">A PIN-kód most lejárt!</string>

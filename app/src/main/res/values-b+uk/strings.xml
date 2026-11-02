@@ -64,7 +64,7 @@
     <string name="subs_font_size">Розмір шрифту</string>
     <string name="search_provider_text_providers">Пошук за постачальниками</string>
     <string name="search_provider_text_types">Пошук за типами</string>
-    <string name="benene_count_text_none">Жодного банана не надано</string>
+
     <string name="subs_auto_select_language">Автовибір мови</string>
     <string name="subs_download_languages">Завантажити мови</string>
     <string name="subs_subtitle_languages">Мова субтитрів</string>
@@ -118,7 +118,7 @@
     <string name="subs_outline_color">Колір обведення</string>
     <string name="autoplay_next_settings">Автовідтворення наступного епізоду</string>
     <string name="swipe_to_seek_settings_des">Проведіть збоку в бік, щоби керувати часом відтворення у відео</string>
-    <string name="benene_count_text">Дано %d бананів розробникам</string>
+
     <string name="player_size_settings">Кнопка зміни розміру програвача</string>
     <string name="action_open_play">@string/home_play</string>
     <string name="vpn_might_be_needed">Для коректної роботи цього постачальника може знадобитися VPN</string>
@@ -151,7 +151,7 @@
     <string name="redo_setup_process">Налаштувати повторно процес встановлення</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Застосунок для ранобе від тих самих розробників</string>
+
     <string name="anim">Застосунок для аніме від тих самих розробників</string>
     <string name="benene">Дати бананів розробникам</string>
     <string name="app_language">Мова застосунку</string>
@@ -225,7 +225,7 @@
     <string name="copy_link_toast">Посилання скопійовано до буфера обміну</string>
 
     <string name="discord">Приєднуйтеся до Discord</string>
-    <string name="benene_des">Дано банани</string>
+
     <string name="year">Рік</string>
     <string name="go_forward_30">+30</string>
     <string name="season_format">%1$s %2$d%3$s</string>
@@ -331,7 +331,7 @@
     <string name="add_site_pref">Клонувати сайт</string>
     <string name="remove_site_pref">Видалити сайт</string>
     <string name="nginx_url_pref">URL-адреса сервера NGINX</string>
-    <string name="pref_category_links">Покликання</string>
+
     <string name="limit_title_rez">Показувати інформацію про програвач</string>
     <string name="video_buffer_length_settings">Довжина буфера відео</string>
     <string name="video_buffer_clear_settings">Очистити кеш відео та зображень</string>
@@ -342,7 +342,7 @@
     <string name="download_path_pref">Шлях завантаження</string>
     <string name="add_site_summary">Додайте двійника наявного сайту, з іншою URL-адресою</string>
     <string name="display_subbed_dubbed_settings">Показувати аніме з дубляжем / із субтитрами</string>
-    <string name="legal_notice">Застереження</string>
+
     <string name="pref_category_extensions">Розширення</string>
     <string name="pref_category_actions">Дії</string>
     <string name="example_ip">127.0.0.1</string>
@@ -497,7 +497,7 @@
     <string name="subscription_episode_released">Епізод %d випущено!</string>
     <string name="revert">Повернути</string>
     <string name="jsdelivr_proxy">Проксі GitHub</string>
-    <string name="jsdelivr_enabled">Не вдалось отримати доступ до GitHub. Увімкнення проксі-сервера jsDelivr…</string>
+
     <string name="pref_category_bypass">Обходи ISP</string>
     <string name="jsdelivr_proxy_summary">Обхід блокування прямих посилань GitHub за допомогою jsDelivr. Може спричинити затримку оновлень на кілька днів.</string>
     <string name="watch_quality_pref_data">Бажана якість перегляду (мобільні дані)</string>
@@ -583,7 +583,7 @@
     <string name="next_season_episode_format" formatted="true">%1$d сезон %2$d епізод вийде через</string>
     <string name="player_settings_select_cast_device">Оберіть пристрій для трансляції</string>
     <string name="episode_action_cast_mirror">Трансляція через дзеркало</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="pref_category_security">Безпека</string>
     <string name="pref_category_accounts">Облікові записи</string>
     <string name="qr_image">Зображення QR-коду</string>

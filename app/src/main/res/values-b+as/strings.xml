@@ -43,7 +43,7 @@
     <string name="dont_show_again">আৰো দেখুৱাব নালাগে</string>
     <string name="limit_title">ভিডিঅ\' প্লেয়াৰৰ শিৰোনামৰ সৰ্বাধিক অক্ষৰ</string>
     <string name="add_site_summary">বিদ্যমান চাইটৰ ক্লোন এটা সন্নিবিষ্ট কৰক, ভিন্ন URLৰ সৈতে</string>
-    <string name="pref_category_links">লিংকসমূহ</string>
+
     <string name="category_ui">লেআউট</string>
     <string name="automatic">স্বয়ংচালিত</string>
     <string name="example_password">password123</string>
@@ -164,8 +164,7 @@
     <string name="subs_font_size">ফণ্টৰ আকাৰ</string>
     <string name="search_provider_text_types">প্ৰকাৰৰ দ্বাৰা সন্ধান কৰক</string>
     <string name="search_provider_text_providers">প্ৰদানকাৰীৰে সন্ধান কৰক</string>
-    <string name="benene_count_text">%d জন ডেভেলপাৰক বেঙেনা দিয়া হৈছে</string>
-    <string name="benene_count_text_none">কোনো বেঙেনা দিয়া হোৱা নাই</string>
+
     <string name="subs_auto_select_language">স্বয়ংক্ৰিয় ভাষা নিৰ্বাচন</string>
     <string name="subs_download_languages">ভাষাসমূহ ডাউনলোড কৰক</string>
     <string name="subs_subtitle_languages">সাবটাইটেল ভাষা</string>
@@ -219,11 +218,11 @@
     <string name="redo_setup_process">পুনৰ চেটআপ প্ৰক্ৰিয়া কৰক</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">একেই ডেভেলপাৰৰ দ্বাৰা লাইট নভেল এপ্‌</string>
+
     <string name="discord">Discordত যোগদান কৰক</string>
     <string name="no_links_found_toast">লিংক পোৱা নগল</string>
     <string name="benene">ডেভেলপাৰক এখন বেঙেনা দিয়ক</string>
-    <string name="benene_des">দিয়া নাম</string>
+
     <string name="app_language">অ্যাপ ভাষা</string>
     <string name="no_chromecast_support_toast">এই প্ৰদানকাৰীৰ ক্ৰোমকাষ্ট সমৰ্থন নাই</string>
     <string name="copy_link_toast">লিংক ক্লিপব\'ৰ্ডত কপিকৰ কৰা হ’ল</string>
@@ -318,7 +317,7 @@
     <string name="dns_pref_summary">ISP ব্লকসমূহ বাচিবলৈ সহায়কাৰী</string>
     <string name="add_site_pref">চাইট ক্লোন কৰক</string>
     <string name="jsdelivr_proxy">GitHub প্ৰক্সি</string>
-    <string name="jsdelivr_enabled">GitHub পাবলৈ সক্ষম নহ\'ল। jsDelivr প্ৰক্সি সক্ৰিয় কৰি দিছে…</string>
+
     <string name="jsdelivr_proxy_summary">jsDelivr ব্যৱহাৰ কৰি কাঁচা GitHub URLসমূহৰ ব্লক আঁতৰ কৰক। ই আপডেট বিলম্বিত হোৱাৰ সম্ভাৱনা আছে।</string>
     <string name="remove_site_pref">চাইট আঁতৰাওক</string>
     <string name="download_path_pref">ডাউনলোড পথ</string>
@@ -326,7 +325,7 @@
     <string name="display_subbed_dubbed_settings">ডাব কৰা/সাবটাইটেলযুক্ত এনিমে প্ৰদৰ্শন</string>
     <string name="resize_fit">স্ক্ৰিনত মিলাওক</string>
     <string name="resize_fill">প্ৰসাৰিত কৰক</string>
-    <string name="legal_notice">দায়ৱলী</string>
+
     <string name="pref_category_bypass">ISP বাইপাছসমূহ</string>
     <string name="resize_zoom">জুম কৰক</string>
 
@@ -594,7 +593,7 @@
     <string name="pref_category_accounts">একাউণ্টসমূহ</string>
     <string name="qr_image">কিউ আৰ কোডৰ ছবি</string>
     <string name="delete_plugin">প্লাগইন ডিলিট কৰক</string>
-    <string name="cs3wiki">CloudStream ৱিকি</string>
+
     <string name="pref_category_security">সুৰক্ষা</string>
     <string name="device_pin_url_message">আপোনাৰ স্মাৰ্টফোন বা কম্পিউটাৰত <b>%s</b> লগ কৰক আৰু ওপৰৰ ক\'ডটো প্ৰৱিষ্ট কৰক</string>
     <string name="device_pin_error_message">ডিভাইচ পিন ক\'ড পোৱা নাই, স্থানীয় প্ৰমাণীকৰণ চেষ্টা কৰক</string>

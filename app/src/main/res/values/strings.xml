@@ -122,8 +122,7 @@
     <string name="subs_font_size">Font Size</string>
     <string name="search_provider_text_providers">Search using providers</string>
     <string name="search_provider_text_types">Search using types</string>
-    <string name="benene_count_text">%d Benenes given to devs</string>
-    <string name="benene_count_text_none">No Benenes given</string>
+
     <string name="subs_auto_select_language">Auto-Select Language</string>
     <string name="subs_download_languages">Download Languages</string>
     <string name="subs_subtitle_languages">Subtitle Language</string>
@@ -207,11 +206,11 @@
     <string name="redo_setup_process">Redo setup process</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Light novel app by the same devs</string>
+
     <string name="anim">Anime app by the same devs</string>
     <string name="discord">Join Discord</string>
     <string name="benene">Give a benene to the devs</string>
-    <string name="benene_des">Given benene</string>
+
     <string name="app_language">App Language</string>
     <string name="no_chromecast_support_toast">This provider has no Chromecast support</string>
     <string name="no_links_found_toast">No Links Found</string>
@@ -342,7 +341,7 @@
     <string name="dns_pref">DNS over HTTPS</string>
     <string name="dns_pref_summary">Useful for bypassing ISP blocks</string>
     <string name="jsdelivr_proxy">GitHub Proxy</string>
-    <string name="jsdelivr_enabled">Could not reach GitHub. Turning on jsDelivr proxy…</string>
+
     <string name="jsdelivr_proxy_summary">Bypass blocking of raw github URLs using jsDelivr. May cause updates to be delayed by few days.</string>
     <string name="add_site_pref">Clone site</string>
     <string name="remove_site_pref">Remove site</string>
@@ -353,9 +352,8 @@
     <string name="resize_fit">Fit to screen</string>
     <string name="resize_fill">Stretch</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">Disclaimer</string>
+
     <string name="pref_category_bypass">ISP Bypasses</string>
-    <string name="pref_category_links">Links</string>
 
     <string name="pref_category_backup">Backup</string>
     <string name="pref_category_extensions">Extensions</string>
@@ -709,7 +707,7 @@
     <string name="biometric_prompt_description">After a few failed attempts, the prompt will close. Simply restart the app to try again.</string>
     <string name="biometric_warning">Your CloudStream data has been backed up now. Although the possibility of this is very low, all devices can behave differently. In the rare case, that you get locked out from accessing the app, clear the app data completely and restore from a backup. We are very sorry for any inconvenience arising from this.</string>
     <string name="reset_btn">Reset</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="device_pin_url_message">Visit <b>%s</b> on your smartphone or computer and enter the above code</string>
     <string name="device_pin_error_message">Can\'t get the device PIN code, try local authentication</string>
     <string name="device_pin_expired_message">PIN code is now expired !</string>

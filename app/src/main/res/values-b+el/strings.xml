@@ -68,8 +68,7 @@
     <string name="subs_font">Γραμματοσειρά</string>
     <string name="search_provider_text_providers">Αναζήτηση βάσει παρόχων</string>
     <string name="search_provider_text_types">Αναζήτηση βάσει τύπων</string>
-    <string name="benene_count_text">%d μπανάνες δόθηκαν στους προγραμματιστές</string>
-    <string name="benene_count_text_none">Καμία μπανάνα δεν δόθηκε</string>
+
     <string name="subs_auto_select_language">Αυτόματη επιλογή γλώσσας</string>
     <string name="subs_download_languages">Λήψη γλωσσών</string>
     <string name="subs_hold_to_reset_to_default">Κρατήστε πατημένο για επαναφορά στις προεπιλεγμένες τιμές</string>
@@ -102,11 +101,11 @@
     <string name="advanced_search_des">Δίνει τα αποτελέσματα αναζήτησης ταξινομημένα ανά πάροχο</string>
 
     <string name="github">GitHub</string>
-    <string name="lightnovel">Εφαρμογή βιβλίων από τους ίδιους προγραμματιστές</string>
+
     <string name="anim">Εφαρμογή άνιμε από τους ίδιους προγραμματιστές</string>
     <string name="discord">Βρείτε μας στο Discord</string>
     <string name="benene">Δώστε μία μπανάνα στους προγραμματιστές</string>
-    <string name="benene_des">Μπανάνα δόθηκε</string>
+
     <string name="player_speed_text_format" formatted="true">Ταχύτητα (%.2fx)</string>
     <string name="rated_format" formatted="true">Βαθμολογία: %.1f</string>
 
@@ -218,7 +217,7 @@
     <string name="resize_fit">Προσαρμογή στην οθόνη</string>
     <string name="resize_fill">Τέντωμα</string>
     <string name="resize_zoom">Μεγέθυνση</string>
-    <string name="legal_notice">Αποποίηση ευθυνών</string>
+
     <string name="category_general">Γενικά</string>
     <string name="random_button_settings">Κουμπί τυχαίας δράσης</string>
     <string name="random_button_settings_desc">Εμφάνιση κουμπιού τυχαίας προβολής στην Αρχική Οθόνη</string>
@@ -439,7 +438,7 @@
     <string name="login_format" formatted="true">%1$s %2$s</string>
     <string name="subs_font_size">Μέγεθος γραμματοσειράς</string>
     <string name="anime_singular">Άνιμε</string>
-    <string name="pref_category_links">Σύνδεσμοι</string>
+
     <string name="pref_category_looks">Εμφάνιση</string>
     <string name="pref_category_ui_features">Χαρακτηριστικά</string>
     <string name="example_ip">127.0.0.1</string>
@@ -496,7 +495,7 @@
     <string name="qualities">Ποιότητες</string>
     <string name="profile_background_des">Φόντο προφίλ</string>
     <string name="restart">Επανεκκίνηση</string>
-    <string name="jsdelivr_enabled">Το GitHub δεν είναι προσβάσιμο. Ενεργοποίηση διακομιστή μεσολάβησης jsDelivr…</string>
+
     <string name="pref_category_bypass">Παράκαμψη ISP</string>
     <string name="subscription_deleted">Αφαιρέθηκε η εγγραφή από %s</string>
     <string name="subscription_list_name">Εγγεγραμμένος</string>
@@ -606,7 +605,7 @@
     <string name="sort_release_date_new">Ημερομηνία κυκλοφορίας (από νέο σε παλιό)</string>
     <string name="preview_seekbar">Προεπισκόπηση Γραμμή αναζήτησης</string>
     <string name="play_from_beginning_img_des">Παίξε από την αρχή</string>
-    <string name="cs3wiki">Το Wiki του CloudStream</string>
+
     <string name="hide_player_control_names">Απόκρυψη των ονομάτων των χειρισμών του παίκτη</string>
     <string name="auth_locally">Τοπική εξουσιοδότηση</string>
     <string name="speech_recognition_unavailable">Αναγνώριση ομιλίας μη διαθέσιμη</string>

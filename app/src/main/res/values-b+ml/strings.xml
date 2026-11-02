@@ -63,8 +63,7 @@
     <string name="subs_font">Font</string> -->
     <string name="search_provider_text_providers">സ്രോതസ് അടിസ്ഥാനത്തിൽ തിരയുക</string>
     <string name="search_provider_text_types">തരം അടിസ്ഥാനത്തിൽ തിരയുക</string>
-    <string name="benene_count_text">%d പഴം കൊടുത്തു</string>
-    <string name="benene_count_text_none">പഴം കൊടുത്തിട്ടില്ല</string>
+
     <!-- <string name="subs_auto_select_language">Auto Select Language</string>
     <string name="subs_download_languages">Download Languages</string> -->
     <string name="subs_hold_to_reset_to_default">റീസെറ് ചെയ്യാൻ അമർത്തിപ്പിടിക്കുക</string>
@@ -94,11 +93,11 @@
     <string name="advanced_search_des">സ്ട്രോതസായി തിരിച്ച ഫലം തരുക</string>
 
     <string name="github">ഗിറ്റ്ഹബ്</string>
-    <string name="lightnovel">നമ്മുടെ ലൈറ്റ് നോവൽ ആപ്പ്</string>
+
     <string name="anim">നമ്മുടെ ആനിമേ ആപ്പ്</string>
     <string name="discord">ഡിസ്‌കോർഡിലേക്ക് സ്വാഗതം</string>
     <string name="benene">പഴം കൊടുക്കു</string>
-    <string name="benene_des">പഴം കൊടുത്ത എണ്ണം</string>
+
     <string name="app_language">ആപ്പിന്റെ ഭാഷ</string>
     <string name="no_chromecast_support_toast">ഈ സ്രോതസ് ക്രോംകാസ്റ് അനുവദിക്കുന്നില്ല</string>
     <string name="no_links_found_toast">ലിങ്കുകൾ ലഭ്യമല്ല</string>

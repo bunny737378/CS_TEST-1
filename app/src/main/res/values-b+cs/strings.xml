@@ -89,8 +89,7 @@
     <string name="subs_font_size">Velikost písma</string>
     <string name="search_provider_text_providers">Hledat pomocí poskytovatelů</string>
     <string name="search_provider_text_types">Hledat pomocí typů</string>
-    <string name="benene_count_text">%d benénů darováno vývojářům</string>
-    <string name="benene_count_text_none">Nedarovali jste žádné benény</string>
+
     <string name="subs_auto_select_language">Automaticky vybrat jazyk</string>
     <string name="subs_download_languages">Stáhnout jazyky</string>
     <string name="subs_subtitle_languages">Jazyk titulků</string>
@@ -145,11 +144,11 @@
     <string name="show_fillers_settings">Zobrazit výplňové epizody u anime</string>
 
     <string name="github">GitHub</string>
-    <string name="lightnovel">Nenáročná aplikace pro romány od stejných vývojářů</string>
+
     <string name="anim">Anime aplikace od stejných vývojářů</string>
     <string name="discord">Připojte se na Discord</string>
     <string name="benene">Darujte benén vývojářům</string>
-    <string name="benene_des">Benén darován</string>
+
     <string name="app_language">Jazyk aplikace</string>
     <string name="no_chromecast_support_toast">Tento poskytovatel nemá podporu pro Chromecast</string>
     <string name="no_links_found_toast">Nenalezeny žádné odkazy</string>
@@ -247,7 +246,7 @@
     <string name="resize_fit">Vyplnit na obrazovku</string>
     <string name="resize_fill">Roztáhnout</string>
     <string name="resize_zoom">Přiblížit</string>
-    <string name="legal_notice">Odmítnutí odpovědnosti</string>
+
     <string name="category_general">Obecné</string>
     <string name="random_button_settings">Náhodné tlačítko</string>
     <string name="random_button_settings_desc">Zobrazit na domovské stránce a v knihovně náhodné tlačítko</string>
@@ -400,7 +399,7 @@
     <string name="pref_category_extensions">Rozšíření</string>
     <string name="pref_category_actions">Akce</string>
     <string name="pref_category_looks">Vzhled</string>
-    <string name="pref_category_links">Odkazy</string>
+
     <string name="pref_category_ui_features">Funkce</string>
     <string name="example_site_name">NovýNázevWebu</string>
     <string name="enable_nsfw_on_providers">Povolit NSFW u podporovaných rozšíření</string>
@@ -510,7 +509,7 @@
     <string name="subscription_episode_released">Byla vydána epizoda %d!</string>
     <string name="subscription_list_name">Odebíráno</string>
     <string name="jsdelivr_proxy">Proxy GitHub</string>
-    <string name="jsdelivr_enabled">Nelze se připojit k serveru GitHub. Zapínání proxy jsDelivr…</string>
+
     <string name="watch_quality_pref_data">Upřednostněná kvalita sledování (mobilní data)</string>
     <string name="revert">Vrátit zpět</string>
     <string name="jsdelivr_proxy_summary">Obejít blokování přímých adres GitHub pomocí jsDelivr. Může způsobit zpoždění aktualizací o několik dní.</string>
@@ -597,7 +596,7 @@
     <string name="next_season_episode_format" formatted="true">Epizoda %2$d ze série %1$d bude vydána za</string>
     <string name="episode_action_cast_mirror">Vysílat zrcadlení</string>
     <string name="player_settings_select_cast_device">Vyberte zařízení k vysílání</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="pref_category_security">Zabezpečení</string>
     <string name="qr_image">Obrázek QR kódu</string>
     <string name="dismiss">Zavřít</string>

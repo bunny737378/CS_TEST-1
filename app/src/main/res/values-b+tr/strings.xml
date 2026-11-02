@@ -95,8 +95,7 @@
     <string name="subs_font_size">Yazı Boyutu</string>
     <string name="search_provider_text_providers">Sağlayıcıları kullanarak ara</string>
     <string name="search_provider_text_types">Türleri kullanarak ara</string>
-    <string name="benene_count_text">Geliştiricilere %d muz verildi</string>
-    <string name="benene_count_text_none">Hiç muz verilmedi</string>
+
     <string name="subs_auto_select_language">Otomatik Seçilecek Dil</string>
     <string name="subs_download_languages">İndirilecek Diller</string>
     <string name="subs_subtitle_languages">Altyazı Dili</string>
@@ -157,11 +156,11 @@
     <string name="automatic_plugin_updates">Otomatik eklenti güncellemeleri</string>
 
     <string name="github">GitHub</string>
-    <string name="lightnovel">Aynı geliştiricilerin Lightnovel Crawler uygulaması</string>
+
     <string name="anim">Aynı geliştiricilerin anime uygulaması</string>
     <string name="discord">Discord\'a katıl</string>
     <string name="benene">Geliştiricilere muz ver</string>
-    <string name="benene_des">Verilen muz</string>
+
     <string name="app_language">Uygulama dili</string>
     <string name="no_chromecast_support_toast">Bu sağlayıcının Chromecast desteği yok</string>
     <string name="no_links_found_toast">Bağlantı bulunamadı</string>
@@ -271,7 +270,7 @@
     <string name="resize_fit">Ekrana sığdır</string>
     <string name="resize_fill">Uzat</string>
     <string name="resize_zoom">Yakınlaştır</string>
-    <string name="legal_notice">Yasal uyarı</string>
+
     <string name="category_general">Genel</string>
     <string name="random_button_settings">Rastgele düğmesi</string>
     <string name="random_button_settings_desc">Ana sayfa ve kütüphane üstünde rastgele düğmesini göster</string>
@@ -443,8 +442,6 @@
 
     <string name="automatic_plugin_download">Eklentileri otomatik olarak indir</string>
 
-    <string name="pref_category_links">Bağlantılar</string>
-
     <string name="pref_category_backup">Yedek</string>
     <string name="pref_category_player_features">Oynatıcı özellikleri</string>
     <string name="pref_category_subtitles">Altyazılar</string>
@@ -494,7 +491,7 @@
     <string name="restart">Yeniden başlat</string>
     <string name="android_tv_interface_off_seek_settings">Oynatıcı gizlenmişken atlanacak süre</string>
     <string name="pref_category_bypass">İSS Kısıtlamaları</string>
-    <string name="jsdelivr_enabled">GitHub\'a ulaşılamadı. jsDelivr vekil sunucusu etkinleştiriliyor…</string>
+
     <string name="start">Başlat</string>
     <string name="test_passed">Başarılı</string>
     <string name="jsdelivr_proxy">GitHub vekil sunucu</string>
@@ -596,7 +593,7 @@
     <string name="next_season_episode_format" formatted="true">%1$d. Sezon %2$d. Bölüm şu tarihte yayınlanacak</string>
     <string name="player_settings_select_cast_device">Yansıtılacak cihaz seç</string>
     <string name="episode_action_cast_mirror">Ekran yansıtma</string>
-    <string name="cs3wiki">CloudStream bilgi</string>
+
     <string name="pref_category_security">Güvenlik</string>
     <string name="pref_category_accounts">Hesaplar</string>
     <string name="auth_locally">Yerel Olarak Doğrula</string>

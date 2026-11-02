@@ -50,8 +50,7 @@
     <string name="player_speed">प्लेयर स्पीड</string>
     <string name="search_provider_text_providers">प्रोवाइडरों का उपयोग कर खोजें</string>
     <string name="search_provider_text_types">प्रकार का उपयोग करके खोजें</string>
-    <string name="benene_count_text">%d केले डेवलपर्स को दिए गए</string>
-    <string name="benene_count_text_none">कोई केले नहीं दिए गए</string>
+
     <string name="subs_hold_to_reset_to_default">डिफ़ॉल्ट पर रीसेट करने के लिए दबाए रखें</string>
     <string name="continue_watching">देखना जारी रखें</string>
     <string name="action_remove_watching">हटाएँ</string>
@@ -71,11 +70,10 @@
     <string name="settings_info">जानकारी</string>
     <string name="advanced_search_des">खोज नतीजों को प्रोवाइडरों के हिसाब से अलग-अलग आपको दिखाता है</string>
 
-    <string name="lightnovel">उन्हीं डेवलपर्स द्वारा Light novel ऐप</string>
     <string name="anim">उन्हीं डेवलपर्स द्वारा Anime ऐप</string>
     <string name="discord">Discord से जुड़िये</string>
     <string name="benene">इस प्रोग्राम के निर्माता को केला दें</string>
-    <string name="benene_des">केले दे दिए गए</string>
+
     <string name="app_language">ऍप की भाषा</string>
     <string name="no_chromecast_support_toast">यह प्रोवाइडर क्रोमकास्ट का समर्थन नहीं करता</string>
     <string name="no_links_found_toast">कोई लिंक नहीं मिले</string>
@@ -346,7 +344,7 @@
     <string name="video_disk_description">अगर कम मेमोरी वाले डिवाइस, जैसे कि एन्ड्रोइड टीवी पर इसे बहुत ज़्यादा सेट किया जाता है, तो इससे क्रैश हो सकता है।</string>
     <string name="dns_pref">एचटीटीपीएस पर डीएनएस</string>
     <string name="jsdelivr_proxy">गिटहब प्रॉक्सी</string>
-    <string name="jsdelivr_enabled">गिटहब तक नहीं पहुंचा जा सका। जेएस डीलीवर प्रॉक्सी चालू किया जा रहा है…</string>
+
     <string name="jsdelivr_proxy_summary">जेएस डीलीवर का इस्तेमाल करके रॉ गिटहब यूआरएल ब्लॉकिंग को बायपास करें। इससे अपडेट में कुछ दिनों की देरी हो सकती है।</string>
     <string name="add_site_pref">क्लोन साइट</string>
     <string name="remove_site_pref">साइट हटाएं</string>
@@ -355,9 +353,8 @@
     <string name="resize_fit">स्क्रीन पर फिट करें</string>
     <string name="resize_fill">खींचा हुआ</string>
     <string name="resize_zoom">ज़ूम</string>
-    <string name="legal_notice">अस्वीकरण</string>
+
     <string name="pref_category_bypass">आईएसपी बाईपास</string>
-    <string name="pref_category_links">लिंक्स</string>
 
     <string name="pref_category_backup">बैकअप</string>
     <string name="pref_category_extensions">एक्सटेंशन्स</string>

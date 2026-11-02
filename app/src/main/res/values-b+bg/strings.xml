@@ -91,8 +91,7 @@
     <string name="subs_font_size">Размер на шрифта</string>
     <string name="search_provider_text_providers">Търсене чрез доставчици</string>
     <string name="search_provider_text_types">Търсене с помощта на типове</string>
-    <string name="benene_count_text">%d Банан/а даден/и на разработчиците</string>
-    <string name="benene_count_text_none">Не е/са даден/и Банан/и</string>
+
     <string name="subs_auto_select_language">Автоматичен избор на език</string>
     <string name="subs_download_languages">Изтегляне на езици</string>
     <string name="subs_subtitle_languages">Език на субтитрите</string>
@@ -153,11 +152,11 @@
     <string name="automatic_plugin_updates">Автоматични актуализации на плъгини</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Light novel - приложение от същите разработчици</string>
+
     <string name="anim">Приложение за аниме от същите разработчици</string>
     <string name="discord">Присъединете се към Discord</string>
     <string name="benene">Дайте банан/и разработчиците</string>
-    <string name="benene_des">Даден/и банан/и</string>
+
     <string name="app_language">Език на приложението</string>
     <string name="no_chromecast_support_toast">Този доставчик няма поддръжка за Chromecast</string>
     <string name="no_links_found_toast">Няма намерени връзки</string>
@@ -265,7 +264,7 @@
     <string name="resize_fit">Побиране в екрана</string>
     <string name="resize_fill">Разтягане</string>
     <string name="resize_zoom">Мащабиране</string>
-    <string name="legal_notice">Опровержение</string>
+
     <string name="category_general">Общ</string>
     <string name="random_button_settings">Случаен бутон</string>
     <string name="random_button_settings_desc">Показване на произволен бутон на началната страница и библиотека</string>
@@ -449,7 +448,6 @@
     <string name="automatic_plugin_download_summary">Автоматично инсталиране на всички все още неинсталирани добавки от добавени хранилища.</string>
 
     <string name="play_trailer_button">Пусни трейлър</string>
-    <string name="pref_category_links">Връзки</string>
 
     <string name="pref_category_extensions">Разширения</string>
     <string name="pref_category_actions">Действия</string>
@@ -477,7 +475,7 @@
     <string name="start">Старт</string>
     <string name="automatic_plugin_download_mode_title">Избери режим, да филтрира изтегляне на добавки</string>
     <string name="jsdelivr_proxy">raw.githubusercontent.com прокси</string>
-    <string name="jsdelivr_enabled">Неуспешно свързване с GitHub. Включване на jsDelivr прокси…</string>
+
     <string name="jsdelivr_proxy_summary">Заобикали блокирането на GitHub адреси с помощта на jsDelivr. Може да доведе до забавяне на актуализациите с няколко дни.</string>
     <string name="category_provider_test">Тест на доставчик</string>
     <string name="disable">Деактивиране</string>
@@ -627,7 +625,7 @@
     <string name="open_downloaded_repo">Отвори хранилище</string>
     <string name="reset_btn">Нулиране</string>
     <string name="device_pin_expired_message">PIN кодът е изтекъл !</string>
-    <string name="cs3wiki">CloudStream Уики</string>
+
     <string name="password_pin_authentication_title">Удостоверяване с парола/PIN</string>
     <string name="custom_media_singular">Медия</string>
     <string name="audio_book_singular">Аудиокнига</string>

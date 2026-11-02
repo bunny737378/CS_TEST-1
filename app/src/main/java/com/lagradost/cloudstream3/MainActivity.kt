@@ -58,7 +58,6 @@ import com.google.android.gms.cast.framework.SessionManagerListener
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.navigationrail.NavigationRailView
-import com.google.android.material.snackbar.Snackbar
 import com.google.common.collect.Comparators.min
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import com.lagradost.cloudstream3.APIHolder.allProviders
@@ -129,7 +128,6 @@ import com.lagradost.cloudstream3.utils.AppContextUtils.getApiDubstatusSettings
 import com.lagradost.cloudstream3.utils.AppContextUtils.html
 import com.lagradost.cloudstream3.utils.AppContextUtils.isCastApiAvailable
 import com.lagradost.cloudstream3.utils.AppContextUtils.isLtr
-import com.lagradost.cloudstream3.utils.AppContextUtils.isNetworkAvailable
 import com.lagradost.cloudstream3.utils.AppContextUtils.isRtl
 import com.lagradost.cloudstream3.utils.AppContextUtils.loadCache
 import com.lagradost.cloudstream3.utils.AppContextUtils.loadRepository
@@ -157,7 +155,6 @@ import com.lagradost.cloudstream3.utils.DataStoreHelper.migrateResumeWatching
 import com.lagradost.cloudstream3.utils.Event
 import com.lagradost.cloudstream3.utils.ImageLoader.loadImage
 import com.lagradost.cloudstream3.utils.SingleSelectionHelper.showBottomDialog
-import com.lagradost.cloudstream3.utils.SnackbarHelper.showSnackbar
 import com.lagradost.cloudstream3.utils.TvChannelUtils
 import com.lagradost.cloudstream3.utils.UIHelper.changeStatusBarState
 import com.lagradost.cloudstream3.utils.UIHelper.checkWrite
@@ -1319,23 +1316,6 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             }
         }
 
-        // Automatically enable jsdelivr if cant connect to raw.githubusercontent.com
-        if (this.getKey<Boolean>(getString(R.string.jsdelivr_proxy_key)) == null && isNetworkAvailable()) {
-            main {
-                if (checkGithubConnectivity()) {
-                    this.setKey(getString(R.string.jsdelivr_proxy_key), false)
-                } else {
-                    this.setKey(getString(R.string.jsdelivr_proxy_key), true)
-                    showSnackbar(
-                        this@MainActivity,
-                        R.string.jsdelivr_enabled,
-                        Snackbar.LENGTH_LONG,
-                        R.string.revert
-                    ) { setKey(getString(R.string.jsdelivr_proxy_key), false) }
-                }
-            }
-        }
-
         ioSafe { SafeFile.check(this@MainActivity) }
 
         if (PluginManager.checkSafeModeFile()) {
@@ -2052,16 +2032,5 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
 
     override fun onAuthenticationError() {
         finish()
-    }
-
-    suspend fun checkGithubConnectivity(): Boolean {
-        return try {
-            app.get(
-                "https://raw.githubusercontent.com/recloudstream/.github/master/connectivitycheck",
-                timeout = 5
-            ).text.trim() == "ok"
-        } catch (t: Throwable) {
-            false
-        }
     }
 }

@@ -80,7 +80,7 @@
     <string name="home_play">Reproducir</string>
     <string name="subs_edge_type">Tipo de Borde</string>
     <string name="subs_font">Fonte</string>
-    <string name="benene_count_text_none">Non se deron bananas</string>
+
     <string name="subs_auto_select_language">Seleccionar idioma automáticamente</string>
     <string name="subs_download_languages">Descargar Idiomas</string>
     <string name="subs_subtitle_languages">Idioma do Subtítulo</string>
@@ -112,7 +112,7 @@
     <string name="home_info">Info</string>
     <string name="subs_subtitle_elevation">Elevación de Subtítulo</string>
     <string name="search_provider_text_providers">Procurar usando proveedores</string>
-    <string name="benene_count_text">%d Bananas dadas aos desenvolvedores</string>
+
     <string name="search_provider_text_types">Procurar por tipos</string>
     <string name="picture_in_picture">Imaxe en Imaxe</string>
     <string name="player_subtitles_settings_des">Configuración de subtítulos do reprodutor</string>
@@ -169,7 +169,7 @@
     <string name="anim">Aplicativo de Anime dos mesmos desenvolvedores</string>
     <string name="discord">Únete o Discord</string>
     <string name="speed_setting_summary">Engade unha opción de velocidade no reproductor</string>
-    <string name="lightnovel">Aplicativo de novela lixeira dos mesmos desenvolvedores</string>
+
     <string name="no_episodes_found">Non se atoparon capítulos</string>
     <string name="delete">Borrar</string>
     <string name="resume">Continuar</string>
@@ -187,7 +187,7 @@
     <string name="season_format">%1$s %2$d%3$s</string>
     <string name="cartoons">Debuxos animados</string>
     <string name="render_error">Erro do renderizador</string>
-    <string name="benene_des">Banana dada</string>
+
     <string name="app_language">Idioma do aplicativo</string>
     <string name="redo_setup_process">Volver a facer o proceso de configuración inicial</string>
     <string name="no_season">Nengunha temportada</string>

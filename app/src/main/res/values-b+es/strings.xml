@@ -176,8 +176,7 @@
     <string name="subs_subtitle_languages">Idioma del subtítulo</string>
     <string name="picture_in_picture">Imagen en Imagen (PIP)</string>
     <string name="search_provider_text_types">Buscar por tipos</string>
-    <string name="benene_count_text">%d bananas otorgadas a los desarrolladores</string>
-    <string name="benene_count_text_none">No se otorgaron bananas</string>
+
     <string name="subs_hold_to_reset_to_default">Mantenga pulsado para restablecer los valores predeterminados</string>
     <string name="subs_import_text" formatted="true">Importar fuentes colocándolas en %s</string>
     <string name="continue_watching">Continuar Viendo</string>
@@ -225,11 +224,11 @@
     <string name="show_trailers_settings">Mostrar avances</string>
     <string name="kitsu_settings">Mostrar pósters de Kitsu</string>
     <string name="github">Github</string>
-    <string name="lightnovel">App de novela ligera de los mismos desarrolladores</string>
+
     <string name="anim">App de Anime de los mismos desarrolladores</string>
     <string name="discord">Únete a Discord</string>
     <string name="benene">Dale una banana a los desarrolladores</string>
-    <string name="benene_des">Banana otorgada</string>
+
     <string name="no_chromecast_support_toast">El proveedor no tiene soporte para Chromecast</string>
     <string name="no_links_found_toast">Enlaces no encontrados</string>
     <string name="copy_link_toast">Enlaces copiados al portapapeles</string>
@@ -374,7 +373,7 @@
     <string name="resize_fit">Ajustar a la pantalla</string>
     <string name="resize_fill">Estirar</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">Descargo de responsabilidad</string>
+
     <string name="bottom_title_settings">Ubicación del título en el póster</string>
     <string name="bottom_title_settings_des">Coloca el título debajo del póster</string>
     <string name="example_password">contraseña123</string>
@@ -413,7 +412,7 @@
     <string name="live_singular">Transmisión en vivo</string>
     <string name="nsfw_singular">NSFW</string>
     <string name="other_singular">Video</string>
-    <string name="pref_category_links">Enlaces</string>
+
     <string name="pref_category_backup">Backup</string>
     <string name="pref_category_cache">Caché</string>
     <string name="create_account">Crear cuenta</string>
@@ -494,7 +493,7 @@
     <string name="subscription_in_progress_notification">Actualizando los programas suscritos</string>
     <string name="subscription_episode_released">¡Episodio %d publicado!</string>
     <string name="jsdelivr_proxy">Proxy de GitHub</string>
-    <string name="jsdelivr_enabled">No se ha podido acceder a GitHub. Activando el proxy jsDelivr…</string>
+
     <string name="jsdelivr_proxy_summary">Eludir el bloqueo de URLs crudas de github usando jsDelivr. Puede causar que las actualizaciones se retrasen unos días.</string>
     <string name="revert">Revertir</string>
     <string name="pref_category_bypass">ISP Bypasses</string>
@@ -581,7 +580,7 @@
     <string name="next_season_episode_format" formatted="true">La temporada %1$d y el episodio %2$d se estrenarán en</string>
     <string name="player_settings_select_cast_device">Seleccionar el dispositivo para transmitir</string>
     <string name="episode_action_cast_mirror">Espejo de transmisión</string>
-    <string name="cs3wiki">Wiki de CloudStream</string>
+
     <string name="pref_category_security">Seguridad</string>
     <string name="pref_category_accounts">Cuentas</string>
     <string name="auth_locally">Autenticación local</string>

@@ -61,7 +61,7 @@
     <string name="player_speed">Vitesse de lecture</string>
     <string name="preview_background_img_des">Aperçu de l\'arrière-plan</string>
     <string name="benene">Donner une benene aux devs</string>
-    <string name="benene_des">benenes données</string>
+
     <string name="app_language">Language de l\'application</string>
     <string name="no_chromecast_support_toast">Ce fournisseur ne supporte pas le Chromecast</string>
     <string name="no_links_found_toast">Aucun lien trouvé</string>
@@ -125,7 +125,7 @@
     <string name="watch_quality_pref">Qualité de visionnage préférée (WiFi)</string>
     <string name="video_buffer_size_settings">Taille de la mémoire cache</string>
     <string name="resize_fill">Étendre</string>
-    <string name="legal_notice">Non-responsabilité</string>
+
     <string name="primary_color_settings">Couleur principale</string>
     <string name="app_theme_settings">Thème de l\'application</string>
     <string name="player_speed_text_format" formatted="true">Vitesse (%.2fx)</string>
@@ -222,8 +222,7 @@
     <string name="subs_font_size">Taille de la police</string>
     <string name="search_provider_text_providers">Recherche par fournisseur</string>
     <string name="search_provider_text_types">Recherche par types</string>
-    <string name="benene_count_text">%d bananes offertes aux devs</string>
-    <string name="benene_count_text_none">Aucune banane n\'a été offerte</string>
+
     <string name="subs_auto_select_language">Sélection automatique de la langue</string>
     <string name="subs_download_languages">Télécharger les langues</string>
     <string name="subs_subtitle_languages">Langue des sous-titres</string>
@@ -284,7 +283,7 @@
     <string name="automatic_plugin_updates">Mises à jour automatiques des plugins</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Application Light Novel par les mêmes devs</string>
+
     <string name="anim">Anime app by the same devs</string>
     <string name="discord">Rejoignez le Discord</string>
     <string name="next_episode_time_hour_format" formatted="true">%1$d h %2$d min</string>
@@ -445,7 +444,6 @@
     <string name="extension_language">Langage</string>
     <string name="enable_skip_op_from_database_des">Afficher les popups skip pour les intro / fins</string>
 
-    <string name="pref_category_links">Liens</string>
     <string name="pref_category_gestures">Gestes</string>
     <string name="pref_category_player_features">Fonctionnalités du lecteur</string>
     <string name="pref_category_subtitles">Sous-titres</string>
@@ -500,7 +498,7 @@
     <string name="android_tv_interface_on_seek_settings_summary">Le temps de recherche utilisé lorsque le lecteur vidéo est visible</string>
     <string name="android_tv_interface_on_seek_settings">Lecteur Visible - Temps de recherche</string>
     <string name="android_tv_interface_off_seek_settings">Lecteur Invisible - Temps de recherche</string>
-    <string name="jsdelivr_enabled">Impossible d\'atteindre GitHub. Activation du proxy jsDelivr…</string>
+
     <string name="already_voted">Vous avez déjà voté</string>
     <string name="disable">Désactivé</string>
     <string name="quality_profile_help">Ici, vous pouvez modifier la façon dont les sources sont ordonnées. Si une vidéo a une priorité plus élevée, elle apparaîtra plus haut dans la sélection de la source. La somme de la priorité source et de la priorité qualité est la priorité vidéo. \n \nSource A : 3 \nQualité B : 7 \nLa priorité vidéo combinée sera de 10. \n \nREMARQUE : Si la somme est de 10 ou plus, le joueur sautera automatiquement le chargement lorsque ce lien est chargé !</string>
@@ -594,7 +592,7 @@
     <string name="delete_format" formatted="true">Supprimer (%1$d | %2$s)</string>
     <string name="open_downloaded_repo">Ouvrir le dépôt</string>
     <string name="device_pin_counter_text">Code expire dans %1$dm %2$ds</string>
-    <string name="cs3wiki">Wiki de CloudStream</string>
+
     <string name="device_pin_expired_message">Le code PIN est maintenant expiré !</string>
     <string name="qr_image">Image du code QR</string>
     <string name="delete_plugin">Supprimer l\'extension</string>

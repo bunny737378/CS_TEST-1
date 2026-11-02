@@ -62,8 +62,7 @@
     <string name="subs_font">Font</string>
     <string name="search_provider_text_providers">Sök med hjälp av leverantörer</string>
     <string name="search_provider_text_types">Sök med hjälp av typer</string>
-    <string name="benene_count_text">%d bananer donerade till utvecklarna</string>
-    <string name="benene_count_text_none">Inga bananer givna</string>
+
     <string name="subs_auto_select_language">Välj språk automatiskt</string>
     <string name="subs_download_languages">Ladda ner språk</string>
     <string name="subs_hold_to_reset_to_default">Håll ned för att återställa till standardinställningen</string>
@@ -94,11 +93,11 @@
     <string name="advanced_search_des">Presenterar sökresultaten i flera olika rader baserat på leverantören</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Lightnovel app av samma utvecklare</string>
+
     <string name="anim">Anime app av samma utvecklare</string>
     <string name="discord">Gå med i Discord-gruppen</string>
     <string name="benene">Ge en banan till utvecklarna</string>
-    <string name="benene_des">Ge banan</string>
+
     <string name="app_language">Språk</string>
     <string name="no_chromecast_support_toast">Denna leverantör har inget Chromecast-stöd</string>
     <string name="no_links_found_toast">Inga länkar hittades</string>
@@ -315,7 +314,6 @@
     <string name="example_lang_name">Språkkod (en)</string>
     <string name="video_buffer_disk_settings">Videocache på disken</string>
     <string name="video_buffer_clear_settings">Rensa video- och bildcache</string>
-    <string name="pref_category_links">Länkar</string>
 
     <string name="pref_category_player_layout">Layout</string>
     <string name="title">Titel</string>
@@ -327,7 +325,7 @@
     <string name="limit_title">Max tecken i videospelartiteln</string>
     <string name="video_buffer_size_settings">Videobuffertstorlek</string>
     <string name="video_buffer_length_settings">Videobuffertlängd</string>
-    <string name="legal_notice">Ansvarsfriskrivning</string>
+
     <string name="pref_category_extensions">Tillägg</string>
     <string name="pref_category_cache">Cache</string>
     <string name="pref_category_backup">Säkerhetskopiering</string>
@@ -365,7 +363,6 @@
     <string name="app_not_found_error">Kunde inte öppna appen</string>
     <string name="jsdelivr_proxy">GitHub Proxy</string>
 
-    <string name="jsdelivr_enabled">Kunde inte nå GitHub, sätter på jsDelivr proxy…</string>
     <string name="category_providers">Leverantörer</string>
     <string name="example_site_name">Nytt webbplatsnamn</string>
     <string name="subtitles_remove_bloat">Ta bort reklam från undertexter</string>
@@ -584,7 +581,7 @@
     <string name="episode_action_cast_mirror">Cast mirror</string>
     <string name="next_season_episode_format" formatted="true">Säsong %1$d Avsnitt %2$d kommer att släppas om</string>
     <string name="player_settings_select_cast_device">Välj cast-enhet</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="pref_category_accounts">Konton</string>
     <string name="pref_category_security">Säkerhet</string>
     <string name="dismiss">Avfärda</string>

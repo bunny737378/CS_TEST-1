@@ -45,21 +45,16 @@ jobs:
           yes | "$SDKMANAGER" --licenses > /dev/null || true
           "$SDKMANAGER" --install "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 
-      # app/build.gradle.kts signs both build types with this repository-local
-      # debug key. Generate it on the runner instead of committing a keystore.
-      - name: Generate debug keystore
+      # app/build.gradle.kts signs both build types with this committed,
+      # non-production debug key so every build has the same signature.
+      - name: Verify fixed debug keystore
         run: |
-          keytool -genkeypair \
-            -alias androiddebugkey \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -storetype JKS \
+          test -f debug.keystore
+          keytool -list -v \
             -keystore debug.keystore \
+            -storetype JKS \
             -storepass android \
-            -keypass android \
-            -dname "CN=Android Debug,O=Android,C=US" \
-            -noprompt
+            -alias androiddebugkey
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew

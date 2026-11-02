@@ -67,8 +67,7 @@
     <string name="subs_font_size">Големина на фонт</string>
     <string name="search_provider_text_providers">Пребарувај користејќи провајдери</string>
     <string name="search_provider_text_types">Пребарувај користејќи типови</string>
-    <string name="benene_count_text">%d крем банани дадени на девелоперите</string>
-    <string name="benene_count_text_none">Нема дадени крем банани</string>
+
     <string name="subs_auto_select_language">Авто одбирање на јазик</string>
     <string name="subs_download_languages">Преземи јазици</string>
     <string name="subs_hold_to_reset_to_default">Држи за да се ресетираш на стандардно</string>
@@ -103,11 +102,11 @@
     <string name="show_fillers_settings">Прикажи епизода за полнење за аниме</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Едноставна апликација за новели од истите развивачи</string>
+
     <string name="anim">Апликација за аниме од истите развивачи</string>
     <string name="discord">Придружи се на Discord</string>
     <string name="benene">Дај им крем банана на развивачите</string>
-    <string name="benene_des">Дадени крем банани</string>
+
     <string name="app_language">Јазик на апликацијата</string>
     <string name="no_chromecast_support_toast">Овој провајдер нема поддршка за Chromecast</string>
     <string name="no_links_found_toast">Не се пронајдени линкови</string>
@@ -172,7 +171,7 @@
     <string name="resize_fit">Прилагоди на екранот</string>
     <string name="resize_fill">Истегни</string>
     <string name="resize_zoom">Зумирај</string>
-    <string name="legal_notice">Disclaimer</string>
+
     <string name="category_general">Општи поставки</string>
     <string name="provider_lang_settings">Јазици на екстензиите</string>
     <string name="app_layout">Распоред на апликацијата</string>
@@ -335,7 +334,7 @@
     <string name="skip_type_mixed_op">Мешано отворање</string>
     <string name="pref_category_extensions">Екстензии</string>
     <string name="enable_nsfw_on_providers">Овозможи NSFW на поддржаните екстензии</string>
-    <string name="jsdelivr_enabled">Не успеа да стигне до GitHub. Вклучувам jsDelivr прокси…</string>
+
     <string name="subtitles_filter_lang">Филтрирај по претпочитан медиумски јазик</string>
     <string name="action_open_play">@string/home_play</string>
     <string name="movies_singular">Филм</string>
@@ -435,7 +434,7 @@
     <string name="open_with">Отвори со</string>
     <string name="season_format">%1$s %2$d%3$s</string>
     <string name="redo_setup_process">Повтори го процесот на поставување опции на апликацијата</string>
-    <string name="pref_category_links">Линкови</string>
+
     <string name="skip_type_recap">Повторување</string>
     <string name="app_subbed_text">Sub</string>
     <string name="test_log">Log</string>
@@ -625,7 +624,7 @@
     <string name="delete_message_multiple" formatted="true">Дали си сигурен дека сакаш трајно да ги избришеш следните ставки?\n\n%s</string>
     <string name="delete_plugin">Избриши го приклучокот</string>
     <string name="device_pin_error_message">Не може да се добие PIN-кодот на уредот, обиди се со локална автентикација</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="delete_message_series_episodes" formatted="true">Дали си сигурен дека сакаш трајно да ги избришеш следните епизоди во %1$s?\n\n%2$s</string>
     <string name="device_pin_counter_text">Кодот истекува за %1$d минута/и и %2$d секунда/и</string>
     <string name="audio_singular">Аудио</string>

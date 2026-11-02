@@ -43,6 +43,8 @@ render.experimental.xml
 # Keystore files
 *.jks
 *.keystore
+# Fixed CI debug key used to keep APK signatures stable.
+!/debug.keystore
 
 # Google Services (e.g. APIs or Firebase)
 google-services.json

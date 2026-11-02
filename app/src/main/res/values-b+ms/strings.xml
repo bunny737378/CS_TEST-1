@@ -102,12 +102,12 @@
     <string name="popup_resume_download">Sambung muat turun</string>
     <string name="download_storage_text">Storan dalaman</string>
     <string name="search_provider_text_providers">Carian mengikut sumber</string>
-    <string name="benene_count_text">%d Pisang yang diberikan kepada pemaju</string>
+
     <string name="subs_font_size">Saiz Teks</string>
     <string name="sort_apply">Simpan</string>
     <string name="subs_text_color">Warna teks</string>
     <string name="subs_background_color">Warna latar belakang</string>
-    <string name="benene_count_text_none">Tiada Benenes diberikan</string>
+
     <string name="subs_auto_select_language">Auto-Pilih Bahasa</string>
     <string name="subs_download_languages">Muat turun Bahasa</string>
     <string name="subs_subtitle_languages">Bahasa Sari kata</string>
@@ -183,8 +183,7 @@
     <string name="update">Kemas kini</string>
     <string name="jsdelivr_proxy">Proksi Github</string>
     <string name="remove_site_pref">Padam laman web</string>
-    <string name="legal_notice">Penafian</string>
-    <string name="pref_category_links">Pautan</string>
+
     <string name="pref_category_backup">Sandaran</string>
     <string name="pref_category_android_tv">Android TV</string>
     <string name="random_button_settings">Butang Rawak</string>
@@ -215,7 +214,7 @@
     <string name="add_site_pref">Klon laman web</string>
     <string name="example_email">hello@world.com</string>
     <string name="bottom_title_settings">Lokasi tajuk poster</string>
-    <string name="cs3wiki">Wiki CloudStream</string>
+
     <string name="delete">Padam</string>
     <string name="ova">OVA</string>
     <string name="asian_drama">Drama Asia</string>
@@ -374,7 +373,7 @@
     <string name="pref_category_security">Keselamatan</string>
     <string name="open_downloaded_repo">Buka repositori</string>
     <string name="device_pin_counter_text">Kod luput dalam %1$dm%2$ds</string>
-    <string name="jsdelivr_enabled">Github tidak dapat dicapai. Menghidupkan proksi jsDelivr…</string>
+
     <string name="random_button_settings_desc">Papar butang rawak di laman utama dan perpustakaan</string>
     <string name="single_plugin_disabled" formatted="true">%s (Dilumpuhkan)</string>
     <string name="empty_library_no_accounts_message">Perpustakaan anda kosong :(\nLog masuk dalam akaun perpustakaan atau tambah cerita di perpustakaan lokal.</string>
@@ -394,7 +393,7 @@
     <string name="category_account">Akaun dan Sekuriti</string>
     <string name="advanced_search">Carian Bestari</string>
     <string name="advanced_search_des">Beri hasil carian dipisah mengikut pelbagai sumber</string>
-    <string name="lightnovel">Aplikasi Light novel oleh pembangun sama</string>
+
     <string name="anim">Aplikasi Anime oleh pembangun sama</string>
     <string name="discord">Menyertai Discord</string>
     <string name="delete_files">Padam Fail</string>
@@ -497,7 +496,7 @@
     <string name="redo_setup_process">Redo Proses Persediaan</string>
 
     <string name="benene">Berikan benen kepada devs</string>
-    <string name="benene_des">Diberi pisang</string>
+
     <string name="app_language">Bahasa App</string>
     <string name="no_chromecast_support_toast">Penyedia ini tidak mempunyai sokongan Chromecast</string>
     <string name="no_links_found_toast">Tiada pautan yang dijumpai</string>

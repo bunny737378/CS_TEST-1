@@ -88,8 +88,7 @@
     <string name="subs_font_size">Ukuran Fonta</string>
     <string name="search_provider_text_providers">Cari menggunakan penyedia</string>
     <string name="search_provider_text_types">Cari menggunakan jenis</string>
-    <string name="benene_count_text">%d piseng diberikan kepada pengembang</string>
-    <string name="benene_count_text_none">Tidak ada piseng yang diberikan</string>
+
     <string name="subs_auto_select_language">Pilih Bahasa Otomatis</string>
     <string name="subs_download_languages">Unduh Bahasa</string>
     <string name="subs_hold_to_reset_to_default">Tahan untuk mengatur ulang ke bawaan</string>
@@ -143,11 +142,11 @@
     <string name="show_fillers_settings">Tampilkan episode filler untuk anime</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Aplikasi novel ringan dari developer yang sama</string>
+
     <string name="anim">Aplikasi anime dari developer yang sama</string>
     <string name="discord">Bergabung dengan Discord</string>
     <string name="benene">Berikan sebuah piseng kepada developer</string>
-    <string name="benene_des">Piseng yang diberikan</string>
+
     <string name="app_language">Bahasa Aplikasi</string>
     <string name="no_chromecast_support_toast">Penyedia ini tidak memiliki dukungan Chromecast</string>
     <string name="no_links_found_toast">Tidak Ada Tautan Yang Ditemukan</string>
@@ -245,7 +244,7 @@
     <string name="resize_fit">Paskan dengan layar</string>
     <string name="resize_fill">Regang</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">Disclaimer</string>
+
     <string name="category_general">Umum</string>
     <string name="random_button_settings">Tombol Acak</string>
     <string name="random_button_settings_desc">Tampilkan tombol acak di Beranda dan Pustaka</string>
@@ -366,7 +365,6 @@
     <string name="other_singular">Video</string>
     <string name="add_site_pref">Duplikasi Website</string>
     <string name="add_site_summary">Duplikasi website yang telah ada, dengan alamat berbeda</string>
-    <string name="pref_category_links">Tautan</string>
 
     <string name="pref_category_backup">Cadangkan</string>
     <string name="pref_category_extensions">Ekstensi</string>
@@ -509,7 +507,7 @@
     <string name="subscription_deleted">Berhenti berlangganan di %s</string>
     <string name="subscription_episode_released">Episode %d telah rilis!</string>
     <string name="jsdelivr_proxy">Proxy GitHub</string>
-    <string name="jsdelivr_enabled">Gagal terhubung ke GitHub. Mengaktifkan proksi jsDelivr…</string>
+
     <string name="jsdelivr_proxy_summary">Lewati pemblokiran raw URL github menggunakan jsDelivr. Dapat menyebabkan pembaruan tertunda selama beberapa hari.</string>
     <string name="pref_category_bypass">Bypass ISP</string>
     <string name="revert">Pulihkan</string>
@@ -596,7 +594,7 @@
     <string name="episode_upcoming_format" formatted="true">Akan datang di %s</string>
     <string name="episode_action_cast_mirror">Cermin Cast</string>
     <string name="player_settings_select_cast_device">Pilih perangkat cast</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="pref_category_security">Keamanan</string>
     <string name="pref_category_accounts">Akun</string>
     <string name="test_warning">Hati hati</string>

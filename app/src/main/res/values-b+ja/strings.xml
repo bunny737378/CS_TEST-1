@@ -96,7 +96,7 @@
     <string name="github">GitHub（ギットハブ）</string>
     <string name="go_back_30">-30</string>
     <string name="go_forward_30">+30</string>
-    <string name="legal_notice">免責</string>
+
     <string name="pref_category_extensions">拡張機能</string>
 
     <string name="category_providers">提供者</string>
@@ -106,7 +106,7 @@
     <string name="automatic">自動</string>
     <string name="home_random">任意</string>
     <string name="extensions">拡張機能</string>
-    <string name="pref_category_links">リンク</string>
+
     <string name="pref_category_android_tv">Android TV</string>
     <string name="login">ログイン</string>
     <string name="logout">ログアウト</string>
@@ -219,7 +219,7 @@
     <string name="swipe_to_change_settings">スワイプして設定を変更します</string>
     <string name="subs_outline_color">輪郭の色</string>
     <string name="subs_subtitle_elevation">字幕の標高</string>
-    <string name="benene_count_text">%d ベネネスが開発者に与えられました</string>
+
     <string name="vpn_might_be_needed">このプロバイダーが正しく動作するには VPN が必要になる可能性があります</string>
     <string name="vpn_torrent">このプロバイダーは torrent です、VPN をお勧めします</string>
     <string name="player_size_settings">プレーヤーのサイズ変更ボタン</string>
@@ -349,7 +349,7 @@
     <string name="favorite_removed">%s がお気に入りから削除されました</string>
     <string name="pin">PIN</string>
     <string name="auto_rotate_video">自動回転</string>
-    <string name="cs3wiki">CloudStreamウィキ</string>
+
     <string name="already_voted">すでに投票しました</string>
     <string name="duplicate_add">追加</string>
     <string name="mobile_data">モバイルデータ</string>
@@ -402,14 +402,14 @@
     <string name="backup_frequency">バックアップ頻度</string>
     <string name="picture_in_picture_des">他のアプリの上にミニプレイヤーで再生し続ける</string>
     <string name="downloads_empty">現在ダウンロードはがありません。</string>
-    <string name="benene_count_text_none">ベネネは与えられていません</string>
+
     <string name="double_tap_to_seek_settings">ダブルタップでシーク</string>
     <string name="android_tv_interface_off_seek_settings_summary">プレーヤーが非表示のときに使用されるシーク量</string>
     <string name="resize_zoom">ズーム</string>
     <string name="action_subscribe">購読</string>
     <string name="subtitles_from_embedded">埋め込み</string>
     <string name="subtitles_from_online">オンライン</string>
-    <string name="lightnovel">同じ開発者によるライトノベルアプリ</string>
+
     <string name="add_site_pref">サイトをクローン</string>
     <string name="actor_main">メイン</string>
     <string name="subtitles_remove_bloat">字幕から不要なものを削除</string>
@@ -473,7 +473,7 @@
     <string name="biometric_authentication_title">CloudStreamをアンロック</string>
     <string name="apply_on_restart">変更を反映するにはアプリを再起動してください。</string>
     <string name="benene">開発者にベネネを与える</string>
-    <string name="benene_des">与えられたベネネ</string>
+
     <string name="use">使用</string>
     <string name="quality_sd">SD</string>
 
@@ -542,7 +542,7 @@
     <string name="test_warning">警告</string>
     <string name="dismiss">閉じる</string>
     <string name="open_downloaded_repo">リポジトリを開く</string>
-    <string name="jsdelivr_enabled">GitHubに接続できません。jsDelivrプロキシをオンにします…</string>
+
     <string name="jsdelivr_proxy_summary">jsDelivrを使用して生のGitHub URLのブロックを回避します。アップデートが数日遅れる可能性があります。</string>
     <string name="speech_recognition_unavailable">音声認識は利用できません</string>
     <string name="begin_speaking">話し始めてください…</string>

@@ -107,51 +107,6 @@
                 android:nextFocusUp="@id/settings_credits"
                 android:text="@string/extensions" />
 
-            <LinearLayout
-                android:id="@+id/app_version_info"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/app_version"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textColor="?attr/textColor"
-                    tools:text="0.0.0" />
-
-                <TextView
-                    android:id="@+id/delimiter0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="•"
-                    android:textColor="?attr/textColor" />
-
-                <TextView
-                    android:id="@+id/commit_hash"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textColor="?attr/textColor"
-                    tools:text="1234567" />
-
-                <TextView
-                    android:id="@+id/delimiter1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="•"
-                    android:textColor="?attr/textColor" />
-
-                <TextView
-                    android:id="@+id/build_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textColor="?attr/textColor"
-                    tools:text="21/03/2024 09:02 pm" />
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -117,8 +117,7 @@
     <string name="subs_font_size">ຂະໜາດຟອນທ໌</string>
     <string name="search_provider_text_providers">ຄົ້ນຫາໂດຍໃຊ້ຜູ້ໃຫ້ບໍລິການ</string>
     <string name="search_provider_text_types">ຄົ້ນຫາໂດຍໃຊ້ປະເພດ</string>
-    <string name="benene_count_text">ມອບ Benene ໃຫ້ຜູ້ພັດທະນາແລ້ວ %d ອັນ</string>
-    <string name="benene_count_text_none">ຍັງບໍ່ໄດ້ມອບ Benene</string>
+
     <string name="subs_auto_select_language">ເລືອກພາສາອັດຕະໂນມັດ</string>
     <string name="subs_download_languages">ພາສາທີ່ຈະດາວໂຫຼດ</string>
     <string name="subs_subtitle_languages">ພາສາຂອງຄຳບັນຍາຍ</string>
@@ -196,11 +195,11 @@
     <string name="redo_setup_process">ຕັ້ງຄ່າໃໝ່ທັງໝົດ</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">ແອັບຯ Light novel ໂດຍຜູ້ພັດທະນາດຽວກັນ</string>
+
     <string name="anim">ແອັບຯ Anime ໂດຍຜູ້ພັດທະນາດຽວກັນ</string>
     <string name="discord">ເຂົ້າຮ່ວມ Discord</string>
     <string name="benene">ມອບ Benene ໃຫ້ຜູ້ພັດທະນາ</string>
-    <string name="benene_des">ມອບ Benene ແລ້ວ</string>
+
     <string name="app_language">ພາສາຂອງແອັບຯ</string>
     <string name="no_chromecast_support_toast">ຜູ້ໃຫ້ບໍລິການນີ້ບໍ່ຮອງຮັບ Chromecast</string>
     <string name="no_links_found_toast">ບໍ່ພົບລິ້ງ</string>
@@ -329,7 +328,7 @@
     <string name="dns_pref">DNS over HTTPS</string>
     <string name="dns_pref_summary">ມີປະໂຫຍດໃນການຂ້າມການບລັອກຈາກ ISP</string>
     <string name="jsdelivr_proxy">GitHub Proxy</string>
-    <string name="jsdelivr_enabled">ບໍ່ສາມາດເຊື່ອມຕໍ່ GitHub ໄດ້. ກຳລັງເປີດໃຊ້ jsDelivr proxy…</string>
+
     <string name="jsdelivr_proxy_summary">ຂ້າມການບລັອກ URL ຂອງ GitHub ໂດຍໃຊ້ jsDelivr. ອາດຈະເຮັດໃຫ້ການອັບເດດຊ້າລົງ 2-3 ມື້.</string>
     <string name="add_site_pref">ຄັດລອກເວັບໄຊທ໌</string>
     <string name="remove_site_pref">ລຶບເວັບໄຊທ໌</string>
@@ -340,9 +339,8 @@
     <string name="resize_fit">ພໍດີກັບໜ້າຈໍ</string>
     <string name="resize_fill">ຍືດໃຫ້ເຕັມ</string>
     <string name="resize_zoom">ຊູມ</string>
-    <string name="legal_notice">ຂໍ້ຄວາມປະຕິເສດຄວາມຮັບຜິດຊອບ</string>
+
     <string name="pref_category_bypass">ການຂ້າມ ISP</string>
-    <string name="pref_category_links">ລິ້ງ</string>
 
     <string name="pref_category_backup">ສຳຮອງຂໍ້ມູນ</string>
     <string name="pref_category_extensions">ສ່ວນເສີມ</string>
@@ -649,7 +647,7 @@
     <string name="biometric_prompt_description">ຫຼັງຈາກພະຍາຍາມລົ້ມເຫຼວຫຼາຍຄັ້ງ, ໜ້າຕ່າງຈະປິດລົງ. ໃຫ້ເລີ່ມແອັບໃໝ່ເພື່ອລອງອີກຄັ້ງ.</string>
     <string name="biometric_warning">ຂໍ້ມູນ CloudStream ຂອງທ່ານຖືກສຳຮອງໄວ້ແລ້ວ. ເຖິງແມ່ນວ່າມັນຈະເກີດຂຶ້ນໄດ້ຍາກ, ແຕ່ອຸປະກອນແຕ່ລະເຄື່ອງອາດເຮັດວຽກຕ່າງກັນ. ໃນກໍລະນີທີ່ທ່ານຖືກລັອກບໍ່ໃຫ້ເຂົ້າເຖິງແອັບ, ໃຫ້ລ້າງຂໍ້ມູນແອັບທັງໝົດ ແລະ ກູ້ຄືນຈາກໄຟລ໌ສຳຮອງ. ພວກເຮົາຂໍອະໄພໃນຄວາມບໍ່ສະດວກ.</string>
     <string name="reset_btn">ຕັ້ງຄ່າໃໝ່</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="device_pin_url_message">ເຂົ້າໄປທີ່ <b>%s</b> ໃນມືຖື ຫຼື ຄອມພິວເຕີຂອງທ່ານ ແລະ ໃສ່ລະຫັດຂ້າງເທິງ</string>
     <string name="device_pin_error_message">ບໍ່ສາມາດຮັບລະຫັດ PIN ຂອງອຸປະກອນໄດ້, ລອງຢືນຢັນຕົວຕົນພາຍໃນເຄື່ອງ</string>
     <string name="device_pin_expired_message">ລະຫັດ PIN ໝົດອາຍຸແລ້ວ!</string>

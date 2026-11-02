@@ -80,8 +80,7 @@
     <string name="subs_font">لکھائی</string>
     <string name="subs_font_size">حرف کا سائز</string>
     <string name="search_provider_text_types">انواع کا استعمال کرتے ہوئے تلاش کریں</string>
-    <string name="benene_count_text">%d ایپ بنانے والے کیلئے 🍌</string>
-    <string name="benene_count_text_none">کیلے نہیں</string>
+
     <string name="subs_auto_select_language">زبان خود بخود منتخب کریں</string>
     <string name="subs_download_languages">زبانیں ڈاؤن لوڈ کریں</string>
     <string name="subs_subtitle_languages">ترجمہ کی زبان</string>
@@ -129,11 +128,11 @@
     <string name="redo_setup_process">سیٹ اپ کا عمل دوبارہ کریں</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">یہ لائٹ ناول ایپ وہی ڈویلپرز نے تیار کی ہے جو اس ایپ کو ڈویلپ کیا ہے</string>
+
     <string name="anim">یہ اینمی ایپ وہی ڈویلپرز نے تیار کی ہے جو اس ایپ کو ڈویلپ کیا ہے</string>
     <string name="discord">ڈسکارڈ میں شامل ہوں</string>
     <string name="benene">شکریہ ڈویلپرز کو! آپ کا کام شاندار ہے</string>
-    <string name="benene_des">تعریفیں</string>
+
     <string name="app_language">ایپ کی زبان</string>
     <string name="no_chromecast_support_toast">اس فراہم کنندہ کے پاس کروم کاسٹ سپورٹ نہیں ہے</string>
     <string name="no_links_found_toast">کوئی لنکس نہیں ملے</string>
@@ -264,8 +263,6 @@
     <string name="nginx_url_pref">NGINX server URL</string>
     <string name="display_subbed_dubbed_settings">ڈسپلے Dubbed/Subbed Anime</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">دستبرداری</string>
-    <string name="pref_category_links">لنکس</string>
 
     <string name="pref_category_backup">بیک اپ</string>
     <string name="pref_category_cache">کیسہ</string>
@@ -489,7 +486,7 @@
     <string name="delete_repository_plugins">اس سے تمام ریپوزٹری پلگ ان بھی حذف ہو جائیں گے</string>
     <string name="plugin_deleted">پلگ ان کو حذف کر دیا گیا</string>
     <string name="batch_download">بیچ ڈاؤن لوڈ</string>
-    <string name="jsdelivr_enabled">Could not reach GitHub. Turning on jsDelivr proxy…</string>
+
     <string name="subtitles_example_text">تیز بھوری لومڑی سست کتے پر چھلانگ لگاتی ہے</string>
     <string name="coming_soon">جلد آرہا ہے…</string>
     <string name="subtitles_remove_captions">سب ٹائٹلز سے بند کیپشنز کو ہٹا دیں</string>

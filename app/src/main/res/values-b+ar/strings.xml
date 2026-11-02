@@ -87,8 +87,7 @@
     <string name="subs_font_size">حجم الخط</string>
     <string name="search_provider_text_providers">البحث باستخدام المصادر</string>
     <string name="search_provider_text_types">البحث باستخدام الأنواع</string>
-    <string name="benene_count_text">%d الموزات المعطاة الى المطورين</string>
-    <string name="benene_count_text_none">لم يتم إعطاء موز</string>
+
     <string name="subs_auto_select_language">تحديد اللغة تلقائيًا</string>
     <string name="subs_download_languages">لغات التحميل</string>
     <string name="subs_subtitle_languages">لغة الترجمة</string>
@@ -149,11 +148,11 @@
     <string name="automatic_plugin_download">تنزيل الإضافات تلقائيًا</string>
 
     <string name="github">غيت هاب</string>
-    <string name="lightnovel">تطبيق روايات خفيف من نفس المطورين</string>
+
     <string name="anim">تطبيق أنمي من نفس المطورين</string>
     <string name="discord">انضم إلى الديسكورد</string>
     <string name="benene">إعط موزة للمطورين</string>
-    <string name="benene_des">الموز المُعطي</string>
+
     <string name="app_language">لغة التطبيق</string>
     <string name="no_chromecast_support_toast">هذا المزود ليس لديه دعم كروم كاست</string>
     <string name="no_links_found_toast">لم يتم العثور على روابط</string>
@@ -260,7 +259,7 @@
     <string name="resize_fit">ملائمة الشاشة</string>
     <string name="resize_fill">امتداد</string>
     <string name="resize_zoom">تكبير</string>
-    <string name="legal_notice">إخلاء مسؤولية</string>
+
     <string name="category_general">عام</string>
     <string name="random_button_settings">زر العشوائي</string>
     <string name="random_button_settings_desc">إظهار زر عشوائي على الصفحة الرئيسية والمكتبة</string>
@@ -457,7 +456,6 @@
 
     <string name="pref_category_player_layout">التخطيط</string>
     <string name="redo_setup_process">إعادة عملية الإعداد</string>
-    <string name="pref_category_links">الروابط</string>
 
     <string name="pref_category_backup">النسخ الإحتياطي</string>
     <string name="pref_category_extensions">الإضافات</string>
@@ -507,7 +505,7 @@
     <string name="subscription_new">مشترك في %s</string>
     <string name="pref_category_bypass">تجاوز مزود خدمة الإنترنت</string>
     <string name="revert">استرجاع</string>
-    <string name="jsdelivr_enabled">تعذر الوصول إلى جيثب. تشغيل وكيل jsDelivr …</string>
+
     <string name="jsdelivr_proxy_summary">تجاوز حظر عناوين URL الأولية لـ github باستخدام jsDelivr. قد يتسبب في تأخير التحديثات لبضعة أيام.</string>
     <string name="jsdelivr_proxy">وكيل github</string>
     <string name="watch_quality_pref_data">جودة المشاهدة المفضلة (بيانات الجوال)</string>
@@ -593,7 +591,7 @@
     <string name="next_season_episode_format" formatted="true">سيتم إصدار الحلقة %1$d من الموسم %2$d في</string>
     <string name="episode_action_cast_mirror">مرآة البث</string>
     <string name="player_settings_select_cast_device">حدد جهاز البث</string>
-    <string name="cs3wiki">CloudStream ويكي</string>
+
     <string name="pref_category_security">إعدادات الأمان</string>
     <string name="pref_category_accounts">الحسابات</string>
     <string name="qr_image">صورة رمز الاستجابة السريعة</string>

@@ -95,8 +95,7 @@
     <string name="subs_font_size">字體大小</string>
     <string name="search_provider_text_providers">按片源搜尋</string>
     <string name="search_provider_text_types">按類型搜尋</string>
-    <string name="benene_count_text">送開發者 %d 根香蕉</string>
-    <string name="benene_count_text_none">不送香蕉</string>
+
     <string name="subs_auto_select_language">自動選擇語言</string>
     <string name="subs_download_languages">下載語言</string>
     <string name="subs_subtitle_languages">字幕語言</string>
@@ -157,11 +156,11 @@
     <string name="automatic_plugin_updates">自動更新外掛</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">由相同開發者開發的輕小說應用程式</string>
+
     <string name="anim">由相同開發者開發的動漫應用程式</string>
     <string name="discord">加入 Discord</string>
     <string name="benene">送開發者一根香蕉</string>
-    <string name="benene_des">送香蕉</string>
+
     <string name="app_language">應用程式語言</string>
     <string name="no_chromecast_support_toast">此片源不支援 Chromecast</string>
     <string name="no_links_found_toast">未找到連結</string>
@@ -271,7 +270,7 @@
     <string name="resize_fit">適應螢幕</string>
     <string name="resize_fill">拉伸</string>
     <string name="resize_zoom">縮放</string>
-    <string name="legal_notice">免責聲明</string>
+
     <string name="category_general">通用</string>
     <string name="random_button_settings">隨機按鈕</string>
     <string name="random_button_settings_desc">在主畫面與媒體庫中顯示隨機按鈕</string>
@@ -460,7 +459,6 @@
     <string name="pref_category_subtitles">字幕</string>
     <string name="play_trailer_button">播放預告片</string>
     <string name="redo_setup_process">重設設定過程</string>
-    <string name="pref_category_links">連結</string>
 
     <string name="pref_category_backup">備份</string>
     <string name="pref_category_extensions">擴充功能</string>
@@ -508,7 +506,7 @@
     <string name="jsdelivr_proxy">GitHub 代理</string>
     <string name="pref_category_bypass">繞過 ISP</string>
     <string name="revert">還原</string>
-    <string name="jsdelivr_enabled">無法存取 GitHub。 正在開啟 jsDelivr proxy…</string>
+
     <string name="jsdelivr_proxy_summary">使用 jsDelivr 繞過直接使用 GitHub 網址時的存取封鎖。 可能導致更新延遲數天。</string>
     <string name="empty_library_no_accounts_message">您的媒體庫是空的 :( \n登入媒體庫帳號或將節目新增到您本機的媒體庫。</string>
     <string name="empty_library_logged_in_message">您的媒體庫是空的。可嘗試以不同的帳號登入。</string>
@@ -594,7 +592,7 @@
     <string name="biometric_warning">您的 CloudStream 資料已完成備份。儘管可能性非常低，但因不同裝置的行為都有所不同，在極少數情況下，您可能會無法存取本應用程式。此時請完全清除本應用程式的資料，再使用已有的備份進行還原。若因此造成任何不便，我們深感抱歉。</string>
     <string name="test_extensions_summary">此測試是供開發人員參考，而不是用以驗證任何擴充功能的正常運作與否。</string>
     <string name="battery_dialog_message">為了確保已訂閱的電視節目的不間斷下載與通知，CloudStream 需要取得在背景執行的權限。若點選「確定」，將顯示「請求權限」，請選擇「允許」。\n\n請注意，取得此權限並不表示本程式會明顯增加電池用量，而是只在必要時在背景執行，例如取得通知或使用擴充功能下載影片。</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="biometric_unsupported">此裝置不支援生物特徵認證</string>
     <string name="device_pin_error_message">無法取得裝置 PIN 碼，請嘗試本機驗證</string>
     <string name="delete_plugin">刪除外掛程式</string>

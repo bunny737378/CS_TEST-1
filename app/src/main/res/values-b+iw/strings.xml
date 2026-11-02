@@ -102,7 +102,7 @@
     <string name="picture_in_picture">מצב תמונה בתמונה</string>
     <string name="player_size_settings">כפתור שינוי גודל הנגן</string>
     <string name="player_size_settings_des">הסר את הגבולות השחורים</string>
-    <string name="benene_count_text">%d בנינים שניתנו למפתחים</string>
+
     <string name="player_subtitles_settings_des">הגדרות כתוביות הנגן</string>
     <string name="chromecast_subtitles_settings_des">הגדרות כתוביות כרומקאסט</string>
     <string name="subs_font">גופן</string>
@@ -182,7 +182,7 @@
     <string name="show_fillers_settings">הצג פרק פילר (לא הכרחי לעלילה) לאנימה</string>
     <string name="automatic_plugin_download">הורדה אוטומטית של תוספים</string>
     <string name="automatic_plugin_updates">עדכוני תוספים אוטומטיים</string>
-    <string name="benene_des">כמות בנינים שניתנו</string>
+
     <string name="season">עונה</string>
     <string name="torrent">טורנטים</string>
     <string name="nsfw">NSFW</string>
@@ -246,7 +246,7 @@
     <string name="example_lang_name">קוד שפה (אנגלית)</string>
     <string name="error">שגיאה</string>
     <string name="provider_lang_settings">שפות ההרחבות</string>
-    <string name="pref_category_links">קישורים</string>
+
     <string name="app_layout">פריסת אפליקציה</string>
     <string name="advanced_search">חיפוש מתקדם</string>
     <string name="is_adult">18+</string>
@@ -273,13 +273,12 @@
     <string name="backup_failed_error_format">שגיאה בגיבוי %s</string>
     <string name="search">חיפוש</string>
     <string name="category_account">חשבונות ובטיחות</string>
-    <string name="benene_count_text_none">לא ניתנו בנינים</string>
+
     <string name="eigengraumode_settings">מהירות ניגון</string>
     <string name="show_trailers_settings">הצג טריילרים</string>
     <string name="kitsu_settings">הצג פוסטרים מKitsu</string>
     <string name="pref_filter_search_quality">הסתר את איכות הסרטון שנבחרה בתוצאות החיפוש</string>
 
-    <string name="lightnovel">אפליקצית רומנים קלים על ידי אותו מפתחים</string>
     <string name="anim">אפליקצית אנימה על ידי אותו מפתחים</string>
     <string name="discord">הצטרפות לדיסקורד</string>
     <string name="app_language">שפת האפליקציה</string>
@@ -333,7 +332,7 @@
     <string name="resize_fit">התאם למסך</string>
     <string name="resize_fill">מתוח</string>
     <string name="resize_zoom">זום</string>
-    <string name="legal_notice">כתב ויתור</string>
+
     <string name="pref_category_extensions">הרחבות</string>
     <string name="pref_category_actions">פעולות</string>
     <string name="pref_category_cache">מטמון</string>
@@ -508,7 +507,7 @@
     <string name="disable">ביטול</string>
     <string name="watch_quality_pref_data">איכות צפיה מועדפת (אינטרנט סלולארי)</string>
     <string name="no_repository_found_error">המאגר לא נמצא, נא לבדוק את ה-URL ולנסות VPN</string>
-    <string name="jsdelivr_enabled">ההתחברות אל GitHub נכשלה. מדליק פרוקסי אל jsDelivr…</string>
+
     <string name="android_tv_interface_off_seek_settings_summary">הזמן שיזוז כשהנגן מוסתר</string>
     <string name="already_voted">כבר הצבעת</string>
     <string name="no_plugins_found_error">לא נמצאו תוספים במאגר</string>
@@ -593,7 +592,7 @@
     <string name="episode_upcoming_format" formatted="true">בקרוב בעוד %s</string>
     <string name="episode_action_cast_mirror">שדר מראה</string>
     <string name="player_settings_select_cast_device">בחר מכשיר שידור</string>
-    <string name="cs3wiki">הוויקי של קלאודסטרים</string>
+
     <string name="pref_category_security">אבטחה</string>
     <string name="pref_category_accounts">חשבונות</string>
     <string name="auth_locally">אימות מקומי</string>

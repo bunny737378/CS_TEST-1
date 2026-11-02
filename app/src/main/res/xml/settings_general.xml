@@ -6,16 +6,6 @@
         android:key="@string/locale_key"
         android:title="@string/app_language" />
 
-    <Preference
-        android:icon="@drawable/ic_baseline_warning_24"
-        android:key="@string/legal_notice_key"
-        android:title="@string/legal_notice" />
-
-    <Preference
-        android:icon="@drawable/benene"
-        android:key="@string/benene_count"
-        android:title="@string/benene"
-        app:summary="@string/benene_des" />
 
     <PreferenceCategory android:title="@string/title_downloads">
 
@@ -71,48 +61,11 @@
 
         <SwitchPreference
             android:defaultValue="false"
-            android:icon="@drawable/ic_github_logo"
+            android:icon="@drawable/wifi_proxy_24px"
             android:key="@string/jsdelivr_proxy_key"
             android:summary="@string/jsdelivr_proxy_summary"
             android:title="@string/jsdelivr_proxy" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/pref_category_links">
-
-        <Preference
-            android:icon="@drawable/ic_github_logo"
-            android:title="@string/github"
-            app:summary="https://github.com/recloudstream/cloudstream">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/recloudstream/cloudstream" />
-        </Preference>
-
-        <Preference
-            android:icon="@drawable/quick_novel_icon"
-            android:title="@string/lightnovel"
-            app:summary="https://github.com/LagradOst/QuickNovel">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/LagradOst/QuickNovel" />
-        </Preference>
-        <Preference
-            android:icon="@drawable/ic_baseline_discord_24"
-            android:title="@string/discord"
-            app:summary="https://discord.gg/5Hus6fM">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://discord.gg/5Hus6fM" />
-        </Preference>
-        <Preference
-            android:icon="@drawable/baseline_description_24"
-            android:title="@string/cs3wiki"
-            app:summary="https://cloudstream.miraheze.org/">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://cloudstream.miraheze.org/" />
-        </Preference>
-
-    </PreferenceCategory>
 </PreferenceScreen>

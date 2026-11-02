@@ -85,8 +85,7 @@
     <string name="subs_font_size">Rozmiar czcionki</string>
     <string name="search_provider_text_providers">Szukaj według źródeł</string>
     <string name="search_provider_text_types">Szukaj według typów</string>
-    <string name="benene_count_text">Dano %d bananów</string>
-    <string name="benene_count_text_none">Brak bananów</string>
+
     <string name="subs_auto_select_language">Wybierz język automatycznie</string>
     <string name="subs_download_languages">Pobieranie języków</string>
     <string name="subs_subtitle_languages">Język napisów</string>
@@ -147,11 +146,11 @@
     <string name="automatic_plugin_download">Automatyczne pobieranie rozszerzeń</string>
 
     <string name="github">Github</string>
-    <string name="lightnovel">Aplikacja do light novel od nas</string>
+
     <string name="anim">Aplikacja do anime od nas</string>
     <string name="discord">Serwer Discord</string>
     <string name="benene">Daj banana programistom</string>
-    <string name="benene_des">Dano banana</string>
+
     <string name="app_language">Język aplikacji</string>
     <string name="no_chromecast_support_toast">Ten dostawca nie wspiera Chromecast</string>
     <string name="no_links_found_toast">Nie znaleziono linków</string>
@@ -259,7 +258,7 @@
     <string name="resize_fit">Dopasuj do ekranu</string>
     <string name="resize_fill">Rozciągnij</string>
     <string name="resize_zoom">Powiększ</string>
-    <string name="legal_notice">Zastrzeżenie</string>
+
     <string name="category_general">Ogólne</string>
     <string name="random_button_settings">Przycisk do losowania</string>
     <string name="random_button_settings_desc">Pokaż przycisk do losowania na stronie głównej i w bibliotece</string>
@@ -452,7 +451,6 @@
     <string name="pref_category_actions">Działania</string>
     <string name="pref_category_cache">Pamięć podręczna</string>
     <string name="redo_setup_process">Powtórz proces konfiguracji</string>
-    <string name="pref_category_links">Linki</string>
 
     <string name="pref_category_backup">Kopia zapasowa</string>
     <string name="pref_category_subtitles">Napisy</string>
@@ -502,7 +500,7 @@
     <string name="subscription_deleted">Anulowano subskrypcję %s</string>
     <string name="subscription_episode_released">Został wydany odcinek %d!</string>
     <string name="jsdelivr_proxy_summary">Obchodzi blokadę surowych adresów URL GitHuba za pomocą jsDelivr. Może powodować opóźnienie aktualizacji o kilka dni.</string>
-    <string name="jsdelivr_enabled">Nie udało się połączyć z GitHubem. Włączono serwer pośredniczący jsDelivr…</string>
+
     <string name="watch_quality_pref_data">Domyślna jakość (dane mobilne)</string>
     <string name="quality_profile_help">W tym miejscu można zmienić kolejność źródeł. Jeśli wideo ma wyższy priorytet, pojawi się wyżej w wyborze źródła. Priorytet wideo jest sumą priorytetu źródła i priorytetu jakości. \n \nŹródło A: 3 \nJakość B: 7 \nŁączny priorytet wideo będzie wynosił 10. \n \nUWAGA: Jeśli suma wynosi 10 lub więcej, odtwarzacz automatycznie pominie ładowanie po załadowaniu tego łącza!</string>
     <string name="profile_number">Profil %d</string>
@@ -586,7 +584,7 @@
     <string name="next_season_episode_format" formatted="true">Odcinek %2$d sezonu %1$d wyjdzie za</string>
     <string name="player_settings_select_cast_device">Wybierz urządzenie do transmisji</string>
     <string name="episode_action_cast_mirror">Mirror transmisji</string>
-    <string name="cs3wiki">Wiki CloudStream</string>
+
     <string name="pref_category_security">Bezpieczeństwo</string>
     <string name="pref_category_accounts">Konta</string>
     <string name="auth_locally">Uwierzytelniaj lokalnie</string>
