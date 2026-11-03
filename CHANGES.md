@@ -108,17 +108,17 @@ Functional dialogs (settings, errors, logs, battery, biometric, safe mode, playe
 test logs) were kept after auditing the dialog call sites.
 
 ---
----
 
 ## 6. Release APK build and addon-integration cleanup
 
 **Files:** `.github/workflows/build_apk.yml`, `CHANGES.md`, app source, resource and test files
 listed in sections 1-5.
 
-The `Build APK` workflow now runs `testReleaseUnitTest` and `assembleRelease`, then uploads one
-`CloudStream-release-apk` from `app/build/outputs/apk/release/*.apk`. The debug APK build step and
-artifact are removed. `app/build.gradle.kts` already signs the release build type with the
-committed public debug keystore, so no new signing secret or Gradle dependency was added.
+The `Build APK` workflow now removes the debug unit-test step and runs `:app:assembleRelease`
+only, then uploads one `CloudStream-release-apk` from
+`app/build/outputs/apk/release/*.apk`. The debug APK build step and artifact are removed.
+`app/build.gradle.kts` already signs the release build type with the committed public debug
+keystore, so no new signing secret or Gradle dependency was added.
 
 All third-party addon integration added in earlier sections was removed: the addon package,
 settings screens/fragments, dedicated stream page and generator, transport unit test, login and
