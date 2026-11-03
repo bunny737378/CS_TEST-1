@@ -225,4 +225,45 @@ now a member of `StremioStreamsFragment`; run `41591916088`, job `125770347095`,
 
 **Artifact:** one unexpired `CloudStream-debug-apk` for this run, ID `13210163744`,
 81,350,775 bytes, created `2026-11-03T06:47:27Z`. Runtime login, stream loading and player
-handoff still need user testing; the sandbox cannot reach `api.strem.io`.
+handoff still need user testing. A direct sandbox TLS connection to `api.strem.io` failed, but a
+GitHub Actions runner reached the API successfully; see section 9.2.
+
+### 9.2 Live Stremio API probe and login false-failure fix
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/stremio/StremioModels.kt`,
+`StremioApi.kt`, `StremioRepository.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/settings/StremioAddonsFragment.kt`.
+
+A temporary GitHub Actions probe called the official `https://api.strem.io/api/login`
+endpoint with the supplied existing account. Credentials were passed only through a
+temporary masked CI payload and are not stored in repository files or this journal.
+All five tested request shapes returned HTTP 200 with the untagged success envelope
+`{ "result": { "authKey": "...", "user": { ... } } }`; there was no `error` field.
+The same runner also got HTTP 200 from `getUser` (minimal and `type`-tagged bodies) and
+`addonCollectionGet` (minimal and `type`-tagged bodies), returning eight addons. A
+temporary JVM unit test then exercised the app's own `StremioApi.login`,
+`loginWithAuthKey`, `register`, post-registration `login`, and `addonCollectionGet`
+against the live API: all succeeded, with only redacted key lengths/counts logged.
+Sign-up used the supplied new-account email and a generated, masked password.
+
+This proved that the generic "Stremio login failed" message did not come from Stremio or
+from response parsing. It came from the settings/repository error path: both layers
+caught `Throwable`, including `CancellationException`, and replaced any null-message
+exception with a hardcoded failure string. The composition-scoped coroutine could also be
+cancelled while a login was in flight. The fix now uses an app-level `SupervisorJob`
+scope, rethrows cancellation, shows the real redacted exception class/message instead of
+a generic failure, resolves account storage through either `CloudStreamApp.context` or
+`getContext()`, and writes the auth key synchronously with `commit()` so `isLoggedIn()`
+sees it immediately. `register` now includes `gdpr_consent.from`, matching the official
+web client. API error text is redacted before it can be shown in the UI.
+
+**Build:** `2d99584` failed at `:app:compileDebugKotlin` because `stremioScope` was
+imported as a top-level symbol instead of an `StremioRepository` member. `b295128`
+fixed the reference; run `41597139672`, job `125787030436`, succeeded in 3m13s.
+
+**Artifact:** one unexpired `CloudStream-debug-apk`, ID `13212483803`, 81,353,609 bytes,
+created `2026-11-03T07:36:39Z`. Install this exact artifact for the login retest. The
+temporary probe workflow, unit test and payload commits were removed by a force-push;
+no credentials or auth keys are stored in repository files or this journal. On-device
+UI acceptance for all three login modes, the dedicated all-streams page, stream loading
+and CloudStream player handoff is still pending.
