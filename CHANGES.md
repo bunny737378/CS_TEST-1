@@ -308,6 +308,13 @@ A JVM unit test asserts that a `/manifest.json` descriptor produces
 are appended after the resource path, that percent encoding matches core, and that the legacy
 `/stremio/v1` transport is detected. It uses only the existing JUnit/JSON test dependencies.
 
-**Build validation:** pending. On-device acceptance for addon search, series/episode stream
-loading, the dedicated all-streams page and CloudStream player handoff remains pending.
-No credentials or auth keys were added.
+**Build validation:** `5e737df` failed at `:app:compileDebugKotlin` because the new
+`proxyHeaders.request` parsing called the key-based `stringMap` helper without a key.
+`7bbe6a3` added a no-argument map helper; run `41602465500`, job `125804225564`, succeeded
+in 2m59s. The workflow now also runs `:app:testDebugUnitTest` before `assembleDebug`.
+
+**Artifact:** one unexpired `CloudStream-debug-apk` for run `41602465500`, ID
+`13215061835`, 81,367,293 bytes, created `2026-11-03T08:22:29Z`. Install this exact
+artifact for the addon search and series/episode stream retest. On-device acceptance
+for addon search, stream loading, the dedicated all-streams page and CloudStream player
+handoff remains pending. No credentials or auth keys were added.

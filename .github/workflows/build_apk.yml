@@ -64,6 +64,9 @@ jobs:
         with:
           cache-read-only: false
 
+      - name: Run unit tests
+        run: ./gradlew testDebugUnitTest --no-daemon --no-configuration-cache --stacktrace
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon --no-configuration-cache --stacktrace
 
