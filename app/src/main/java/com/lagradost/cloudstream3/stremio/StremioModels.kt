@@ -387,22 +387,33 @@ data class StremioUser(
     val email: String?,
 ) {
     companion object {
-        fun fromAuthResult(result: JSONObject): StremioUser? {
-            val authKey = result.string("authKey") ?: result.string("token") ?: return null
+        /** Accepts the official authKey shape plus the legacy key/token and nested auth shapes. */
+        fun fromAuthResult(result: JSONObject, fallbackAuthKey: String? = null): StremioUser? {
+            val authObject = result.optJSONObject("auth")
+            val authKey = result.string("authKey")
+                ?: result.string("token")
+                ?: result.string("key")
+                ?: authObject?.string("authKey")
+                ?: authObject?.string("key")
+                ?: authObject?.string("token")
+                ?: fallbackAuthKey?.takeIf { it.isNotBlank() }
+                ?: return null
             val user = result.optJSONObject("user")
+                ?: authObject?.optJSONObject("user")
             return StremioUser(
                 authKey = authKey,
-                id = user?.string("_id") ?: user?.string("id") ?: result.string("_id"),
+                id = user?.string("_id") ?: user?.string("id")
+                    ?: result.string("_id") ?: result.string("id"),
                 email = user?.string("email") ?: result.string("email"),
             )
         }
 
-        fun fromUserResult(result: JSONObject, authKey: String): StremioUser {
-            return StremioUser(
+        /** getUser returns only the user object, so the pasted auth key is the session token. */
+        fun fromUserResult(result: JSONObject, authKey: String): StremioUser =
+            fromAuthResult(result, authKey) ?: StremioUser(
                 authKey = authKey,
                 id = result.string("_id") ?: result.string("id"),
                 email = result.string("email"),
             )
-        }
     }
 }

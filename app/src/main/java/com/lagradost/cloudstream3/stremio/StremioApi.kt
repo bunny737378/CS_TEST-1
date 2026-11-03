@@ -17,78 +17,113 @@ object StremioApi {
     private const val API_BASE = "https://api.strem.io"
 
     private suspend fun post(method: String, body: Map<String, Any>): JSONObject {
-        val text = app.post("$API_BASE/api/$method", json = body).text
-        val json = JSONObject(text)
+        val response = app.post(
+            "$API_BASE/api/$method",
+            headers = mapOf("Content-Type" to "application/json"),
+            json = body,
+        )
+        val text = response.text
+        if (!response.isSuccessful) {
+            throw IllegalStateException(
+                "Stremio HTTP ${response.code}: ${text.take(200)}"
+            )
+        }
+        val json = runCatching { JSONObject(text) }.getOrElse {
+            throw IllegalStateException("Stremio returned non-JSON: ${text.take(200)}")
+        }
         val error = errorText(json)
         if (!error.isNullOrBlank()) throw IllegalStateException(error)
         return json
     }
 
+    /**
+     * Stremio uses an untagged { result } / { error } envelope. Some successful responses also
+     * carry a zero/false/empty error field, so only a real message or non-zero code is a failure.
+     */
     private fun errorText(json: JSONObject): String? {
         if (!json.has("error") || json.isNull("error")) return null
         return when (val error = json.get("error")) {
             is Boolean -> if (error) "Stremio API returned an error" else null
-            is String -> error.takeIf { it.isNotBlank() && it != "null" }
-            is JSONObject -> error.optString("message").takeIf { it.isNotBlank() }
-                ?: error.toString().takeIf { it.isNotBlank() }
-            else -> error.toString().takeIf { it.isNotBlank() && it != "null" }
+            is Number -> if (error.toLong() != 0L) "Stremio API error $error" else null
+            is String -> error.takeIf {
+                it.isNotBlank() && !it.equals("null", true) &&
+                    !it.equals("false", true) && it != "0"
+            }
+            is JSONObject -> {
+                val message = error.optString("message").takeIf { it.isNotBlank() }
+                val code = error.optLong("code", 0L)
+                when {
+                    message != null -> message
+                    code != 0L -> "Stremio API error $code"
+                    else -> null
+                }
+            }
+            is JSONArray -> if (error.length() == 0) null else error.toString()
+            else -> null
         }
     }
 
-    suspend fun login(email: String, password: String): StremioUser? = runCatching {
+    private fun authResult(json: JSONObject, fallbackAuthKey: String? = null): StremioUser {
+        val rawResult = json.opt("result").takeUnless { it === JSONObject.NULL }
+        val result = when (rawResult) {
+            is JSONObject -> rawResult
+            is String -> JSONObject().put("authKey", rawResult)
+            is JSONArray -> rawResult.optJSONObject(0) ?: JSONObject()
+            else -> json
+        }
+        return StremioUser.fromAuthResult(result, fallbackAuthKey)
+            ?: throw IllegalStateException(
+                "Stremio response has no auth key: ${json.toString().take(240)}"
+            )
+    }
+
+    suspend fun login(email: String, password: String): StremioUser {
         val json = post(
             "login",
             mapOf(
-                "type" to "Login",
                 "email" to email.trim(),
                 "password" to password,
+                "facebook" to false,
             )
         )
-        val result = json.optJSONObject("result") ?: return@runCatching null
-        StremioUser.fromAuthResult(result)
-    }.getOrNull()
+        return authResult(json)
+    }
 
-    suspend fun register(email: String, password: String): StremioUser? = runCatching {
+    suspend fun register(email: String, password: String): StremioUser {
         val json = post(
             "register",
             mapOf(
-                "type" to "Register",
                 "email" to email.trim(),
                 "password" to password,
                 "gdpr_consent" to mapOf(
-                    "terms" to true,
+                    "tos" to true,
                     "privacy" to true,
                     "marketing" to false,
                 ),
             )
         )
-        val result = json.optJSONObject("result") ?: return@runCatching null
-        StremioUser.fromAuthResult(result)
-    }.getOrNull()
+        return authResult(json)
+    }
 
-    suspend fun loginWithAuthKey(authKey: String): StremioUser? = runCatching {
+    suspend fun loginWithAuthKey(authKey: String): StremioUser {
+        val key = authKey.trim()
         val json = post(
             "getUser",
-            mapOf(
-                "type" to "GetUser",
-                "authKey" to authKey.trim(),
-            )
+            mapOf("authKey" to key)
         )
-        val result = json.optJSONObject("result") ?: return@runCatching null
-        StremioUser.fromUserResult(result, authKey.trim())
-    }.getOrNull()
+        return authResult(json, key)
+    }
 
     suspend fun addonCollectionGet(authKey: String): List<JSONObject>? = runCatching {
         val json = post(
             "addonCollectionGet",
             mapOf(
-                "type" to "AddonCollectionGet",
                 "authKey" to authKey,
                 "update" to true,
                 "addFromURL" to emptyList<String>(),
             )
         )
-        val result = json.opt("result")
+        val result = json.opt("result").takeUnless { it === JSONObject.NULL }
         val array: JSONArray? = when {
             result is JSONObject && result.optJSONArray("addons") != null ->
                 result.getJSONArray("addons")
@@ -107,7 +142,6 @@ object StremioApi {
         post(
             "addonCollectionSet",
             mapOf(
-                "type" to "AddonCollectionSet",
                 "authKey" to authKey,
                 "addons" to addons,
             )
@@ -158,11 +192,12 @@ object StremioApi {
     ): StremioMeta? = runCatching {
         val text = app.get(resourceUrl(addon, "meta", type, id, emptyMap())).text
         val json = JSONObject(text)
-        val metaValue = json.opt("meta") ?: json.opt("metas")
+        val metaValue = json.opt("meta").takeUnless { it === JSONObject.NULL }
+            ?: json.opt("metas").takeUnless { it === JSONObject.NULL }
         val metaJson = when (metaValue) {
             is JSONObject -> metaValue
             is JSONArray -> if (metaValue.length() > 0) metaValue.optJSONObject(0) else null
-            else -> json
+            else -> null
         } ?: return@runCatching null
         StremioMeta.from(metaJson, type)
     }.getOrNull()
@@ -194,9 +229,9 @@ object StremioApi {
         var normalized = url.trim()
         when {
             normalized.startsWith("stremio://", true) ->
-                normalized = "https://" + normalized.removePrefix("stremio://")
+                normalized = "https://" + normalized.substringAfter("://")
             normalized.startsWith("stremio:", true) ->
-                normalized = "https://" + normalized.removePrefix("stremio:")
+                normalized = "https://" + normalized.substringAfter(":")
         }
         normalized = normalized
             .removeSuffix("manifest.json")

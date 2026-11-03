@@ -141,10 +141,10 @@ movie/series detail pages with episodes, and addon `stream` responses into Cloud
 UI/UX and player are preserved. CloudStream extension repositories and their normal behavior are
 unchanged.
 
-**Still pending for full parity:** a dedicated Stremio stream list page that prevents direct
-player opening before the user chooses a stream, library/continue watching sync, configurable
-addon pages, native torrent/stream server support, and deeper account settings parity. Do not
-claim these are finished; append the next phase here when implemented.
+**Still pending for full parity:** library/continue watching sync, configurable addon pages,
+native torrent/stream server support, and deeper account settings parity. The dedicated stream
+list is implemented in section 9; do not claim the remaining items are finished; append the next
+phase here when implemented.
 
 ### 6.1 Phase 1 build fixes
 
@@ -185,6 +185,31 @@ lambda receiver. `StremioBridge.registerProvider()` now references `allProviders
 `41523213497`, `41528025087` and `41532042162` may also remain until GitHub expires them; the
 current APK is the phase 1 build that includes sections 1–6.1.
 
-**Scope note:** a successful compile does not mean the Stremio bridge has runtime parity. The
-pending items in section 6, especially the dedicated stream-list page and direct-player behavior,
-still need confirmation before calling the Stremio integration complete.
+**Scope note:** a successful compile does not mean the Stremio bridge has runtime parity. This
+build predates section 9. The dedicated stream-list page is now implemented, but runtime login,
+stream loading and the remaining parity items in section 6 still need confirmation before calling
+the Stremio integration complete.
+
+---
+
+## 9. Login fix and dedicated all-streams page
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/stremio/StremioApi.kt`,
+`StremioModels.kt`, `StremioRepository.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/settings/StremioAddonsFragment.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/result/ResultViewModel2.kt`,
+`StremioStreamsFragment.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/player/StremioStreamGenerator.kt`,
+`app/src/main/res/navigation/mobile_navigation.xml`,
+`app/src/main/java/com/lagradost/cloudstream3/MainActivity.kt`,
+`app/src/main/res/values/strings.xml`.
+
+Login, sign-up and auth-key calls now use minimal official request bodies, tolerate Stremio's
+zero/false/empty `error` side-channel, accept `authKey`/`token`/`key`/nested `auth` responses, and
+surface the real API or transport message instead of a generic failure. No test account
+credentials are stored in the repository.
+
+Stremio result clicks now navigate to `StremioStreamsFragment` before playback. The page calls
+`StremioProvider.loadLinks`, shows every distinct stream, and hands only the chosen link and
+subtitles to CloudStream's existing player through `StremioStreamGenerator`. Ordinary CloudStream
+extension results are unchanged.

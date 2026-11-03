@@ -94,22 +94,29 @@ object StremioRepository {
         )
     }
 
-    suspend fun login(email: String, password: String): Boolean {
-        val user = StremioApi.login(email, password) ?: return false
+    /** Returns null on success, or a human-readable API/transport error for the settings UI. */
+    suspend fun login(email: String, password: String): String? = try {
+        val user = StremioApi.login(email, password)
         saveAccount(user.authKey, user.email ?: email.trim())
-        return true
+        null
+    } catch (t: Throwable) {
+        t.message ?: "Stremio login failed"
     }
 
-    suspend fun register(email: String, password: String): Boolean {
-        val user = StremioApi.register(email, password) ?: return false
+    suspend fun register(email: String, password: String): String? = try {
+        val user = StremioApi.register(email, password)
         saveAccount(user.authKey, user.email ?: email.trim())
-        return true
+        null
+    } catch (t: Throwable) {
+        t.message ?: "Stremio sign up failed"
     }
 
-    suspend fun loginWithAuthKey(authKey: String): Boolean {
-        val user = StremioApi.loginWithAuthKey(authKey) ?: return false
+    suspend fun loginWithAuthKey(authKey: String): String? = try {
+        val user = StremioApi.loginWithAuthKey(authKey)
         saveAccount(user.authKey, user.email ?: "")
-        return true
+        null
+    } catch (t: Throwable) {
+        t.message ?: "Stremio auth key failed"
     }
 
     /** Pull the account collection, then install the official defaults on a fresh account. */

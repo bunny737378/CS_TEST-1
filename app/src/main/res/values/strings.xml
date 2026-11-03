@@ -825,4 +825,12 @@
     <string name="stremio_no_addons">No addons installed.</string>
     <string name="stremio_uninstall">Uninstall</string>
     <string name="stremio_addon_removed">Addon removed.</string>
+
+    <!-- Dedicated Stremio stream picker -->
+    <string name="stremio_streams">Stremio Streams</string>
+    <string name="stremio_streams_intro">Pick a stream before playback. CloudStream opens the selected link in its existing player.</string>
+    <string name="stremio_streams_found">Available streams</string>
+    <string name="stremio_streams_empty">No playable Stremio streams found.</string>
+    <string name="stremio_streams_error">Could not load Stremio streams.</string>
+    <string name="stremio_streams_play">Play this stream</string>
 </resources>

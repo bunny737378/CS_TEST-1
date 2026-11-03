@@ -88,7 +88,7 @@ fun StremioAddonsContent() {
             try {
                 status = block()
             } catch (t: Throwable) {
-                status = t.message ?: "Request failed"
+                status = t.message ?: loginFailed
             } finally {
                 refresh()
                 busy = false
@@ -141,8 +141,8 @@ fun StremioAddonsContent() {
                 Button(
                     onClick = {
                         runBusy {
-                            val ok = StremioRepository.login(email, password)
-                            if (!ok) return@runBusy loginFailed
+                            val error = StremioRepository.login(email, password)
+                            if (error != null) return@runBusy error
                             StremioRepository.bootstrapAccount()
                             loggedInText
                         }
@@ -152,8 +152,8 @@ fun StremioAddonsContent() {
                 OutlinedButton(
                     onClick = {
                         runBusy {
-                            val ok = StremioRepository.register(email, password)
-                            if (!ok) return@runBusy loginFailed
+                            val error = StremioRepository.register(email, password)
+                            if (error != null) return@runBusy error
                             StremioRepository.bootstrapAccount()
                             loggedInText
                         }
@@ -174,8 +174,8 @@ fun StremioAddonsContent() {
             OutlinedButton(
                 onClick = {
                     runBusy {
-                        val ok = StremioRepository.loginWithAuthKey(authKey)
-                        if (!ok) return@runBusy loginFailed
+                        val error = StremioRepository.loginWithAuthKey(authKey)
+                        if (error != null) return@runBusy error
                         StremioRepository.bootstrapAccount()
                         loggedInText
                     }
