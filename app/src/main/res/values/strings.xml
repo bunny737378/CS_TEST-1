@@ -525,7 +525,6 @@
     <string name="view_public_repositories_button">View community repositories</string>
     <string name="view_public_repositories_button_short">Public list</string>
     <string name="uppercase_all_subtitles">Uppercase all subtitles</string>
-    <string name="download_all_plugins_from_repo">Warning: CloudStream does not take any responsibility for using third-party extensions and does not provide any support for them!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Disabled)</string>
     <string name="tracks">Tracks</string>
     <string name="compressor">Compressor</string>
@@ -557,7 +556,6 @@
     <string name="extension_authors">Authors</string>
     <string name="extension_types">Supported</string>
     <string name="extension_language">Language</string>
-    <string name="extension_install_first">Install the extension first</string>
     <string name="hls_playlist">HLS Playlist</string>
     <string name="player_pref">Preferred video player</string>
     <string name="player_settings_play_in_app">Internal player</string>
@@ -587,7 +585,6 @@
     <string name="no">No</string>
     <string name="ok">OK</string>
     <string name="dismiss">Dismiss</string>
-    <string name="open_downloaded_repo">Open repository</string>
     <string name="battery_dialog_title">Disable Battery optimization</string>
     <string name="battery_dialog_message">To ensure uninterrupted downloads and notifications for subscribed
         TV shows, CloudStream needs permission to run in background. By pressing "OK", you\'ll be shown a request dialog.
@@ -656,7 +653,6 @@
     <string name="qualities">Qualities</string>
     <string name="profile_background_des">Profile background</string>
     <string name="unable_to_inflate">UI was unable to be created correctly, this is a MAJOR BUG and should be reported immediately %s</string>
-    <string name="already_voted">You have already voted</string>
     <string name="favorites_list_name">Favorites</string>
     <string name="favorite_added">%s added to favorites</string>
     <string name="favorite_removed">%s removed from favorites</string>
@@ -801,4 +797,32 @@
     </plurals>
     <string name="player_is_live">Live</string>
     <string name="installed_plugins">Installed plugins</string>
+
+    <!-- Standalone Stremio addon bridge -->
+    <string name="stremio_addons">Stremio Addons</string>
+    <string name="stremio_intro">Sign in to sync addon collections with your Stremio account. Addons supply catalogs, metadata and streams through CloudStream's existing screens.</string>
+    <string name="stremio_email">Email</string>
+    <string name="stremio_password">Password</string>
+    <string name="stremio_login">Login</string>
+    <string name="stremio_signup">Sign up</string>
+    <string name="stremio_login_failed">Stremio login failed</string>
+    <string name="stremio_auth_key">Auth key (optional)</string>
+    <string name="stremio_use_auth_key">Use auth key</string>
+    <string name="stremio_account_selected">Stremio account selected</string>
+    <string name="stremio_account">Stremio account</string>
+    <string name="stremio_logged_in">Logged in. Default addons are ready.</string>
+    <string name="stremio_sync">Sync account</string>
+    <string name="stremio_synced">Account addon collection synced.</string>
+    <string name="stremio_install_defaults">Install defaults</string>
+    <string name="stremio_defaults_installed">Default addons installed.</string>
+    <string name="stremio_logout">Log out</string>
+    <string name="stremio_logged_out">Logged out.</string>
+    <string name="stremio_addon_url">Addon manifest URL</string>
+    <string name="stremio_install">Install</string>
+    <string name="stremio_install_failed">Could not install addon</string>
+    <string name="stremio_addon_installed">Addon installed.</string>
+    <string name="stremio_installed_addons">Installed addons</string>
+    <string name="stremio_no_addons">No addons installed.</string>
+    <string name="stremio_uninstall">Uninstall</string>
+    <string name="stremio_addon_removed">Addon removed.</string>
 </resources>

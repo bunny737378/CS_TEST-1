@@ -413,7 +413,6 @@
     <string name="extension_rating" formatted="true">Note : %s</string>
     <string name="extension_description">Description</string>
     <string name="extension_status">Status</string>
-    <string name="extension_install_first">Installer l\'extension d\'abord</string>
     <string name="hls_playlist">Playlist HLS</string>
     <string name="player_pref">Lecteur vidéo préféré</string>
     <string name="skip_type_mixed_ed">Fin mitigée</string>
@@ -427,7 +426,6 @@
     <string name="plugins_disabled" formatted="true">Désactivé : %d</string>
     <string name="plugins_not_downloaded" formatted="true">Non téléchargé : %d</string>
     <string name="plugins_updated" formatted="true">%d plugins mis-à-jour</string>
-    <string name="download_all_plugins_from_repo">Avertissement : CloudStream 3 décline toute responsabilité concernant l’utilisation d’extensions tierces et ne fournit aucun support pour celles-ci !</string>
     <string name="single_plugin_disabled" formatted="true">%s (Désactivé)</string>
     <string name="tracks">Pistes</string>
     <string name="audio_tracks">Pistes audio</string>
@@ -498,8 +496,6 @@
     <string name="android_tv_interface_on_seek_settings_summary">Le temps de recherche utilisé lorsque le lecteur vidéo est visible</string>
     <string name="android_tv_interface_on_seek_settings">Lecteur Visible - Temps de recherche</string>
     <string name="android_tv_interface_off_seek_settings">Lecteur Invisible - Temps de recherche</string>
-
-    <string name="already_voted">Vous avez déjà voté</string>
     <string name="disable">Désactivé</string>
     <string name="quality_profile_help">Ici, vous pouvez modifier la façon dont les sources sont ordonnées. Si une vidéo a une priorité plus élevée, elle apparaîtra plus haut dans la sélection de la source. La somme de la priorité source et de la priorité qualité est la priorité vidéo. \n \nSource A : 3 \nQualité B : 7 \nLa priorité vidéo combinée sera de 10. \n \nREMARQUE : Si la somme est de 10 ou plus, le joueur sautera automatiquement le chargement lorsque ce lien est chargé !</string>
     <string name="no_plugins_found_error">Aucun plugin trouvé dans ce dossier</string>
@@ -590,7 +586,6 @@
     <string name="select_all">Tout sélectionner</string>
     <string name="deselect_all">Tout désélectionner</string>
     <string name="delete_format" formatted="true">Supprimer (%1$d | %2$s)</string>
-    <string name="open_downloaded_repo">Ouvrir le dépôt</string>
     <string name="device_pin_counter_text">Code expire dans %1$dm %2$ds</string>
 
     <string name="device_pin_expired_message">Le code PIN est maintenant expiré !</string>

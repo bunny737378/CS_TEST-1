@@ -322,7 +322,6 @@
     <string name="view_public_repositories_button">Προβολή αποθετηρίων κοινότητας</string>
     <string name="view_public_repositories_button_short">Δημόσια λίστα</string>
     <string name="uppercase_all_subtitles">Κεφαλοποίηση υποτίτλων</string>
-    <string name="download_all_plugins_from_repo">Προειδοποίηση: Το CloudStream 3 δεν αναλαμβάνει καμία ευθύνη για τη χρήση επεκτάσεων τρίτων και δεν παρέχει καμία υποστήριξη για αυτές!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Απενεργοποιήθηκε)</string>
     <string name="tracks">Κομμάτια</string>
     <string name="audio_tracks">Ηχητικά κομμάτια</string>
@@ -339,7 +338,6 @@
     <string name="extension_authors">Συγγραφείς</string>
     <string name="extension_types">Υποστηρίζονται</string>
     <string name="extension_language">Γλώσσα</string>
-    <string name="extension_install_first">Εγκατάσταση προσθέτου πρώτα</string>
     <string name="hls_playlist">HLS Playlist</string>
     <string name="player_pref">Προτεινόμενο πρόγραμμα αναπαραγωγής</string>
     <string name="player_settings_play_in_app">Ενσωματωμένο πρόγραμμα αναπαραγωγής</string>
@@ -527,7 +525,6 @@
     <string name="android_tv_interface_off_seek_settings_summary">Δευτερόλεπτα Σκιπ όταν ο αναπαραγωγέας είναι κρυφός</string>
     <string name="ok">Εντάξει</string>
     <string name="battery_dialog_title">Απενεργοποιήση της εξοικονόμησης της μπαταρίας</string>
-    <string name="already_voted">Έχετε ήδη ψηφίσει</string>
     <string name="duplicate_message_single" formatted="true">Φαίνεται πως ένα πιθανό αντίγραφο βρίσκεται στη βιβλιοθήκη σας: \'%s.\' \n \nΘα επιθυμούσατε να το προσθέσετε, να το αντικαταστήσετε, ή να ακυρώσετε την ενέργεια;</string>
     <string name="enter_current_pin">Εισαγωγή Τρέχον Κωδικού</string>
     <string name="lock_profile">Κλείδωμα Προφίλ</string>
@@ -634,7 +631,6 @@
     <string name="starting_plugin_update_manually">Έναρξη διαδικασίας ενημέρωσης πρόσθετων!</string>
     <string name="plugins_updated_manually">Επιτυχής ενημέρωση του πρόσθετου(τών) %d!</string>
     <string name="qr_image">Εικόνα κωδικού QR</string>
-    <string name="open_downloaded_repo">Ανοίξε αποθετήριο</string>
     <string name="torrent_info">Αυτό το βίντεο είναι ένα Torrent, αυτό σημαίνει ότι η δραστηριότητα του βίντεο μπορεί να παρακολουθείται.\nΒεβαιωθείτε ότι έχετε κατανοήσει το Torrenting πριν συνεχίσετε.</string>
     <string name="offline_file">Διαθέσιμο για παρακολούθηση χωρίς σύνδεση</string>
     <string name="device_pin_url_message">Επισκεφθείτε το <b>%s</b> στο κινητό ή τον υπολογιστή σας και πληκτρολογήστε τον παραπάνω κωδικό</string>

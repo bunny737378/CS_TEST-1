@@ -402,7 +402,6 @@
     <string name="uppercase_all_subtitles">Gunakan huruf besar untuk semua subtitel</string>
     <string name="plugins_downloaded" formatted="true">Terunduh: %d</string>
     <string name="plugins_not_downloaded" formatted="true">Tidak terunduh: %d</string>
-    <string name="download_all_plugins_from_repo">Peringatan: CloudStream 3 tidak bertanggung jawab atas penggunaan ekstensi pihak ketiga dan tidak menyediakan dukungan apa pun untuk ekstensi tersebut!</string>
     <string name="safe_mode_title">Mode aman aktif</string>
     <string name="single_plugin_disabled" formatted="true">%s (Tidak aktif)</string>
     <string name="tracks">Trek</string>
@@ -452,7 +451,6 @@
     <string name="pref_category_actions">Aksi</string>
     <string name="referer">Memberi referensi (opsional)</string>
     <string name="yes">Ya</string>
-    <string name="extension_install_first">Install ekstensi terlebih dahulu</string>
     <string name="all_languages_preference">Semua Bahasa</string>
     <string name="skip_type_format" formatted="true">Lewati %s</string>
     <string name="skip_type_op">Pembuka</string>
@@ -528,7 +526,6 @@
     <string name="automatic_plugin_download_mode_title">Pilih mode filter unduhan plugin</string>
     <string name="no_plugins_found_error">Tidak ada plugin yang ditemukan di repositori</string>
     <string name="no_repository_found_error">Repositori tidak ditemukan, periksa URL dan coba VPN</string>
-    <string name="already_voted">Kamu sudah voting</string>
     <string name="favorite_removed">%s dihapus dari favorit</string>
     <string name="favorites_list_name">Favorit</string>
     <string name="favorite_added">%s ditambahkan ke favorit</string>
@@ -607,7 +604,6 @@
     <string name="preview_seekbar">Pratinjau bilah pencarian</string>
     <string name="preview_seekbar_desc">Aktifkan pratinjau gambar mini di bilah pencarian</string>
     <string name="hide_player_control_names">Sembunyikan Nama Kontrol Pemain</string>
-    <string name="open_downloaded_repo">Buka repositori</string>
     <string name="play_from_beginning_img_des">Putar dari awal</string>
     <string name="downloads_empty">Tidak ada unduhan.</string>
     <string name="open_local_video">Buka video lokal</string>

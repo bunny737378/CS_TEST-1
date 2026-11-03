@@ -241,7 +241,6 @@
     <string name="quality_tc">TC</string>
     <string name="subscription_new">Претплатен на %s</string>
     <string name="pref_category_subtitles">Преводи</string>
-    <string name="download_all_plugins_from_repo">Предупредување: CloudStream не презема никаква одговорност за користење на екстензии од трети страни и не обезбедува никаква поддршка за нив!</string>
     <string name="backup_failed">Недостасуваат дозволи за складирање. Обиди се повторно.</string>
     <string name="sort_save">Зачувај</string>
     <string name="player_load_subtitles">Вчитај од датотека</string>
@@ -276,7 +275,6 @@
     <string name="plugin_singular">приклучок</string>
     <string name="sync_score_format" formatted="true">%d / 10</string>
     <string name="provider_languages_tip">Гледај видеа на овие јазици</string>
-    <string name="extension_install_first">Прво инсталирај ја екстензијата</string>
     <string name="episode_sync_settings">Ажурирај го напредокот на гледање</string>
     <string name="library">Библиотека</string>
     <string name="android_tv_interface_off_seek_settings_summary">Износот на барањето што се користи кога плеерот е скриен</string>
@@ -524,7 +522,6 @@
     <string name="use_default_account">Користи го стандардниот корисник</string>
     <string name="rotate_video">Ротирај</string>
     <string name="rotate_video_desc">Прикажи копче за префрлување за ориентација на екранот</string>
-    <string name="already_voted">Веќе гласавте</string>
     <string name="quality_profile_help">Овде можеш да го промениш начинот на кој се подредуваат изворите. Ако видеото има повисок приоритет, ќе се појави повисоко во изборот на изворот. Збирот на приоритетот на изворот и приоритетот на квалитетот е приоритет на видеото.\n\nИзвор А: 3\nКвалитет Б: 7\nЌе има комбиниран приоритет на видеото од 10.\n\nЗАБЕЛЕШКА: Ако сумата е 10 или повеќе, плеерот автоматски ќе го прескокне вчитувањето кога ќе се вчита тој линк!</string>
     <string name="select_an_account">Одбери корисник</string>
     <string name="links_reloaded_toast">Повторно се вчитани линковите</string>
@@ -589,7 +586,6 @@
     <string name="audio_book_singular">Аудио книга</string>
     <string name="pref_category_security">Безбедност</string>
     <string name="dismiss">Отфрли</string>
-    <string name="open_downloaded_repo">Отвори извор</string>
     <string name="preview_seekbar">Преглед на лентата за пребарување</string>
     <string name="device_pin_url_message">Посети го <b>%s</b> на твојот паметен телефон или компјутер и внеси го горниот код</string>
     <string name="subs_edge_size">Големина на раб</string>

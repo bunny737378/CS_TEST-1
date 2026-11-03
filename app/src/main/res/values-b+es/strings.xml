@@ -271,8 +271,6 @@
     <string name="extension_language">Idioma</string>
 
     <string name="blank_repo_message">CloudStream no tiene sitios instalados por defecto. Necesitas instalar los sitios desde los repositorios. \n \nÚnete a nuestro Discord o busca en línea.</string>
-    <string name="download_all_plugins_from_repo">Advertencia: ¡CloudStream 3 no asume ninguna responsabilidad por el uso de extensiones de terceros y no brinda ningún soporte para ellas!</string>
-
     <string name="episode_sync_settings_des">Sincronizar automáticamente el progreso de su episodio actual</string>
     <string name="automatic_plugin_updates">Actualización automática de plugins</string>
     <string name="pref_category_player_features">Características del reproductor</string>
@@ -442,7 +440,6 @@
     <string name="extension_size">Tamaño</string>
     <string name="extension_authors">Autores</string>
     <string name="extension_types">Soportado</string>
-    <string name="extension_install_first">Instale las extensiones primero</string>
     <string name="hls_playlist">Lista de reproducción HLS</string>
     <string name="clear_history">Limpiar historial</string>
     <string name="history">Historial</string>
@@ -514,7 +511,6 @@
     <string name="disable">Deshabilitar</string>
     <string name="no_plugins_found_error">No se encontraron plugins en el repositorio</string>
     <string name="no_repository_found_error">Repositorio no encontrado, comprueba la URL y prueba la VPN</string>
-    <string name="already_voted">Ya has votado</string>
     <string name="backup_frequency">Frecuencia de la copia de seguridad</string>
     <string name="favorite_removed">%s eliminado de favoritos</string>
     <string name="favorites_list_name">Favoritos</string>
@@ -586,7 +582,6 @@
     <string name="auth_locally">Autenticación local</string>
     <string name="qr_image">Imagen del código QR</string>
     <string name="dismiss">Descartar</string>
-    <string name="open_downloaded_repo">Abrir repositorio</string>
     <string name="device_pin_url_message">Visita <b>%s</b> en tu smartphone o equipo e introduce el código anterior</string>
     <string name="device_pin_expired_message">¡El código PIN ya ha caducado!</string>
     <string name="device_pin_counter_text">El código caduca en %1$d mín y %2$d s</string>

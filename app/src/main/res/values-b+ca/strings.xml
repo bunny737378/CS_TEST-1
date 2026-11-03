@@ -300,7 +300,6 @@
     <string name="qualities">Qualitats</string>
     <string name="profile_background_des">Fons del perfil</string>
     <string name="unable_to_inflate">La interfície d\'usuari no s\'ha pogut crear correctament, es tracta d\'un ERROR MAJOR que s\'ha de reportar immediatament %s</string>
-    <string name="already_voted">Ja heu votat</string>
     <string name="favorites_list_name">Preferits</string>
     <string name="favorite_added">%s afegit als favorits</string>
     <string name="favorite_removed">%s eliminat dels favorits</string>

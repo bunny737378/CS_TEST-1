@@ -396,11 +396,9 @@
     <string name="plugin">ဖြည့်စွက်များ</string>
     <string name="delete_repository_plugins">ရီပိုစစ်ထရီ ဖြည့်စွက်များအားလုံးကိုဖျက်မည်ဖြစ်သည်</string>
     <string name="delete_repository">ရီပိုစစ်ထရီ ကိုဖျက်ရန်</string>
-    <string name="download_all_plugins_from_repo">ဤရီပိုစစ်ထရီမှ ဖြည့်စွက်များအားလုံးကို ဒေါင်းလုဒ်လုပ်မှာလား?</string>
     <string name="single_plugin_disabled" formatted="true">%s (ပိတ်ပြီး)</string>
     <string name="extension_types">ထောက်ပံ့ထားသော</string>
     <string name="extension_language">ဘာသာစကား</string>
-    <string name="extension_install_first">အဆက်များကိုအရင်သွင်းပါ</string>
     <string name="skip_type_op">အစပိုင်း</string>
     <string name="skip_type_ed">အဆုံးပိုင်း</string>
     <string name="clear_history">ကြည့်ရှုခဲ့သည်များကိုရှင်းရန်</string>
@@ -513,7 +511,6 @@
     <string name="quality_profile_help">ဤနေရာတွင် သင်သည် အရင်းအမြစ်များကို မည်ကဲ့သို့ အစီအစဥ်ချမည်ကို ပြောင်းလဲနိုင်သည်။ ဗီဒီယိုတစ်ခုတွင် ပိုမိုဦးစားပေးပါက ရင်းမြစ်ရွေးချယ်မှုတွင် ပိုမိုမြင့်မားလာမည်ဖြစ်သည်။ အရင်းအမြစ် ဦးစားပေးနှင့် အရည်အသွေး ဦးစားပေး၏ ပေါင်းစုသည် ဗီဒီယို ဦးစားပေးဖြစ်သည်။ \n \nအရင်းအမြစ် A: 3 \nအရည်အသွေး B: 7 \nပေါင်းစပ်ဗီဒီယို ဦးစားပေး 10 ခု ရှိပါမည်။ \n \nမှတ်ချက်- ပေါင်းလဒ်သည် 10 သို့မဟုတ် ထို့ထက်ပိုပါက ထိုလင့်ခ်ကို တင်သည့်အခါ ဗီဒီယိုဖွင့်စက်သည် အလိုအလျောက် ဒေါင်းလုဒ်ကို ကျော်သွားမည်ဖြစ်သည်</string>
     <string name="profile_background_des">ပရိုဖိုင်နောက်ခံ</string>
     <string name="unable_to_inflate">UI ကို မှန်ကန်စွာ ဖန်တီး၍မရပါ၊ ၎င်းသည် အဓိက ချို့ယွင်းချက်တစ်ခုဖြစ်ပြီး ချက်ချင်းသတင်းပို့သင့်သည်။ %s</string>
-    <string name="already_voted">သင်နဂိုတည်းကသတ်မှတ်ပြီး</string>
     <string name="select_library">လိုက်ဘရီရွေးချယ်ရန်</string>
     <string name="open_with">ဖြင့်ဖွင့်မည်</string>
 </resources>

@@ -412,7 +412,6 @@
     <string name="stream">Nätverksflöde</string>
     <string name="repository_name_hint">Databasens namn (valfritt)</string>
     <string name="batch_download_nothing_to_download_format" formatted="true">All %s har redan laddats ner</string>
-    <string name="download_all_plugins_from_repo">Varning: CloudStream tar inget ansvar för att använda tredjepartstillägg och ger inget stöd för dem!</string>
     <string name="safe_mode_title">Felsäkert läge på</string>
     <string name="apply_on_restart">Starta om appen för att se ändringar.</string>
     <string name="player_settings_play_in_app">Intern spelare</string>
@@ -427,7 +426,6 @@
     <string name="actor_background">Bakgrund</string>
     <string name="view_public_repositories_button_short">Offentlig lista</string>
     <string name="extension_language">Språk</string>
-    <string name="extension_install_first">Installera tillägget först</string>
     <string name="player_pref">Önskad videospelare</string>
     <string name="android_tv_interface_on_seek_settings">Spelare visas - Sök förlopp</string>
     <string name="android_tv_interface_on_seek_settings_summary">Sök förlopp som används när spelaren är synlig</string>
@@ -485,7 +483,6 @@
     <string name="subscription_list_name">Prenumererad</string>
     <string name="action_subscribe">Prenumerera</string>
     <string name="unable_to_inflate">UI kunde inte skapas korrekt, detta är en MASSIV BUG och bör rapporteras omedelbart %s</string>
-    <string name="already_voted">Du har redan röstat</string>
     <string name="action_unsubscribe">Avprenumerera</string>
     <string name="action_add_to_favorites">Lägg till i favoriter</string>
     <string name="duplicate_add">Lägg till</string>
@@ -585,7 +582,6 @@
     <string name="pref_category_accounts">Konton</string>
     <string name="pref_category_security">Säkerhet</string>
     <string name="dismiss">Avfärda</string>
-    <string name="open_downloaded_repo">Öppna databasen</string>
     <string name="device_pin_counter_text">Koden löper ut om %1$dm %2$ds</string>
     <string name="test_warning">Varning</string>
     <string name="auth_locally">Autentisera lokalt</string>

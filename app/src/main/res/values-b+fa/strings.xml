@@ -269,7 +269,6 @@
     <string name="player_pref">پخش‌کننده ویدئو برگزیده</string>
     <string name="error_invalid_id">شناسه نامعتبر</string>
     <string name="repository_url_hint">نشانی مخزن یا Shortcode</string>
-    <string name="open_downloaded_repo">بازکردن مخزن</string>
     <string name="backup_path_title">مکان پوشه پشتیبانی</string>
     <string name="clipboard_permission_error">خطا در دسترسی به حافظه موقت، لطفا دوباره تلاش کنید.</string>
     <string name="repository_name_hint">نام مخزن (اختیاری)</string>

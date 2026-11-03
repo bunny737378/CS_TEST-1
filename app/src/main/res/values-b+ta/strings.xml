@@ -285,7 +285,6 @@
     <string name="no_repository_found_error">களஞ்சியம் கிடைக்கவில்லை, முகவரி ஐ சரிபார்த்து VPN ஐ முயற்சிக்கவும்</string>
     <string name="batch_download">தொகுதி பதிவிறக்கம்</string>
     <string name="plugin_singular">சொருகு</string>
-    <string name="download_all_plugins_from_repo">எச்சரிக்கை: மூன்றாம் தரப்பு நீட்டிப்புகளைப் பயன்படுத்துவதற்கு CloudStream எந்தப் பொறுப்பையும் ஏற்காது, அவற்றிற்கு எந்த ஆதரவையும் வழங்காது!</string>
     <string name="extension_language">மொழி</string>
     <string name="revert">திரும்பவும்</string>
     <string name="subscription_deleted">%s இலிருந்து குழுவிலகப்பட்டது</string>
@@ -330,7 +329,6 @@
     <string name="sort_by">வரிசைப்படுத்தவும்</string>
     <string name="sort_updated_old">புதுப்பிக்கப்பட்டது (பழையது முதல் புதியது)</string>
     <string name="profile_background_des">சுயவிவர பின்னணி</string>
-    <string name="already_voted">நீங்கள் ஏற்கனவே வாக்களித்து விட்டீர்கள்</string>
     <string name="favorites_list_name">பிடித்தவை</string>
     <string name="action_remove_from_favorites">பிடித்தவைகளிலிருந்து அகற்று</string>
     <string name="duplicate_title">சாத்தியமான நகல் காணப்படுகிறது</string>
@@ -497,7 +495,6 @@
     <string name="extension_status">நிலை</string>
     <string name="extension_size">அளவு</string>
     <string name="extension_types">ஆதரிக்கப்பட்டது</string>
-    <string name="extension_install_first">முதலில் நீட்டிப்பை நிறுவவும்</string>
     <string name="player_settings_select_cast_device">காச்ட் சாதனத்தைத் தேர்ந்தெடுக்கவும்</string>
     <string name="all_languages_preference">அனைத்து மொழிகளும்</string>
     <string name="yes">ஆம்</string>
@@ -609,7 +606,6 @@
     <string name="preview_seekbar">சீக்பார் முன்னோட்டம்</string>
     <string name="backup_path_title">காப்பு கோப்புறை இருப்பிடம்</string>
     <string name="open_local_video">உள்ளக வீடியோவைத் திறக்கவும்</string>
-    <string name="open_downloaded_repo">திறந்த களஞ்சியம்</string>
     <string name="duplicate_message_single" formatted="true">உங்கள் நூலகத்தில் ஏற்கனவே ஒரு நகல் உருப்படி இருப்பதாகத் தெரிகிறது: \'%s.\'\n\n இந்த உருப்படியை எப்படியும் சேர்க்க விரும்புகிறீர்களா, இருக்கும் ஒன்றை மாற்ற விரும்புகிறீர்களா அல்லது செயலை ரத்து செய்ய விரும்புகிறீர்களா?</string>
     <string name="duplicate_message_multiple" formatted="true">உங்கள் நூலகத்தில் சாத்தியமான நகல் உருப்படிகள் கண்டறியப்பட்டுள்ளன:\n\n %s\n\n இந்த உருப்படியை எப்படியும் சேர்க்க விரும்புகிறீர்களா, ஏற்கனவே உள்ளவற்றை மாற்ற விரும்புகிறீர்களா அல்லது செயலை ரத்து செய்ய விரும்புகிறீர்களா?</string>
     <string name="hide_player_control_names">வீரரின் கட்டுப்பாடுகளின் பெயர்களை மறைக்கவும்</string>

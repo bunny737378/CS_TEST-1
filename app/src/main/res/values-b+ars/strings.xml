@@ -161,7 +161,6 @@
     <string name="profiles">ملفات تعريفية</string>
     <string name="help">مساعدة</string>
     <string name="quality_profile_help">.هنا يمكنك تغيير كيفية ترتيب المصادر. إذا كان للفيديو أولوية أعلى، فسيظهر في مكان أعلى في تحديد المصدر. مجموع أولوية المصدر وأولوية الجودة هو أولوية الفيديو \n \nالمصدر أ: 3 \nالجودة ب: 7 \nستكون أولوية الفيديو المدمجة .10 \n \n!ملاحظة: إذا كان المجموع 10 أو أكثر، فسيقوم اللاعب تلقائيًا بتخطي التحميل عند تحميل هذا الرابط</string>
-    <string name="already_voted">لقد صوت بالفعل</string>
     <string name="sort_alphabetical_z">أبجديًا (ياء إلى ألف)</string>
     <string name="sort_by">ترتيب حسب</string>
     <string name="subscription_list_name">مشترك</string>

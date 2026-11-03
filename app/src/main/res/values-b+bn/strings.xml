@@ -511,7 +511,6 @@
     <string name="view_public_repositories_button">কমিউনিটি রিপোজিটরিগুলো দেখুন</string>
     <string name="view_public_repositories_button_short">পাবলিক তালিকা</string>
     <string name="uppercase_all_subtitles">সব সাবটাইটেল বড় হাতের অক্ষরে দেখান</string>
-    <string name="download_all_plugins_from_repo">সতর্কতা: তৃতীয় পক্ষের এক্সটেনশন ব্যবহারের জন্য CloudStream কোনো দায়িত্ব নেয় না এবং সেগুলোর জন্য কোনো সহায়তা প্রদান করে না!</string>
     <string name="single_plugin_disabled" formatted="true">%s (নিষ্ক্রিয়)</string>
     <string name="tracks">ট্র্যাকসমূহ</string>
     <string name="compressor">কম্প্রেসর</string>
@@ -543,7 +542,6 @@
     <string name="extension_authors">লেখকবৃন্দ</string>
     <string name="extension_types">সমর্থিত</string>
     <string name="extension_language">ভাষা</string>
-    <string name="extension_install_first">প্রথমে এক্সটেনশনটি ইনস্টল করুন</string>
     <string name="hls_playlist">HLS প্লেলিস্ট</string>
     <string name="player_pref">পছন্দের ভিডিও প্লেয়ার</string>
     <string name="player_settings_play_in_app">অভ্যন্তরীণ প্লেয়ার</string>
@@ -572,7 +570,6 @@
     <string name="no">না</string>
     <string name="ok">ঠিক আছে</string>
     <string name="dismiss">বাতিল</string>
-    <string name="open_downloaded_repo">রিপোজিটরি খুলুন</string>
     <string name="battery_dialog_title">ব্যাটারি অপ্টিমাইজেশন নিষ্ক্রিয় করুন</string>
     <string name="battery_dialog_message">সাবস্ক্রাইব করা টিভি শোগুলোর নিরবচ্ছিন্ন ডাউনলোড এবং নোটিফিকেশন নিশ্চিত করতে CloudStream-এর ব্যাকগ্রাউন্ডে চলার অনুমতি প্রয়োজন। ঠিক আছে চাপলে একটি অনুমতির ডায়ালগ দেখানো হবে।\n\nঅনুগ্রহ করে \'অনুমতি দিন\' চাপুন।\n\nমনে রাখবেন, এই অনুমতির কারণে CS3 আপনার অতিরিক্ত ব্যাটারি খরচ করবে না। এটি কেবল প্রয়োজনের সময়ই ব্যাকগ্রাউন্ডে কাজ করবে, যেমন অফিসিয়াল এক্সটেনশন থেকে ভিডিও ডাউনলোড বা নোটিফিকেশন প্রাপ্তির সময়।</string>
     <string name="app_unrestricted_toast">অ্যাপের ব্যাটারি ব্যবহার ইতোমধ্যে সীমাবদ্ধতাহীন হিসেবে সেট করা আছে</string>
@@ -629,7 +626,6 @@
     <string name="qualities">কোয়ালিটিসমূহ</string>
     <string name="profile_background_des">প্রোফাইলের ব্যাকগ্রাউন্ড</string>
     <string name="unable_to_inflate">UI সঠিকভাবে তৈরি করা যায়নি, এটি একটি গুরুতর ত্রুটি এবং অবিলম্বে রিপোর্ট করা উচিত %s</string>
-    <string name="already_voted">আপনি ইতোমধ্যে ভোট দিয়েছেন</string>
     <string name="favorites_list_name">প্রিয় তালিকা</string>
     <string name="favorite_added">%s প্রিয় তালিকায় যোগ করা হয়েছে</string>
     <string name="favorite_removed">%s প্রিয় তালিকা থেকে সরানো হয়েছে</string>

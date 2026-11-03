@@ -383,7 +383,6 @@
     <string name="view_public_repositories_button">Zobacz repozytoria społeczności</string>
     <string name="view_public_repositories_button_short">Publiczna lista</string>
     <string name="uppercase_all_subtitles">Wszystkie napisy wielką literą</string>
-    <string name="download_all_plugins_from_repo">Uwaga: CloudStream nie ponosi żadnej odpowiedzialności za korzystanie z rozszerzeń innych dostawców i nie zapewnia dla nich żadnego wsparcia!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Wyłączone)</string>
     <string name="tracks">Ścieżki</string>
     <string name="audio_tracks">Ścieżki audio</string>
@@ -400,7 +399,6 @@
     <string name="extension_authors">Autorzy</string>
     <string name="extension_types">Wspierane</string>
     <string name="extension_language">Język</string>
-    <string name="extension_install_first">Najpierw zainstaluj rozszerzenie</string>
     <string name="hls_playlist">Playlista HLS</string>
     <string name="player_pref">Preferowany odtwarzacz wideo</string>
     <string name="player_settings_play_in_app">Odtwarzacz wewnętrzny</string>
@@ -517,7 +515,6 @@
     <string name="automatic_plugin_download_mode_title">Wybierz tryb filtrowania pobieranych rozszerzeń</string>
     <string name="disable">Wyłączać</string>
     <string name="no_plugins_found_error">Nie znaleziono żadnych wtyczek w repozytorium</string>
-    <string name="already_voted">Już oddano głos</string>
     <string name="no_repository_found_error">Nie znaleziono tego repozytorium, sprawdź adres URL lub spróbuj połączyć się przez VPN</string>
     <string name="favorite_removed">Usunięto %s z ulubionych</string>
     <string name="favorites_list_name">Ulubione</string>
@@ -593,7 +590,6 @@
     <string name="device_pin_expired_message">Kod PIN stracił ważność!</string>
     <string name="device_pin_counter_text">Kod wygasa za %1$dm %2$ds</string>
     <string name="dismiss">Odrzuć</string>
-    <string name="open_downloaded_repo">Otwórz repozytorium</string>
     <string name="device_pin_url_message">Odwiedź <b>%s</b> na swoim smartfonie lub komputerze i wprowadź powyższy kod</string>
     <string name="play_from_beginning_img_des">Odtwarzaj od początku</string>
     <string name="delete_plugin">Usuń wtyczkę</string>

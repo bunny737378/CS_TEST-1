@@ -352,8 +352,6 @@
     <string name="previous">پچھلا</string>
     <string name="trailer">ٹریلر</string>
     <string name="safe_mode_crash_info">حادثے کی معلومات دیکھیں</string>
-
-    <string name="download_all_plugins_from_repo">اس ذخیرہ سے تمام پلگ ان ڈاؤن لوڈ کریں؟</string>
     <string name="subscription_episode_released">قسط %d ریلیز ہو گئی!</string>
 
     <string name="recommended">تجویز کردہ</string>
@@ -494,7 +492,6 @@
     <string name="next">اگلے</string>
     <string name="blank_repo_message">CloudStream میں بذریعہ ڈیفالٹ کوئی سائٹ انسٹال نہیں ہے۔ آپ کو ریپوزٹری سے سائٹس انسٹال کرنے کی ضرورت ہے۔ \n \nہمارے Discord میں شامل ہوں یا آن لائن تلاش کریں۔</string>
     <string name="safe_mode_description">تمام ایکسٹینشنز کریش کی وجہ سے آف کر دی گئیں تاکہ آپ کو پریشانی کا باعث تلاش کرنے میں مدد مل سکے۔</string>
-    <string name="extension_install_first">پہلے ایکسٹینشن انسٹال کریں</string>
     <string name="clipboard_too_large">بہت زیادہ متن۔ کلپ بورڈ میں محفوظ کرنے سے قاصر۔</string>
 
     <string name="empty_library_logged_in_message">یہ فہرست خالی ہے۔ کسی اور پر سوئچ کرنے کی کوشش کریں۔</string>
@@ -511,7 +508,6 @@
     <string name="use">استعمال کریں</string>
     <string name="disable">غیرفعال کریں</string>
     <string name="no_repository_found_error">مخزن نہیں ملا، URL کو چیک کریں اور VPN استعمال کریں</string>
-    <string name="already_voted">آپ نے پہلے ہی ووٹ دیا ہے</string>
     <string name="no_plugins_found_error">مخزن میں کوئی پلگ انز نہیں ملا</string>
     <string name="set_default">ترجیحی تعین کریں</string>
     <string name="quality_profile_help">یہاں آپ تبدیلی کرسکتے ہیں کہ سورسز کو کس طرح کی ترتیب دی جائے۔ اگر ایک ویڈیو کی زیادہ پرائیورٹی ہوتی ہے تو یہ سورس کی انتخاب میں زیادہ اوپر آئے گی۔ سورس کی پرائیورٹی اور کوالٹی کی پرائیورٹی کا مجموعہ ویڈیو کی پرائیورٹی ہوتی ہے۔ \n \nسورس A: 3 \nکوالٹی B: 7 \nاس کا مجموعی ویڈیو پرائیورٹی 10 ہوتی ہے۔ \n \nنوٹ: اگر مجموعہ 10 یا اس سے زیادہ ہو تو پلیر وہ لنک لوڈ کرنے کو خود بخود چھوڑ دے گا!</string>

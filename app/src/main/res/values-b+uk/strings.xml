@@ -428,7 +428,6 @@
     <string name="extension_size">Розмір</string>
     <string name="extension_types">Підтримується</string>
     <string name="extension_language">Мова</string>
-    <string name="extension_install_first">Спочатку встановіть розширення</string>
     <string name="hls_playlist">Список відтворення HLS</string>
     <string name="player_settings_play_in_app">Вбудований програвач</string>
     <string name="skip_type_ed">Ендінґ</string>
@@ -454,7 +453,6 @@
     <string name="plugin_deleted">Розширення видалено</string>
     <string name="is_adult">18+</string>
     <string name="audio_tracks">Аудіодоріжки</string>
-    <string name="download_all_plugins_from_repo">Увага: CloudStream не несе жодної відповідальності за використання сторонніх розширень і не надає жодної підтримки для них!</string>
     <string name="player_pref">Бажаний відеопрогравач</string>
     <string name="safe_mode_title">Увімкнено безпечний режим</string>
     <string name="extension_authors">Автори</string>
@@ -517,7 +515,6 @@
     <string name="disable">Вимкнути</string>
     <string name="no_repository_found_error">Репозиторій не знайдено, перевірте URL-адресу та спробуйте VPN</string>
     <string name="no_plugins_found_error">Не знайдено жодного розширення в репозиторії</string>
-    <string name="already_voted">Ви вже проголосували</string>
     <string name="backup_frequency">Частота резервного копіювання</string>
     <string name="favorite_removed">%s вилучено з вподобаних</string>
     <string name="favorites_list_name">Вподобані</string>
@@ -587,7 +584,6 @@
     <string name="pref_category_security">Безпека</string>
     <string name="pref_category_accounts">Облікові записи</string>
     <string name="qr_image">Зображення QR-коду</string>
-    <string name="open_downloaded_repo">Відкрити сховище</string>
     <string name="device_pin_url_message">Відвідайте <b>%s</b> на своєму смартфоні або комп’ютері та введіть вищевказаний код</string>
     <string name="device_pin_error_message">Не вдається отримати PIN-код пристрою, спробуйте локальну автентифікацію</string>
     <string name="device_pin_expired_message">Термін дії PIN-коду закінчився!</string>

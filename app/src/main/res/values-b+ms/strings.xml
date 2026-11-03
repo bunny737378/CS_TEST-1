@@ -371,7 +371,6 @@
     <string name="pref_category_accounts">Akaun</string>
     <string name="device_pin_expired_message">Kod PIN telah luput!</string>
     <string name="pref_category_security">Keselamatan</string>
-    <string name="open_downloaded_repo">Buka repositori</string>
     <string name="device_pin_counter_text">Kod luput dalam %1$dm%2$ds</string>
 
     <string name="random_button_settings_desc">Papar butang rawak di laman utama dan perpustakaan</string>
@@ -385,7 +384,6 @@
     <string name="season_short">S</string>
     <string name="downloaded_file">Fail dimuat turun</string>
     <string name="stop">Berhenti</string>
-    <string name="already_voted">Anda telah mengundi</string>
     <string name="action_remove_from_favorites">Alih keluar dari Kegemaran</string>
     <string name="music_singular">Musik</string>
     <string name="downloads_delete_select">Pilih benda untuk dibuang</string>
@@ -427,7 +425,6 @@
     <string name="extension_description">Penghuraian</string>
     <string name="extension_version">Versi</string>
     <string name="extension_authors">Pengarang</string>
-    <string name="extension_install_first">Tetapkan tambahan dahulu</string>
     <string name="biometric_setting_summary">Buka aplikasi dengan Cap Jari, Pengesahan Muka, PIN, Corak dan Password.</string>
     <string name="resize_zoom">Zum</string>
     <string name="category_general">Umum</string>
@@ -447,7 +444,6 @@
     <string name="test_passed">Lepas</string>
     <string name="example_site_url">https://example.com</string>
     <string name="max">Maks</string>
-    <string name="download_all_plugins_from_repo">Amaran: CloudStream 3 tidak bertanggungjawab atas penggunaan tambahan pihak ketiga dan tidak memberi sumbang kepada mereka!</string>
     <string name="apply_on_restart">Mula semula aplikasi untuk lihat perubahan.</string>
     <string name="empty_library_logged_in_message">Senarai ini kosong. Sila tukar yang lain.</string>
     <string name="mobile_data">Data mudah alih</string>

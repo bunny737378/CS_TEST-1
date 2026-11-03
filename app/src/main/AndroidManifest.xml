@@ -73,6 +73,7 @@
     <!--TODO https://stackoverflow.com/questions/41799732/chromecast-button-not-visible-in-android-->
     <application
         android:name=".CloudStreamApp"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:appCategory="video"
         android:banner="@mipmap/ic_banner"

@@ -212,7 +212,6 @@
     <string name="home_source">ഉറവിടം</string>
     <string name="video_tracks">വീഡിയോ ട്രാക്കുകൾ</string>
     <string name="episode_action_chromecast_mirror">Chromecast മിറർ</string>
-    <string name="download_all_plugins_from_repo">ഈ ശേഖരത്തിൽ നിന്ന് എല്ലാ പ്ലഗിന്നുകളും ഡൗൺലോഡ് ചെയ്യണോ?</string>
     <string name="delete_repository">ശേഖരം ഇല്ലാതാക്കുക</string>
     <string name="home_random">ക്രമരഹിതം</string>
     <string name="quality_cam">ക്യാമറ</string>

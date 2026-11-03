@@ -409,7 +409,6 @@
     <string name="view_public_repositories_button">Xem các kho nguồn phim của cộng đồng</string>
     <string name="view_public_repositories_button_short">Danh sách công khai</string>
     <string name="uppercase_all_subtitles">In hoa toàn bộ phụ đề</string>
-    <string name="download_all_plugins_from_repo">Cảnh báo: CloudStream không chịu trách nhiệm về các tiện ích mở rộng bên thứ ba và không cung cấp bất kỳ sự hỗ trợ nào!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Đã vô hiệu)</string>
     <string name="tracks">Âm thanh &amp; video</string>
     <string name="audio_tracks">Âm thanh</string>
@@ -452,7 +451,6 @@
     <string name="extension_size">Kích thước</string>
     <string name="extension_types">Hỗ trợ</string>
     <string name="extension_language">Ngôn ngữ</string>
-    <string name="extension_install_first">Cài đặt tiện ích mở rộng trước</string>
     <string name="app_not_found_error">Không thấy ứng dụng</string>
     <string name="all_languages_preference">Tất cả ngôn ngữ</string>
     <string name="skip_type_format" formatted="true">Bỏ qua %s</string>
@@ -523,7 +521,6 @@
     <string name="profile_background_des">Nền hồ sơ</string>
     <string name="quality_profile_help">Tại đây bạn có thể thay đổi cách sắp xếp các nguồn. Nếu video có mức độ ưu tiên cao hơn thì video đó sẽ xuất hiện cao hơn trong lựa chọn nguồn. Tổng ưu tiên nguồn và ưu tiên chất lượng là ưu tiên video. \n \nNguồn A: 3 \nChất lượng B: 7 \nSẽ có mức độ ưu tiên video kết hợp là 10. \n \nLƯU Ý: Nếu tổng là 10 hoặc nhiều hơn, trình phát sẽ tự động bỏ tải khi liên kết đó được tải!</string>
     <string name="qualities">Chất lượng</string>
-    <string name="already_voted">Bạn đã bình chọn</string>
     <string name="disable">Tắt</string>
     <string name="no_repository_found_error">Không tìm thấy kho nguồn phim, hãy kiểm tra URL và thử lại với VPN</string>
     <string name="no_plugins_found_error">Không tìm thấy tiện ích mở rộng</string>
@@ -597,8 +594,6 @@
     <string name="pref_category_accounts">Tài khoản</string>
     <string name="qr_image">Mã QR</string>
     <string name="dismiss">Bỏ qua</string>
-    <string name="open_downloaded_repo">Mở kho nguồn phim</string>
-
     <string name="device_pin_url_message">Truy cập <b>%s</b> trên điện thoại hoặc máy tính và nhập mã bên trên</string>
     <string name="device_pin_expired_message">Mã PIN đã hết hạn!</string>
     <string name="device_pin_counter_text">Mã sẽ hết hạn trong %1$d phút %2$d giây</string>

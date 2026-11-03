@@ -295,7 +295,6 @@
     <string name="view_public_repositories_button">커뮤니티 저장소 보기</string>
     <string name="view_public_repositories_button_short">공개 목록</string>
     <string name="uppercase_all_subtitles">자막 대문자화 표시</string>
-    <string name="download_all_plugins_from_repo">경고: CloudStream은 외부 확장 프로그램 사용에 대해 어떠한 책임도 지지 않으며, 관련 기술 지원을 제공하지 않습니다!</string>
     <string name="single_plugin_disabled" formatted="true">%s (사용불가)</string>
     <string name="add_repository">저장소 추가</string>
     <string name="repository_name_hint">저장소 이름 (선택 사항)</string>
@@ -425,7 +424,6 @@
     <string name="stop">정지</string>
     <string name="extension_description">소개</string>
     <string name="extension_types">유형</string>
-    <string name="extension_install_first">먼저 확장 프로그램을 설치하세요</string>
     <string name="app_not_found_error">앱을 찾을 수 없음</string>
     <string name="all_languages_preference">모든 언어</string>
     <string name="skip_type_format" formatted="true">%s 스킵</string>
@@ -511,14 +509,12 @@
     <string name="auth_locally">로컬 인증</string>
     <string name="clipboard_permission_error">클립보드에 액세스하는 중 오류가 발생했습니다. 다시 시도하십시오.</string>
     <string name="dismiss">취소</string>
-    <string name="open_downloaded_repo">저장소 열기</string>
     <string name="enter_current_pin">현재 PIN 입력</string>
     <string name="auto_rotate_video_desc">비디오 방향에 따라 화면 방향을 자동으로 회전합니다</string>
     <string name="device_pin_error_message">장치 PIN 코드를 가져올 수 없습니다, 로컬 인증을 시도하세요</string>
     <string name="device_pin_expired_message">PIN 코드가 만료되었습니다!</string>
     <string name="device_pin_counter_text">코드 만료까지 남은 시간: %1$dm %2$ds</string>
     <string name="no_repository_found_error">리포지토리를 찾을 수 없습니다. URL을 확인하고 VPN을 시도하십시오</string>
-    <string name="already_voted">이미 투표했습니다</string>
     <string name="unable_to_inflate">UI를 올바르게 만들 수 없습니다. 이것은 주요 버그이며 %s 즉시 보고해야 합니다</string>
     <string name="action_add_to_favorites">즐겨찾기에 추가</string>
     <string name="wifi">와이파이</string>

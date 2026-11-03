@@ -396,7 +396,6 @@
     <string name="view_public_repositories_button">Ver repositórios da comunidade</string>
     <string name="view_public_repositories_button_short">Lista pública</string>
     <string name="uppercase_all_subtitles">Todas as legendas em maiúsculas</string>
-    <string name="download_all_plugins_from_repo">Aviso: CloudStream não assume nenhuma responsabilidade pelo uso de extensões de terceiros e não fornece nenhum suporte para elas!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Desativado)</string>
     <string name="autoplay_next_settings">Reproduzir automaticamente próximo episódio</string>
     <string name="autoplay_next_settings_des">Começa o próximo episódio quando o atual termina</string>
@@ -404,8 +403,6 @@
     <string name="category_providers">Fornecedores</string>
     <string name="revert">Reverter</string>
     <string name="pref_category_actions">Ações</string>
-    <string name="already_voted">votou com sucesso</string>
-
     <string name="referer">Referenciador (opcional)</string>
 
     <string name="play_with_app_name">Assistir com o CloudStream</string>
@@ -494,7 +491,6 @@
     <string name="extension_description">Descrição</string>
     <string name="extension_version">Versão</string>
     <string name="extension_authors">Autores</string>
-    <string name="extension_install_first">Instale a extensão primeiro</string>
     <string name="skip_type_credits">Créditos</string>
     <string name="history">Historico</string>
     <string name="clear_history">Limpar historico</string>
@@ -604,7 +600,6 @@
     <string name="auth_locally">Autenticação local</string>
     <string name="qr_image">Imagem do código QR</string>
     <string name="dismiss">Descartar</string>
-    <string name="open_downloaded_repo">Abrir repositório</string>
     <string name="device_pin_url_message">Acesse <b>%s</b> em seu smartphone ou computador e digite o código acima</string>
     <string name="device_pin_error_message">Não é possível obter o código PIN do dispositivo, tente a autenticação local</string>
     <string name="device_pin_expired_message">O código PIN expirou!</string>

@@ -355,8 +355,6 @@
     <string name="repository_url_hint">URL adresa repozitára</string>
     <string name="view_public_repositories_button_short">Verejný zoznam</string>
     <string name="blank_repo_message">CloudStream nemá nainštalované žiadne stránky v predvolenom nastavení. Musíte nainštalovať stránky z repozitára. \n \nPripojte sa k nášmu Discord alebo vyhľadajte online.</string>
-
-    <string name="download_all_plugins_from_repo">Upozornenie: CloudStream 3 nenesie žiadnu zodpovednosť za používanie rozšírenia tretích strán a neposkytuje žiadnu podporu pre nich!</string>
     <string name="add_repository">Pridať repozitár</string>
     <string name="repository_name_hint">Názov repozitára</string>
     <string name="view_public_repositories_button">Zobraziť komunitné repozitáre</string>

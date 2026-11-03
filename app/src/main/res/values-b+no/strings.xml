@@ -231,7 +231,6 @@
     <string name="extension_status">Status</string>
     <string name="extension_size">Størrelse</string>
     <string name="extension_types">Støttet</string>
-    <string name="extension_install_first">Installer utvidelsen først</string>
     <string name="hls_playlist">HLS-spilleliste</string>
     <string name="player_pref">Foretrukket videospiller</string>
     <string name="player_settings_play_in_app">Intern spiller</string>
@@ -318,7 +317,6 @@
     <string name="setup_extensions_subtext">Last ned listen over sider du vil bruke</string>
     <string name="delete_repository_plugins">Dette vil også slette alle pakkebrønnsprogramtillegg</string>
     <string name="view_public_repositories_button">Vis gemenskapspakkebrønner</string>
-    <string name="download_all_plugins_from_repo">Last ned alle programtilleggene fra denne pakkebrønnen?</string>
     <string name="single_plugin_disabled" formatted="true">%s (avskrudd)</string>
     <string name="tracks">Spor</string>
     <string name="app_not_found_error">Fant ikke programmet</string>

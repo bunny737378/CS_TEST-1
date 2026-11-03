@@ -495,7 +495,6 @@
     <string name="plugins_downloaded" formatted="true">Descărcat: %d</string>
     <string name="plugins_disabled" formatted="true">Dezactivat: %d</string>
     <string name="uppercase_all_subtitles">Toate subtitrările cu majuscule</string>
-    <string name="download_all_plugins_from_repo">Descărcați toate plugin-urile din acest depozit?</string>
     <string name="subscription_in_progress_notification">Se actualizează emisiunile abonate</string>
     <string name="subscription_list_name">Abonat</string>
     <string name="view_public_repositories_button_short">Lista publică</string>
@@ -516,7 +515,6 @@
     <string name="extension_language">Limbă</string>
     <string name="plugin_singular">plugin</string>
     <string name="plugin">plugin-uri</string>
-    <string name="extension_install_first">Instalați mai întâi extensia</string>
     <string name="player_pref">Player video preferat</string>
 
     <string name="pref_category_subtitles">Subtitrări</string>
@@ -536,7 +534,6 @@
     <string name="use">Utilizați</string>
     <string name="unable_to_inflate">UI nu a putut fi creată corect, acesta este un BUG MAJOR și trebuie raportat imediat %s</string>
     <string name="automatic_plugin_download_mode_title">Selectați modul de filtrare a descărcării plugin-urilor</string>
-    <string name="already_voted">Ați votat deja</string>
     <string name="duplicate_message_multiple" formatted="true">Elemente potențial duplicate au fost găsite în biblioteca ta: \n \n%s \n \nÎn ciuda acestui fapt, ai dori să adaugi acest alement, să le înlocuiești pe cele existente, sau să anulezi acțiunea?</string>
     <string name="favorite_added">%s a fost adăugat la favoriți/te</string>
     <string name="favorite_removed">%s a fost eliminat din favoriți/te</string>

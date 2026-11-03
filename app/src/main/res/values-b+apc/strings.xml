@@ -394,7 +394,6 @@
     <string name="action_add_to_favorites">زيدو ع المفضل</string>
     <string name="subtitle_offset_title">تأخير الترجمة</string>
     <string name="normal">عادي</string>
-    <string name="extension_install_first">نزل الإضافة قبل</string>
     <string name="all">الكل</string>
     <string name="sort_rating_desc">رايتينگ (من العالي للواطي)</string>
     <string name="profiles">الپروفيلات</string>
@@ -516,13 +515,11 @@
     <string name="plugin">إضافات</string>
     <string name="plugin_load_fail" formatted="true">م قدرنا نفتح %s</string>
     <string name="extension_rating" formatted="true">رايتينگ: %s</string>
-    <string name="download_all_plugins_from_repo">تحزير: \"كلاود ستريم\" مش مسؤولة عن الإضافات المش رسمية، و م بتدعمن أبدًا!</string>
     <string name="extension_status">الحالة</string>
     <string name="delete_repository">محي الريپو</string>
     <string name="category_player">مشغل الڤيديو</string>
     <string name="skip_type_ed">النهاية</string>
     <string name="home_random">عشوائي</string>
-    <string name="already_voted">إنتو أصلًا مصوتين</string>
     <string name="quality_cam">كاميرا</string>
     <string name="no_plugins_found_error">م لقينا ولا إضافة بال ريپو</string>
     <string name="duplicate_message_single" formatted="true">مبين إنو في عنصر متل هيدا موجود بالمكتبة عندكن: \n\"%s\" \n \nبدكن تزيدو هيدا العنصر بأيّ حال، أو تستبدلوّ مع العنصر الموجود، أو تلغو الإجراء؟</string>
@@ -595,7 +592,6 @@
     <string name="device_pin_counter_text">بتخلص مدة الپِن ب %1$d دقايق و%2$d ثانية</string>
     <string name="auth_locally">فوت عال أكونت محليًا</string>
     <string name="dismiss">تجاهل</string>
-    <string name="open_downloaded_repo">فتاح الريپو</string>
     <string name="device_pin_url_message">فتاح <b>%s</b> ع تلفونك أو كمپيوترك، وحط الكود اللي فوق</string>
     <string name="play_from_beginning_img_des">بلشه من الأول</string>
     <string name="test_warning">تحذير</string>

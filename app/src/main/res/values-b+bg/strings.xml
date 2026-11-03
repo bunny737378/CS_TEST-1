@@ -403,7 +403,6 @@
     <string name="view_public_repositories_button">Вижте хранилищата на общността</string>
     <string name="view_public_repositories_button_short">Публичен списък</string>
     <string name="uppercase_all_subtitles">Всички субтитри с главни букви</string>
-    <string name="download_all_plugins_from_repo">Предупреждение: CloudStream не носи отговорност за използването на трети страни разширения и не предоставя поддръжка за тях!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Деактивиран)</string>
     <string name="tracks">Потоци</string>
     <string name="audio_tracks">Аудио потоци</string>
@@ -420,7 +419,6 @@
     <string name="extension_authors">Автори</string>
     <string name="extension_types">Поддържани</string>
     <string name="extension_language">език</string>
-    <string name="extension_install_first">Първо инсталирайте разширението</string>
     <string name="hls_playlist">HLS плейлист</string>
     <string name="player_pref">Предпочитан видео плеър</string>
     <string name="player_settings_play_in_app">Вътрешен плеър</string>
@@ -510,7 +508,6 @@
     <string name="use">Използване</string>
     <string name="subscription_episode_released">Епизод %d е публикуван!</string>
     <string name="safe_mode_file">Намерен е файл за безопасен режим! \nНяма да се зареждат никакви разширения при стартиране, докато файлът не бъде премахнат.</string>
-    <string name="already_voted">Вече сте гласували</string>
     <string name="set_default">Задаване по подразбиране</string>
     <string name="pin_error_length">ПИН трябва да е 4 символа</string>
     <string name="sort_updated_old">Актуализирано (от старо към ново)</string>
@@ -622,7 +619,6 @@
     <string name="podcast_singular">Подкаст</string>
     <string name="auth_locally">Автентикация локално</string>
     <string name="biometric_setting">Заключване с биометрия</string>
-    <string name="open_downloaded_repo">Отвори хранилище</string>
     <string name="reset_btn">Нулиране</string>
     <string name="device_pin_expired_message">PIN кодът е изтекъл !</string>
 

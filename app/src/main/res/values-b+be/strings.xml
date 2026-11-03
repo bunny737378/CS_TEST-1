@@ -496,7 +496,6 @@
     <string name="view_public_repositories_button">Праглядзець рэпазіторыі ад супольнасці</string>
     <string name="view_public_repositories_button_short">Публічны спіс</string>
     <string name="uppercase_all_subtitles">Усе субцітры верхнім рэгістрам</string>
-    <string name="download_all_plugins_from_repo">Увага: CloudStream не нясе адказнасці за выкарыстанне старонніх пашырэнняў і не пастаўляе для іх ніякай падтрымцы!</string>
     <string name="single_plugin_disabled" formatted="true">%s (выключана)</string>
     <string name="tracks">Трэкі</string>
     <string name="audio_tracks">Аўдыятрэкі</string>
@@ -515,7 +514,6 @@
     <string name="extension_authors">Аўтары</string>
     <string name="extension_types">Падтрымлівае</string>
     <string name="extension_language">Мова</string>
-    <string name="extension_install_first">Спачатку ўсталюйце пашырэнне</string>
     <string name="hls_playlist">Плэй-ліст HLS</string>
     <string name="player_pref">Прыярытэтны прайгравальнік</string>
     <string name="player_settings_play_in_app">Убудаваны прайгравальнік</string>
@@ -544,7 +542,6 @@
     <string name="no">Не</string>
     <string name="ok">ОК</string>
     <string name="dismiss">Адхіліць</string>
-    <string name="open_downloaded_repo">Адкрыць рэпазіторый</string>
     <string name="battery_dialog_title">Выключыць аптымізацыю батарэі</string>
     <string name="battery_dialog_message">Каб забяспечыць бесперапынныя спампоўкі і апавяшчэнні аб тэлеперадачах, на якія вы падпісаны, CloudStream патрэбны дазвол на выкананне ў фонавым рэжыме. Па націсканні «ОК», вам пакажацца дыялогавае акно. Націсніце «Дазволіць».\n\nЗвярніце ўвагу — гэта не значыць, што CS3 будзе садзіць вашу батарэю. Праграма будзе працаваць у фоне толькі калі патрэбна, напрыклад пры атрыманні апавяшчэнняў або спампоўванні відэа з афіцыйных пашырэнняў.</string>
     <string name="app_unrestricted_toast">Выкарыстанне батарэі ўжо выстаўлена як неабмежаванае</string>
@@ -592,7 +589,6 @@
     <string name="qualities">Якасці</string>
     <string name="profile_background_des">Фон профілю</string>
     <string name="unable_to_inflate">Не ўдалося карэктна стварыць інтэрфейс, гэта СУР\'ЁЗНАЯ ХІБА, пра якую варта неадкладна паведаміць %s</string>
-    <string name="already_voted">Вы ўжо прагаласавалі</string>
     <string name="favorites_list_name">Абраныя</string>
     <string name="favorite_added">%s дададзена ў абранае</string>
     <string name="favorite_removed">%s прыбрана з абранага</string>

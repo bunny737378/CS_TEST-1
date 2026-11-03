@@ -511,6 +511,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             R.id.navigation_settings_providers,
             R.id.navigation_settings_general,
             R.id.navigation_settings_extensions,
+            R.id.navigation_settings_stremio_addons,
             R.id.navigation_settings_plugins,
             R.id.navigation_test_providers,
         ).contains(destination.id)
@@ -587,6 +588,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                     R.id.navigation_settings_providers,
                     R.id.navigation_settings_general,
                     R.id.navigation_settings_extensions,
+                    R.id.navigation_settings_stremio_addons,
                     R.id.navigation_settings_plugins,
                     R.id.navigation_test_providers
                 ) -> {

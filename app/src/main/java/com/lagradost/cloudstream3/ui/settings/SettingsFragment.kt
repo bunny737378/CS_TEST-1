@@ -220,6 +220,7 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
                 settingsProviders to R.id.action_navigation_global_to_navigation_settings_providers,
                 settingsBackup to R.id.action_navigation_global_to_navigation_settings_backup,
                 settingsExtensions to R.id.action_navigation_global_to_navigation_settings_extensions,
+                settingsStremioAddons to R.id.action_navigation_global_to_navigation_settings_stremio_addons,
             ).forEach { (view, navigationId) ->
                 view.apply {
                     setOnClickListener {

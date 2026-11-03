@@ -502,7 +502,6 @@
     <string name="view_public_repositories_button">ເບິ່ງບ່ອນເກັບຂໍ້ມູນຂອງຊຸມຊົນ</string>
     <string name="view_public_repositories_button_short">ລາຍການສາທາລະນະ</string>
     <string name="uppercase_all_subtitles">ເຮັດໃຫ້ຄຳບັນຍາຍທັງໝົດເປັນຕົວພິມໃຫຍ່</string>
-    <string name="download_all_plugins_from_repo">ຄຳເຕືອນ: CloudStream ບໍ່ມີສ່ວນຮັບຜິດຊອບໃດໆໃນການໃຊ້ສ່ວນເສີມຈາກບຸກຄົນທີສາມ ແລະ ບໍ່ມີການຊ່ວຍເຫຼືອສຳລັບພວກມັນ!</string>
     <string name="single_plugin_disabled" formatted="true">%s (ປິດໃຊ້ງານ)</string>
     <string name="tracks">ແທຣັກ</string>
     <string name="audio_tracks">ແທຣັກສຽງ</string>
@@ -521,7 +520,6 @@
     <string name="extension_authors">ຜູ້ຂຽນ</string>
     <string name="extension_types">ທີ່ຮອງຮັບ</string>
     <string name="extension_language">ພາສາ</string>
-    <string name="extension_install_first">ກະລຸນາຕິດຕັ້ງສ່ວນເສີມກ່ອນ</string>
     <string name="hls_playlist">HLS Playlist</string>
     <string name="player_pref">ເຄື່ອງຫຼິ້ນວິດີໂອທີ່ມັກ</string>
     <string name="player_settings_play_in_app">ເຄື່ອງຫຼິ້ນພາຍໃນແອັບ</string>
@@ -551,7 +549,6 @@
     <string name="no">ບໍ່</string>
     <string name="ok">ຕົກລົງ</string>
     <string name="dismiss">ຍົກເລີກ</string>
-    <string name="open_downloaded_repo">ເປີດບ່ອນເກັບຂໍ້ມູນ</string>
     <string name="battery_dialog_title">ປິດການປະຢັດແບັດເຕີຣີ</string>
     <string name="battery_dialog_message">ເພື່ອໃຫ້ການດາວໂຫຼດ ແລະ ການແຈ້ງເຕືອນລາຍການທີ່ຕິດຕາມບໍ່ຖືກຂັດຈັງຫວະ, CloudStream ຕ້ອງການການອະນຸຍາດໃຫ້ເຮັດວຽກຢູ່ພື້ນຫຼັງ. ເມື່ອກົດ ຕົກລົງ, ເຈົ້າຈະເຫັນໜ້າຕ່າງຂໍອະນຸຍາດ, ກະລຸນາກົດ \'ອະນຸຍາດ\'.\n\nໝາຍເຫດ: ການອະນຸຍາດນີ້ບໍ່ໄດ້ໝາຍຄວາມວ່າແອັບຈະກິນແບັດເຕີຣີ. ມັນຈະເຮັດວຽກຢູ່ພື້ນຫຼັງສະເພາະເວລາທີ່ຈຳເປັນ ເຊັ່ນ: ເວລາຮັບການແຈ້ງເຕືອນ ຫຼື ດາວໂຫຼດວິດີໂອ.</string>
     <string name="app_unrestricted_toast">ການໃຊ້ແບັດເຕີຣີຂອງແອັບຖືກຕັ້ງເປັນແບບບໍ່ຈຳກັດແລ້ວ</string>
@@ -607,7 +604,6 @@
     <string name="qualities">ຄຸນນະພາບ</string>
     <string name="profile_background_des">ພື້ນຫຼັງໂປຣໄຟລ໌</string>
     <string name="unable_to_inflate">UI ບໍ່ສາມາດສ້າງໄດ້ຢ່າງຖືກຕ້ອງ, ນີ້ແມ່ນບັກໃຫຍ່ ແລະ ຄວນລາຍງານທັນທີ %s</string>
-    <string name="already_voted">ເຈົ້າໄດ້ລົງຄະແນນແລ້ວ</string>
     <string name="favorites_list_name">ລາຍການທີ່ມັກ</string>
     <string name="favorite_added">ເພີ່ມ %s ເຂົ້າໃນລາຍການທີ່ມັກແລ້ວ</string>
     <string name="favorite_removed">ເອົາ %s ອອກຈາກລາຍການທີ່ມັກແລ້ວ</string>

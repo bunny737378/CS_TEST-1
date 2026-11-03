@@ -402,7 +402,6 @@
     <string name="view_public_repositories_button">Skatīt kopienas repozitorijus</string>
     <string name="view_public_repositories_button_short">Publiskais saraksts</string>
     <string name="uppercase_all_subtitles">Visi subtitri ar lielajiem burtiem</string>
-    <string name="download_all_plugins_from_repo">Uzmanību: CloudStream neuzņemas nekādu atbildību par trešo pušu papildinājumu izmantošanu un nesniedz nekādu tā atbalstu!</string>
     <string name="single_plugin_disabled" formatted="true">%s (atspējots)</string>
     <string name="tracks">Tracks</string>
     <string name="audio_tracks">Audio dziesmas</string>
@@ -484,7 +483,6 @@
     <string name="repository_name_hint">Repozitorija nosaukums (pēc izvēles, neobligāti)</string>
     <string name="plugin_downloaded">Papildinājums lejupielādēts</string>
     <string name="setup_extensions_subtext">Lejupielādējiet to vietņu sarakstu, kuras vēlaties izmantot</string>
-    <string name="extension_install_first">Vispirms uzstādīt papildinājumu</string>
     <string name="skip_type_op">Atvēršana</string>
     <string name="skip_type_intro">Ievads</string>
     <string name="skip_type_format" formatted="true">Izlaist %s</string>
@@ -555,7 +553,6 @@
     <string name="repo_copy_label">Repozitorija nosaukums un URL</string>
     <string name="no_plugins_found_error">Repozitorijā nav atrasts neviens papildinājums</string>
     <string name="no_repository_found_error">Repozitorijs nav atrasts, pārbaudiet URL un izmēģiniet ar ieslēgtu VPN</string>
-    <string name="open_downloaded_repo">Atvērt repozitoriju</string>
     <string name="unable_to_inflate">Lietotāja saskarni nevarēja izveidot pareizi, tā ir NOPIETNA KĻŪDA, un par to jāziņo nekavējoties %s</string>
     <string name="automatic_plugin_download_mode_title">Atlasiet režīmu pēc kā filtrēt papildinājumu lejupielādi</string>
     <string name="delete_plugin">Dzēst papildinājumu</string>

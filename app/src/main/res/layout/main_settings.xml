@@ -105,7 +105,14 @@
                 android:id="@+id/settings_extensions"
                 style="@style/SettingsItem"
                 android:nextFocusUp="@id/settings_credits"
+                android:nextFocusDown="@id/settings_stremio_addons"
                 android:text="@string/extensions" />
+
+            <TextView
+                android:id="@+id/settings_stremio_addons"
+                style="@style/SettingsItem"
+                android:nextFocusUp="@id/settings_extensions"
+                android:text="@string/stremio_addons" />
 
         </LinearLayout>
     </ScrollView>

@@ -156,6 +156,13 @@ object SettingsFragmentScreen : Screen {
             icon = R.drawable.extension_24px,
             subtitle = persistentListOf(R.string.add_repository)
         ),
+        SettingsNavigation(
+            title = R.string.stremio_addons,
+            navigation = R.id.action_navigation_global_to_navigation_settings_stremio_addons,
+            screen = StremioAddonsScreen,
+            icon = R.drawable.extension_24px,
+            subtitle = persistentListOf(R.string.stremio_addons)
+        ),
     )
 
     @Immutable

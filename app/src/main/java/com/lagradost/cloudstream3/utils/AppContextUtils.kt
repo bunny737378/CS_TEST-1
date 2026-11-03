@@ -76,7 +76,6 @@ import com.lagradost.cloudstream3.ui.WebviewFragment
 import com.lagradost.cloudstream3.ui.player.SubtitleData
 import com.lagradost.cloudstream3.ui.result.ResultFragment
 import com.lagradost.cloudstream3.ui.settings.Globals
-import com.lagradost.cloudstream3.ui.settings.extensions.PluginsFragment
 import com.lagradost.cloudstream3.ui.settings.extensions.RepositoryData
 import com.lagradost.cloudstream3.utils.Coroutines.ioSafe
 import com.lagradost.cloudstream3.utils.Coroutines.main
@@ -538,37 +537,6 @@ object AppContextUtils {
                 )
             }
             afterRepositoryLoadedEvent.invoke(true)
-            addRepositoryDialog(data)
-        }
-    }
-
-    fun Activity.addRepositoryDialog(
-        repositoryData: RepositoryData
-    ) {
-        val repos = RepositoryManager.getRepositories()
-
-        // navigate to newly added repository on pressing Open Repository
-        fun openAddedRepo() {
-            if (repos.isNotEmpty()) {
-                navigate(
-                    R.id.global_to_navigation_settings_plugins,
-                    PluginsFragment.newInstance(
-                        repositoryData,
-                    )
-                )
-            }
-        }
-
-        runOnUiThread {
-            AlertDialog.Builder(this).apply {
-                setTitle(repositoryData.name)
-                setMessage(R.string.download_all_plugins_from_repo)
-                setPositiveButton(R.string.open_downloaded_repo) { _, _ ->
-                    openAddedRepo()
-                }
-                setNegativeButton(R.string.dismiss, null)
-                show().setDefaultFocus()
-            }
         }
     }
 

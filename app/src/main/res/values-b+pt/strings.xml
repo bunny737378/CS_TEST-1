@@ -362,7 +362,6 @@
     <string name="view_public_repositories_button">Ver repositórios da comunidade</string>
     <string name="view_public_repositories_button_short">Lista pública</string>
     <string name="uppercase_all_subtitles">Todas as legendas em maiúsculas</string>
-    <string name="download_all_plugins_from_repo">Aviso: O CloudStream 3 não se responsabiliza pelo uso de extensões de terceiros e não fornece qualquer suporte às mesmas!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Desativado)</string>
 
     <string name="duration_format" formatted="true">%d min</string>
@@ -413,7 +412,6 @@
     <string name="extension_authors">Autores</string>
     <string name="extension_types">Suportado</string>
     <string name="extension_language">Idioma</string>
-    <string name="extension_install_first">Instalar a extensão primeiro</string>
     <string name="hls_playlist">Playlist HLS</string>
     <string name="player_pref">Player de vídeo preferido</string>
     <string name="extension_status">Estado</string>
@@ -518,7 +516,6 @@
     <string name="disable">Desativar</string>
     <string name="no_plugins_found_error">Não foram encontrados plugins no repositório</string>
     <string name="no_repository_found_error">Repositório não encontrado, verifique o URL e tente a VPN</string>
-    <string name="already_voted">Você já votou</string>
     <string name="action_unsubscribe">Cancelar Inscrição</string>
     <string name="action_subscribe">Inscrever-se</string>
     <string name="favorites_list_name">Favoritos</string>
@@ -614,7 +611,6 @@
 
     <string name="device_pin_expired_message">O código PIN está agora expirado !</string>
     <string name="no_subtitles_loaded">Ainda sem legendadas carregadas</string>
-    <string name="open_downloaded_repo">Abrir repositório</string>
     <string name="dismiss">Dispensar</string>
     <string name="confirm_before_exiting_title">Confirmar antes de sair</string>
     <string name="confirm_before_exiting_desc">Mostrar diálogo antes de sair da aplicação</string>

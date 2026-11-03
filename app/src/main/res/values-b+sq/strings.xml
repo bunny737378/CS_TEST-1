@@ -497,7 +497,6 @@
     <string name="view_public_repositories_button">Shiko repository-t e komunitetit</string>
     <string name="safe_mode_title">Modaliteti i sigurt është aktive</string>
     <string name="plugins_not_downloaded" formatted="true">Të pa shkarkuara: %d</string>
-    <string name="extension_install_first">Instalo shtesën para</string>
     <string name="apply_on_restart">Rifillo aplikacionin për të parë ndryshimet.</string>
     <string name="plugins_disabled" formatted="true">Çaktivizuar: %d</string>
     <string name="stop">Pauzë</string>
@@ -516,7 +515,6 @@
     <string name="hls_playlist">Lista e HLS</string>
     <string name="plugin">shtesa</string>
     <string name="extension_rating" formatted="true">Vlerësimi: %s</string>
-    <string name="download_all_plugins_from_repo">Paralajmërim: CloudStream nuk mban asnjë përgjegjësi për përdorimin e shtesave të palëve të treta dhe nuk ofron asnjë mbështetje për to!</string>
     <string name="extension_status">Statusi</string>
     <string name="delete_repository">Fshi repository-n</string>
     <string name="extension_version">Versioni</string>
@@ -551,7 +549,6 @@
     <string name="no">Jo</string>
     <string name="ok">Në rregull</string>
     <string name="dismiss">Largo</string>
-    <string name="open_downloaded_repo">Hap repository-n</string>
     <string name="battery_dialog_title">Çaktivizo kursimin e baterisë</string>
     <string name="battery_dialog_message">Për të siguruar shkarkime të pandërprera dhe njoftime për serialet e abonuar, CloudStream ka nevojë për leje për të funksionuar në sfond. Duke shtypur OK, do t’ju shfaqet një dialog kërkese. Ju lutem shtypni “Lejo”.\n\nJu lutemi vini re: kjo leje nuk do të thotë që CS3 do të harxhojë baterinë tuaj. Do të funksionojë në sfond vetëm kur është e nevojshme, si p.sh. kur merr njoftime ose shkarkon video nga shtesat zyrtare.</string>
     <string name="app_unrestricted_toast">Përdorimi i baterisë është i vendosur si i pakufizuar</string>
@@ -599,7 +596,6 @@
     <string name="qualities">Cilësitë</string>
     <string name="profile_background_des">Sfondi i profilit</string>
     <string name="unable_to_inflate">UI nuk mundi të krijohej siç duhet, ky është një PROBLEM SERIOZ dhe duhet raportuar menjëherë %s</string>
-    <string name="already_voted">Ju keni votuar</string>
     <string name="favorites_list_name">Të preferuarat</string>
     <string name="favorite_added">%s u shtua te të preferuarat</string>
     <string name="favorite_removed">%s u hoq nga të preferuarat</string>

@@ -398,7 +398,6 @@
     <string name="music_singular">aaahh</string>
     <string name="biometric_prompt_description">uuugg g uug uuuuhh attempts, aah aaaagg uugg uuuhh aaaagg uuuuhhh aag uug ah uuh uuugg</string>
     <string name="min">oog</string>
-    <string name="extension_install_first">aaaaggg uug oooohhhuh uuuuk</string>
     <string name="network_adress_example">https://examplecom/examplemp4</string>
     <string name="hide_player_control_names">oohh uuugg ag aag player uuuugggg</string>
     <string name="sort_updated_new">aaaaggg (New ah Old)</string>
@@ -444,7 +443,6 @@
     <string name="plugins_disabled" formatted="true">Disabled: %d</string>
     <string name="plugins_not_downloaded" formatted="true">aag downloaded: %d</string>
     <string name="view_public_repositories_button">uuhh aaaagggag ooooggguuuhh</string>
-    <string name="download_all_plugins_from_repo">Warning: ooooggguuhh 3 uuhh aah aahh oog aaaagggaaaaggg aah aaahh aaaahhhoog aaaagggaag uuh uugg uug uuuuhhh uug eeeeeek aah them!</string>
     <string name="safe_mode_description">ooh oooohhhooh oogg oooogg ooh uuh uh g ooogg oh uuhh uug uuhh ooh aah uuuuggg ooooggg</string>
     <string name="extension_authors">ooooggg</string>
     <string name="player_settings_play_in_app">aaaagggh uuuugg</string>
@@ -468,7 +466,6 @@
     <string name="no_repository_found_error">oooohhhuuh aag found, aaagg uug oog uuh oog aah</string>
     <string name="action_subscribe">oooogggag</string>
     <string name="action_unsubscribe">aaaahhhuugg</string>
-    <string name="already_voted">uuh uuhh uuuuggg uuuhh</string>
     <string name="favorite_added">%s ooogg oh oooohhhog</string>
     <string name="duplicate_replace_all">aaaahhh uuh</string>
     <string name="duplicate_message_single" formatted="true">oh ooooggg oogg k uuuuuukaahh uuuugggag uuhh ooooggg oooogg ah oogg library: \'%s\' \n \n \nWould uug uugg uh aak oogg oohh anyway, oooohhh uuh oooohhhg one, oh aaaagg eek action?</string>
@@ -490,7 +487,6 @@
     <string name="test_warning">uuuuhhh</string>
     <string name="qr_image">uk aahh ooogg</string>
     <string name="dismiss">uuuuuuk</string>
-    <string name="open_downloaded_repo">aagg oooohhhaah</string>
     <string name="device_pin_expired_message">ooh uuuk oh aah oooohhh !</string>
     <string name="play_from_beginning_img_des">aahh oohh uuh uuuuggguh</string>
     <string name="double_tap_to_pause_settings_des">aah aaahh uh aak aaaagg oh eeeek</string>

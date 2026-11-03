@@ -410,7 +410,6 @@
     <string name="view_public_repositories_button">Visualizza i repository della comunità</string>
     <string name="view_public_repositories_button_short">Lista pubblica</string>
     <string name="uppercase_all_subtitles">Tutti i sottotitoli in maiuscolo</string>
-    <string name="download_all_plugins_from_repo">Attenzione: CloudStream non si assume alcuna responsabilità per l\'utilizzo di estensioni di terze parti e non fornisce alcun supporto per esse!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Disabilitato)</string>
     <string name="tracks">Tracce</string>
     <string name="audio_tracks">Tracce audio</string>
@@ -427,7 +426,6 @@
     <string name="extension_authors">Autori</string>
     <string name="extension_types">Supportati</string>
     <string name="extension_language">Lingua</string>
-    <string name="extension_install_first">Prima installa l\'estensione</string>
     <string name="hls_playlist">Playlist HLS</string>
     <string name="player_pref">Video lettore preferito</string>
     <string name="player_settings_play_in_app">Lettore interno</string>
@@ -535,7 +533,6 @@
     <string name="unable_to_inflate">Non è stato possibile creare correttamente l\'interfaccia utente, questo è un GRANDE BUG e dovrebbe essere segnalato immediatamente %s</string>
     <string name="automatic_plugin_download_mode_title">Seleziona la modalità per filtrare il download dei plugin</string>
     <string name="disable">Disabilita</string>
-    <string name="already_voted">Hai già votato</string>
     <string name="favorite_removed">%s rimosso dai preferiti</string>
     <string name="favorites_list_name">Preferiti</string>
     <string name="favorite_added">%s aggiunto ai preferiti</string>
@@ -607,7 +604,6 @@
     <string name="auth_locally">Autenticazione locale</string>
     <string name="qr_image">Immagine codice QR</string>
     <string name="dismiss">Respingi</string>
-    <string name="open_downloaded_repo">Apri repository</string>
     <string name="device_pin_url_message">Visita <b>%s</b> sul tuo smartphone o computer e inserisci il codice sopra</string>
     <string name="device_pin_error_message">Impossibile ottenere il codice PIN del dispositivo, prova l\'autenticazione locale</string>
     <string name="device_pin_expired_message">Il codice PIN è scaduto!</string>

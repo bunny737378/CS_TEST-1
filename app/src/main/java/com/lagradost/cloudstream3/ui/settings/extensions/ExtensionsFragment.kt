@@ -34,7 +34,6 @@ import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.setSystemBarsPadding
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.setToolBarScrollFlags
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.setUpToolbar
-import com.lagradost.cloudstream3.utils.AppContextUtils.addRepositoryDialog
 import com.lagradost.cloudstream3.utils.AppContextUtils.setDefaultFocus
 import com.lagradost.cloudstream3.utils.Coroutines.ioSafe
 import com.lagradost.cloudstream3.utils.Coroutines.main
@@ -314,10 +313,6 @@ class ExtensionsFragment : BaseFragment<FragmentExtensionsBinding>(
                             showToast(R.string.no_plugins_found_error, Toast.LENGTH_LONG)
                             return@ioSafe
                         }
-
-                        this@ExtensionsFragment.activity?.addRepositoryDialog(
-                            newRepo
-                        )
                     } finally {
                         binding.applyBtt.hideProgress()
                     }

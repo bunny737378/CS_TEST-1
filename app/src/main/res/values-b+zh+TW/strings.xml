@@ -411,7 +411,6 @@
     <string name="view_public_repositories_button">查看</string>
     <string name="view_public_repositories_button_short">公開清單</string>
     <string name="uppercase_all_subtitles">字幕全大寫</string>
-    <string name="download_all_plugins_from_repo">警告：CloudStream 不對使用第三方擴充功能承擔任何責任，也不提供任何支援！</string>
     <string name="single_plugin_disabled" formatted="true">%s （停用）</string>
     <string name="tracks">軌道</string>
     <string name="audio_tracks">音頻軌道</string>
@@ -428,7 +427,6 @@
     <string name="extension_authors">作者</string>
     <string name="extension_types">類型</string>
     <string name="extension_language">語言</string>
-    <string name="extension_install_first">請先安裝外掛</string>
     <string name="hls_playlist">HLS 播放清單</string>
     <string name="player_pref">偏好影片播放器</string>
     <string name="player_settings_play_in_app">內部播放器</string>
@@ -546,7 +544,6 @@
     <string name="select_an_account">選擇帳號</string>
     <string name="disable">停用</string>
     <string name="no_repository_found_error">找不到資源庫，請檢查網址與 VPN 設定</string>
-    <string name="already_voted">您已完成投票</string>
     <string name="no_plugins_found_error">在資源庫中找不到外掛程式</string>
     <string name="duplicate_message_single" formatted="true">您的媒體庫中似乎有重覆的項目：「%s」。 \n \n您要強制加入、取代已有項目、還是取消操作？</string>
     <string name="set_default">設回預設</string>
@@ -596,7 +593,6 @@
     <string name="biometric_unsupported">此裝置不支援生物特徵認證</string>
     <string name="device_pin_error_message">無法取得裝置 PIN 碼，請嘗試本機驗證</string>
     <string name="delete_plugin">刪除外掛程式</string>
-    <string name="open_downloaded_repo">開啟資源庫</string>
     <string name="device_pin_expired_message">PIN 碼已過期！</string>
     <string name="device_pin_counter_text">驗證碼將在 %1$d 分 %2$d 秒後過期</string>
     <string name="sort_release_date_new">發行日期（由新到舊）</string>

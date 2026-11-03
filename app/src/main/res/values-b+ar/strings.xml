@@ -399,7 +399,6 @@
     <string name="view_public_repositories_button">عرض مستودعات المجتمع</string>
     <string name="view_public_repositories_button_short">قائمة عامة</string>
     <string name="uppercase_all_subtitles">جميع الترجمات حروف كبيرة</string>
-    <string name="download_all_plugins_from_repo">تحذير: لا يتحمل CloudStream 3 أي مسؤولية عن استخدام ملحقات الطرف الثالث ولا يقدم أي دعم لها!</string>
     <string name="single_plugin_disabled" formatted="true">%s (معطل)</string>
     <string name="tracks">المسارات</string>
     <string name="audio_tracks">مسار الصوت</string>
@@ -441,8 +440,6 @@
     <string name="no">ﻻ</string>
     <string name="app_dub_sub_episode_text_format" formatted="true">%1$s الحلقة %2$d</string>
     <string name="next_episode_format" formatted="true">سيتم إصدار الحلقة %d في</string>
-
-    <string name="extension_install_first">تثبيت الإضافة أولا</string>
     <string name="player_settings_play_in_app">مشغل داخلي</string>
     <string name="app_not_found_error">لم يتم العثور على التطبيق</string>
     <string name="all_languages_preference">جميع اللغات</string>
@@ -525,7 +522,6 @@
     <string name="disable">تعطيل</string>
     <string name="no_plugins_found_error">لا توجد اضافة في المستودع</string>
     <string name="no_repository_found_error">المستودع لم يتم العثور عليه، تحقق من العنوان اوجرب شبكة افتراضية خاصة(vpn)</string>
-    <string name="already_voted">لقد صوتت بالفعل</string>
     <string name="backup_frequency">معدل النسخ الإحتياطي</string>
     <string name="favorite_removed">تمت إزالة %s من المفضلة</string>
     <string name="favorites_list_name">المفضلة</string>
@@ -596,7 +592,6 @@
     <string name="pref_category_accounts">الحسابات</string>
     <string name="qr_image">صورة رمز الاستجابة السريعة</string>
     <string name="dismiss">تجاهَل</string>
-    <string name="open_downloaded_repo">فتح المستودع</string>
     <string name="device_pin_expired_message">لقد انتهت صلاحية الرمز السري الآن!</string>
     <string name="auth_locally">تحقق محليا</string>
     <string name="device_pin_url_message">قم بزيارة <b>%s</b> على هاتفك الذكي أو جهاز الكمبيوتر وأدخل الرمز أعلاه</string>

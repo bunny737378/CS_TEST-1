@@ -411,7 +411,6 @@
     <string name="view_public_repositories_button">Topluluk depolarını görüntüle</string>
     <string name="view_public_repositories_button_short">Herkese açık liste</string>
     <string name="uppercase_all_subtitles">Tüm altyazılar büyük harf</string>
-    <string name="download_all_plugins_from_repo">Uyarı: CloudStream 3.taraf uzantıların kullanımı için herhangi bir sorumluluk kabul etmez ve bunlar için herhangi bir destek sağlamaz!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Devre dışı)</string>
     <string name="tracks">Parçalar</string>
     <string name="audio_tracks">Ses parçaları</string>
@@ -428,7 +427,6 @@
     <string name="extension_authors">Geliştiriciler</string>
     <string name="extension_types">Desteklenen</string>
     <string name="extension_language">Dil</string>
-    <string name="extension_install_first">Önce eklentiyi yükleyin</string>
     <string name="hls_playlist">HLS Oynatma Listesi</string>
     <string name="player_pref">Tercih edilen video oynatıcısı</string>
     <string name="player_settings_play_in_app">Dahili oynatıcı</string>
@@ -549,7 +547,6 @@
     <string name="select_an_account">Hesap Seç</string>
     <string name="disable">Devre dışı bırak</string>
     <string name="no_repository_found_error">Depo bulunamadı, bağlantı adresini kontrol edin veya VPN ile deneyin</string>
-    <string name="already_voted">Zaten oyladınız</string>
     <string name="no_plugins_found_error">Depoda eklenti bulunamadı</string>
     <string name="duplicate_message_single" formatted="true">Görünüşe göre potansiyel bir kopya kütüphanenizde zaten bulunuyor: \'%s\' \n \nYine de ekleyerek var olanı değiştirmek mi istersiniz, yoksa iptal etmek mi?</string>
     <string name="enter_pin">PIN girin</string>
@@ -599,7 +596,6 @@
     <string name="auth_locally">Yerel Olarak Doğrula</string>
     <string name="qr_image">QR Kod Görüntüsü</string>
     <string name="dismiss">Yoksay</string>
-    <string name="open_downloaded_repo">Depoyu aç</string>
     <string name="device_pin_url_message">Akıllı telefonunuzda veya bilgisayarınızda <b>%s</b> adresini ziyaret edin ve yukarıdaki kodu girin</string>
     <string name="device_pin_error_message">Cihaz PIN kodu alınamıyor, yerel kimlik doğrulamayı deneyin</string>
     <string name="device_pin_expired_message">PIN kodunun süresi doldu!</string>

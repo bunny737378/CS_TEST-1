@@ -423,7 +423,6 @@
 
     <string name="batch_download">הורדת אצווה</string>
     <string name="plugin_singular">תוסף</string>
-    <string name="download_all_plugins_from_repo">אזהרה: קלאודסטרים אינה לוקחת אחריות על השימוש בהרחבות צד שלישי ואינה מספקת להן תמיכה כלשהי!</string>
     <string name="audio_tracks">רצועות שמע</string>
     <string name="tracks">מסלולים</string>
     <string name="safe_mode_description">כל התוספים נכבו עקב התרסקות כדי לעזור לך למצוא את האחד הגורם לצרות.</string>
@@ -450,7 +449,6 @@
     <string name="extension_status">מצב</string>
     <string name="extension_size">גודל</string>
     <string name="extension_types">תומך</string>
-    <string name="extension_install_first">התקן תחילה את התוסף</string>
     <string name="hls_playlist">פלייליסט HLS</string>
     <string name="player_pref">נגן וידאו מועדף</string>
     <string name="player_settings_play_in_app">נגן פנימי</string>
@@ -509,7 +507,6 @@
     <string name="no_repository_found_error">המאגר לא נמצא, נא לבדוק את ה-URL ולנסות VPN</string>
 
     <string name="android_tv_interface_off_seek_settings_summary">הזמן שיזוז כשהנגן מוסתר</string>
-    <string name="already_voted">כבר הצבעת</string>
     <string name="no_plugins_found_error">לא נמצאו תוספים במאגר</string>
     <string name="pref_category_android_tv">טלוויזיית אנדרואיד</string>
     <string name="set_default">קביעה כברירת מחדל</string>
@@ -602,7 +599,6 @@
     <string name="device_pin_expired_message">תוקף קוד ה־PIN פג !</string>
     <string name="device_pin_counter_text">תוקף הקוד יפוג בעוד %1$d דק׳ %2$d שנ׳</string>
     <string name="dismiss">סגור</string>
-    <string name="open_downloaded_repo">פתח מאגר</string>
     <string name="test_warning">אזהרה</string>
     <string name="delete_plugin">מחק תוסף</string>
     <string name="hide_player_control_names">הסתר את שמות הפקדים של הנגן</string>

@@ -409,7 +409,6 @@
     <string name="view_public_repositories_button">Prikaži repozitorije zajednice</string>
     <string name="view_public_repositories_button_short">Javni popis</string>
     <string name="uppercase_all_subtitles">Koristi velika slova za sve titlove</string>
-    <string name="download_all_plugins_from_repo">Upozorenje: CloudStream ne preuzima odgovornost za korištenje proširenja trećih strana i ne pruža podršku za njih!</string>
     <string name="single_plugin_disabled" formatted="true">%s (onemogućeno)</string>
     <string name="tracks">Zapisi</string>
     <string name="audio_tracks">Audio zapis</string>
@@ -432,7 +431,6 @@
     <string name="automatic_plugin_download_summary">Automatski instaliraj sve neinstalirane dodatke iz dodanih repozitorija.</string>
     <string name="player_pref">Preferirani video player</string>
     <string name="player_settings_play_in_app">Interni player</string>
-    <string name="extension_install_first">Najprije instaliraj proširenje</string>
     <string name="app_not_found_error">Aplikacija nije pronađena</string>
     <string name="all_languages_preference">Svi jezici</string>
     <string name="clipboard_too_large">Previše teksta. Nije moguće spremiti u međuspremnik.</string>
@@ -528,7 +526,6 @@
     <string name="no_plugins_found_error">U repozitoriju nisu pronađeni dodaci</string>
     <string name="no_repository_found_error">Repozitorij nije pronađen. Provjeri URL i pokušaj VPN</string>
     <string name="quality_profile_help">Ovdje možete promijeniti način na koji su izvori poredani. Ako video ima viši prioritet, pojavit će se više u odabiru izvora. Zbroj prioriteta izvora i prioriteta kvalitete je prioritet videa. \n \nIzvor A: 3 \nKvaliteta B: 7 \nImat će kombinirani prioritet videa od 10. \n \nNAPOMENA: Ako je zbroj 10 ili više, video player će automatski preskočiti učitavanje kada se ta poveznica učita!</string>
-    <string name="already_voted">Već si glasao/la</string>
     <string name="backup_frequency">Učestalost spremanja sigurnosne kopije</string>
     <string name="favorite_removed">%s uklonjeno iz favorita</string>
     <string name="favorites_list_name">Favoriti</string>
@@ -606,7 +603,6 @@
     <string name="device_pin_counter_text">Kod isteče za %1$d min %2$d s</string>
     <string name="qr_image">Slika QR koda</string>
     <string name="hide_player_control_names">Sakrij nazive kontrola playera</string>
-    <string name="open_downloaded_repo">Otvori repozitorij</string>
     <string name="device_pin_expired_message">PIN kod je sada istekao!</string>
     <string name="sort_release_date_new">Datum izdanja (od novog prema starom)</string>
     <string name="sort_release_date_old">Datum izdanja (od starog prema novom)</string>

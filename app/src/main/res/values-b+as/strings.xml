@@ -453,7 +453,6 @@
     <string name="blank_repo_message">CloudStreamত কোনো চাইট ডিফল্টভাৱে ইনষ্টল হোৱা নাই। আপুনিয়ে ৰিপ\'জিট\'ৰিবোৰৰ পৰা চাইটসমূহ ইনষ্টল কৰিব লাগিব। \n \nআমাৰ Discordত যোগদান কৰক বা অনলাইন বিচাৰক।</string>
     <string name="view_public_repositories_button">সম্প্ৰদায়ৰ ৰিপ\'জিট\'ৰিসমূহ চাওক</string>
     <string name="uppercase_all_subtitles">সকলো চাবটাইটল মুকলি আখৰত</string>
-    <string name="download_all_plugins_from_repo">সতর্কতা: CloudStream 3 কোৱা নাই যে তৃতীয় পক্ষৰ বৃদ্ধিসমূহ ব্যৱহাৰ কৰিবলৈ আপুনি সম্পূৰ্ণ দায়িত্ব ল\'ব আৰু কোনো সহায় নাপাব!</string>
     <string name="single_plugin_disabled" formatted="true">%s (নিষ্ক্ৰিয়)</string>
     <string name="tracks">ট্ৰেকসমূহ</string>
     <string name="audio_tracks">অ\'ডিঅ\' ট্ৰেকসমূহ</string>
@@ -471,7 +470,6 @@
     <string name="extension_authors">লেখক</string>
     <string name="extension_types">সমৰ্থিত</string>
     <string name="extension_language">ভাষা</string>
-    <string name="extension_install_first">আগতে বৃদ্ধি ইনষ্টল কৰক</string>
     <string name="app_not_found_error">এপ্‌টো পোৱা নগ\'ল</string>
     <string name="all_languages_preference">সকলো ভাষা</string>
     <string name="skip_type_format" formatted="true">%s এৰি দিয়া</string>
@@ -527,7 +525,6 @@
     <string name="quality_profile_help">ইয়াত আপুনি উৎসসমূহ কেনেকৈ ক্ৰম অনুযায়ী চিহ্নিত কৰিব সেই বিষয়ে সলনি কৰিব পাৰে। যদি এখন ভিডিঅ\'ৰ উচ্চ অগ্ৰাধিকাৰ থাকে তেন্তে সেইটো উৎস নিৰ্বাচনৰ সময়ত ওপৰত দেখা যাব। উৎস অগ্ৰাধিকাৰ আৰু গুণ অগ্ৰাধিকাৰৰ মুঠ যোগফল হৈছে ভিডিঅ\'ৰ অগ্ৰাধিকাৰ। \n \nউৎস A: 3 \nগুণ B: 7 \nসৰহযোগে ভিডিঅ\'ৰ অগ্ৰাধিকাৰ হ\'ব 10। \n \nদ্ৰষ্টব্য: যদি যোগফল 10 বা তাৰ ওপৰত থাকে তেন্তে প্লেয়াৰটো নিজেই লিংক ল\'ড কৰাৰ সময়ত ল\'ডিং এড়াই যাব!</string>
     <string name="profile_background_des">প্ৰ\'ফাইলৰ পটভূমি</string>
     <string name="unable_to_inflate">UI সঠিকভাৱে সৃষ্টি কৰিব পৰা নগ\'ল, ই এটা গুৰুত্বপূৰ্ণ সমস্যা আৰু তাক অবিলম্বে জনোৱা উচিত %s</string>
-    <string name="already_voted">আপুনি ইতিমধ্যে ভোট দিছে</string>
     <string name="favorites_list_name">প্ৰিয় তালিকা</string>
     <string name="favorite_added">%s প্ৰিয় তালিকাত যোগ কৰা হৈছে</string>
     <string name="favorite_removed">%s প্ৰিয় তালিকাৰ পৰা আঁতৰ কৰা হৈছে</string>
@@ -603,7 +600,6 @@
     <string name="preview_seekbar_desc">সীকবৰত প্ৰিভিউ থাম্বনেইল সক্ৰিয় কৰক</string>
     <string name="play_from_beginning_img_des">আৰম্ভৰ পৰা প্লে কৰক</string>
     <string name="dismiss">এৰি দিয়া</string>
-    <string name="open_downloaded_repo">ডাউনলোড কৰা ৰিপ\'জিট\'ৰি খোলক</string>
     <string name="hide_player_control_names">প্লেয়াৰৰ নিয়ন্ত্ৰণসমূহৰ নাম লুকাওক</string>
     <string name="downloads_delete_select">মুছিবলৈ আইটেমসমূহ নিৰ্ব্বাচন কৰক</string>
     <string name="offline_file">অফলাইনতে চাবলৈ উপলব্ধ</string>

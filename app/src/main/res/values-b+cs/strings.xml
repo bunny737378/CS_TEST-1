@@ -422,7 +422,6 @@
     <string name="player_pref">Preferovaný přehrávač videí</string>
     <string name="extension_description">Popis</string>
     <string name="extension_status">Stav</string>
-    <string name="extension_install_first">Nejprve nainstalujte rozšíření</string>
     <string name="skip_type_mixed_ed">Smíšený konec</string>
     <string name="extension_language">Jazyk</string>
     <string name="player_settings_play_in_app">Interní přehrávač</string>
@@ -455,7 +454,6 @@
     <string name="add_site_summary">Přidat klon existujícího webu s jinou adresou URL</string>
     <string name="example_site_url">https://example.com</string>
     <string name="example_lang_name">Kód jazyka (cs)</string>
-    <string name="download_all_plugins_from_repo">Varování: CloudStream nenese žádnou zodpovědnost za používání rozšíření třetích stran a neposkytuje pro ně žádnou podporu!</string>
     <string name="single_plugin_disabled" formatted="true">%s (zakázáno)</string>
     <string name="tracks">Stopy</string>
     <string name="nsfw">NSFW</string>
@@ -530,7 +528,6 @@
     <string name="automatic_plugin_download_mode_title">Výběr režimu pro filtrování stahování doplňků</string>
     <string name="no_plugins_found_error">V repozitáři nebyly nalezeny žádné doplňky</string>
     <string name="no_repository_found_error">Repozitář nenalezen, zkontrolujte adresu URL a zkuste použít VPN</string>
-    <string name="already_voted">Již jste hlasovali</string>
     <string name="favorite_removed">%s odebráno z oblíbených</string>
     <string name="favorites_list_name">Oblíbené</string>
     <string name="favorite_added">%s přidáno do oblíbených</string>
@@ -600,7 +597,6 @@
     <string name="pref_category_security">Zabezpečení</string>
     <string name="qr_image">Obrázek QR kódu</string>
     <string name="dismiss">Zavřít</string>
-    <string name="open_downloaded_repo">Otevřít repozitář</string>
     <string name="device_pin_url_message">Navštivte <b>%s</b> na vašem zařízení nebo počítači a zadejte kód výše</string>
     <string name="device_pin_error_message">Nepodařilo se získat PIN kód, zkuste místní ověření</string>
     <string name="device_pin_counter_text">Kód vyprší za %1$dm %2$ds</string>
