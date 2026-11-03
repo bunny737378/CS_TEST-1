@@ -250,14 +250,6 @@ object StremioStreamPresentation {
         return base + preferredBonus
     }
 
-    private fun qualityValue(quality: String?): Int = when (quality?.lowercase(Locale.US)) {
-        "2160p" -> Qualities.P2160.value
-        "1080p" -> Qualities.P1080.value
-        "720p" -> Qualities.P720.value
-        "480p" -> Qualities.P480.value
-        else -> Qualities.Unknown.value
-    }
-
     private fun linkTypeFor(url: String): ExtractorLinkType? = when {
         url.startsWith("magnet:", true) -> ExtractorLinkType.MAGNET
         url.contains(".m3u8", true) -> ExtractorLinkType.M3U8
@@ -283,4 +275,12 @@ object StremioStreamPresentation {
             }
         return "magnet:?xt=urn:btih:$hash&dn=$encodedName$index$trackers"
     }
+}
+
+private fun qualityValue(quality: String?): Int = when (quality?.lowercase(Locale.US)) {
+    "2160p" -> Qualities.P2160.value
+    "1080p" -> Qualities.P1080.value
+    "720p" -> Qualities.P720.value
+    "480p" -> Qualities.P480.value
+    else -> Qualities.Unknown.value
 }

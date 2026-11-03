@@ -43,7 +43,7 @@ fun JSONArray.toAnyList(): List<Any> {
     return result
 }
 
-private fun JSONObject.string(name: String): String? {
+fun JSONObject.string(name: String): String? {
     if (!has(name) || isNull(name)) return null
     return optString(name).takeIf { it.isNotBlank() && it != "null" }
 }
