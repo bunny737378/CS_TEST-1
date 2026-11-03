@@ -1,6 +1,8 @@
 package com.lagradost.cloudstream3.ui.settings
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,7 +26,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -35,8 +36,11 @@ import androidx.compose.ui.unit.dp
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.stremio.StremioAddon
 import com.lagradost.cloudstream3.stremio.StremioRepository
+import com.lagradost.cloudstream3.stremio.redactStremioSecrets
+import com.lagradost.cloudstream3.stremio.stremioScope
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.setUpToolbar
 import com.lagradost.cloudstream3.utils.BaseComposeFragment
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 
 /** Glue fragment for the legacy navigation graph. */
@@ -54,7 +58,7 @@ class StremioAddonsFragment : BaseComposeFragment() {
 
 @Composable
 fun StremioAddonsContent() {
-    val scope = rememberCoroutineScope()
+    val mainHandler = remember { Handler(Looper.getMainLooper()) }
     var busy by remember { mutableStateOf(false) }
     var status by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
@@ -65,7 +69,6 @@ fun StremioAddonsContent() {
     var accountEmail by remember { mutableStateOf(StremioRepository.getEmail().orEmpty()) }
     var addons by remember { mutableStateOf(StremioRepository.getAddons()) }
 
-    val loginFailed = stringResource(R.string.stremio_login_failed)
     val installFailed = stringResource(R.string.stremio_install_failed)
     val loggedInText = stringResource(R.string.stremio_logged_in)
     val syncedText = stringResource(R.string.stremio_synced)
@@ -82,16 +85,23 @@ fun StremioAddonsContent() {
 
     fun runBusy(block: suspend () -> String) {
         if (busy) return
-        scope.launch {
-            busy = true
-            status = ""
+        busy = true
+        status = ""
+        stremioScope.launch {
             try {
-                status = block()
+                val result = block()
+                mainHandler.post { status = result }
             } catch (t: Throwable) {
-                status = t.message ?: loginFailed
+                if (t is CancellationException) throw t
+                val message = (t.message?.takeIf { it.isNotBlank() } ?: t.toString())
+                    .redactStremioSecrets()
+                    .take(300)
+                mainHandler.post { status = message }
             } finally {
-                refresh()
-                busy = false
+                mainHandler.post {
+                    refresh()
+                    busy = false
+                }
             }
         }
     }

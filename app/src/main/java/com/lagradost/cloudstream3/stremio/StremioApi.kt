@@ -25,11 +25,13 @@ object StremioApi {
         val text = response.text
         if (!response.isSuccessful) {
             throw IllegalStateException(
-                "Stremio HTTP ${response.code}: ${text.take(200)}"
+                "Stremio HTTP ${response.code}: ${text.redactStremioSecrets().take(200)}"
             )
         }
         val json = runCatching { JSONObject(text) }.getOrElse {
-            throw IllegalStateException("Stremio returned non-JSON: ${text.take(200)}")
+            throw IllegalStateException(
+                "Stremio returned non-JSON: ${text.redactStremioSecrets().take(200)}"
+            )
         }
         val error = errorText(json)
         if (!error.isNullOrBlank()) throw IllegalStateException(error)
@@ -73,7 +75,9 @@ object StremioApi {
         }
         return StremioUser.fromAuthResult(result, fallbackAuthKey)
             ?: throw IllegalStateException(
-                "Stremio response has no auth key: ${json.toString().take(240)}"
+                "Stremio response has no auth key: ${
+                    json.toString().redactStremioSecrets().take(240)
+                }"
             )
     }
 
@@ -99,6 +103,7 @@ object StremioApi {
                     "tos" to true,
                     "privacy" to true,
                     "marketing" to false,
+                    "from" to "cloudstream",
                 ),
             )
         )

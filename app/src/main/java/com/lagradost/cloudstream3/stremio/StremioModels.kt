@@ -3,6 +3,15 @@ package com.lagradost.cloudstream3.stremio
 import org.json.JSONArray
 import org.json.JSONObject
 
+private val SENSITIVE_JSON_VALUE =
+    Regex("\"(authKey|key|token|password)\"\\s*:\\s*\"[^\"]*\"")
+
+/** Remove session tokens and passwords before showing an API error in the UI. */
+fun String.redactStremioSecrets(): String =
+    SENSITIVE_JSON_VALUE.replace(this) { match ->
+        "\"${match.groupValues[1]}\":\"[REDACTED]\""
+    }
+
 /** Converts an org.json tree into plain Kotlin maps/lists that NiceHttp can serialize. */
 fun JSONObject.toAnyMap(): Map<String, Any> {
     val result = LinkedHashMap<String, Any>()

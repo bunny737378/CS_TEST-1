@@ -2,7 +2,12 @@ package com.lagradost.cloudstream3.stremio
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.lagradost.api.getContext
 import com.lagradost.cloudstream3.CloudStreamApp
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -20,6 +25,9 @@ object StremioRepository {
     private const val KEY_SELECTED = "account_selected"
     private const val KEY_ADDONS = "addons"
 
+    /** App-level scope: recomposing the settings screen must not cancel an in-flight login. */
+    val stremioScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+
     /** Official default addons used when a Stremio account has no installed collection yet. */
     private val DEFAULT_ADDON_URLS = listOf(
         "https://v3-cinemeta.strem.io/manifest.json",
@@ -30,20 +38,25 @@ object StremioRepository {
         "https://opensubtitles.strem.io/stremio/v1",
     )
 
-    private fun prefs(): SharedPreferences? =
-        CloudStreamApp.context?.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+    private fun prefs(): SharedPreferences? {
+        val context = CloudStreamApp.context ?: (getContext() as? Context)
+        return context?.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+    }
+
+    private fun requirePrefs(): SharedPreferences =
+        prefs() ?: throw IllegalStateException("Stremio account storage is not ready")
 
     private fun getString(key: String): String? =
         prefs()?.getString(key, null)?.takeIf { it.isNotBlank() }
 
     private fun setString(key: String, value: String?) {
-        val editor = prefs()?.edit() ?: return
+        val editor = requirePrefs().edit()
         if (value == null) editor.remove(key) else editor.putString(key, value)
-        editor.apply()
+        editor.commit()
     }
 
     private fun setBoolean(key: String, value: Boolean) {
-        prefs()?.edit()?.putBoolean(key, value)?.apply()
+        requirePrefs().edit().putBoolean(key, value).commit()
     }
 
     fun getAuthKey(): String? = getString(KEY_AUTH)
@@ -94,29 +107,40 @@ object StremioRepository {
         )
     }
 
-    /** Returns null on success, or a human-readable API/transport error for the settings UI. */
+    private fun Throwable.safeMessage(): String {
+        val raw = message?.takeIf { it.isNotBlank() } ?: toString()
+        return raw.redactStremioSecrets().take(300)
+    }
+
+    /** Returns null on success, or a real API/transport error for the settings UI. */
     suspend fun login(email: String, password: String): String? = try {
         val user = StremioApi.login(email, password)
         saveAccount(user.authKey, user.email ?: email.trim())
         null
+    } catch (t: CancellationException) {
+        throw t
     } catch (t: Throwable) {
-        t.message ?: "Stremio login failed"
+        t.safeMessage()
     }
 
     suspend fun register(email: String, password: String): String? = try {
         val user = StremioApi.register(email, password)
         saveAccount(user.authKey, user.email ?: email.trim())
         null
+    } catch (t: CancellationException) {
+        throw t
     } catch (t: Throwable) {
-        t.message ?: "Stremio sign up failed"
+        t.safeMessage()
     }
 
     suspend fun loginWithAuthKey(authKey: String): String? = try {
         val user = StremioApi.loginWithAuthKey(authKey)
         saveAccount(user.authKey, user.email ?: "")
         null
+    } catch (t: CancellationException) {
+        throw t
     } catch (t: Throwable) {
-        t.message ?: "Stremio auth key failed"
+        t.safeMessage()
     }
 
     /** Pull the account collection, then install the official defaults on a fresh account. */
