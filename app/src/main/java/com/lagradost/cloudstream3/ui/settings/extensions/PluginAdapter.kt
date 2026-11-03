@@ -29,10 +29,6 @@ import com.lagradost.cloudstream3.utils.UIHelper.toPx
 import com.lagradost.cloudstream3.utils.getImageFromDrawable
 import com.lagradost.cloudstream3.utils.setText
 import com.lagradost.cloudstream3.utils.txt
-import java.text.DecimalFormat
-import kotlin.math.floor
-import kotlin.math.log10
-import kotlin.math.pow
 
 data class PluginViewData(
     val pluginWrapper: PluginWrapper,
@@ -173,21 +169,6 @@ class PluginAdapter(
 
         binding.extVotes.isVisible = false
 
-        // Disable this for now as the vote api is down, this will also significantly improve the lag
-        // from doing all these network requests
-        /*if (!isLocal) {
-            ioSafe {
-                metadata.getVotes().main { votes ->
-                    val currentRecycleCount = (holder as? RepositoryViewHolderState)?.recycleCount
-
-                    // Only set the text if the view is correctly rendered
-                    if (currentRecycleCount == oldRecycleCount) {
-                        binding.extVotes.setText(txt(R.string.extension_rating, prettyCount(votes)))
-                        binding.extVotes.isVisible = true
-                    }
-                }
-            }
-        }*/
 
         if (metadata.fileSize != null) {
             binding.extFilesize.isVisible = true
@@ -234,18 +215,5 @@ class PluginAdapter(
             findClosestBase2(iconSizeExact, 16, 512)
         }
 
-        fun prettyCount(number: Number): String? {
-            val suffix = charArrayOf(' ', 'k', 'M', 'B', 'T', 'P', 'E')
-            val numValue = number.toLong()
-            val value = floor(log10(numValue.toDouble())).toInt()
-            val base = value / 3
-            return if (value >= 3 && base < suffix.size) {
-                DecimalFormat("#0.00").format(
-                    numValue / 10.0.pow((base * 3).toDouble())
-                ) + suffix[base]
-            } else {
-                DecimalFormat().format(numValue)
-            }
-        }
     }
 }

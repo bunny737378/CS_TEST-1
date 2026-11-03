@@ -1,17 +1,11 @@
 package com.lagradost.cloudstream3.ui.settings.extensions
 
-import android.content.res.ColorStateList
 import android.text.format.Formatter.formatFileSize
 import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.openBrowser
 import com.lagradost.cloudstream3.databinding.FragmentPluginDetailsBinding
 import com.lagradost.cloudstream3.plugins.PluginManager
-import com.lagradost.cloudstream3.plugins.VotingApi.canVote
-import com.lagradost.cloudstream3.plugins.VotingApi.getVotes
-import com.lagradost.cloudstream3.plugins.VotingApi.hasVoted
-import com.lagradost.cloudstream3.plugins.VotingApi.vote
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.ui.BaseBottomSheetDialogFragment
 import com.lagradost.cloudstream3.ui.BaseFragment
@@ -19,12 +13,9 @@ import com.lagradost.cloudstream3.ui.settings.Globals.EMULATOR
 import com.lagradost.cloudstream3.ui.settings.Globals.TV
 import com.lagradost.cloudstream3.ui.settings.Globals.isLandscape
 import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
-import com.lagradost.cloudstream3.utils.Coroutines.ioSafe
-import com.lagradost.cloudstream3.utils.Coroutines.main
 import com.lagradost.cloudstream3.utils.getImageFromDrawable
 import com.lagradost.cloudstream3.utils.ImageLoader.loadImage
 import com.lagradost.cloudstream3.utils.SubtitleHelper.getNameNextToFlagEmoji
-import com.lagradost.cloudstream3.utils.UIHelper.colorFromAttribute
 import com.lagradost.cloudstream3.utils.UIHelper.fixSystemBarsPadding
 import com.lagradost.cloudstream3.utils.UIHelper.toPx
 
@@ -83,15 +74,6 @@ class PluginDetailsFragment(val data: PluginViewData) : BaseBottomSheetDialogFra
                 else
                     getNameNextToFlagEmoji(metadata.language) ?: metadata.language
 
-            githubBtn.setOnClickListener {
-                if (metadata.repositoryUrl != null) {
-                    openBrowser(metadata.repositoryUrl)
-                }
-            }
-
-            if (!metadata.canVote()) {
-                upvote.alpha = .6f
-            }
 
             if (data.isDownloaded) {
                 // On local plugins page the filepath is provided instead of url.
@@ -118,35 +100,7 @@ class PluginDetailsFragment(val data: PluginViewData) : BaseBottomSheetDialogFra
                 actionSettings.isVisible = false
             }
 
-            upvote.setOnClickListener {
-                ioSafe {
-                    metadata.vote().main {
-                        updateVoting(it)
-                    }
-                }
-            }
-
-            ioSafe {
-                metadata.getVotes().main {
-                    updateVoting(it)
-                }
-            }
         }
     }
 
-    private fun updateVoting(value: Int) {
-        val metadata = data.pluginWrapper.plugin
-        binding?.apply {
-            pluginVotes.text = value.toString()
-            if (metadata.hasVoted()) {
-                upvote.imageTintList = ColorStateList.valueOf(
-                    context?.colorFromAttribute(R.attr.colorPrimary) ?: R.color.colorPrimary
-                )
-            } else {
-                upvote.imageTintList = ColorStateList.valueOf(
-                    context?.colorFromAttribute(com.google.android.material.R.attr.colorOnSurface) ?: R.color.white
-                )
-            }
-        }
-    }
 }

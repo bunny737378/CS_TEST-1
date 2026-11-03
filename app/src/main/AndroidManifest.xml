@@ -8,11 +8,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Downloads on low api devices -->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" /> <!-- Plugin API -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- Used for player vertical slide -->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- Used for app update -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Used for app notifications on Android 13+ -->
     <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" /> <!-- Used for Android TV watch next -->
-    <uses-permission android:name="android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION" /> <!-- Used for updates without prompt -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Used for update service -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Used by foreground download/background services -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> <!-- We can use this directly as CS3 is not on Play Store -->
@@ -75,6 +73,7 @@
     <!--TODO https://stackoverflow.com/questions/41799732/chromecast-button-not-visible-in-android-->
     <application
         android:name=".CloudStreamApp"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:appCategory="video"
         android:banner="@mipmap/ic_banner"
@@ -253,10 +252,6 @@
             </intent-filter>
         </receiver>
 
-        <receiver
-            android:name=".receivers.PackageInstallerStatusReceiver"
-            android:exported="false" />
-
         <service
             android:name=".services.VideoDownloadService"
             android:enabled="true"
@@ -277,11 +272,6 @@
 
         <activity
             android:name=".ui.ControllerActivity"
-            android:exported="false" />
-
-        <service
-            android:name=".services.PackageInstallerService"
-            android:foregroundServiceType="dataSync"
             android:exported="false" />
 
         <provider

@@ -24,7 +24,7 @@
     <!-- TRANSLATE, BUT DON'T FORGET FORMAT -->
     <string name="player_speed_text_format" formatted="true">Speed (%.2fx)</string>
     <string name="rated_format" formatted="true">Rated: %.1f</string>
-    <string name="new_update_format" formatted="true">New update found!\n%1$s -&gt; %2$s</string>
+
     <string name="filler" formatted="true">Filler</string>
     <string name="duration_format" formatted="true">%d min</string>
     <string name="app_name">CloudStream</string>
@@ -79,7 +79,7 @@
     <string name="offline_file">Available for watching offline</string>
     <string name="select_all">Select All</string>
     <string name="deselect_all">Deselect All</string>
-    <string name="update_started">Update Started</string>
+
     <string name="stream">Network stream</string>
     <string name="open_local_video">Open local video</string>
     <string name="error_loading_links_toast">Error Loading Links</string>
@@ -122,8 +122,7 @@
     <string name="subs_font_size">Font Size</string>
     <string name="search_provider_text_providers">Search using providers</string>
     <string name="search_provider_text_types">Search using types</string>
-    <string name="benene_count_text">%d Benenes given to devs</string>
-    <string name="benene_count_text_none">No Benenes given</string>
+
     <string name="subs_auto_select_language">Auto-Select Language</string>
     <string name="subs_download_languages">Download Languages</string>
     <string name="subs_subtitle_languages">Subtitle Language</string>
@@ -186,7 +185,7 @@
     <string name="search">Search</string>
     <string name="library">Library</string>
     <string name="category_account">Accounts and Security</string>
-    <string name="category_updates">Updates and Backup</string>
+
     <string name="settings_info">Info</string>
     <string name="advanced_search">Advanced Search</string>
     <string name="advanced_search_des">Gives you the search results separated by provider</string>
@@ -203,20 +202,15 @@
     <string name="automatic_plugin_download">Automatically download plugins</string>
     <string name="automatic_plugin_download_mode_title">Select mode to filter plugins download</string>
     <string name="automatic_plugin_download_summary">Automatically install all not yet installed plugins from added repositories.</string>
-    <string name="updates_settings">Show app updates</string>
-    <string name="updates_settings_des">Automatically search for new updates after starting the app.</string>
+
     <string name="redo_setup_process">Redo setup process</string>
-    <string name="install_prerelease">Install pre-release version</string>
-    <string name="prerelease_already_installed">Pre-release is already installed.</string>
-    <string name="prerelease_install_failed">Failed to install pre-release.</string>
-    <string name="apk_installer_settings">APK Installer</string>
-    <string name="apk_installer_settings_des">Some devices do not support the new package installer. Try the legacy option if updates do not install.</string>
+
     <string name="github">Github</string>
-    <string name="lightnovel">Light novel app by the same devs</string>
+
     <string name="anim">Anime app by the same devs</string>
     <string name="discord">Join Discord</string>
     <string name="benene">Give a benene to the devs</string>
-    <string name="benene_des">Given benene</string>
+
     <string name="app_language">App Language</string>
     <string name="no_chromecast_support_toast">This provider has no Chromecast support</string>
     <string name="no_links_found_toast">No Links Found</string>
@@ -322,14 +316,13 @@
     <string name="show_title">Title</string>
     <string name="show_episode_text">Episode Text</string>
     <string name="poster_ui_settings">Toggle UI elements on poster</string>
-    <string name="no_update_found">No Update Found</string>
-    <string name="check_for_update">Check for Update</string>
+
     <string name="video_lock">Lock</string>
     <string name="video_aspect_ratio_resize">Resize</string>
     <string name="video_source">Source</string>
     <string name="video_skip_op">Skip OP</string>
     <string name="dont_show_again">Don\'t show again</string>
-    <string name="skip_update">Skip this Update</string>
+
     <string name="update">Update</string>
     <string name="watch_quality_pref">Preferred watch quality (WiFi)</string>
     <string name="watch_quality_pref_data">Preferred watch quality (Mobile Data)</string>
@@ -348,7 +341,7 @@
     <string name="dns_pref">DNS over HTTPS</string>
     <string name="dns_pref_summary">Useful for bypassing ISP blocks</string>
     <string name="jsdelivr_proxy">GitHub Proxy</string>
-    <string name="jsdelivr_enabled">Could not reach GitHub. Turning on jsDelivr proxy…</string>
+
     <string name="jsdelivr_proxy_summary">Bypass blocking of raw github URLs using jsDelivr. May cause updates to be delayed by few days.</string>
     <string name="add_site_pref">Clone site</string>
     <string name="remove_site_pref">Remove site</string>
@@ -359,10 +352,9 @@
     <string name="resize_fit">Fit to screen</string>
     <string name="resize_fill">Stretch</string>
     <string name="resize_zoom">Zoom</string>
-    <string name="legal_notice">Disclaimer</string>
+
     <string name="pref_category_bypass">ISP Bypasses</string>
-    <string name="pref_category_links">Links</string>
-    <string name="pref_category_app_updates">App updates</string>
+
     <string name="pref_category_backup">Backup</string>
     <string name="pref_category_extensions">Extensions</string>
     <string name="pref_category_actions">Actions</string>
@@ -533,7 +525,6 @@
     <string name="view_public_repositories_button">View community repositories</string>
     <string name="view_public_repositories_button_short">Public list</string>
     <string name="uppercase_all_subtitles">Uppercase all subtitles</string>
-    <string name="download_all_plugins_from_repo">Warning: CloudStream does not take any responsibility for using third-party extensions and does not provide any support for them!</string>
     <string name="single_plugin_disabled" formatted="true">%s (Disabled)</string>
     <string name="tracks">Tracks</string>
     <string name="compressor">Compressor</string>
@@ -565,7 +556,6 @@
     <string name="extension_authors">Authors</string>
     <string name="extension_types">Supported</string>
     <string name="extension_language">Language</string>
-    <string name="extension_install_first">Install the extension first</string>
     <string name="hls_playlist">HLS Playlist</string>
     <string name="player_pref">Preferred video player</string>
     <string name="player_settings_play_in_app">Internal player</string>
@@ -595,7 +585,6 @@
     <string name="no">No</string>
     <string name="ok">OK</string>
     <string name="dismiss">Dismiss</string>
-    <string name="open_downloaded_repo">Open repository</string>
     <string name="battery_dialog_title">Disable Battery optimization</string>
     <string name="battery_dialog_message">To ensure uninterrupted downloads and notifications for subscribed
         TV shows, CloudStream needs permission to run in background. By pressing "OK", you\'ll be shown a request dialog.
@@ -603,12 +592,7 @@
         when receiving notifications or downloading videos from official extensions.</string>
     <string name="app_unrestricted_toast">App battery usage is already set to unrestricted</string>
     <string name="app_info_intent_error">Unable to open CloudStream\'s App info.</string>
-    <string name="update_notification_downloading">Downloading app update…</string>
-    <string name="update_notification_installing">Installing app update…</string>
-    <string name="update_notification_failed">Could not install the new version of the app</string>
-    <string name="apk_installer_legacy">Legacy</string>
-    <string name="apk_installer_package_installer">PackageInstaller</string>
-    <string name="delayed_update_notice">App will be updated upon exit</string>
+
     <string name="sort_by">Sort by</string>
     <string name="sort">Sort</string>
     <string name="sort_rating_desc">Rating (High to Low)</string>
@@ -669,7 +653,6 @@
     <string name="qualities">Qualities</string>
     <string name="profile_background_des">Profile background</string>
     <string name="unable_to_inflate">UI was unable to be created correctly, this is a MAJOR BUG and should be reported immediately %s</string>
-    <string name="already_voted">You have already voted</string>
     <string name="favorites_list_name">Favorites</string>
     <string name="favorite_added">%s added to favorites</string>
     <string name="favorite_removed">%s removed from favorites</string>
@@ -720,7 +703,7 @@
     <string name="biometric_prompt_description">After a few failed attempts, the prompt will close. Simply restart the app to try again.</string>
     <string name="biometric_warning">Your CloudStream data has been backed up now. Although the possibility of this is very low, all devices can behave differently. In the rare case, that you get locked out from accessing the app, clear the app data completely and restore from a backup. We are very sorry for any inconvenience arising from this.</string>
     <string name="reset_btn">Reset</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
+
     <string name="device_pin_url_message">Visit <b>%s</b> on your smartphone or computer and enter the above code</string>
     <string name="device_pin_error_message">Can\'t get the device PIN code, try local authentication</string>
     <string name="device_pin_expired_message">PIN code is now expired !</string>
@@ -814,4 +797,40 @@
     </plurals>
     <string name="player_is_live">Live</string>
     <string name="installed_plugins">Installed plugins</string>
+
+    <!-- Standalone Stremio addon bridge -->
+    <string name="stremio_addons">Stremio Addons</string>
+    <string name="stremio_intro">Sign in to sync addon collections with your Stremio account. Addons supply catalogs, metadata and streams through CloudStream screens.</string>
+    <string name="stremio_email">Email</string>
+    <string name="stremio_password">Password</string>
+    <string name="stremio_login">Login</string>
+    <string name="stremio_signup">Sign up</string>
+    <string name="stremio_login_failed">Stremio login failed</string>
+    <string name="stremio_auth_key">Auth key (optional)</string>
+    <string name="stremio_use_auth_key">Use auth key</string>
+    <string name="stremio_account_selected">Stremio account selected</string>
+    <string name="stremio_account">Stremio account</string>
+    <string name="stremio_logged_in">Logged in. Default addons are ready.</string>
+    <string name="stremio_sync">Sync account</string>
+    <string name="stremio_synced">Account addon collection synced.</string>
+    <string name="stremio_install_defaults">Install defaults</string>
+    <string name="stremio_defaults_installed">Default addons installed.</string>
+    <string name="stremio_logout">Log out</string>
+    <string name="stremio_logged_out">Logged out.</string>
+    <string name="stremio_addon_url">Addon manifest URL</string>
+    <string name="stremio_install">Install</string>
+    <string name="stremio_install_failed">Could not install addon</string>
+    <string name="stremio_addon_installed">Addon installed.</string>
+    <string name="stremio_installed_addons">Installed addons</string>
+    <string name="stremio_no_addons">No addons installed.</string>
+    <string name="stremio_uninstall">Uninstall</string>
+    <string name="stremio_addon_removed">Addon removed.</string>
+
+    <!-- Dedicated Stremio stream picker -->
+    <string name="stremio_streams">Stremio Streams</string>
+    <string name="stremio_streams_intro">Pick a stream before playback. CloudStream opens the selected link in its existing player.</string>
+    <string name="stremio_streams_found">Available streams</string>
+    <string name="stremio_streams_empty">No playable Stremio streams found.</string>
+    <string name="stremio_streams_error">Could not load Stremio streams.</string>
+    <string name="stremio_streams_play">Play this stream</string>
 </resources>

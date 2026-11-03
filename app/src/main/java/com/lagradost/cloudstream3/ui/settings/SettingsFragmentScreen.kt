@@ -26,7 +26,6 @@ import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -65,15 +64,11 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.lagradost.cloudstream3.BuildConfig
 import com.lagradost.cloudstream3.CommonActivity.activity
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.utils.DataStoreHelper
 import com.lagradost.cloudstream3.utils.DataStoreHelper.profileImages
-import com.lagradost.cloudstream3.utils.GitInfo.currentCommitHash
-import com.lagradost.cloudstream3.utils.UIHelper.clipboardHelper
 import com.lagradost.cloudstream3.utils.UIHelper.navigate
-import com.lagradost.cloudstream3.utils.txt
 import com.lagradost.cloudstream4.compose.Screen
 import com.lagradost.cloudstream4.compose.TV
 import com.lagradost.cloudstream4.compose.circleBorder
@@ -88,11 +83,6 @@ import com.mihon.presentation.settings.widget.TextPreferenceWidget
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toPersistentList
-import java.text.DateFormat
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
-import java.util.TimeZone
 
 object SettingsFragmentScreen : Screen {
     val screens = persistentListOf(
@@ -104,8 +94,7 @@ object SettingsFragmentScreen : Screen {
             subtitle = persistentListOf(
                 R.string.extension_language,
                 R.string.title_downloads,
-                R.string.pref_category_bypass,
-                R.string.pref_category_links
+                R.string.pref_category_bypass
             )
         ),
         SettingsNavigation(
@@ -140,15 +129,14 @@ object SettingsFragmentScreen : Screen {
             )
         ),
         SettingsNavigation(
-            title = R.string.category_updates,
-            navigation = R.id.action_navigation_global_to_navigation_settings_updates,
-            screen = SettingsUpdatesScreen,
-            icon = R.drawable.mobile_arrow_down_24px,
+            title = R.string.pref_category_backup,
+            navigation = R.id.action_navigation_global_to_navigation_settings_backup,
+            screen = SettingsBackupScreen,
+            icon = R.drawable.save_as_24px,
             subtitle = persistentListOf(
-                R.string.pref_category_app_updates,
-                R.string.pref_category_backup,
-                R.string.pref_category_extensions,
-                R.string.pref_category_actions
+                R.string.backup_settings,
+                R.string.automatic_plugin_updates,
+                R.string.show_log_cat
             )
         ),
         SettingsNavigation(
@@ -167,6 +155,13 @@ object SettingsFragmentScreen : Screen {
             screen = null,
             icon = R.drawable.extension_24px,
             subtitle = persistentListOf(R.string.add_repository)
+        ),
+        SettingsNavigation(
+            title = R.string.stremio_addons,
+            navigation = R.id.action_navigation_global_to_navigation_settings_stremio_addons,
+            screen = StremioAddonsScreen,
+            icon = R.drawable.extension_24px,
+            subtitle = persistentListOf(R.string.stremio_addons)
         ),
     )
 
@@ -271,7 +266,6 @@ object SettingsFragmentScreen : Screen {
                             screens.forEach { settingsTab ->
                                 SettingsTab(settingsTab)
                             }
-                            BuildStamp()
                         }
                     })
 
@@ -426,45 +420,6 @@ object SettingsFragmentScreen : Screen {
                 SearchableSettings.highlightKey = null
                 activity?.navigate(settingsTab.navigation)
             })
-    }
-
-    @Composable
-    fun BuildStamp() {
-        val (commitHash, buildTimestamp) = remember {
-            val commitHash = activity?.currentCommitHash() ?: ""
-            val buildTimestamp = SimpleDateFormat.getDateTimeInstance(
-                DateFormat.LONG, DateFormat.MEDIUM,
-                Locale.getDefault()
-            ).apply {
-                timeZone = TimeZone.getTimeZone("UTC")
-            }.format(Date(BuildConfig.BUILD_DATE)).replace("UTC", "")
-            commitHash to buildTimestamp
-        }
-
-        Row(
-            horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp)
-                .focusOutline()
-                .clickable {
-                    clipboardHelper(
-                        txt(R.string.extension_version),
-                        "${BuildConfig.VERSION_NAME} $commitHash $buildTimestamp"
-                    )
-                },
-        ) {
-            ProvideTextStyle(MaterialTheme.typography.bodyMedium) {
-                Text(text = BuildConfig.VERSION_NAME)
-                if (commitHash != "") {
-                    Text("•")
-                    Text(text = commitHash)
-                }
-                Text("•")
-                Text(text = buildTimestamp)
-            }
-        }
     }
 }
 

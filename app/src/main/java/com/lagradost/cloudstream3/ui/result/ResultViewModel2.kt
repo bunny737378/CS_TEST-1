@@ -52,6 +52,7 @@ import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.VPNStatus
 import com.lagradost.cloudstream3.actions.AlwaysAskAction
 import com.lagradost.cloudstream3.actions.VideoClickActionHolder
+import com.lagradost.cloudstream3.stremio.StremioProvider
 import com.lagradost.cloudstream3.amap
 import com.lagradost.cloudstream3.isEpisodeBased
 import com.lagradost.cloudstream3.isLiveStream
@@ -1357,7 +1358,28 @@ class ResultViewModel2 : ViewModel() {
     }
 
 
+    /** Stremio results stop at a dedicated all-streams page instead of opening the player. */
+    private fun openStremioStreams(episode: ResultEpisode) {
+        val args = android.os.Bundle().apply {
+            putString("episode", episode.toJson())
+            putString("title", currentResponse?.name ?: episode.name.orEmpty())
+            putSerializable(
+                "syncData",
+                HashMap(currentResponse?.syncData ?: emptyMap())
+            )
+        }
+        activity?.navigate(R.id.global_to_navigation_stremio_streams, args)
+    }
+
     private suspend fun handleEpisodeClickEvent(click: EpisodeClickEvent) {
+        if (currentResponse?.apiName == StremioProvider.name &&
+            (click.action == ACTION_CLICK_DEFAULT ||
+                click.action == ACTION_PLAY_EPISODE_IN_PLAYER)
+        ) {
+            openStremioStreams(click.data)
+            return
+        }
+
         when (click.action) {
             ACTION_SHOW_OPTIONS -> {
                 val options = mutableListOf<Pair<UiText, Int>>()

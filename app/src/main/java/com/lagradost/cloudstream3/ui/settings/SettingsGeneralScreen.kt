@@ -81,7 +81,6 @@ object SettingsGeneralScreen : SearchableSettings {
                 }
             }
 
-        val bananas by settings.general.bananas.collectAsState()
         val downloadPathVisual by settings.general.downloadPathVisual.collectAsState()
         //val downloadPath by settings.general.downloadPath.collectAsState()
 
@@ -240,57 +239,6 @@ object SettingsGeneralScreen : SearchableSettings {
                     )
                 )
             ),
-
-            Preference.PreferenceGroup(
-                title = stringResource(R.string.pref_category_links),
-                preferenceItems = persistentListOf(
-                    Preference.PreferenceItem.TextPreference(
-                        title = stringResource(R.string.github),
-                        subtitle = "https://github.com/recloudstream/cloudstream",
-                        icon = painterResource(R.drawable.ic_github_logo),
-                        onClick = {
-                            CloudStreamApp.openBrowser("https://github.com/recloudstream/cloudstream")
-                        }
-                    ),
-                    Preference.PreferenceItem.TextPreference(
-                        title = stringResource(R.string.lightnovel),
-                        subtitle = "https://github.com/LagradOst/QuickNovel",
-                        icon = painterResource(R.drawable.quick_novel_icon),
-                        onClick = {
-                            CloudStreamApp.openBrowser("https://github.com/LagradOst/QuickNovel")
-                        }
-                    ),
-                    Preference.PreferenceItem.TextPreference(
-                        title = stringResource(R.string.discord),
-                        subtitle = "https://discord.gg/5Hus6fM",
-                        icon = painterResource(R.drawable.ic_baseline_discord_24),
-                        onClick = {
-                            CloudStreamApp.openBrowser("https://discord.gg/5Hus6fM")
-                        }
-                    ),
-                    Preference.PreferenceItem.TextPreference(
-                        title = stringResource(R.string.cs3wiki),
-                        subtitle = "https://cloudstream.miraheze.org/",
-                        icon = painterResource(R.drawable.description_24px),
-                        onClick = {
-                            CloudStreamApp.openBrowser("https://cloudstream.miraheze.org/")
-                        }
-                    ),
-                )
-            ),
-            Preference.PreferenceItem.TextPreference(
-                title = stringResource(R.string.benene),
-                subtitle = if (bananas == 0) {
-                    stringResource(R.string.benene_count_text_none)
-                } else {
-                    stringResource(R.string.benene_count_text, bananas)
-                },
-                onClick = {
-                    settings.general.bananas.set(bananas + 1)
-                },
-                icon = painterResource(R.drawable.benene),
-            ),
-            Preference.PreferenceItem.InfoPreference(title = stringResource(R.string.legal_notice_text)),
         )
     }
 }
