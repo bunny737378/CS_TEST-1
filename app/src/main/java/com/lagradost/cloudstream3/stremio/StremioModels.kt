@@ -84,11 +84,15 @@ private fun JSONObject.stringArray(name: String): List<String> =
 
 private fun JSONObject.stringMap(name: String): Map<String, String> {
     val source = optJSONObject(name) ?: return emptyMap()
+    return source.stringMapValues()
+}
+
+private fun JSONObject.stringMapValues(): Map<String, String> {
     val result = LinkedHashMap<String, String>()
-    val iterator = source.keys()
+    val iterator = keys()
     while (iterator.hasNext()) {
         val key = iterator.next()
-        source.string(key)?.let { result[key] = it }
+        string(key)?.let { result[key] = it }
     }
     return result
 }
@@ -444,7 +448,7 @@ data class StremioStream(
             val proxyRequestHeaders = behaviorHints
                 ?.optJSONObject("proxyHeaders")
                 ?.optJSONObject("request")
-                ?.stringMap()
+                ?.stringMapValues()
                 .orEmpty()
             return StremioStream(
                 url = json.string("url"),
