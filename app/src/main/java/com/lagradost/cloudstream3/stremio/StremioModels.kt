@@ -93,20 +93,45 @@ private fun JSONObject.stringMap(name: String): Map<String, String> {
     return result
 }
 
+data class StremioExtraProp(
+    val name: String,
+    val isRequired: Boolean = false,
+    val options: List<String> = emptyList(),
+)
+
+/** Mirrors stremio-core's ManifestResource: a short string resource inherits the manifest types/prefixes. */
 data class StremioResource(
     val name: String,
-    val types: List<String> = emptyList(),
+    val types: List<String>? = null,
     val idPrefixes: List<String>? = null,
+    val isShort: Boolean = false,
 )
 
 data class StremioCatalog(
     val id: String,
     val type: String,
     val name: String?,
-    val extra: List<String>,
+    val extraProps: List<StremioExtraProp>,
 ) {
-    val supportsSearch: Boolean get() = "search" in extra
+    val extra: List<String> get() = extraProps.map { it.name }
+
+    /** Mirrors ManifestCatalog::is_extra_supported from stremio-core. */
+    fun isExtraSupported(names: Collection<String>): Boolean {
+        val supported = extraProps.map { it.name }.toSet()
+        val allSupported = names.all { it in supported }
+        val requiredSatisfied = extraProps
+            .filter { it.isRequired }
+            .all { it.name in names }
+        return allSupported && requiredSatisfied
+    }
+
+    val supportsSearch: Boolean get() = isExtraSupported(listOf("search"))
     val supportsSkip: Boolean get() = "skip" in extra
+
+    /** First option for every required extra, matching core's default_required_extra(). */
+    fun defaultRequiredExtra(): Map<String, String> = extraProps
+        .filter { it.isRequired && it.options.isNotEmpty() }
+        .associate { it.name to it.options.first() }
 }
 
 data class StremioManifest(
@@ -130,14 +155,17 @@ data class StremioManifest(
             json.optJSONArray("resources")?.let { array ->
                 for (index in 0 until array.length()) {
                     when (val value = array.opt(index)) {
-                        is String -> resources.add(StremioResource(value))
+                        is String -> resources.add(
+                            StremioResource(name = value, isShort = true)
+                        )
                         is JSONObject -> {
                             val resourceName = value.string("name") ?: continue
                             resources.add(
                                 StremioResource(
                                     name = resourceName,
-                                    types = value.stringArray("types"),
-                                    idPrefixes = value.optJSONArray("idPrefixes")?.stringList()
+                                    types = value.optJSONArray("types")?.stringList(),
+                                    idPrefixes = value.optJSONArray("idPrefixes")?.stringList(),
+                                    isShort = false,
                                 )
                             )
                         }
@@ -151,22 +179,44 @@ data class StremioManifest(
                     val catalog = array.optJSONObject(index) ?: continue
                     val catalogId = catalog.string("id") ?: continue
                     val catalogType = catalog.string("type") ?: continue
-                    val extras = LinkedHashSet<String>()
+                    val extraProps = LinkedHashMap<String, StremioExtraProp>()
                     catalog.optJSONArray("extra")?.let { extraArray ->
                         for (extraIndex in 0 until extraArray.length()) {
                             when (val extra = extraArray.opt(extraIndex)) {
-                                is String -> extras.add(extra)
-                                is JSONObject -> extra.string("name")?.let(extras::add)
+                                is String -> {
+                                    if (!extraProps.containsKey(extra)) {
+                                        extraProps[extra] = StremioExtraProp(extra)
+                                    }
+                                }
+                                is JSONObject -> {
+                                    val extraName = extra.string("name") ?: continue
+                                    val isRequired = extra.optBoolean("isRequired", false)
+                                    val options = extra.optJSONArray("options")?.stringList().orEmpty()
+                                    extraProps[extraName] = StremioExtraProp(
+                                        name = extraName,
+                                        isRequired = isRequired,
+                                        options = options,
+                                    )
+                                }
                             }
                         }
                     }
-                    extras.addAll(catalog.stringArray("extraSupported"))
+                    catalog.stringArray("extraSupported").forEach { extraName ->
+                        if (!extraProps.containsKey(extraName)) {
+                            extraProps[extraName] = StremioExtraProp(extraName)
+                        }
+                    }
+                    catalog.stringArray("extraRequired").forEach { extraName ->
+                        val existing = extraProps[extraName]
+                        extraProps[extraName] = existing?.copy(isRequired = true)
+                            ?: StremioExtraProp(extraName, isRequired = true)
+                    }
                     catalogs.add(
                         StremioCatalog(
                             id = catalogId,
                             type = catalogType,
                             name = catalog.string("name"),
-                            extra = extras.toList()
+                            extraProps = extraProps.values.toList()
                         )
                     )
                 }
@@ -220,12 +270,27 @@ data class StremioAddon(
 
     fun descriptorMap(): Map<String, Any> = JSONObject(rawJson).toAnyMap()
 
+    /**
+     * Mirrors stremio-core Manifest::is_resource_supported: short resources inherit
+     * manifest types/prefixes, full resources use only their own optional types/prefixes.
+     */
     fun supports(resource: String, type: String, id: String): Boolean {
+        if (resource == "catalog") {
+            return manifest.catalogs.any { it.type == type && it.id == id }
+        }
         val resourceDefinition = manifest.resources.firstOrNull { it.name == resource } ?: return false
-        val resourceTypes = resourceDefinition.types.ifEmpty { manifest.types }
-        if (resourceTypes.isNotEmpty() && type !in resourceTypes) return false
-        val prefixes = resourceDefinition.idPrefixes ?: manifest.idPrefixes.orEmpty()
-        return prefixes.isEmpty() || prefixes.any { id.startsWith(it) }
+        val types: List<String>? = if (resourceDefinition.isShort) {
+            manifest.types
+        } else {
+            resourceDefinition.types
+        }
+        if (types == null || type !in types) return false
+        val prefixes: List<String>? = if (resourceDefinition.isShort) {
+            manifest.idPrefixes
+        } else {
+            resourceDefinition.idPrefixes
+        }
+        return prefixes == null || prefixes.isEmpty() || prefixes.any { id.startsWith(it) }
     }
 }
 
@@ -352,6 +417,8 @@ data class StremioStream(
     val infoHash: String?,
     val fileIdx: Int?,
     val externalUrl: String?,
+    val androidTvUrl: String?,
+    val playerFrameUrl: String?,
     val name: String?,
     val title: String?,
     val description: String?,
@@ -374,17 +441,24 @@ data class StremioStream(
                 }
             }
             val behaviorHints = json.optJSONObject("behaviorHints")
+            val proxyRequestHeaders = behaviorHints
+                ?.optJSONObject("proxyHeaders")
+                ?.optJSONObject("request")
+                ?.stringMap()
+                .orEmpty()
             return StremioStream(
                 url = json.string("url"),
                 ytId = json.string("ytId"),
                 infoHash = json.string("infoHash"),
                 fileIdx = json.intValue("fileIdx"),
                 externalUrl = json.string("externalUrl"),
+                androidTvUrl = json.string("androidTvUrl"),
+                playerFrameUrl = json.string("playerFrameUrl"),
                 name = json.string("name"),
                 title = json.string("title"),
                 description = json.string("description"),
                 subtitles = subtitles,
-                headers = behaviorHints?.stringMap("proxyHeaders").orEmpty(),
+                headers = proxyRequestHeaders,
             )
         }
     }

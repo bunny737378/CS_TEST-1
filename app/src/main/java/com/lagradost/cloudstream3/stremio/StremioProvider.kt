@@ -94,10 +94,9 @@ object StremioProvider : MainAPI() {
     private suspend fun searchAddons(query: String, page: Int): List<SearchResponse> {
         if (query.isBlank()) return emptyList()
         val results = ArrayList<SearchResponse>()
-        StremioRepository.getAddons().take(8).forEach { addon ->
+        StremioRepository.getAddons().forEach { addon ->
             addon.manifest.catalogs
                 .filter { it.supportsSearch }
-                .take(2)
                 .forEach { catalog ->
                     results.addAll(
                         StremioApi.fetchCatalog(addon, catalog, query, page)
@@ -230,6 +229,13 @@ object StremioProvider : MainAPI() {
                 (stream.fileIdx?.let { index -> "&so=$index" } ?: "")
         }
         stream.ytId?.let { return "https://www.youtube.com/watch?v=$it" }
+        listOfNotNull(
+            stream.externalUrl,
+            stream.androidTvUrl,
+            stream.playerFrameUrl,
+        ).forEach { external ->
+            return StremioApi.resolveUrl(addon, external) ?: external
+        }
         return null
     }
 

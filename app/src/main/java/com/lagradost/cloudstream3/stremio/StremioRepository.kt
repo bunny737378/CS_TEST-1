@@ -95,7 +95,7 @@ object StremioRepository {
     }
 
     private fun isLocalAddon(addon: StremioAddon): Boolean {
-        val url = addon.transportUrl.lowercase()
+        val url = StremioApi.resourceBase(addon.transportUrl).lowercase()
         return url.contains("127.0.0.1") || url.contains("localhost")
     }
 
@@ -157,7 +157,7 @@ object StremioRepository {
         val descriptors = StremioApi.addonCollectionGet(authKey) ?: return false
         val addons = descriptors.mapNotNull { StremioAddon.fromDescriptor(it) }
             .filterNot { isLocalAddon(it) }
-            .distinctBy { it.transportUrl }
+            .distinctBy { StremioApi.resourceBase(it.transportUrl) }
         saveAddons(addons)
         return addons.isNotEmpty()
     }
@@ -165,8 +165,8 @@ object StremioRepository {
     suspend fun installDefaults(): Int {
         var installed = 0
         for (url in DEFAULT_ADDON_URLS) {
-            val normalized = StremioApi.normalizeTransportUrl(url)
-            if (getAddons().any { it.transportUrl == normalized }) continue
+            val base = StremioApi.resourceBase(url)
+            if (getAddons().any { StremioApi.resourceBase(it.transportUrl) == base }) continue
             val addon = StremioApi.fetchManifest(url) ?: continue
             val current = getAddons().toMutableList()
             current.add(addon)
@@ -179,9 +179,9 @@ object StremioRepository {
 
     suspend fun installAddon(url: String): Boolean {
         val addon = StremioApi.fetchManifest(url) ?: return false
-        val normalized = StremioApi.normalizeTransportUrl(url)
+        val base = StremioApi.resourceBase(url)
         val current = getAddons()
-            .filterNot { it.transportUrl == normalized || it.transportUrl == addon.transportUrl }
+            .filterNot { StremioApi.resourceBase(it.transportUrl) == base }
             .toMutableList()
         current.add(addon)
         saveAddons(current)
@@ -190,10 +190,10 @@ object StremioRepository {
     }
 
     suspend fun uninstallAddon(transportUrl: String): Boolean {
+        val requestedBase = StremioApi.resourceBase(transportUrl)
         val current = getAddons()
         val updated = current.filterNot {
-            it.transportUrl == transportUrl ||
-                it.transportUrl.trimEnd('/') == transportUrl.trimEnd('/')
+            StremioApi.resourceBase(it.transportUrl) == requestedBase
         }
         if (updated.size == current.size) return false
         saveAddons(updated)

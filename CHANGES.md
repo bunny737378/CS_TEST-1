@@ -267,3 +267,47 @@ temporary probe workflow, unit test and payload commits were removed by a force-
 no credentials or auth keys are stored in repository files or this journal. On-device
 UI acceptance for all three login modes, the dedicated all-streams page, stream loading
 and CloudStream player handoff is still pending.
+
+### 9.3 Stremio addon transport, search and stream protocol parity
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/stremio/StremioApi.kt`,
+`StremioModels.kt`, `StremioProvider.kt`, `StremioRepository.kt`,
+`app/src/test/java/com/lagradost/cloudstream3/StremioTransportTest.kt`.
+
+**Reference:** `https://github.com/stremio-native/stremio-android` (with its
+`streamio-core-kotlin` / `stream-server` submodules) and
+`Stremio/stremio-core@90c38f181d290fc705049e4c8bd30df00f6f3e66`. The native app delegates
+search to `CatalogsWithExtra.Selected(extra=[search])`, meta/streams to `ResourcePath`, and
+core builds addon URLs by replacing `/manifest.json` in the descriptor transport URL with
+`/{resource}/{type}/{id}[/{extra}].json`.
+
+**Root cause confirmed:** the official `addonCollectionGet` descriptors store
+`transportUrl` ending in `/manifest.json`, while the old bridge kept that full string as the
+resource base. A live check returned `Cannot GET
+/manifest.json/catalog/movie/top/search=deadpool.json` for
+`https://v3-cinemeta.strem.io/manifest.json/catalog/movie/top/search=deadpool.json`, but
+`https://v3-cinemeta.strem.io/catalog/movie/top/search=deadpool.json` returned the expected
+metas. The same broken prefix affected catalog, meta and stream calls, which explains both
+the addon search errors and the provider API errors on the series/episode stream-load page.
+
+**Fix:** `StremioApi` now parses the transport URL into a base plus an optional config query,
+strips the `/manifest.json` suffix, preserves the query after the resource path, and uses
+stremio-core's exact `URI_COMPONENT_ENCODE_SET` percent encoding. It also implements the
+legacy `/stremio/v1` `q.json?b=<base64 JSON-RPC>` transport, maps legacy manifests into the
+standard manifest shape, and logs redacted per-addon errors instead of silently dropping them.
+`StremioModels` now mirrors core's short/full `ManifestResource` filtering, required/supported
+catalog extras and `default_required_extra`, reads `behaviorHints.proxyHeaders.request`, and
+keeps `externalUrl`/`androidTvUrl`/`playerFrameUrl` stream sources. `StremioProvider` searches
+all installed search-capable catalogs (no arbitrary `.take(8)`/`.take(2)`), uses the episode
+`videoId` for stream requests, and resolves external stream URLs. `StremioRepository` dedupes
+and installs/uninstalls addons by canonical resource base so synced and manually installed
+descriptors no longer produce duplicate, broken addon entries.
+
+A JVM unit test asserts that a `/manifest.json` descriptor produces
+`https://v3-cinemeta.strem.io/catalog/movie/top/search=dead%20pool.json`, that config queries
+are appended after the resource path, that percent encoding matches core, and that the legacy
+`/stremio/v1` transport is detected. It uses only the existing JUnit/JSON test dependencies.
+
+**Build validation:** pending. On-device acceptance for addon search, series/episode stream
+loading, the dedicated all-streams page and CloudStream player handoff remains pending.
+No credentials or auth keys were added.
