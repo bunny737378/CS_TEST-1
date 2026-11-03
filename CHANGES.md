@@ -314,7 +314,10 @@ are appended after the resource path, that percent encoding matches core, and th
 in 2m59s. The workflow now also runs `:app:testDebugUnitTest` before `assembleDebug`.
 
 **Artifact:** one unexpired `CloudStream-debug-apk` for run `41602465500`, ID
-`13215061835`, 81,367,293 bytes, created `2026-11-03T08:22:29Z`. Install this exact
-artifact for the addon search and series/episode stream retest. On-device acceptance
-for addon search, stream loading, the dedicated all-streams page and CloudStream player
-handoff remains pending. No credentials or auth keys were added.
+`13215061835`, 81,367,293 bytes, created `2026-11-03T08:22:29Z`. The follow-up
+`fe37c97` run `41603016655`, job `125806008772`, added the unit-test step and succeeded
+in 2m11s: `:app:testDebugUnitTest` and `:app:assembleDebug` both passed, with artifact
+`13215087873`, 81,367,293 bytes, created `2026-11-03T08:25:49Z`. Install `13215087873`
+(or code-identical `13215061835`) for the addon search and series/episode stream retest.
+On-device acceptance for addon search, stream loading, the dedicated all-streams page and
+CloudStream player handoff remains pending. No credentials or auth keys were added.
