@@ -9,8 +9,8 @@ import com.lagradost.cloudstream3.APIHolder.allProviders
 object StremioBridge {
     fun registerProvider() {
         allProviders.withLock {
-            if (none { it.name == StremioProvider.name }) {
-                add(StremioProvider)
+            if (allProviders.none { provider -> provider.name == StremioProvider.name }) {
+                allProviders.add(StremioProvider)
             }
         }
     }

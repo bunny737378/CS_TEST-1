@@ -146,13 +146,18 @@ player opening before the user chooses a stream, library/continue watching sync,
 addon pages, native torrent/stream server support, and deeper account settings parity. Do not
 claim these are finished; append the next phase here when implemented.
 
-### 6.1 Phase 1 build fix
+### 6.1 Phase 1 build fixes
 
-**File:** `app/src/main/res/values/strings.xml`.
+**Files:** `app/src/main/res/values/strings.xml`,
+`app/src/main/java/com/lagradost/cloudstream3/stremio/StremioBridge.kt`.
 
 The first phase 1 build failed at `:app:mergeDebugResources` because `stremio_intro` contained an
 unescaped apostrophe in `CloudStream's`. Replaced it with `CloudStream screens` so AAPT can flatten
 the string. Keep future string additions free of unescaped apostrophes or use `\'`.
+
+The next build failed at `:app:compileDebugKotlin` because `AtomicMutableList.withLock` has no
+lambda receiver. `StremioBridge.registerProvider()` now references `allProviders` explicitly for
+`none` and `add` instead of using an implicit `it` receiver.
 
 ---
 
