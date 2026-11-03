@@ -175,7 +175,7 @@ lambda receiver. `StremioBridge.registerProvider()` now references `allProviders
 
 ---
 
-## 8. Current validation
+## 8. Phase 1 validation
 
 **Build:** `e8b6edb22d376eaaca2e67c612c25351db223196`, GitHub Actions run `41587855589`, job
 `125757432852`, conclusion `success`, finished `2026-11-03T06:10:15Z`.
@@ -186,9 +186,9 @@ lambda receiver. `StremioBridge.registerProvider()` now references `allProviders
 current APK is the phase 1 build that includes sections 1–6.1.
 
 **Scope note:** a successful compile does not mean the Stremio bridge has runtime parity. This
-build predates section 9. The dedicated stream-list page is now implemented, but runtime login,
-stream loading and the remaining parity items in section 6 still need confirmation before calling
-the Stremio integration complete.
+build predates section 9; the current build is recorded in section 9.1. The dedicated stream-list
+page is now implemented, but runtime login, stream loading and the remaining parity items in
+section 6 still need confirmation before calling the Stremio integration complete.
 
 ---
 
@@ -213,3 +213,16 @@ Stremio result clicks now navigate to `StremioStreamsFragment` before playback. 
 `StremioProvider.loadLinks`, shows every distinct stream, and hands only the chosen link and
 subtitles to CloudStream's existing player through `StremioStreamGenerator`. Ordinary CloudStream
 extension results are unchanged.
+
+### 9.1 Phase 2 build validation
+
+**File:** `app/src/main/java/com/lagradost/cloudstream3/ui/result/StremioStreamsFragment.kt`.
+
+The first phase 2 build (`b6fb83c`, run `41591628868`, job `125769452447`) failed because
+`StremioStreamsContent` was top-level and had no Fragment `arguments`/`activity` receiver. It is
+now a member of `StremioStreamsFragment`; run `41591916088`, job `125770347095`, succeeded at
+`7282e95`.
+
+**Artifact:** one unexpired `CloudStream-debug-apk` for this run, ID `13210163744`,
+81,350,775 bytes, created `2026-11-03T06:47:27Z`. Runtime login, stream loading and player
+handoff still need user testing; the sandbox cannot reach `api.strem.io`.
