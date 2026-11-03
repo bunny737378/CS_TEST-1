@@ -161,15 +161,15 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
     var selectedSearchTypes = mutableListOf<TvType>()
     var selectedApis = mutableSetOf<String>()
 
-    /**
-     * Will filter all providers by preferred media and selectedSearchTypes.
-     * If that results in no available providers then only filter
-     * providers by preferred media
-     **/
+
+
+
+
+
     fun search(query: String?) {
         if (query == null) return
         searchViewModel.clearSuggestions()
-        // don't resume state from prev search
+
         (binding?.searchMasterRecycler?.adapter as? BaseAdapter<*, *>)?.clearState()
         context?.let { ctx ->
             val default = enumValues<TvType>().sorted().filter { it != TvType.NSFW }
@@ -181,13 +181,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
 
             val settings = ctx.getApiSettings()
 
-            // Empty saved selection means "all providers", matching the filter dialog.
-            val allValidApiNames = ctx.filterProviderByPreferredMedia(
-                hasHomePageIsRequired = false,
-            ).map { it.name }.toSet()
-            val activeApiNames = selectedApis.ifEmpty { allValidApiNames }
-
-            val notFilteredBySelectedTypes = activeApiNames.filter { name ->
+            val notFilteredBySelectedTypes = selectedApis.filter { name ->
                 settings.contains(name)
             }.map { name ->
                 name to getApiFromNameNull(name)?.supportedTypes
@@ -204,8 +198,8 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
         }
     }
 
-    // Null if defined as a variable
-    // This needs to be run after view created
+
+
 
     private fun reloadRepos(success: Boolean = false) = main {
         searchViewModel.reloadRepos()
@@ -232,7 +226,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
             padLeft = isLayout(TV or EMULATOR)
         )
 
-        // Fix grid
+
         currentSpan = view.context.getSpanCount()
         binding?.searchAutofitResults?.spanCount = currentSpan
         HomeFragment.configEvent.invoke()
@@ -278,7 +272,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                         speechRecognizerLauncher.launch(intent)
                     }
                 } catch (_: Throwable) {
-                    // launch may throw
+
                     showToast(R.string.speech_recognition_unavailable)
                 }
             }
@@ -359,7 +353,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                             listView?.setItemChecked(index, currentSelectedApis.contains(api))
                         }
 
-                        //arrayAdapter.notifyDataSetChanged()
+
                         arrayAdapter.addAll(names)
                         arrayAdapter.notifyDataSetChanged()
                     }
@@ -371,7 +365,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                     ) { list ->
                         updateList(list)
 
-                        // refresh selected chips in main chips
+
                         if (selectedSearchTypes.toSet() != list.toSet()) {
                             selectedSearchTypes.clear()
                             selectedSearchTypes.addAll(list)
@@ -393,9 +387,9 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                     }
 
                     applyBtt?.setOnClickListener {
-                        //if (currentApiName != selectedApiName) {
-                        //    currentApiName?.let(callback)
-                        //}
+
+
+
                         dialog.dismissSafe()
                     }
 
@@ -403,7 +397,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                         DataStoreHelper.searchPreferenceProviders = currentSelectedApis.toList()
                         selectedApis = currentSelectedApis
 
-                        // run search when dialog is close
+
                         if (previousSelectedApis != selectedApis.toSet() || previousSelectedSearchTypes != selectedSearchTypes.toSet()) {
                             search(binding.mainSearch.query.toString())
                         }
@@ -424,7 +418,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
             binding.searchFilter.isFocusableInTouchMode = true
         }
 
-        // Hide suggestions when search view loses focus (phone only)
+
         if (isLayout(PHONE)) {
             binding.mainSearch.setOnQueryTextFocusChangeListener { _, hasFocus ->
                 if (!hasFocus) {
@@ -447,14 +441,14 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
-                //searchViewModel.quickSearch(newText)
+
                 val showHistory = newText.isBlank()
                 if (showHistory) {
                     searchViewModel.clearSearch()
                     searchViewModel.updateHistory()
                     searchViewModel.clearSuggestions()
                 } else {
-                    // Fetch suggestions when user is typing (if enabled)
+
                     if (isSearchSuggestionsEnabled) {
                         searchViewModel.fetchSuggestions(newText)
                     }
@@ -463,7 +457,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                     searchHistoryRecycler.isVisible = showHistory
                     searchMasterRecycler.isVisible = !showHistory && isAdvancedSearch
                     searchAutofitResults.isVisible = !showHistory && !isAdvancedSearch
-                    // Hide suggestions when showing history or showing search results
+
                     searchSuggestionsRecycler.isVisible = !showHistory && isSearchSuggestionsEnabled
                 }
 
@@ -487,7 +481,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                 }
 
                 is Resource.Failure -> {
-                    // Toast.makeText(activity, "Server error", Toast.LENGTH_LONG).show()
+
                     searchExitIcon?.alpha = 1f
                     binding.searchLoadingBar.alpha = 0f
                 }
@@ -502,28 +496,15 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
         val listLock = ReentrantLock()
         observe(searchViewModel.currentSearch) { list ->
             try {
-                // https://stackoverflow.com/questions/6866238/concurrent-modification-exception-adding-to-an-arraylist
+
                 listLock.lock()
 
                 val pinnedOrder = DataStoreHelper.pinnedProviders.reversedArray()
-                val globalLoading = searchViewModel.searchResponse.value is Resource.Loading
 
-                // Responding providers rise above still-loading and empty rows, then
-                // pinned-provider order is used as the tie breaker.
-                val sortedList = list.toList()
-                    .filter { (_, data) ->
-                        data.isLoading || globalLoading || data.list.isNotEmpty()
-                    }
-                    .sortedWith(
-                        compareByDescending<Pair<String, ExpandableSearchList>> { (_, data) ->
-                            if (data.list.isNotEmpty()) 1 else 0
-                        }
-                            .thenByDescending { (_, data) -> data.list.size }
-                            .thenBy { (providerName, _) ->
-                                val index = pinnedOrder.indexOf(providerName)
-                                if (index == -1) Int.MAX_VALUE else index
-                            }
-                    )
+                val sortedList = list.toList().sortedWith(compareBy { (providerName, _) ->
+                    val index = pinnedOrder.indexOf(providerName)
+                    if (index == -1) Int.MAX_VALUE else index
+                })
 
                 (binding.searchMasterRecycler.adapter as? ParentItemAdapter)?.apply {
                     val newItems = sortedList.map { (providerName, providerData) ->
@@ -539,13 +520,12 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                         HomeViewModel.ExpandableHomepageList(
                             homePageList,
                             providerData.currentPage,
-                            providerData.hasNext,
-                            isLoading = providerData.isLoading || globalLoading,
+                            providerData.hasNext
                         )
                     }
 
                     submitList(newItems)
-                    //notifyDataSetChanged()
+
                 }
             } catch (e: Exception) {
                 logError(e)
@@ -555,13 +535,13 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
         }
 
 
-        /*main_search.setOnQueryTextFocusChangeListener { _, b ->
-            if (b) {
-                // https://stackoverflow.com/questions/12022715/unable-to-show-keyboard-automatically-in-the-searchview
-                showInputMethod(view.findFocus())
-            }
-        }*/
-        //main_search.onActionViewExpanded()*/
+
+
+
+
+
+
+
 
         val masterAdapter =
             ParentItemAdapter(id = "masterAdapter".hashCode(), { callback ->
@@ -597,7 +577,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                 }
 
                 SEARCH_HISTORY_CLEAR -> {
-                    // Show confirmation dialog (from footer button)
+
                     activity?.let { ctx ->
                         val builder: AlertDialog.Builder = AlertDialog.Builder(ctx)
                         val dialogClickListener =
@@ -629,7 +609,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                 }
 
                 else -> {
-                    // wth are you doing???
+
                 }
             }
         }
@@ -637,16 +617,16 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
         val suggestionAdapter = SearchSuggestionAdapter { callback ->
             when (callback.clickAction) {
                 SEARCH_SUGGESTION_CLICK -> {
-                    // Search directly
+
                     binding.mainSearch.setQuery(callback.suggestion, true)
                     searchViewModel.clearSuggestions()
                 }
                 SEARCH_SUGGESTION_FILL -> {
-                    // Fill the search box without searching
+
                     binding.mainSearch.setQuery(callback.suggestion, false)
                 }
                 SEARCH_SUGGESTION_CLEAR -> {
-                    // Clear suggestions (from footer button)
+
                     searchViewModel.clearSuggestions()
                 }
             }
@@ -655,19 +635,19 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
         binding.apply {
             searchHistoryRecycler.adapter = historyAdapter
             searchHistoryRecycler.setLinearListLayout(isHorizontal = false, nextRight = FOCUS_SELF)
-            //searchHistoryRecycler.layoutManager = GridLayoutManager(context, 1)
 
-            // Setup suggestions RecyclerView
+
+
             searchSuggestionsRecycler.adapter = suggestionAdapter
             searchSuggestionsRecycler.layoutManager = LinearLayoutManager(context)
 
             searchMasterRecycler.setRecycledViewPool(ParentItemAdapter.sharedPool)
             searchMasterRecycler.adapter = masterAdapter
-            //searchMasterRecycler.setLinearListLayout(isHorizontal = false, nextRight = FOCUS_SELF)
+
 
             searchMasterRecycler.layoutManager = GridLayoutManager(context, 1)
 
-            // Automatically search the specified query, this allows the app search to launch from intent
+
             var sq =
                 arguments?.getString(SEARCH_QUERY) ?: savedInstanceState?.getString(SEARCH_QUERY)
             if (sq.isNullOrBlank()) {
@@ -677,11 +657,11 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
             sq?.let { query ->
                 if (query.isBlank()) return@let
 
-                // Queries are dropped if you are submitted before layout finishes
+
                 mainSearch.doOnLayout {
                     mainSearch.setQuery(query, true)
                 }
-                // Clear the query as to not make it request the same query every time the page is opened
+
                 arguments?.remove(SEARCH_QUERY)
                 savedInstanceState?.remove(SEARCH_QUERY)
                 MainActivity.nextSearchQuery = null
@@ -690,30 +670,30 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
 
         observe(searchViewModel.currentHistory) { list ->
             (binding.searchHistoryRecycler.adapter as? SearchHistoryAdaptor?)?.submitList(list)
-             // Scroll to top to show newest items (list is sorted by newest first)
+
             if (list.isNotEmpty()) {
                 binding.searchHistoryRecycler.scrollToPosition(0)
             }
         }
 
-        // Observe search suggestions
+
         observe(searchViewModel.searchSuggestions) { suggestions ->
             val hasSuggestions = suggestions.isNotEmpty()
             binding.searchSuggestionsRecycler.isVisible = hasSuggestions
             (binding.searchSuggestionsRecycler.adapter as? SearchSuggestionAdapter?)?.submitList(suggestions)
 
-            // On non-phone layouts, redirect focus and handle back button
+
             if (!isLayout(PHONE)) {
                 if (hasSuggestions) {
                     binding.tvtypesChipsScroll.tvtypesChips.root.nextFocusDownId = R.id.search_suggestions_recycler
-                    // Attach back button callback to clear suggestions
+
                     activity?.attachBackPressedCallback("SearchFragment") {
                         searchViewModel.clearSuggestions()
                     }
                 } else {
-                    // Reset to default focus target (history)
+
                     binding.tvtypesChipsScroll.tvtypesChips.root.nextFocusDownId = R.id.search_history_recycler
-                    // Detach back button callback when no suggestions
+
                     activity?.detachBackPressedCallback("SearchFragment")
                 }
             }

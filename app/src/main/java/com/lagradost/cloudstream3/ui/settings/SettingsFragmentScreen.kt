@@ -110,12 +110,12 @@ object SettingsFragmentScreen : Screen {
                 R.string.pref_category_cache
             )
         ),
-        /*SettingsNavigation(
-            title = R.string.category_providers,
-            navigation = R.id.action_navigation_global_to_navigation_settings_providers,
-            screen = SettingsProvidersScreen,
-            icon = R.drawable.build_24px,
-        ),*/
+
+
+
+
+
+
         SettingsNavigation(
             title = R.string.category_ui,
             navigation = R.id.action_navigation_global_to_navigation_settings_ui,
@@ -155,13 +155,6 @@ object SettingsFragmentScreen : Screen {
             screen = null,
             icon = R.drawable.extension_24px,
             subtitle = persistentListOf(R.string.add_repository)
-        ),
-        SettingsNavigation(
-            title = R.string.stremio_addons,
-            navigation = R.id.action_navigation_global_to_navigation_settings_stremio_addons,
-            screen = StremioAddonsScreen,
-            icon = R.drawable.extension_24px,
-            subtitle = persistentListOf(R.string.stremio_addons)
         ),
     )
 
@@ -298,13 +291,13 @@ object SettingsFragmentScreen : Screen {
             state = textFieldState,
             keyboardOptions = KeyboardOptions.Default.copy(
                 imeAction = ImeAction.Search,
-                /**
-                 * We do not want to pull up the keyboard when navigating to the item on TV, therefore
-                 * we listen to when the TV user presses some key to "extra" focus it
-                 *
-                 * showKeyboardOnFocus is somewhat bugged, so need to change this to true when you
-                 * press it, as otherwise no keyboard will show even with keyboardController
-                 * */
+
+
+
+
+
+
+
                 showKeyboardOnFocus = if (isTv) isWritable else true
             ),
             lineLimits = TextFieldLineLimits.SingleLine,
@@ -314,7 +307,7 @@ object SettingsFragmentScreen : Screen {
                 .focusOutline(enabled = isTv, CircleShape)
                 .onFocusChanged { newFocus ->
                     hasFocus = newFocus.hasFocus
-                    /** Loss of focus -> readonly */
+
                     if (!newFocus.hasFocus) {
                         isWritable = false
                     }
@@ -325,7 +318,7 @@ object SettingsFragmentScreen : Screen {
                         return@onPreviewKeyEvent false
                     }
 
-                    /** Focus + press once -> writable */
+
                     return@onPreviewKeyEvent when (keyEvent.key) {
                         Key.Enter, Key.DirectionCenter, Key.NumPadEnter, Key.Spacebar -> {
                             isWritable = true
@@ -411,11 +404,11 @@ object SettingsFragmentScreen : Screen {
         TextPreferenceWidget(
             title = stringResource(settingsTab.title),
             icon = painterResource(settingsTab.icon),
-            // This can not be converted to joinToString due to stringResource being composable
+
             subtitle =
                 @Suppress("SimplifiableCallChain")
                 settingsTab.subtitle.map { stringResource(it) }.joinToString(),
-            // Clear it if we have already set it but navigated back instantly
+
             onPreferenceClick = {
                 SearchableSettings.highlightKey = null
                 activity?.navigate(settingsTab.navigation)

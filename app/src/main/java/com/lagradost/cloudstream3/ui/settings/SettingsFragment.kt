@@ -47,9 +47,9 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
             }
         }
 
-        /**
-         * Hide many Preferences on selected layouts.
-         **/
+
+
+
         fun PreferenceFragmentCompat?.hidePrefs(ids: List<Int>, layoutFlags: Int) {
             if (this == null) return
 
@@ -62,22 +62,22 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
             }
         }
 
-        /**
-         * Hide the [Preference] on selected layouts.
-         * @return [Preference] if visible otherwise null.
-         *
-         * [hideOn] is usually followed by some actions on the preference which are mostly
-         * unnecessary when the preference is disabled for the said layout thus returning null.
-         **/
+
+
+
+
+
+
+
         fun Preference?.hideOn(layoutFlags: Int): Preference? {
             if (this == null) return null
             this.isVisible = !isLayout(layoutFlags)
             return if(this.isVisible) this else null
         }
 
-        /**
-         * On TV you cannot properly scroll to the bottom of settings, this fixes that.
-         * */
+
+
+
         fun PreferenceFragmentCompat.setPaddingBottom() {
             if (isLayout(TV or EMULATOR)) {
                 listView?.setPadding(0, 0, 0, 100.toPx)
@@ -150,7 +150,7 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
             dir.listFiles()?.let {
                 for (file in it) {
                     size += if (file.isFile) {
-                        // System.out.println(file.getName() + " " + file.length());
+
                         file.length()
                     } else getFolderSize(file)
                 }
@@ -173,9 +173,9 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
             activity?.navigate(id, Bundle())
         }
 
-        /** used to debug leaks
-        showToast(activity,"${VideoDownloadManager.downloadStatusEvent.size} :
-        ${VideoDownloadManager.downloadProgressEvent.size}") **/
+
+
+
 
         fun hasProfilePictureFromAccountManagers(accountManagers: Array<AuthRepo>): Boolean {
             for (syncApi in accountManagers) {
@@ -184,17 +184,17 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
 
                 binding.settingsProfilePic.let { imageView ->
                     imageView.loadImage(pic) {
-                        // Fallback to random error drawable
+
                         error { getImageFromDrawable(context ?: return@error null, errorProfilePic) }
                     }
                 }
                 binding.settingsProfileText.text = login.name
-                return true // sync profile exists
+                return true
             }
-            return false // not syncing
+            return false
         }
 
-        // display local account information if not syncing
+
         if (!hasProfilePictureFromAccountManagers(AccountManager.allApis)) {
             val activity = activity ?: return
             val currentAccount = try {
@@ -220,7 +220,6 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
                 settingsProviders to R.id.action_navigation_global_to_navigation_settings_providers,
                 settingsBackup to R.id.action_navigation_global_to_navigation_settings_backup,
                 settingsExtensions to R.id.action_navigation_global_to_navigation_settings_extensions,
-                settingsStremioAddons to R.id.action_navigation_global_to_navigation_settings_stremio_addons,
             ).forEach { (view, navigationId) ->
                 view.apply {
                     setOnClickListener {
@@ -233,7 +232,7 @@ class SettingsFragment : BaseFragment<MainSettingsBinding>(
                 }
             }
 
-            // Default focus on TV
+
             if (isLayout(TV)) {
                 settingsGeneral.requestFocus()
             }

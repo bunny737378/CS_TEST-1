@@ -72,12 +72,7 @@ open class ParentItemAdapter(
         list: Collection<HomeViewModel.ExpandableHomepageList>?,
         commitCallback: Runnable?
     ) {
-        // Native-style home: empty shelves are hidden, loading placeholders remain visible.
-        super.submitList(
-            list?.filter { it.list.list.isNotEmpty() || it.isLoading }
-                ?.sortedBy { it.list.list.isEmpty() },
-            commitCallback,
-        )
+        super.submitList(list?.sortedBy { it.list.list.isEmpty() }, commitCallback)
     }
 
     override fun onUpdateContent(
@@ -130,11 +125,7 @@ open class ParentItemAdapter(
                 nextLeft = startFocus,
                 nextRight = endFocus,
             )
-            homeChildMoreInfo.text = if (item.isLoading && info.list.isEmpty()) {
-                "${info.name} · Loading…"
-            } else {
-                info.name
-            }
+            homeChildMoreInfo.text = info.name
 
             homeChildRecyclerview.addOnScrollListener(object :
                 RecyclerView.OnScrollListener() {
@@ -152,14 +143,14 @@ open class ParentItemAdapter(
 
                     val count = adapter.itemCount
                     val hasNext = adapter.hasNext
-                    /*println(
-                        "scolling ${recyclerView.isRecyclerScrollable()} ${
-                            recyclerView.canScrollHorizontally(
-                                1
-                            )
-                        }"
-                    )*/
-                    //!recyclerView.canScrollHorizontally(1)
+
+
+
+
+
+
+
+
                     if (!recyclerView.isRecyclerScrollable() && hasNext && expandCount != count) {
                         expandCount = count
                         expandCallback?.invoke(name)
@@ -167,7 +158,7 @@ open class ParentItemAdapter(
                 }
             })
 
-            //(recyclerView.adapter as HomeChildItemAdapter).notifyDataSetChanged()
+
             if (isLayout(PHONE or EMULATOR)) {
                 homeChildMoreInfo.setOnClickListener {
                     moreInfoClickCallback.invoke(item)
@@ -188,7 +179,7 @@ open class ParentItemAdapter(
             HomepageParentBinding.bind(inflater.inflate(layoutResId, parent, false))
         } catch (t: Throwable) {
             logError(t)
-            // just in case someone forgot we don't want to crash
+
             HomepageParentBinding.inflate(inflater)
         }
 
