@@ -374,7 +374,19 @@ CloudStream. Home filters empty shelves instead of only pushing them to the bott
 `MainActivity.onAllPluginsLoaded()` re-registers dynamic Stremio providers after plugin
 reloads without republishing the plugin event.
 
-**Build validation:** pending CI `Build APK` / `:app:testDebugUnitTest` / `assembleDebug`
-run on this branch. On-device acceptance for per-addon search, configured addon installs,
-language-priority ordering, the native-style streams page, stream playback and subtitle
-handoff remains pending. No credentials or auth keys were added.
+**Build validation:** `3bf5991` / run `41638675895`, job `125926274584`, failed at
+`:app:compileDebugKotlin` because `JSONObject.string()` was file-private when reused by
+`StremioApi.fetchSubtitles()` and because `qualityValue()` was private to the
+`StremioStreamPresentation` object while called from the top-level `StremioStreamOption`.
+`d37bc98` / run `41639063182`, job `125927600587`, exposed the remaining name shadowing:
+`ExtractorLink.quality` is an `Int` inside the link initializer. `027142a` captured the
+stream quality string before entering that initializer; run `41639441828`, job
+`125928898703`, succeeded in 3m26s. Logs show `:app:testDebugUnitTest` compiled and ran,
+then `BUILD SUCCESSFUL in 1m 32s`, followed by a successful `assembleDebug`; only
+deprecation warnings remain.
+
+**Artifact:** one unexpired `CloudStream-debug-apk` for run `41639441828`, ID
+`13232745335`, 81,497,129 bytes, created `2026-11-03T12:55:38Z`. Install this exact
+artifact for the per-addon search, configured addon, language-priority, native streams
+page, playback and subtitle retest. On-device acceptance remains pending. No credentials
+or auth keys were added.
