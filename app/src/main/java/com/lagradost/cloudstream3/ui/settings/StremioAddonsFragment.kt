@@ -37,7 +37,6 @@ import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.stremio.StremioAddon
 import com.lagradost.cloudstream3.stremio.StremioRepository
 import com.lagradost.cloudstream3.stremio.redactStremioSecrets
-import com.lagradost.cloudstream3.stremio.stremioScope
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.setUpToolbar
 import com.lagradost.cloudstream3.utils.BaseComposeFragment
 import kotlinx.coroutines.CancellationException
@@ -87,7 +86,7 @@ fun StremioAddonsContent() {
         if (busy) return
         busy = true
         status = ""
-        stremioScope.launch {
+        StremioRepository.stremioScope.launch {
             try {
                 val result = block()
                 mainHandler.post { status = result }
