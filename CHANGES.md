@@ -172,3 +172,19 @@ lambda receiver. `StremioBridge.registerProvider()` now references `allProviders
    `CloudStream-debug-apk` artifact.
 5. Append every later change to this file with the cleared field names, a 2–3 line explanation and
    the affected file paths.
+
+---
+
+## 8. Current validation
+
+**Build:** `e8b6edb22d376eaaca2e67c612c25351db223196`, GitHub Actions run `41587855589`, job
+`125757432852`, conclusion `success`, finished `2026-11-03T06:10:15Z`.
+
+**Artifact:** one `CloudStream-debug-apk` for this run, ID `13208388375`, unexpired,
+81,333,857 bytes, created `2026-11-03T06:09:50Z`. Earlier validated artifacts from runs
+`41523213497`, `41528025087` and `41532042162` may also remain until GitHub expires them; the
+current APK is the phase 1 build that includes sections 1–6.1.
+
+**Scope note:** a successful compile does not mean the Stremio bridge has runtime parity. The
+pending items in section 6, especially the dedicated stream-list page and direct-player behavior,
+still need confirmation before calling the Stremio integration complete.
