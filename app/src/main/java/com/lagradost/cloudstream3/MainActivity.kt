@@ -1944,7 +1944,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                 for (api in allProviders) {
                     providersAndroidManifestString += "<data android:scheme=\"https\" android:host=\"${
                         api.mainUrl.removePrefix(
-                            "https:
+                            "https://"
                         )
                     }\" android:pathPrefix=\"/\"/>\n"
                 }
