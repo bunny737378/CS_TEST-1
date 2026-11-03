@@ -97,6 +97,36 @@ private fun JSONObject.stringMapValues(): Map<String, String> {
     return result
 }
 
+private fun JSONObject.longValue(name: String): Long? {
+    if (!has(name) || isNull(name)) return null
+    return when (val value = get(name)) {
+        is Number -> value.toLong()
+        is String -> value.toLongOrNull()
+        else -> null
+    }
+}
+
+private fun JSONArray.objectList(): List<JSONObject> =
+    (0 until length()).mapNotNull { optJSONObject(it) }
+
+private fun JSONObject.objectArray(name: String): List<JSONObject> =
+    optJSONArray(name)?.objectList().orEmpty()
+
+private fun JSONArray.urlList(): List<String> {
+    val result = ArrayList<String>(length())
+    for (index in 0 until length()) {
+        when (val value = opt(index)) {
+            is String -> value.takeIf { it.isNotBlank() }?.let(result::add)
+            is JSONObject -> value.string("url")?.let(result::add)
+            else -> optString(index).takeIf { it.isNotBlank() }?.let(result::add)
+        }
+    }
+    return result
+}
+
+private fun JSONObject.urlArray(name: String): List<String> =
+    optJSONArray(name)?.urlList().orEmpty()
+
 data class StremioExtraProp(
     val name: String,
     val isRequired: Boolean = false,
@@ -138,6 +168,62 @@ data class StremioCatalog(
         .associate { it.name to it.options.first() }
 }
 
+data class StremioBehaviorHints(
+    val adult: Boolean = false,
+    val p2p: Boolean = false,
+    val configurable: Boolean = false,
+    val configurationRequired: Boolean = false,
+)
+
+data class StremioAddonCatalog(
+    val id: String,
+    val type: String,
+    val name: String?,
+)
+
+data class StremioLink(
+    val name: String,
+    val category: String,
+    val url: String,
+) {
+    companion object {
+        fun from(json: JSONObject): StremioLink? {
+            val name = json.string("name") ?: return null
+            val category = json.string("category") ?: return null
+            val url = json.string("url") ?: return null
+            return StremioLink(name, category, url)
+        }
+    }
+}
+
+data class StremioMetaBehaviorHints(
+    val defaultVideoId: String?,
+    val featuredVideoId: String?,
+    val hasScheduledVideos: Boolean,
+) {
+    companion object {
+        fun from(json: JSONObject?): StremioMetaBehaviorHints = StremioMetaBehaviorHints(
+            defaultVideoId = json?.string("defaultVideoId"),
+            featuredVideoId = json?.string("featuredVideoId"),
+            hasScheduledVideos = json?.optBoolean("hasScheduledVideos", false) ?: false,
+        )
+    }
+}
+
+data class StremioMetaDeepLinks(
+    val metaDetailsVideos: String?,
+    val metaDetailsStreams: String?,
+    val player: String?,
+) {
+    companion object {
+        fun from(json: JSONObject?): StremioMetaDeepLinks = StremioMetaDeepLinks(
+            metaDetailsVideos = json?.string("metaDetailsVideos"),
+            metaDetailsStreams = json?.string("metaDetailsStreams"),
+            player = json?.string("player"),
+        )
+    }
+}
+
 data class StremioManifest(
     val rawJson: String,
     val id: String,
@@ -150,7 +236,13 @@ data class StremioManifest(
     val idPrefixes: List<String>?,
     val resources: List<StremioResource>,
     val catalogs: List<StremioCatalog>,
+    val contactEmail: String?,
+    val addonCatalogs: List<StremioAddonCatalog>,
+    val behaviorHints: StremioBehaviorHints,
 ) {
+    val configurable: Boolean get() = behaviorHints.configurable
+    val configurationRequired: Boolean get() = behaviorHints.configurationRequired
+
     companion object {
         fun from(json: JSONObject): StremioManifest? {
             val id = json.string("id") ?: return null
@@ -226,6 +318,29 @@ data class StremioManifest(
                 }
             }
 
+            val addonCatalogs = ArrayList<StremioAddonCatalog>()
+            json.optJSONArray("addonCatalogs")?.let { array ->
+                for (index in 0 until array.length()) {
+                    val catalog = array.optJSONObject(index) ?: continue
+                    val catalogId = catalog.string("id") ?: continue
+                    val catalogType = catalog.string("type") ?: continue
+                    addonCatalogs.add(
+                        StremioAddonCatalog(
+                            id = catalogId,
+                            type = catalogType,
+                            name = catalog.string("name"),
+                        )
+                    )
+                }
+            }
+            val hintsJson = json.optJSONObject("behaviorHints")
+            val behaviorHints = StremioBehaviorHints(
+                adult = hintsJson?.optBoolean("adult", false) ?: false,
+                p2p = hintsJson?.optBoolean("p2p", false) ?: false,
+                configurable = hintsJson?.optBoolean("configurable", false) ?: false,
+                configurationRequired = hintsJson?.optBoolean("configurationRequired", false) ?: false,
+            )
+
             return StremioManifest(
                 rawJson = json.toString(),
                 id = id,
@@ -238,6 +353,9 @@ data class StremioManifest(
                 idPrefixes = json.optJSONArray("idPrefixes")?.stringList(),
                 resources = resources,
                 catalogs = catalogs,
+                contactEmail = json.string("contactEmail"),
+                addonCatalogs = addonCatalogs,
+                behaviorHints = behaviorHints,
             )
         }
     }
@@ -273,6 +391,12 @@ data class StremioAddon(
     }
 
     fun descriptorMap(): Map<String, Any> = JSONObject(rawJson).toAnyMap()
+
+    val isConfigurable: Boolean get() = manifest.configurable
+    val isConfigurationRequired: Boolean get() = manifest.configurationRequired
+    val isOfficial: Boolean get() = flags["official"] == true
+    val isProtected: Boolean get() = flags["protected"] == true
+    val isInstalled: Boolean get() = flags["installed"] != false
 
     /**
      * Mirrors stremio-core Manifest::is_resource_supported: short resources inherit
@@ -310,6 +434,17 @@ data class StremioMetaPreview(
     val imdbRating: String?,
     val year: Int?,
     val genres: List<String>,
+    val runtime: String?,
+    val posterShape: String?,
+    val released: String?,
+    val links: List<StremioLink>,
+    val trailerStreams: List<StremioStream>,
+    val behaviorHints: StremioMetaBehaviorHints,
+    val deepLinks: StremioMetaDeepLinks,
+    val progress: Double?,
+    val inLibrary: Boolean,
+    val watched: Boolean,
+    val inCinema: Boolean,
 ) {
     companion object {
         fun from(json: JSONObject, defaultType: String): StremioMetaPreview? {
@@ -329,6 +464,17 @@ data class StremioMetaPreview(
                 year = json.intValue("year")
                     ?: releaseInfo?.let { Regex("""(19|20)\d{2}""").find(it)?.value?.toIntOrNull() },
                 genres = json.stringArray("genres"),
+                runtime = json.string("runtime"),
+                posterShape = json.string("posterShape"),
+                released = json.string("released") ?: json.string("firstAired"),
+                links = json.objectArray("links").mapNotNull { StremioLink.from(it) },
+                trailerStreams = json.objectArray("trailerStreams").map { StremioStream.from(it) },
+                behaviorHints = StremioMetaBehaviorHints.from(json.optJSONObject("behaviorHints")),
+                deepLinks = StremioMetaDeepLinks.from(json.optJSONObject("deepLinks")),
+                progress = json.optDouble("progress", Double.NaN).takeIf { !it.isNaN() },
+                inLibrary = json.optBoolean("inLibrary", false),
+                watched = json.optBoolean("watched", false),
+                inCinema = json.optBoolean("inCinema", false),
             )
         }
     }
@@ -342,17 +488,31 @@ data class StremioVideo(
     val overview: String?,
     val thumbnail: String?,
     val released: String?,
+    val streams: List<StremioStream>,
+    val upcoming: Boolean,
+    val watched: Boolean,
+    val currentVideo: Boolean,
+    val progress: Double?,
+    val deepLinks: StremioMetaDeepLinks,
 ) {
     companion object {
         fun from(json: JSONObject, fallbackId: String): StremioVideo {
+            val seriesInfo = json.optJSONObject("seriesInfo")
             return StremioVideo(
                 id = json.string("id") ?: fallbackId,
                 name = json.string("name") ?: json.string("title"),
-                season = json.intValue("season"),
-                episode = json.intValue("episode") ?: json.intValue("number"),
+                season = json.intValue("season") ?: seriesInfo?.intValue("season"),
+                episode = json.intValue("episode") ?: json.intValue("number")
+                    ?: seriesInfo?.intValue("episode"),
                 overview = json.string("overview") ?: json.string("description"),
                 thumbnail = json.string("thumbnail") ?: json.string("poster"),
                 released = json.string("released") ?: json.string("firstAired"),
+                streams = json.objectArray("streams").map { StremioStream.from(it) },
+                upcoming = json.optBoolean("upcoming", false),
+                watched = json.optBoolean("watched", false),
+                currentVideo = json.optBoolean("currentVideo", false),
+                progress = json.optDouble("progress", Double.NaN).takeIf { !it.isNaN() },
+                deepLinks = StremioMetaDeepLinks.from(json.optJSONObject("deepLinks")),
             )
         }
     }
@@ -375,6 +535,21 @@ data class StremioMeta(
     val certification: String?,
     val status: String?,
     val videos: List<StremioVideo>,
+    val cast: List<String>,
+    val director: List<String>,
+    val writer: List<String>,
+    val country: List<String>,
+    val awards: String?,
+    val posterShape: String?,
+    val released: String?,
+    val links: List<StremioLink>,
+    val trailerStreams: List<StremioStream>,
+    val behaviorHints: StremioMetaBehaviorHints,
+    val deepLinks: StremioMetaDeepLinks,
+    val progress: Double?,
+    val inLibrary: Boolean,
+    val watched: Boolean,
+    val receiveNotifications: Boolean,
 ) {
     companion object {
         fun from(json: JSONObject, defaultType: String): StremioMeta? {
@@ -405,6 +580,21 @@ data class StremioMeta(
                 certification = json.string("certification"),
                 status = json.string("status"),
                 videos = videos,
+                cast = json.stringArray("cast"),
+                director = json.stringArray("director"),
+                writer = json.stringArray("writer"),
+                country = json.stringArray("country"),
+                awards = json.string("awards"),
+                posterShape = json.string("posterShape"),
+                released = json.string("released") ?: json.string("firstAired"),
+                links = json.objectArray("links").mapNotNull { StremioLink.from(it) },
+                trailerStreams = json.objectArray("trailerStreams").map { StremioStream.from(it) },
+                behaviorHints = StremioMetaBehaviorHints.from(json.optJSONObject("behaviorHints")),
+                deepLinks = StremioMetaDeepLinks.from(json.optJSONObject("deepLinks")),
+                progress = json.optDouble("progress", Double.NaN).takeIf { !it.isNaN() },
+                inLibrary = json.optBoolean("inLibrary", false),
+                watched = json.optBoolean("watched", false),
+                receiveNotifications = json.optBoolean("receiveNotifications", false),
             )
         }
     }
@@ -413,6 +603,8 @@ data class StremioMeta(
 data class StremioSubtitle(
     val url: String,
     val lang: String,
+    val id: String? = null,
+    val name: String? = null,
 )
 
 data class StremioStream(
@@ -428,6 +620,24 @@ data class StremioStream(
     val description: String?,
     val subtitles: List<StremioSubtitle>,
     val headers: Map<String, String>,
+    val thumbnail: String?,
+    val sources: List<String>,
+    val announce: List<String>,
+    val fileMustInclude: List<String>,
+    val archiveUrls: List<String>,
+    val nzbUrl: String?,
+    val nzbUrls: List<String>,
+    val servers: List<String>,
+    val notWebReady: Boolean,
+    val bingeGroup: String?,
+    val countryWhitelist: List<String>,
+    val filename: String?,
+    val videoHash: String?,
+    val videoSize: Long?,
+    val responseHeaders: Map<String, String>,
+    val playerDeepLink: String?,
+    val externalPlayerStreaming: String?,
+    val externalPlayerDownload: String?,
 ) {
     companion object {
         fun from(json: JSONObject): StremioStream {
@@ -440,29 +650,79 @@ data class StremioStream(
                         StremioSubtitle(
                             url = url,
                             lang = subtitle.string("lang") ?: "eng",
+                            id = subtitle.string("id"),
+                            name = subtitle.string("name"),
                         )
                     )
                 }
             }
             val behaviorHints = json.optJSONObject("behaviorHints")
-            val proxyRequestHeaders = behaviorHints
-                ?.optJSONObject("proxyHeaders")
+            val proxyHeaders = behaviorHints?.optJSONObject("proxyHeaders")
+            val proxyRequestHeaders = proxyHeaders
                 ?.optJSONObject("request")
                 ?.stringMapValues()
                 .orEmpty()
+            val proxyResponseHeaders = proxyHeaders
+                ?.optJSONObject("response")
+                ?.stringMapValues()
+                .orEmpty()
+
+            val external = json.optJSONObject("external")
+            val playerFrame = json.optJSONObject("playerFrame")
+            val youtube = json.optJSONObject("youtube")
+            val tramvai = json.optJSONObject("tramvai")
+            val nzb = json.optJSONObject("nzb")
+            val archiveUrls = LinkedHashSet<String>()
+            listOf("rar" to "rarUrls", "zip" to "zipUrls", "zip7" to "zip7Urls",
+                "tgz" to "tgzUrls", "tar" to "tarUrls").forEach { (key, field) ->
+                json.optJSONObject(key)?.urlArray(field)?.let(archiveUrls::addAll)
+            }
+            json.urlArray("archiveUrls").let(archiveUrls::addAll)
+
+            val deepLinks = json.optJSONObject("deepLinks")
+            val externalPlayer = deepLinks?.optJSONObject("externalPlayer")
+
             return StremioStream(
                 url = json.string("url"),
-                ytId = json.string("ytId"),
-                infoHash = json.string("infoHash"),
-                fileIdx = json.intValue("fileIdx"),
-                externalUrl = json.string("externalUrl"),
-                androidTvUrl = json.string("androidTvUrl"),
-                playerFrameUrl = json.string("playerFrameUrl"),
+                ytId = json.string("ytId") ?: youtube?.string("ytId"),
+                infoHash = json.string("infoHash") ?: tramvai?.string("infoHash"),
+                fileIdx = json.intValue("fileIdx") ?: tramvai?.intValue("fileIdx"),
+                externalUrl = json.string("externalUrl") ?: external?.string("externalUrl"),
+                androidTvUrl = json.string("androidTvUrl") ?: external?.string("androidTvUrl"),
+                playerFrameUrl = json.string("playerFrameUrl") ?: playerFrame?.string("playerFrameUrl"),
                 name = json.string("name"),
                 title = json.string("title"),
                 description = json.string("description"),
                 subtitles = subtitles,
                 headers = proxyRequestHeaders,
+                thumbnail = json.string("thumbnail"),
+                sources = json.stringArray("sources").ifEmpty {
+                    tramvai?.stringArray("sources").orEmpty()
+                },
+                announce = json.stringArray("announce").ifEmpty {
+                    tramvai?.stringArray("announce").orEmpty()
+                },
+                fileMustInclude = json.stringArray("fileMustInclude").ifEmpty {
+                    tramvai?.stringArray("fileMustInclude").orEmpty()
+                },
+                archiveUrls = archiveUrls.toList(),
+                nzbUrl = json.string("nzbUrl") ?: nzb?.string("nzbUrl"),
+                nzbUrls = json.urlArray("nzbUrls").ifEmpty {
+                    nzb?.urlArray("nzbUrls").orEmpty()
+                },
+                servers = json.stringArray("servers").ifEmpty {
+                    nzb?.stringArray("servers").orEmpty()
+                },
+                notWebReady = behaviorHints?.optBoolean("notWebReady", false) ?: false,
+                bingeGroup = behaviorHints?.string("bingeGroup"),
+                countryWhitelist = behaviorHints?.stringArray("countryWhitelist").orEmpty(),
+                filename = behaviorHints?.string("filename"),
+                videoHash = behaviorHints?.string("videoHash"),
+                videoSize = behaviorHints?.longValue("videoSize"),
+                responseHeaders = proxyResponseHeaders,
+                playerDeepLink = deepLinks?.string("player"),
+                externalPlayerStreaming = externalPlayer?.string("streaming"),
+                externalPlayerDownload = externalPlayer?.string("download"),
             )
         }
     }

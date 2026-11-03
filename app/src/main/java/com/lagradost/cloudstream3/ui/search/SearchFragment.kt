@@ -181,7 +181,13 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
 
             val settings = ctx.getApiSettings()
 
-            val notFilteredBySelectedTypes = selectedApis.filter { name ->
+            // Empty saved selection means "all providers", matching the filter dialog.
+            val allValidApiNames = ctx.filterProviderByPreferredMedia(
+                hasHomePageIsRequired = false,
+            ).map { it.name }.toSet()
+            val activeApiNames = selectedApis.ifEmpty { allValidApiNames }
+
+            val notFilteredBySelectedTypes = activeApiNames.filter { name ->
                 settings.contains(name)
             }.map { name ->
                 name to getApiFromNameNull(name)?.supportedTypes
@@ -500,11 +506,24 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                 listLock.lock()
 
                 val pinnedOrder = DataStoreHelper.pinnedProviders.reversedArray()
+                val globalLoading = searchViewModel.searchResponse.value is Resource.Loading
 
-                val sortedList = list.toList().sortedWith(compareBy { (providerName, _) ->
-                    val index = pinnedOrder.indexOf(providerName)
-                    if (index == -1) Int.MAX_VALUE else index
-                })
+                // Responding providers rise above still-loading and empty rows, then
+                // pinned-provider order is used as the tie breaker.
+                val sortedList = list.toList()
+                    .filter { (_, data) ->
+                        data.isLoading || globalLoading || data.list.isNotEmpty()
+                    }
+                    .sortedWith(
+                        compareByDescending<Pair<String, ExpandableSearchList>> { (_, data) ->
+                            if (data.list.isNotEmpty()) 1 else 0
+                        }
+                            .thenByDescending { (_, data) -> data.list.size }
+                            .thenBy { (providerName, _) ->
+                                val index = pinnedOrder.indexOf(providerName)
+                                if (index == -1) Int.MAX_VALUE else index
+                            }
+                    )
 
                 (binding.searchMasterRecycler.adapter as? ParentItemAdapter)?.apply {
                     val newItems = sortedList.map { (providerName, providerData) ->
@@ -520,7 +539,8 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
                         HomeViewModel.ExpandableHomepageList(
                             homePageList,
                             providerData.currentPage,
-                            providerData.hasNext
+                            providerData.hasNext,
+                            isLoading = providerData.isLoading || globalLoading,
                         )
                     }
 

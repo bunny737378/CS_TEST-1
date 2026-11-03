@@ -72,7 +72,12 @@ open class ParentItemAdapter(
         list: Collection<HomeViewModel.ExpandableHomepageList>?,
         commitCallback: Runnable?
     ) {
-        super.submitList(list?.sortedBy { it.list.list.isEmpty() }, commitCallback)
+        // Native-style home: empty shelves are hidden, loading placeholders remain visible.
+        super.submitList(
+            list?.filter { it.list.list.isNotEmpty() || it.isLoading }
+                ?.sortedBy { it.list.list.isEmpty() },
+            commitCallback,
+        )
     }
 
     override fun onUpdateContent(
@@ -125,7 +130,11 @@ open class ParentItemAdapter(
                 nextLeft = startFocus,
                 nextRight = endFocus,
             )
-            homeChildMoreInfo.text = info.name
+            homeChildMoreInfo.text = if (item.isLoading && info.list.isEmpty()) {
+                "${info.name} · Loading…"
+            } else {
+                info.name
+            }
 
             homeChildRecyclerview.addOnScrollListener(object :
                 RecyclerView.OnScrollListener() {

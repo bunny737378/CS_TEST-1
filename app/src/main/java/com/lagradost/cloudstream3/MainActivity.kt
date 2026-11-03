@@ -90,6 +90,7 @@ import com.lagradost.cloudstream3.plugins.PluginManager.___DO_NOT_CALL_FROM_A_PL
 import com.lagradost.cloudstream3.plugins.PluginManager.loadSinglePlugin
 import com.lagradost.cloudstream3.receivers.VideoDownloadRestartReceiver
 import com.lagradost.cloudstream3.services.SubscriptionWorkManager
+import com.lagradost.cloudstream3.stremio.StremioBridge
 import com.lagradost.cloudstream3.syncproviders.AccountManager
 import com.lagradost.cloudstream3.syncproviders.AccountManager.Companion.APP_STRING
 import com.lagradost.cloudstream3.syncproviders.AccountManager.Companion.APP_STRING_PLAYER
@@ -512,7 +513,6 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             R.id.navigation_settings_general,
             R.id.navigation_settings_extensions,
             R.id.navigation_settings_stremio_addons,
-            R.id.navigation_stremio_streams,
             R.id.navigation_settings_plugins,
             R.id.navigation_test_providers,
         ).contains(destination.id)
@@ -834,6 +834,9 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                         logError(e)
                     }
                 }
+                // Plugin reloads rebuild apis from allProviders; re-register Stremio
+                // addon providers and refresh apiMap without publishing another event.
+                StremioBridge.syncProviders(notify = false)
             }
         }
     }

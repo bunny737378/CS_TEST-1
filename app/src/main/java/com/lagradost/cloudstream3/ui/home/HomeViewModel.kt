@@ -222,6 +222,7 @@ class HomeViewModel : ViewModel() {
         var list: HomePageList,
         var currentPage: Int,
         var hasNext: Boolean,
+        var isLoading: Boolean = false,
     )
 
     private val expandable: MutableMap<String, ExpandableHomepageList> = mutableMapOf()
@@ -268,7 +269,7 @@ class HomeViewModel : ViewModel() {
                     current.hasNext = false
                 }
             }
-            _page.postValue(Resource.Success(expandable))
+            _page.postValue(Resource.Success(expandable.filter { it.value.list.list.isNotEmpty() }))
         }
 
         lock -= name
@@ -343,7 +344,7 @@ class HomeViewModel : ViewModel() {
                 try {
                     expandable.clear()
                     data.value.forEach { home ->
-                        home?.items?.forEach { list ->
+                        home?.items?.filter { it.list.isNotEmpty() }?.forEach { list ->
                             val filteredList =
                                 context?.filterHomePageListByFilmQuality(list) ?: list
                             expandable[list.name] =
@@ -396,7 +397,7 @@ class HomeViewModel : ViewModel() {
                     } else {
                         _preview.postValue(Resource.Success((previewResponsesAdded.size < currentShuffledList.size) to previewResponses))
                     }
-                    _page.postValue(Resource.Success(expandable))
+                    _page.postValue(Resource.Success(expandable.filter { it.value.list.list.isNotEmpty() }))
                 } catch (e: Exception) {
                     _randomItems.postValue(emptyList())
                     logError(e)

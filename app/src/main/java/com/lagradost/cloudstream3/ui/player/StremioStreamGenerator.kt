@@ -26,9 +26,9 @@ class StremioStreamGenerator(
         isCasting: Boolean,
     ): Boolean {
         subtitles.forEach(subtitleCallback)
-        if (sourceTypes.contains(link.type)) {
-            callback(link to null)
-        }
+        // The user explicitly picked this stream on the Stremio page; do not let the
+        // player's default source-type filter silently discard it.
+        callback(link to null)
         return true
     }
 }

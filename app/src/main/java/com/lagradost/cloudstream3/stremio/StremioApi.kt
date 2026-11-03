@@ -538,7 +538,8 @@ object StremioApi {
     }
 
     suspend fun fetchManifest(manifestUrl: String): StremioAddon? = try {
-        val parts = transportParts(manifestUrl)
+        val canonical = canonicalInstallUrl(manifestUrl)
+        val parts = transportParts(canonical)
         val response = getJson(parts.manifestUrl)
         val manifestJson = if (parts.isLegacy) {
             legacyError(response)?.let { throw IllegalStateException("Legacy addon: $it") }
@@ -624,6 +625,28 @@ object StremioApi {
         }
     }
 
+    /** Core's LoadableSubtitles uses ResourcePath("subtitles", type, videoId). */
+    suspend fun fetchSubtitles(
+        addon: StremioAddon,
+        type: String,
+        videoId: String,
+    ): List<StremioSubtitle> =
+        addonCall(addon, "subtitles/$videoId", emptyList<StremioSubtitle>()) {
+            val json = fetchResource(addon, "subtitles", type, videoId, emptyMap())
+            val array = json.optJSONArray("subtitles")
+                ?: return@addonCall emptyList<StremioSubtitle>()
+            (0 until array.length()).mapNotNull { index ->
+                val subtitle = array.optJSONObject(index) ?: return@mapNotNull null
+                val url = subtitle.string("url") ?: return@mapNotNull null
+                StremioSubtitle(
+                    url = url,
+                    lang = subtitle.string("lang") ?: "eng",
+                    id = subtitle.string("id"),
+                    name = subtitle.string("name"),
+                )
+            }
+        }
+
     fun resolveUrl(addon: StremioAddon, url: String?): String? {
         if (url.isNullOrBlank()) return null
         val base = resourceBase(addon.transportUrl)
@@ -637,6 +660,37 @@ object StremioApi {
 
     /** Kept for callers that only need a stable base; resource requests use transportParts(). */
     fun normalizeTransportUrl(url: String): String = resourceBase(url)
+
+    /**
+     * Accepts a manifest URL, stremio:// deep link or an addon /configure URL and returns
+     * a canonical manifest descriptor URL. Query strings on configured addons are preserved.
+     */
+    fun canonicalInstallUrl(url: String): String {
+        var normalized = url.trim()
+        when {
+            normalized.startsWith("stremio://", true) ->
+                normalized = "https://" + normalized.substringAfter("://")
+            normalized.startsWith("stremio:", true) ->
+                normalized = "https://" + normalized.substringAfter(":")
+        }
+        val path = normalized.substringBefore('?').trimEnd('/')
+        val query = normalized.substringAfter('?', "")
+            .takeIf { it.isNotBlank() }
+            ?.let { "?$it" }
+            .orEmpty()
+        if (path.endsWith("/configure", true)) {
+            val basePath = path.substring(0, path.length - "/configure".length)
+            return basePath + "/manifest.json" + query
+        }
+        return transportParts(normalized).canonicalTransportUrl
+    }
+
+    /** Native addon configure page, mirroring AddonDetailsSheet in stremio-native. */
+    fun configureUrl(addon: StremioAddon): String? {
+        if (!addon.manifest.configurable && !addon.manifest.configurationRequired) return null
+        val parts = transportParts(addon.transportUrl)
+        return parts.base + "configure" + parts.querySuffix
+    }
 
     // endregion
 }

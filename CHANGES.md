@@ -321,3 +321,60 @@ in 2m11s: `:app:testDebugUnitTest` and `:app:assembleDebug` both passed, with ar
 (or code-identical `13215061835`) for the addon search and series/episode stream retest.
 On-device acceptance for addon search, stream loading, the dedicated all-streams page and
 CloudStream player handoff remains pending. No credentials or auth keys were added.
+
+### 10 Per-addon providers, native-style streams page, settings and search/home behaviour
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/stremio/StremioAddonProvider.kt`,
+`StremioBridge.kt`, `StremioLanguageCatalog.kt`, `StremioSettings.kt`,
+`StremioStreamPresentation.kt`, `StremioStreamsInfo.kt`, `StremioApi.kt`,
+`StremioModels.kt`, `StremioProvider.kt`, `StremioRepository.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/settings/StremioAddonsFragment.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/result/StremioStreamsFragment.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/result/ResultViewModel2.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/player/StremioStreamGenerator.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchViewModel.kt`,
+`SearchFragment.kt`, `app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeViewModel.kt`,
+`HomeParentItemAdapter.kt`, `app/src/main/java/com/lagradost/cloudstream3/MainActivity.kt`.
+
+**Reference:** the four supplied Stremio screenshots and the stremio-native Compose
+`DetailSheet.kt`, `StreamsSheet.kt`, `SearchScreen.kt`, `AddonsScreen.kt`,
+`AddonDetailsSheet.kt`, `StreamParser.kt`, `LanguageCatalog.kt`, `StreamOption.kt`,
+`StreamSortCriterion.kt`, `PlaybackRepository.kt`, `StremioCore.kt`, profile/settings
+screens and stremio-core protobuf models. No Rust JNI server, telemetry, app updater or
+new Gradle dependency was added.
+
+**Fix:** each installed search-capable addon is now registered as its own
+`StremioAddonProvider` in `APIHolder.allProviders` and `APIHolder.apis`, so search/home
+rows carry the individual addon name instead of one combined "Stremio" provider. The
+shared `StremioProvider` still aggregates streams from every installed stream/subtitle
+addon. Configured addon URLs, `stremio://` deep links and `/configure` descriptors are
+canonicalised to `manifest.json`; native-style Configure buttons open the addon's
+`/configure` page. Native profile settings now surface stream/audio/subtitle/interface
+languages, preferred quality, sort criterion, minimum seeds/speed, proxy/seeding/cache/
+connections/transcode, subtitle/audio/playback, spoiler, mobile-data, screen and foreground
+options. ISO-639 aliases and country flags support Any, Local and specific languages;
+selected-language streams are sorted to the top.
+
+`StremioModels` now parses core-like manifest, meta, video, subtitle and stream fields:
+links/trailers/cast/director/writer/country, runtime/posterShape/released, video streams/
+seriesInfo/progress/deepLinks, subtitle id/name, external/playerFrame/youtube/tramvai/nzb
+sources, archive URLs, proxy request/response headers and player deep links. The dedicated
+streams page now renders the screenshot-style hero (background, poster, logo, runtime,
+year, IMDb rating, episode label), metadata, provider chips, sort control and rich stream
+cards with green play icon, addon/quality badges, clean description, seeds, size, origin
+and language flags. It loads per-addon subtitle resources and passes the selected link and
+subtitles to CloudStream's player. Magnet playback now uses CloudStream's `&index=<fileIdx>`
+parameter instead of `&so=` and preserves torrent trackers. The selected link is no longer
+dropped by the generator's source-type filter. Bottom home/search navigation is hidden on
+the dedicated info/streams page.
+
+Search now immediately shows a loading row for every selected provider on submit, moves
+responders upward as they return, and hides empty provider rows for both Stremio and
+CloudStream. Home filters empty shelves instead of only pushing them to the bottom.
+`MainActivity.onAllPluginsLoaded()` re-registers dynamic Stremio providers after plugin
+reloads without republishing the plugin event.
+
+**Build validation:** pending CI `Build APK` / `:app:testDebugUnitTest` / `assembleDebug`
+run on this branch. On-device acceptance for per-addon search, configured addon installs,
+language-priority ordering, the native-style streams page, stream playback and subtitle
+handoff remains pending. No credentials or auth keys were added.

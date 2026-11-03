@@ -178,8 +178,9 @@ object StremioRepository {
     }
 
     suspend fun installAddon(url: String): Boolean {
-        val addon = StremioApi.fetchManifest(url) ?: return false
-        val base = StremioApi.resourceBase(url)
+        val canonical = StremioApi.canonicalInstallUrl(url)
+        val addon = StremioApi.fetchManifest(canonical) ?: return false
+        val base = StremioApi.resourceBase(canonical)
         val current = getAddons()
             .filterNot { StremioApi.resourceBase(it.transportUrl) == base }
             .toMutableList()
