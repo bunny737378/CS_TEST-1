@@ -73,15 +73,15 @@ class HomeViewModel : ViewModel() {
                     )
 
                     val data = if (headerCache == null) {
-                        // We store resume watching data in download header cache
-                        // Because downloads automatically pruned outdated download headers we
-                        // removed resume watching data. We should restore the data for affected users.
+
+
+
                         val oldData = getKey<DownloadObjects.DownloadHeaderCached>(
                             DOWNLOAD_HEADER_CACHE_BACKUP,
                             resume.parentId.toString()
                         ) ?: return@mapNotNull null
 
-                        // Restore data
+
                         setKey(DOWNLOAD_HEADER_CACHE, resume.parentId.toString(), oldData)
                         oldData
                     } else {
@@ -155,7 +155,7 @@ class HomeViewModel : ViewModel() {
         val resumeWatchingResult = getResumeWatching()
         if (isLayout(TV) && resumeWatchingResult != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             ioSafe {
-                // this WILL crash on non tvs, so keep this inside a try catch
+
                 activity?.addProgramsToContinueWatching(resumeWatchingResult)
             }
         }
@@ -191,7 +191,7 @@ class HomeViewModel : ViewModel() {
         }
 
         val watchPrefNotNull = preferredWatchStatus ?: EnumSet.of(currentWatchTypes.first())
-        //if (currentWatchTypes.any { watchPrefNotNull.contains(it) }) watchPrefNotNull else listOf(currentWatchTypes.first())
+
 
         DataStoreHelper.homeBookmarkedList = watchPrefNotNull.map { it.internalId }.toIntArray()
         _availableWatchStatusTypes.postValue(
@@ -212,7 +212,7 @@ class HomeViewModel : ViewModel() {
     private var onGoingLoad: Job? = null
     private var isCurrentlyLoadingName: String? = null
     private fun loadAndCancel(api: MainAPI) {
-        //println("loaded ${api.name}")
+
         onGoingLoad?.cancel()
         isCurrentlyLoadingName = api.name
         onGoingLoad = load(api)
@@ -258,7 +258,7 @@ class HomeViewModel : ViewModel() {
                                 }
 
                                 this.list.list += newList.list
-                                this.list.list.distinctBy { it.url } // just to be sure we are not adding the same shit for some reason
+                                this.list.list.distinctBy { it.url }
                             } ?: debugWarning {
                                 "Expanded an item not in main load named $key, current list is ${expandable.keys}"
                             }
@@ -276,12 +276,12 @@ class HomeViewModel : ViewModel() {
         return expandable[name]
     }
 
-    // this is soo over engineered, but idk how I can make it clean without making the main api harder to use :pensive:
+
     fun expand(name: String) = viewModelScope.launchSafe {
         expandAndReturn(name)
     }
 
-    // returns the amount of items added and modifies current
+
     private suspend fun updatePreviewResponses(
         current: MutableList<LoadResponse>,
         alreadyAdded: MutableSet<String>,
@@ -317,11 +317,11 @@ class HomeViewModel : ViewModel() {
     }
 
     private fun load(api: MainAPI): Job = ioSafe {
-        repo = //if (api != null) {
+        repo =
             APIRepository(api)
-        //} else {
-        //    autoloadRepo()
-        //}
+
+
+
 
         _apiName.postValue(repo?.name)
         _randomItems.postValue(listOf())
@@ -335,7 +335,7 @@ class HomeViewModel : ViewModel() {
 
         _page.postValue(Resource.Loading())
         _preview.postValue(Resource.Loading())
-        // cancel the current preview expand as that is no longer relevant
+
         addJob?.cancel()
 
         when (val data = repo?.getMainPage(1, null)) {
@@ -363,7 +363,7 @@ class HomeViewModel : ViewModel() {
                     previewResponses.clear()
                     previewResponsesAdded.clear()
 
-                    //val home = data.value
+
                     if (items.isNotEmpty()) {
                         val currentList =
                             items.shuffled().filter { it.list.isNotEmpty() }
@@ -477,7 +477,7 @@ class HomeViewModel : ViewModel() {
     }
 
     fun queryTextChange(newText: String) {
-        // do nothing
+
     }
 
     fun loadStoredData() {
@@ -497,20 +497,20 @@ class HomeViewModel : ViewModel() {
         loadResult(load.response.url, load.response.apiName, load.response.name, load.action)
     }
 
-    // only save the key if it is from UI, as we don't want internal functions changing the setting
+
     fun loadAndCancel(
         preferredApiName: String?,
         forceReload: Boolean = true,
         fromUI: Boolean = false
     ) =
         ioSafe {
-            //println("trying to load $preferredApiName")
-            // Since plugins are loaded in stages this function can get called multiple times.
-            // The issue with this is that the homepage may be fetched multiple times while the first request is loading
-            // api?.let { expandable[it.name]?.list?.list?.isNotEmpty() } == true
+
+
+
+
             val currentPage = page.value
 
-            // if we don't need to reload and we have a valid homepage or currently loading the same thing then return
+
             val currentLoading = isCurrentlyLoadingName
             if (!forceReload && (currentPage is Resource.Success && currentPage.value.isNotEmpty() || (currentLoading != null && currentLoading == preferredApiName))) {
                 return@ioSafe
@@ -518,12 +518,12 @@ class HomeViewModel : ViewModel() {
 
             val api = getApiFromNameNull(preferredApiName)
             if (preferredApiName == noneApi.name) {
-                // just set to random
+
                 if (fromUI) DataStoreHelper.currentHomePage = noneApi.name
                 loadAndCancel(noneApi)
             } else if (preferredApiName == randomApi.name) {
-                // randomize the api, if none exist like if not loaded or not installed
-                // then use nothing
+
+
                 val validAPIs = context?.filterProviderByPreferredMedia()
                 if (validAPIs.isNullOrEmpty()) {
                     loadAndCancel(noneApi)
@@ -533,8 +533,8 @@ class HomeViewModel : ViewModel() {
                     if (fromUI) DataStoreHelper.currentHomePage = apiRandom.name
                 }
             } else if (api == null) {
-                // API is not found aka not loaded or removed, post the loading
-                // progress if waiting for plugins, otherwise nothing
+
+
                 if (PluginManager.loadedOnlinePlugins || PluginManager.isSafeMode()) {
                     loadAndCancel(noneApi)
                 } else {
@@ -543,7 +543,7 @@ class HomeViewModel : ViewModel() {
                         _apiName.postValue(preferredApiName)
                 }
             } else {
-                // if the api is found, then set it to it and save key
+
                 if (fromUI) DataStoreHelper.currentHomePage = api.name
                 loadAndCancel(api)
             }

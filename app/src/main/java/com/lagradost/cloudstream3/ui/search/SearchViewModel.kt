@@ -59,9 +59,9 @@ class SearchViewModel : ViewModel() {
 
     var lastQuery: String? = null
 
-    /** Save which providers can searched again and which search result page they are on.
-     * Maps provider name to search list.
-     * @see [HomeViewModel.expandable] */
+
+
+
     private val expandableSearches: MutableMap<String, ExpandableSearchList> = mutableMapOf()
 
     private var currentSearchIndex = 0
@@ -89,30 +89,30 @@ class SearchViewModel : ViewModel() {
         _currentHistory.postValue(items)
     }
 
-    /**
-     * Fetches search suggestions with debouncing.
-     * Waits 300ms before making the API call to avoid too many requests.
-     * 
-     * @param query The search query to get suggestions for
-     */
+
+
+
+
+
+
     fun fetchSuggestions(query: String) {
         suggestionJob?.cancel()
-        
+
         if (query.isBlank() || query.length < 2) {
             _searchSuggestions.postValue(emptyList())
             return
         }
-        
+
         suggestionJob = ioSafe {
-            delay(300) // Debounce
+            delay(300)
             val suggestions = SearchSuggestionApi.getSuggestions(query)
             _searchSuggestions.postValue(suggestions)
         }
     }
 
-    /**
-     * Clears the current search suggestions.
-     */
+
+
+
     fun clearSuggestions() {
         suggestionJob?.cancel()
         _searchSuggestions.postValue(emptyList())
@@ -120,7 +120,7 @@ class SearchViewModel : ViewModel() {
 
     private val lock: MutableSet<String> = mutableSetOf()
 
-    // ExpandableHomepageList because the home adapter is reused in the search fragment
+
     suspend fun expandAndReturn(name: String): HomeViewModel.ExpandableHomepageList? {
         if (lock.contains(name)) return null
         val query = lastQuery ?: return null
@@ -145,8 +145,8 @@ class SearchViewModel : ViewModel() {
                         "Expanded search contained an item that was previously already in the list.\nQuery = $query, ${nextValue.items} = ${this.list}"
                     }
 
-                    // just to be sure we are not adding the same shit for some reason
-                    // Avoids weird behavior in the recyclerview by recreating the list
+
+
                     this.list = (this.list + nextValue.items).distinctBy { it.url }
                 } ?: debugWarning {
                     "Expanded an item not in search load named $name, current list is ${expandableSearches.keys}"
@@ -178,7 +178,7 @@ class SearchViewModel : ViewModel() {
         val nestedList =
             lists.map { it.value.list }
 
-        // I do it this way to move the relevant search results to the top
+
         var index = 0
         while (true) {
             var added = 0
@@ -216,7 +216,7 @@ class SearchViewModel : ViewModel() {
                     SearchHistoryItem(
                         searchedAt = System.currentTimeMillis(),
                         searchText = query,
-                        type = emptyList(), // TODO implement tv type
+                        type = emptyList(),
                         key = key,
                     )
                 )
@@ -228,10 +228,10 @@ class SearchViewModel : ViewModel() {
 
             lastQuery = query
 
-            withContext(Dispatchers.IO) { // This interrupts UI otherwise
+            withContext(Dispatchers.IO) {
                 repos.filter { a ->
                     (ignoreSettings || (providersActive.isEmpty() || providersActive.contains(a.name))) && (!isQuickSearch || a.hasQuickSearch)
-                }.amap { a -> // Parallel
+                }.amap { a ->
                     val search = if (isQuickSearch) a.quickSearch(query) else a.search(query, 1)
                     if (currentSearchIndex != currentIndex) return@amap
                     if (search is Resource.Success) {
@@ -243,7 +243,7 @@ class SearchViewModel : ViewModel() {
                     _currentSearch.postValue(expandableSearches)
                 }
 
-                if (currentSearchIndex != currentIndex) return@withContext // this should prevent rewrite of existing data bug
+                if (currentSearchIndex != currentIndex) return@withContext
 
                 _currentSearch.postValue(expandableSearches)
                 val list = bundleSearch(expandableSearches)

@@ -143,14 +143,14 @@ open class ParentItemAdapter(
 
                     val count = adapter.itemCount
                     val hasNext = adapter.hasNext
-                    /*println(
-                        "scolling ${recyclerView.isRecyclerScrollable()} ${
-                            recyclerView.canScrollHorizontally(
-                                1
-                            )
-                        }"
-                    )*/
-                    //!recyclerView.canScrollHorizontally(1)
+
+
+
+
+
+
+
+
                     if (!recyclerView.isRecyclerScrollable() && hasNext && expandCount != count) {
                         expandCount = count
                         expandCallback?.invoke(name)
@@ -158,7 +158,7 @@ open class ParentItemAdapter(
                 }
             })
 
-            //(recyclerView.adapter as HomeChildItemAdapter).notifyDataSetChanged()
+
             if (isLayout(PHONE or EMULATOR)) {
                 homeChildMoreInfo.setOnClickListener {
                     moreInfoClickCallback.invoke(item)
@@ -179,7 +179,7 @@ open class ParentItemAdapter(
             HomepageParentBinding.bind(inflater.inflate(layoutResId, parent, false))
         } catch (t: Throwable) {
             logError(t)
-            // just in case someone forgot we don't want to crash
+
             HomepageParentBinding.inflate(inflater)
         }
 

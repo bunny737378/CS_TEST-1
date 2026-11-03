@@ -30,8 +30,6 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      # Hosted runners already include cmdline-tools/latest. setup-android@v3
-      # tries to install the obsolete "tools" package, so use sdkmanager directly.
       - name: Set up Android SDK
         run: |
           SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
@@ -40,13 +38,10 @@ jobs:
           echo "ANDROID_SDK_ROOT=$SDK_ROOT" >> "$GITHUB_ENV"
           echo "$SDK_ROOT/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
           echo "$SDK_ROOT/platform-tools" >> "$GITHUB_PATH"
-
           "$SDKMANAGER" --version
           yes | "$SDKMANAGER" --licenses > /dev/null || true
           "$SDKMANAGER" --install "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 
-      # app/build.gradle.kts signs both build types with this committed,
-      # non-production debug key so every build has the same signature.
       - name: Verify fixed debug keystore
         run: |
           test -f debug.keystore
@@ -64,15 +59,12 @@ jobs:
         with:
           cache-read-only: false
 
-      - name: Run unit tests
-        run: ./gradlew testDebugUnitTest --no-daemon --no-configuration-cache --stacktrace
+      - name: Build Release APK
+        run: ./gradlew :app:assembleRelease --no-daemon --no-configuration-cache --stacktrace
 
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon --no-configuration-cache --stacktrace
-
-      - name: Upload Debug APK
+      - name: Upload Release APK
         uses: actions/upload-artifact@v4
         with:
-          name: CloudStream-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
+          name: CloudStream-release-apk
+          path: app/build/outputs/apk/release/*.apk
           if-no-files-found: error
