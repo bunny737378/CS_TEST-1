@@ -800,7 +800,7 @@
 
     <!-- Standalone Stremio addon bridge -->
     <string name="stremio_addons">Stremio Addons</string>
-    <string name="stremio_intro">Sign in to sync addon collections with your Stremio account. Addons supply catalogs, metadata and streams through CloudStream's existing screens.</string>
+    <string name="stremio_intro">Sign in to sync addon collections with your Stremio account. Addons supply catalogs, metadata and streams through CloudStream screens.</string>
     <string name="stremio_email">Email</string>
     <string name="stremio_password">Password</string>
     <string name="stremio_login">Login</string>
