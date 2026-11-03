@@ -42,18 +42,22 @@ data class StremioStreamOption(
     val linkType: ExtractorLinkType?,
     val subtitles: List<StremioSubtitle>,
 ) {
-    suspend fun toExtractorLink(): ExtractorLink = newExtractorLink(
-        source = addonTitle,
-        name = name,
-        url = playbackUrl,
-        type = linkType,
-    ) {
-        this.headers = stream.headers
-        this.quality = qualityValue(quality)
-        val referer = stream.headers.entries
-            .firstOrNull { it.key.equals("Referer", true) || it.key.equals("referer", true) }
-            ?.value.orEmpty()
-        this.referer = referer
+    suspend fun toExtractorLink(): ExtractorLink {
+        // Capture before entering ExtractorLink's initializer, whose `quality` is an Int.
+        val streamQuality = quality
+        return newExtractorLink(
+            source = addonTitle,
+            name = name,
+            url = playbackUrl,
+            type = linkType,
+        ) {
+            this.headers = stream.headers
+            this.quality = qualityValue(streamQuality)
+            val referer = stream.headers.entries
+                .firstOrNull { it.key.equals("Referer", true) || it.key.equals("referer", true) }
+                ?.value.orEmpty()
+            this.referer = referer
+        }
     }
 
     suspend fun subtitleFiles(): List<SubtitleFile> = subtitles.distinctBy { it.url }
