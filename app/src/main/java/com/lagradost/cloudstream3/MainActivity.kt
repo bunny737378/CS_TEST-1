@@ -336,6 +336,21 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                         val url = str.replaceFirst(APP_STRING_REPO, "https")
                         loadRepository(url)
                         return true
+                    } else if (safeURI(str)?.scheme.equals("stremio", ignoreCase = true)) {
+                        ioSafe {
+                            runCatching {
+                                com.lagradost.cloudstream3.stremio.StremioAddonManager.fetchAndInstallAddon(str)
+                            }.onSuccess { installed ->
+                                showToast("Installed ${installed.name}", Toast.LENGTH_SHORT)
+                                main {
+                                    activity.navigate(R.id.action_navigation_global_to_navigation_settings_addons)
+                                }
+                            }.onFailure { err ->
+                                logError(err)
+                                showToast(err.localizedMessage ?: "Failed to install Stremio addon", Toast.LENGTH_SHORT)
+                            }
+                        }
+                        return true
                     } else if (safeURI(str)?.scheme == APP_STRING_SEARCH) {
                         val query = str.substringAfter("$APP_STRING_SEARCH://")
                         nextSearchQuery =
@@ -494,6 +509,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             !listOf(
                 R.id.navigation_results_phone,
                 R.id.navigation_results_tv,
+                R.id.navigation_stremio_streams,
                 R.id.navigation_player
             ).contains(destination.id)
 
@@ -514,6 +530,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             R.id.navigation_settings_providers,
             R.id.navigation_settings_general,
             R.id.navigation_settings_extensions,
+            R.id.navigation_settings_addons,
             R.id.navigation_settings_plugins,
             R.id.navigation_test_providers,
         ).contains(destination.id)
@@ -590,6 +607,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                     R.id.navigation_settings_providers,
                     R.id.navigation_settings_general,
                     R.id.navigation_settings_extensions,
+                    R.id.navigation_settings_addons,
                     R.id.navigation_settings_plugins,
                     R.id.navigation_test_providers
                 ) -> {
@@ -1665,8 +1683,8 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
 
         ioSafe {
             initAll()
-
             apis = allProviders.distinctBy { it }
+            com.lagradost.cloudstream3.stremio.StremioAddonManager.ensureInitialized()
         }
 
 
@@ -2028,7 +2046,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
 
             } else if (PluginManager.getPluginsOnline().isEmpty()
                 && PluginManager.getPluginsLocal().isEmpty()
-
+                && !com.lagradost.cloudstream3.stremio.StremioAddonManager.hasInstalledAddonsSync()
             ) {
                 navController.navigate(
                     R.id.navigation_setup_extensions,

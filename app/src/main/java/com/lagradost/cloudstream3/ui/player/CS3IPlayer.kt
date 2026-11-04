@@ -1867,12 +1867,8 @@ class CS3IPlayer : IPlayer {
                         null
                     } ?: default
 
-                    if (!currentPrefMedia.contains(TvType.Torrent.ordinal)) {
-                        val errorMessage = context.getString(R.string.torrent_preferred_media)
-                        event(ErrorEvent(ErrorLoadingException(errorMessage)))
-                        return
-                    }
-
+                    // Direct P2P torrent streaming is natively supported; do not block playback
+                    // even if Torrent media filter is unchecked in catalog preferences.
                     if (Torrent.hasAcceptedTorrentForThisSession == false) {
                         val errorMessage = context.getString(R.string.torrent_not_accepted)
                         event(ErrorEvent(ErrorLoadingException(errorMessage)))

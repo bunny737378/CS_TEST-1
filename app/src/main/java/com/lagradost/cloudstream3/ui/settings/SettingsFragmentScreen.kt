@@ -156,6 +156,13 @@ object SettingsFragmentScreen : Screen {
             icon = R.drawable.extension_24px,
             subtitle = persistentListOf(R.string.add_repository)
         ),
+        SettingsNavigation(
+            title = R.string.category_addons,
+            navigation = R.id.action_navigation_global_to_navigation_settings_addons,
+            screen = null,
+            icon = R.drawable.ic_baseline_extension_24,
+            subtitle = persistentListOf(R.string.category_addons_subtitle)
+        ),
     )
 
     @Immutable

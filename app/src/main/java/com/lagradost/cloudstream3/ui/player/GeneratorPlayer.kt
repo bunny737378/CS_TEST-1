@@ -122,6 +122,7 @@ import com.lagradost.cloudstream3.utils.UIHelper.dismissSafe
 import com.lagradost.cloudstream3.utils.UIHelper.fixSystemBarsPadding
 import com.lagradost.cloudstream3.utils.UIHelper.hideProgress
 import com.lagradost.cloudstream3.utils.UIHelper.hideSystemUI
+import com.lagradost.cloudstream3.utils.UIHelper.navigate
 import com.lagradost.cloudstream3.utils.UIHelper.popCurrentPage
 import com.lagradost.cloudstream3.utils.UIHelper.showProgress
 import com.lagradost.cloudstream3.utils.UIHelper.toPx
@@ -1012,9 +1013,12 @@ class GeneratorPlayer : FullScreenPlayer() {
         }
 
 
+    private var pendingStremioSubtitleSelection: SubtitleData? = null
+
     override fun showMirrorsDialogue() {
         try {
             currentSelectedSubtitles = player.getCurrentPreferredSubtitle()
+                ?: pendingStremioSubtitleSelection?.also { pendingStremioSubtitleSelection = null }
             //println("CURRENT SELECTED :$currentSelectedSubtitles of $currentSubs")
             context?.let { ctx ->
                 val isPlaying = player.getIsPlaying()
@@ -1060,7 +1064,63 @@ class GeneratorPlayer : FullScreenPlayer() {
                     activity?.hideSystemUI()
                 }
 
-                if (subsProvidersIsActive) {
+                val stremioGen = viewModel.generator as? com.lagradost.cloudstream3.stremio.StremioVideoGenerator
+                var stremioSubsObserverJob: Job? = null
+
+                if (stremioGen != null) {
+                    // For Stremio playback: omit "Search Online" footers and instead show installed
+                    // Stremio Subtitle Addons with their found subtitle counts.
+                    val initialAddonResults = stremioGen.ensureSubtitlesLoaded()
+                    val footerViewsByAddonId = LinkedHashMap<String, TextView>()
+
+                    for (addonRes in initialAddonResults) {
+                        val addonFooter: TextView = layoutInflater.inflate(
+                            R.layout.sort_bottom_footer_add_choice, null
+                        ) as TextView
+
+                        addonFooter.text = if (addonRes.isLoading) {
+                            "${addonRes.addonName} (...)"
+                        } else {
+                            "${addonRes.addonName} (${addonRes.subtitles.size})"
+                        }
+
+                        addonFooter.setOnClickListener {
+                            val latest = stremioGen.subtitleAddons.value
+                                .firstOrNull { it.addonId == addonRes.addonId && it.addonName == addonRes.addonName }
+                                ?: addonRes
+                            if (latest.isLoading) {
+                                showToast(R.string.loading)
+                                return@setOnClickListener
+                            }
+                            if (latest.subtitles.isEmpty()) {
+                                showToast(R.string.no_subtitles)
+                                return@setOnClickListener
+                            }
+                            shouldDismiss = false
+                            sourceDialog.dismissSafe(activity)
+                            selectSourceDialog = null
+                            openStremioAddonSubtitlePicker(ctx, latest, isPlaying)
+                        }
+
+                        footerViewsByAddonId["${addonRes.addonId}:${addonRes.addonName}"] = addonFooter
+                        subtitleList.addFooterView(addonFooter)
+                    }
+
+                    stremioSubsObserverJob = viewModel.viewModelScope.launch {
+                        stremioGen.subtitleAddons.collect { updatedList ->
+                            activity?.runOnUiThread {
+                                for (item in updatedList) {
+                                    val tv = footerViewsByAddonId["${item.addonId}:${item.addonName}"] ?: continue
+                                    tv.text = if (item.isLoading) {
+                                        "${item.addonName} (...)"
+                                    } else {
+                                        "${item.addonName} (${item.subtitles.size})"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else if (subsProvidersIsActive) {
                     val currentLoadResponse = viewModel.state.generatorState?.response
 
                     val loadFromOpenSubsFooter: TextView = layoutInflater.inflate(
@@ -1187,6 +1247,7 @@ class GeneratorPlayer : FullScreenPlayer() {
                 refreshLinks(currentQualityProfile)
 
                 sourceDialog.setOnDismissListener {
+                    stremioSubsObserverJob?.cancel()
                     if (shouldDismiss) dismiss()
                     selectSourceDialog = null
                 }
@@ -1676,8 +1737,166 @@ class GeneratorPlayer : FullScreenPlayer() {
         }
     }
 
+    private fun openStremioAddonSubtitlePicker(
+        context: Context,
+        addonResult: com.lagradost.cloudstream3.stremio.StremioSubtitleAddonResult,
+        wasPlayingBeforeDialog: Boolean,
+    ) {
+        val dialog = Dialog(context, R.style.DialogFullscreenPlayer)
+        val binding = DialogOnlineSubtitlesBinding.inflate(LayoutInflater.from(context), null, false)
+        dialog.setContentView(binding.root)
+        fixSystemBarsPadding(binding.root)
+
+        binding.yearBtt.isGone = true
+        binding.searchFilter.isGone = true
+        binding.searchLoadingBar.hide()
+        binding.subtitlesSearch.queryHint = "${addonResult.addonName} (${addonResult.subtitles.size})"
+
+        var filteredSubs: List<com.lagradost.cloudstream3.stremio.StremioSubtitleItem> = addonResult.subtitles
+        var selectedSub: com.lagradost.cloudstream3.stremio.StremioSubtitleItem? = filteredSubs.firstOrNull()
+        var returnToMirrorsOnDismiss = true
+
+        val rowLayout = R.layout.sort_bottom_single_choice_double_text
+        val adapter = object : ArrayAdapter<com.lagradost.cloudstream3.stremio.StremioSubtitleItem>(
+            dialog.context,
+            rowLayout,
+        ) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = convertView ?: LayoutInflater.from(context).inflate(rowLayout, null)
+                val item = getItem(position)
+                val mainTextView = view.findViewById<TextView>(R.id.main_text)
+                val secondaryTextView = view.findViewById<TextView>(R.id.secondary_text)
+                val drawableEnd = view.findViewById<ImageView>(R.id.drawable_end)
+                drawableEnd?.setImageDrawable(null)
+
+                val langName = item?.let { fromTagToLanguageName(it.lang.trim()) ?: it.lang } ?: ""
+                mainTextView?.text = langName
+                secondaryTextView?.text = item?.let {
+                    val cleanLabel = it.label?.trim()?.takeIf { l -> l.isNotEmpty() }
+                    cleanLabel ?: "${addonResult.addonName} · ${it.id}"
+                } ?: ""
+                return view
+            }
+        }
+
+        fun refreshFiltered(filterQuery: String?) {
+            val q = filterQuery?.trim().orEmpty()
+            filteredSubs = if (q.isEmpty()) {
+                addonResult.subtitles
+            } else {
+                addonResult.subtitles.filter { item ->
+                    val langName = fromTagToLanguageName(item.lang.trim()) ?: item.lang
+                    langName.contains(q, ignoreCase = true) ||
+                        item.lang.contains(q, ignoreCase = true) ||
+                        (item.label?.contains(q, ignoreCase = true) == true) ||
+                        item.id.contains(q, ignoreCase = true)
+                }
+            }
+            adapter.clear()
+            adapter.addAll(filteredSubs)
+            selectedSub = filteredSubs.firstOrNull()
+            if (filteredSubs.isNotEmpty()) {
+                binding.subtitleAdapter.setItemChecked(0, true)
+            }
+        }
+
+        fun applySubtitleSelection(subItem: com.lagradost.cloudstream3.stremio.StremioSubtitleItem) {
+            val subData = com.lagradost.cloudstream3.stremio.StremioStreamLinkResolver.toSubtitleData(
+                subItem,
+                addonResult.addonName,
+            )
+            returnToMirrorsOnDismiss = false
+            dialog.dismissSafe(activity)
+
+            pendingStremioSubtitleSelection = subData
+            setSubtitles(subData, true)
+            addAndSelectSubtitles(subData)
+            if (wasPlayingBeforeDialog) {
+                player.handleEvent(CSPlayerEvent.Play)
+            }
+            // Return directly to the normal subtitle dialog page with this subtitle added & enabled
+            showMirrorsDialogue()
+        }
+
+        binding.subtitleAdapter.choiceMode = AbsListView.CHOICE_MODE_SINGLE
+        binding.subtitleAdapter.adapter = adapter
+        refreshFiltered(null)
+
+        binding.subtitleAdapter.setOnItemClickListener { _, _, position, _ ->
+            val picked = filteredSubs.getOrNull(position) ?: return@setOnItemClickListener
+            selectedSub = picked
+            applySubtitleSelection(picked)
+        }
+
+        binding.subtitlesSearch.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                refreshFiltered(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                refreshFiltered(newText)
+                return true
+            }
+        })
+
+        binding.cancelBtt.setOnClickListener {
+            dialog.dismissSafe(activity)
+        }
+
+        binding.applyBtt.setOnClickListener {
+            val current = selectedSub
+            if (current != null) {
+                applySubtitleSelection(current)
+            } else {
+                dialog.dismissSafe(activity)
+            }
+        }
+
+        dialog.setOnDismissListener {
+            if (returnToMirrorsOnDismiss) {
+                if (wasPlayingBeforeDialog) {
+                    player.handleEvent(CSPlayerEvent.Play)
+                }
+                showMirrorsDialogue()
+            }
+        }
+
+        dialog.show()
+    }
+
+    private fun switchStremioEpisodeToStreamSelector(targetIndex: Int): Boolean {
+        if (viewModel.generator !is com.lagradost.cloudstream3.stremio.StremioVideoGenerator) {
+            return false
+        }
+        val total = com.lagradost.cloudstream3.stremio.StremioStreamSession.episodes.size
+        if (targetIndex !in 0 until total) return false
+
+        player.saveData()
+        isNextEpisode = false
+        playerBinding?.playerEpisodeOverlay?.isGone = true
+        releasePlayer()
+
+        com.lagradost.cloudstream3.stremio.StremioStreamSession.selectEpisode(
+            index = targetIndex,
+            forceReload = true,
+        )
+
+        val navController = runCatching {
+            androidx.navigation.fragment.NavHostFragment.findNavController(this)
+        }.getOrNull()
+        val poppedToSelector = navController?.popBackStack(R.id.navigation_stremio_streams, false) == true
+        if (!poppedToSelector) {
+            activity?.popCurrentPage(isInPlayer = true, isInExpandedView = false, isInResults = false)
+            activity?.navigate(R.id.global_to_navigation_stremio_streams)
+        }
+        return true
+    }
+
     override fun nextEpisode() {
         if (viewModel.hasNextEpisode() == true) {
+            if (switchStremioEpisodeToStreamSelector(viewModel.episodeIndex + 1)) return
             isNextEpisode = true
             releasePlayer()
             viewModel.loadLinksNext()
@@ -1686,6 +1905,7 @@ class GeneratorPlayer : FullScreenPlayer() {
 
     override fun prevEpisode() {
         if (viewModel.hasPrevEpisode() == true) {
+            if (switchStremioEpisodeToStreamSelector(viewModel.episodeIndex - 1)) return
             isNextEpisode = true
             releasePlayer()
             viewModel.loadLinksPrev()
@@ -2146,10 +2366,14 @@ class GeneratorPlayer : FullScreenPlayer() {
                     false,
                     { episodeClick ->
                         if (episodeClick.action == ACTION_CLICK_DEFAULT) {
+                            val clickedPos = episodeClick.position
+                            if (clickedPos != null && switchStremioEpisodeToStreamSelector(clickedPos)) {
+                                return@EpisodeAdapter
+                            }
                             isNextEpisode = false
                             releasePlayer()
                             playerEpisodeOverlay.isGone = true
-                            episodeClick.position?.let { viewModel.loadThisEpisode(it) }
+                            clickedPos?.let { viewModel.loadThisEpisode(it) }
                         }
                     },
                     { downloadClickEvent ->

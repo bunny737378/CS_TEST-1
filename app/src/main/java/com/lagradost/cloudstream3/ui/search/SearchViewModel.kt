@@ -230,7 +230,10 @@ class SearchViewModel : ViewModel() {
 
             withContext(Dispatchers.IO) {
                 repos.filter { a ->
-                    (ignoreSettings || (providersActive.isEmpty() || providersActive.contains(a.name))) && (!isQuickSearch || a.hasQuickSearch)
+                    val stremioSearchAllowed = (a.api as? com.lagradost.cloudstream3.stremio.StremioCatalogProvider)?.hasSearchSupport ?: true
+                    stremioSearchAllowed &&
+                        (ignoreSettings || (providersActive.isEmpty() || providersActive.contains(a.name))) &&
+                        (!isQuickSearch || a.hasQuickSearch)
                 }.amap { a ->
                     val search = if (isQuickSearch) a.quickSearch(query) else a.search(query, 1)
                     if (currentSearchIndex != currentIndex) return@amap

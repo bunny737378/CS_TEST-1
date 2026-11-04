@@ -376,8 +376,13 @@ object AppContextUtils {
         val hashSet = HashSet<String>()
         val activeLangs = getApiProviderLangSettings()
         val hasUniversal = activeLangs.contains(AllLanguagesName)
-        hashSet.addAll(apis.filter { hasUniversal || activeLangs.contains(it.lang) }
-            .map { it.name })
+        hashSet.addAll(
+            apis.filter {
+                it is com.lagradost.cloudstream3.stremio.StremioCatalogProvider ||
+                    hasUniversal ||
+                    activeLangs.contains(it.lang)
+            }.map { it.name }
+        )
         return hashSet
     }
 
@@ -469,7 +474,17 @@ object AppContextUtils {
         val langs = this.getApiProviderLangSettings()
         val hasUniversal = langs.contains(AllLanguagesName)
         val allApis =
-            apis.filter { api -> (hasUniversal || langs.contains(api.lang)) && (api.hasMainPage || !hasHomePageIsRequired) }
+            apis.filter { api ->
+                val langAllowed = api is com.lagradost.cloudstream3.stremio.StremioCatalogProvider ||
+                    hasUniversal ||
+                    langs.contains(api.lang)
+                val capabilityAllowed = if (api is com.lagradost.cloudstream3.stremio.StremioCatalogProvider && !hasHomePageIsRequired) {
+                    api.hasSearchSupport
+                } else {
+                    api.hasMainPage || !hasHomePageIsRequired
+                }
+                langAllowed && capabilityAllowed
+            }
         return if (currentPrefMedia.isEmpty()) {
             allApis
         } else {

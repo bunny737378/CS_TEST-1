@@ -145,6 +145,27 @@ plugin `DialogFragment`s via `FragmentLifecycleCallbacks` (`showsDialog = false`
 
 ---
 
+## 10. Native Stremio Addons & Direct P2P Torrent Streaming
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/stremio/StremioModels.kt`,
+`StremioTransport.kt`, `StremioAddonManager.kt`, `StremioCatalogProvider.kt`,
+`StremioStreamLinkResolver.kt`, `StremioStreamSession.kt`, `StremioVideoGenerator.kt`,
+`StremioAddonsScreen.kt`, `StremioAddonsFragment.kt`, `StremioStreamsScreen.kt`,
+`StremioStreamsFragment.kt`, `SettingsFragmentScreen.kt`, `SettingsFragment.kt`,
+`main_settings.xml`, `mobile_navigation.xml`, `strings.xml`, `AndroidManifest.xml`,
+`MainActivity.kt`, `AppContextUtils.kt`, `SearchFragment.kt`, `SearchViewModel.kt`,
+`ResultViewModel2.kt`, `GeneratorPlayer.kt`, `Torrent.kt`, `CS3IPlayer.kt`.
+
+Added full native Stremio Addon SDK support (`catalog`, `meta`, `stream`, `subtitles`) under
+Settings -> `"Addones"` with URL fetch, 4 horizontal capability tabs, declarative & web
+`/configure` flows (`stremio://` deep-link handling), exact addon-name Home & Search catalog
+integration, native CloudStream-themed Stream Selector (`All` + per-addon filter chips), direct
+high-performance P2P torrent streaming (`TorrServer` magnet metadata polling, tracker injection,
+`fileIdx` / largest-video selection), episode switching back to the Stream Selector from inside the
+player, and Stremio Subtitle Addon lists + counts inside `GeneratorPlayer`'s subtitle dialog.
+
+---
+
 ## 8. How to reapply on a fresh clone
 
 1. Clone upstream `recloudstream/cloudstream` from the same base commit, then restore the missing
