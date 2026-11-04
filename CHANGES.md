@@ -154,7 +154,8 @@ plugin `DialogFragment`s via `FragmentLifecycleCallbacks` (`showsDialog = false`
 `StremioStreamsFragment.kt`, `SettingsFragmentScreen.kt`, `SettingsFragment.kt`,
 `main_settings.xml`, `mobile_navigation.xml`, `strings.xml`, `AndroidManifest.xml`,
 `MainActivity.kt`, `AppContextUtils.kt`, `SearchFragment.kt`, `SearchViewModel.kt`,
-`ResultViewModel2.kt`, `GeneratorPlayer.kt`, `Torrent.kt`, `CS3IPlayer.kt`.
+`ResultViewModel2.kt`, `GeneratorPlayer.kt`, `PlayerGeneratorViewModel.kt`, `Torrent.kt`,
+`CS3IPlayer.kt`, `DataStoreHelper.kt`, `CHANGES.md`.
 
 Added full native Stremio Addon SDK support (`catalog`, `meta`, `stream`, `subtitles`) under
 Settings -> `"Addones"` with URL fetch, 4 horizontal capability tabs, declarative & web
