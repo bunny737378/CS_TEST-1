@@ -1888,7 +1888,7 @@ class GeneratorPlayer : FullScreenPlayer() {
         }.getOrNull()
         val poppedToSelector = navController?.popBackStack(R.id.navigation_stremio_streams, false) == true
         if (!poppedToSelector) {
-            activity?.popCurrentPage(isInPlayer = true, isInExpandedView = false, isInResults = false)
+            activity?.popCurrentPage()
             activity?.navigate(R.id.global_to_navigation_stremio_streams)
         }
         return true

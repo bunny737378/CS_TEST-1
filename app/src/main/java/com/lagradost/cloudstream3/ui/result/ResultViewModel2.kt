@@ -1563,7 +1563,7 @@ class ResultViewModel2 : ViewModel() {
                             syncData = list,
                         )
                         activity?.navigate(R.id.global_to_navigation_stremio_streams)
-                        return@launchSafe
+                        return
                     }
                 }
 
