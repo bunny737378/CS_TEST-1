@@ -129,11 +129,27 @@ keys are stored.
 
 ---
 
-## 7. How to reapply on a fresh clone
+## 7. Extension repository promotional / donation popup suppression
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/plugins/PluginManager.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/MainActivity.kt`, `CHANGES.md`.
+
+Blocked unsolicited promotional / donation popups bundled inside `.cs3` extensions (such as
+`com.cncverse.donation.DonationManager` / `DonationDialogFragment`,
+`com.phisher98.donation.DonationManager`, `com.raghav.donation.DonationManager`, and
+`com.netnaija.donation.DonationManager`) that trigger during `getMainPage` on Provider Test and on
+the Home screen. `PluginManager` neutralizes known plugin `DonationManager` state (`activityRef`,
+`isDialogShowing`, `isLaunching`, `testMode`) on plugin load, and `MainActivity` intercepts blocked
+plugin `DialogFragment`s via `FragmentLifecycleCallbacks` (`showsDialog = false` +
+`dismissAllowingStateLoss`) while keeping normal plugin settings and captcha dialogs intact.
+
+---
+
+## 8. How to reapply on a fresh clone
 
 1. Clone upstream `recloudstream/cloudstream` from the same base commit, then restore the missing
    wrapper/module sources as in section 1.
-2. Apply sections 2-6 in order. Keep `debug.keystore` unignored and do not regenerate it.
+2. Apply sections 2-7 in order. Keep `debug.keystore` unignored and do not regenerate it.
 3. Keep extension network/install/update code intact; remove only app updaters, promotional
    surfaces and the named General/Extensions clutter fields.
 4. Validate with the `Build APK` workflow on the `arena/**` branch and confirm one unexpired
@@ -143,7 +159,7 @@ keys are stored.
 
 ---
 
-## 8. Release build validation
+## 9. Release build validation
 
 **Build:** pending GitHub Actions run on the push of this commit.
 

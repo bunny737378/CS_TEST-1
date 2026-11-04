@@ -17,6 +17,8 @@ import androidx.annotation.WorkerThread
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.APIHolder
@@ -65,6 +67,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import java.io.File
 import java.io.InputStreamReader
+import java.lang.ref.WeakReference
+import java.util.Locale
 
 // Different keys for local and not since local can be removed at any time without app knowing, hence the local are getting rebuilt on every app start
 const val PLUGINS_KEY = "PLUGINS_KEY"
@@ -200,6 +204,68 @@ object PluginManager {
 
     private val classLoaders: MutableMap<PathClassLoader, BasePlugin> =
         HashMap<PathClassLoader, BasePlugin>()
+
+    private val pluginRepoPopupManagers = listOf(
+        "com.cncverse.donation.DonationManager",
+        "com.phisher98.donation.DonationManager",
+        "com.raghav.donation.DonationManager",
+        "com.netnaija.donation.DonationManager",
+        "com.netnaija.app.donation.DonationManager",
+    )
+
+    private val pluginRepoPopupTokens = listOf(
+        "donation",
+        "donate",
+        "support_repo",
+        "repo_popup",
+        "sponsor",
+        "promo",
+    )
+
+    fun isPluginClassLoader(loader: ClassLoader?): Boolean {
+        if (loader == null) return false
+        return synchronized(classLoaders) {
+            classLoaders.containsKey(loader)
+        }
+    }
+
+    fun isBlockedPluginDialog(fragment: Fragment): Boolean {
+        if (fragment !is DialogFragment) return false
+        if (!isPluginClassLoader(fragment.javaClass.classLoader)) return false
+        val className = fragment.javaClass.name.lowercase(Locale.ROOT)
+        val tag = fragment.tag?.lowercase(Locale.ROOT).orEmpty()
+        return pluginRepoPopupTokens.any { token ->
+            className.contains(token) || tag.contains(token)
+        }
+    }
+
+    private fun suppressPluginRepoPopups(loader: PathClassLoader) {
+        for (managerClassName in pluginRepoPopupManagers) {
+            try {
+                val cls = Class.forName(managerClassName, true, loader)
+                val instance = runCatching {
+                    cls.getDeclaredField("INSTANCE").apply { isAccessible = true }.get(null)
+                }.getOrNull()
+                runCatching {
+                    cls.getDeclaredField("activityRef").apply { isAccessible = true }
+                        .set(instance, WeakReference<Any?>(null))
+                }
+                runCatching {
+                    cls.getDeclaredField("isDialogShowing").apply { isAccessible = true }
+                        .setBoolean(instance, true)
+                }
+                runCatching {
+                    cls.getDeclaredField("isLaunching").apply { isAccessible = true }
+                        .setBoolean(instance, true)
+                }
+                runCatching {
+                    cls.getDeclaredField("testMode").apply { isAccessible = true }
+                        .setBoolean(instance, false)
+                }
+            } catch (_: Throwable) {
+            }
+        }
+    }
 
     var loadedLocalPlugins = false
         private set
@@ -671,6 +737,7 @@ object PluginManager {
             } else {
                 pluginInstance.load()
             }
+            suppressPluginRepoPopups(loader)
             Log.i(TAG, "Loaded plugin ${data.internalName} successfully")
             currentlyLoading = null
             true

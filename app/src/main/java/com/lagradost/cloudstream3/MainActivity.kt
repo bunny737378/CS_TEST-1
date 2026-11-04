@@ -37,7 +37,10 @@ import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.core.view.marginStart
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -1191,6 +1194,37 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
         setNavigationBarColorCompat(R.attr.primaryGrayBackground)
         updateLocale()
         super.onCreate(savedInstanceState)
+        supportFragmentManager.registerFragmentLifecycleCallbacks(
+            object : FragmentManager.FragmentLifecycleCallbacks() {
+                override fun onFragmentPreAttached(
+                    fm: FragmentManager,
+                    f: Fragment,
+                    context: Context
+                ) {
+                    if (f is DialogFragment && PluginManager.isBlockedPluginDialog(f)) {
+                        f.showsDialog = false
+                    }
+                }
+
+                override fun onFragmentCreated(
+                    fm: FragmentManager,
+                    f: Fragment,
+                    savedInstanceState: Bundle?
+                ) {
+                    if (f is DialogFragment && PluginManager.isBlockedPluginDialog(f)) {
+                        f.showsDialog = false
+                        window.decorView.post {
+                            safe {
+                                if (f.isAdded) {
+                                    f.dismissAllowingStateLoss()
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            true
+        )
         try {
             if (isCastApiAvailable()) {
                 CastContext.getSharedInstance(this) { it.run() }
