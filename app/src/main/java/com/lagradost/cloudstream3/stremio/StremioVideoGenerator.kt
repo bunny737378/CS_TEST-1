@@ -23,7 +23,7 @@ class StremioVideoGenerator(
     episodes: List<ResultEpisode>,
     val selectedStream: StremioResolvedStream,
     val episodeData: StremioEpisodeData?,
-    override val loadResponse: LoadResponse? = null,
+    val page: LoadResponse? = null,
 ) : VideoGenerator<ResultEpisode>(episodes) {
 
     override val hasCache: Boolean = false
@@ -35,7 +35,7 @@ class StremioVideoGenerator(
     private val _subtitleAddons = MutableStateFlow<List<StremioSubtitleAddonResult>>(emptyList())
     val subtitleAddons: StateFlow<List<StremioSubtitleAddonResult>> = _subtitleAddons.asStateFlow()
 
-    override fun getCurrentId(index: Int): Int? {
+    override fun getId(index: Int): Int? {
         return videos.getOrNull(index)?.id
     }
 

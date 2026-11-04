@@ -210,13 +210,13 @@ object StremioStreamsScreen : Screen {
                                             s.ytId.isNullOrBlank() &&
                                             !s.externalUrl.isNullOrBlank()
                                         ) {
-                                            context.openBrowser(s.externalUrl)
+                                            openBrowser(s.externalUrl)
                                         } else {
                                             val generator = StremioVideoGenerator(
                                                 episodes = StremioStreamSession.episodes,
                                                 selectedStream = resolvedStream,
                                                 episodeData = state.episodeData,
-                                                loadResponse = StremioStreamSession.loadResponse,
+                                                page = StremioStreamSession.loadResponse,
                                             )
                                             activity?.navigate(
                                                 R.id.global_to_navigation_player,
@@ -241,7 +241,7 @@ object StremioStreamsScreen : Screen {
     private fun EpisodeInfoBanner(state: StremioEpisodeStreamsState) {
         val ep = state.episode
         val seasonNum = ep?.season ?: state.episodeData?.season
-        val episodeNum = ep?.episode ?: state.episodeData?.episode
+        val episodeNum = (ep?.episode?.takeIf { it > 0 }) ?: state.episodeData?.episode
         val epTitle = ep?.name?.takeIf { it.isNotBlank() && it != state.showTitle }
 
         val subtitleLine = buildString {

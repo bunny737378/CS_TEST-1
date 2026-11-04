@@ -371,7 +371,7 @@ object StremioAddonsScreen : Screen {
                 addon = targetAddon,
                 onDismiss = { webConfigureAddon = null },
                 onOpenExternalBrowser = {
-                    context.openBrowser(targetAddon.configureWebUrl())
+                    openBrowser(targetAddon.configureWebUrl())
                 },
                 onStremioInstallIntercepted = { interceptedUrl ->
                     webConfigureAddon = null
