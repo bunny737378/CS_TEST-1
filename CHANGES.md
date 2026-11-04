@@ -183,8 +183,9 @@ player, and Stremio Subtitle Addon lists + counts inside `GeneratorPlayer`'s sub
 
 ## 9. Release build validation
 
-**Build:** pending GitHub Actions run on the push of this commit.
+**Build:** passed on 2026-11-04 in GitHub Actions `Build APK` run `41852731787` (job
+`126653058046`, source commit `b45b79c`). The `:app:assembleRelease` and APK upload steps both
+succeeded. The workflow now keeps plain Gradle output and annotates build diagnostics on failure.
 
-**Artifact:** one `CloudStream-release-apk` will be uploaded from
-`app/build/outputs/apk/release/*.apk`. The exact run ID, job ID and artifact ID will be reported
-after the workflow completes.
+**Artifact:** `CloudStream-release-apk`, artifact ID `13334814635` (69,009,589 bytes; expires
+2027-02-02). [Open the successful workflow run](https://github.com/bunny737378/CS_TEST-1/actions/runs/41852731787).
