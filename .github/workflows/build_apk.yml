@@ -60,7 +60,34 @@ jobs:
           cache-read-only: false
 
       - name: Build Release APK
-        run: ./gradlew :app:assembleRelease --no-daemon --no-configuration-cache --stacktrace
+        shell: bash
+        run: |
+          set +e
+          ./gradlew :app:assembleRelease --no-daemon --no-configuration-cache --stacktrace --console=plain 2>&1 | tee gradle-build.log
+          build_status=${PIPESTATUS[0]}
+          exit "$build_status"
+
+      - name: Annotate Gradle build diagnostics
+        if: failure()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          log_path = Path("gradle-build.log")
+          lines = log_path.read_text(errors="replace").splitlines() if log_path.exists() else []
+          diagnostics = [
+              line for line in lines
+              if line.lstrip().startswith((
+                  "e: ", "error:", "ERROR:", "FAILURE:",
+                  "Execution failed for task ", "* What went wrong:", "Caused by:"
+              ))
+          ]
+          if not diagnostics:
+              diagnostics = [line for line in lines if line.strip()][-40:]
+          for line in diagnostics[:80]:
+              escaped = line.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+              print(f"::error title=Gradle build diagnostic::{escaped}")
+          PY
 
       - name: Upload Release APK
         uses: actions/upload-artifact@v4

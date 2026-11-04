@@ -129,11 +129,49 @@ keys are stored.
 
 ---
 
-## 7. How to reapply on a fresh clone
+## 7. Extension repository promotional / donation popup suppression
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/plugins/PluginManager.kt`,
+`app/src/main/java/com/lagradost/cloudstream3/MainActivity.kt`, `CHANGES.md`.
+
+Blocked unsolicited promotional / donation popups bundled inside `.cs3` extensions (such as
+`com.cncverse.donation.DonationManager` / `DonationDialogFragment`,
+`com.phisher98.donation.DonationManager`, `com.raghav.donation.DonationManager`, and
+`com.netnaija.donation.DonationManager`) that trigger during `getMainPage` on Provider Test and on
+the Home screen. `PluginManager` neutralizes known plugin `DonationManager` state (`activityRef`,
+`isDialogShowing`, `isLaunching`, `testMode`) on plugin load, and `MainActivity` intercepts blocked
+plugin `DialogFragment`s via `FragmentLifecycleCallbacks` (`showsDialog = false` +
+`dismissAllowingStateLoss`) while keeping normal plugin settings and captcha dialogs intact.
+
+---
+
+## 10. Native Stremio Addons & Direct P2P Torrent Streaming
+
+**Files:** `app/src/main/java/com/lagradost/cloudstream3/stremio/StremioModels.kt`,
+`StremioTransport.kt`, `StremioAddonManager.kt`, `StremioCatalogProvider.kt`,
+`StremioStreamLinkResolver.kt`, `StremioStreamSession.kt`, `StremioVideoGenerator.kt`,
+`StremioAddonsScreen.kt`, `StremioAddonsFragment.kt`, `StremioStreamsScreen.kt`,
+`StremioStreamsFragment.kt`, `SettingsFragmentScreen.kt`, `SettingsFragment.kt`,
+`main_settings.xml`, `mobile_navigation.xml`, `strings.xml`, `AndroidManifest.xml`,
+`MainActivity.kt`, `AppContextUtils.kt`, `SearchFragment.kt`, `SearchViewModel.kt`,
+`ResultViewModel2.kt`, `GeneratorPlayer.kt`, `PlayerGeneratorViewModel.kt`, `Torrent.kt`,
+`CS3IPlayer.kt`, `DataStoreHelper.kt`, `CHANGES.md`.
+
+Added full native Stremio Addon SDK support (`catalog`, `meta`, `stream`, `subtitles`) under
+Settings -> `"Addones"` with URL fetch, 4 horizontal capability tabs, declarative & web
+`/configure` flows (`stremio://` deep-link handling), exact addon-name Home & Search catalog
+integration, native CloudStream-themed Stream Selector (`All` + per-addon filter chips), direct
+high-performance P2P torrent streaming (`TorrServer` magnet metadata polling, tracker injection,
+`fileIdx` / largest-video selection), episode switching back to the Stream Selector from inside the
+player, and Stremio Subtitle Addon lists + counts inside `GeneratorPlayer`'s subtitle dialog.
+
+---
+
+## 8. How to reapply on a fresh clone
 
 1. Clone upstream `recloudstream/cloudstream` from the same base commit, then restore the missing
    wrapper/module sources as in section 1.
-2. Apply sections 2-6 in order. Keep `debug.keystore` unignored and do not regenerate it.
+2. Apply sections 2-7 in order. Keep `debug.keystore` unignored and do not regenerate it.
 3. Keep extension network/install/update code intact; remove only app updaters, promotional
    surfaces and the named General/Extensions clutter fields.
 4. Validate with the `Build APK` workflow on the `arena/**` branch and confirm one unexpired
@@ -143,10 +181,11 @@ keys are stored.
 
 ---
 
-## 8. Release build validation
+## 9. Release build validation
 
-**Build:** pending GitHub Actions run on the push of this commit.
+**Build:** passed on 2026-11-04 in GitHub Actions `Build APK` run `41852731787` (job
+`126653058046`, source commit `b45b79c`). The `:app:assembleRelease` and APK upload steps both
+succeeded. The workflow now keeps plain Gradle output and annotates build diagnostics on failure.
 
-**Artifact:** one `CloudStream-release-apk` will be uploaded from
-`app/build/outputs/apk/release/*.apk`. The exact run ID, job ID and artifact ID will be reported
-after the workflow completes.
+**Artifact:** `CloudStream-release-apk`, artifact ID `13334814635` (69,009,589 bytes; expires
+2027-02-02). [Open the successful workflow run](https://github.com/bunny737378/CS_TEST-1/actions/runs/41852731787).

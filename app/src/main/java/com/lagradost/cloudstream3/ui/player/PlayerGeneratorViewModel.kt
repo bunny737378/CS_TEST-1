@@ -395,7 +395,8 @@ class PlayerGeneratorViewModel : ViewModel() {
                         meta = gen.videos.getOrNull(index),
                         nextMeta = gen.videos.getOrNull(index + 1),
                         id = gen.getId(index),
-                        response = (gen as? RepoLinkGenerator)?.page,
+                        response = (gen as? RepoLinkGenerator)?.page
+                            ?: (gen as? com.lagradost.cloudstream3.stremio.StremioVideoGenerator)?.page,
                         index = index,
                         allMeta = gen.videos
                     )

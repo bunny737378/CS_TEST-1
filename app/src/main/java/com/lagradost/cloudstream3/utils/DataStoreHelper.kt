@@ -113,7 +113,7 @@ object DataStoreHelper {
         get() {
             val ret = searchPreferenceProvidersStrings
             return ret.ifEmpty {
-                context?.filterProviderByPreferredMedia()?.map { it.name } ?: emptyList()
+                context?.filterProviderByPreferredMedia(hasHomePageIsRequired = false)?.map { it.name } ?: emptyList()
             }
         }
         set(value) {

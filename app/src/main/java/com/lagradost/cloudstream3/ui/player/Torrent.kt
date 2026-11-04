@@ -9,15 +9,17 @@ import com.lagradost.cloudstream3.mvvm.logError
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import kotlinx.coroutines.delay
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import torrServer.TorrServer
 import java.io.File
 import java.net.ConnectException
+import java.net.URLDecoder
 import java.net.URLEncoder
 
 object Torrent {
-    var hasAcceptedTorrentForThisSession: Boolean? = null
+    var hasAcceptedTorrentForThisSession: Boolean? = true
     private const val TORRENT_SERVER_PATH: String = "torrent_tmp"
     private const val TIMEOUT: Long = 3
     private const val TAG: String = "Torrent"
@@ -217,11 +219,33 @@ object Torrent {
     suspend fun transformLink(link: ExtractorLink): Pair<ExtractorLink, TorrentStatus> {
         val act = CommonActivity.activity ?: throw IllegalArgumentException("No activity")
         val defaultDirectory = "${act.cacheDir.path}/$TORRENT_SERVER_PATH"
-        File(defaultDirectory).mkdir()
+        File(defaultDirectory).mkdirs()
         if (!setup(defaultDirectory)) {
             throw ErrorLoadingException("Unable to setup the torrent server")
         }
-        val status = add(link.url)
+
+        // Register any custom trackers supplied in magnet `tr=` query parameters (e.g. Stremio `sources`)
+        val extraTrackers = extractMagnetTrackers(link.url)
+        if (extraTrackers.isNotEmpty()) {
+            runCatching {
+                TorrServer.addTrackers((trackers + extraTrackers).distinct().joinToString(separator = ",\n"))
+            }
+        }
+
+        var status = add(link.url)
+        val hash = status.hash
+        if (status.fileStats.isNullOrEmpty() && !hash.isNullOrBlank()) {
+            // Wait for magnet metadata (`GotInfo`) so fileStats are populated before selecting file index
+            var attempts = 0
+            while (attempts < 75 && status.fileStats.isNullOrEmpty()) {
+                delay(400)
+                val polled = runCatching { get(hash) }.getOrNull()
+                if (polled != null) {
+                    status = polled
+                }
+                attempts++
+            }
+        }
 
         return newExtractorLink(
             source = link.source,
@@ -232,6 +256,21 @@ object Torrent {
             this.referer = ""
             this.quality = link.quality
         } to status
+    }
+
+    private fun extractMagnetTrackers(url: String): List<String> {
+        if (!url.startsWith("magnet:?", ignoreCase = true)) return emptyList()
+        val query = url.substringAfter("?", "")
+        if (query.isEmpty()) return emptyList()
+        return query.split("&").mapNotNull { part ->
+            if (part.startsWith("tr=", ignoreCase = true)) {
+                runCatching { URLDecoder.decode(part.substring(3), "UTF-8").trim() }
+                    .getOrNull()
+                    ?.takeIf { it.isNotEmpty() }
+            } else {
+                null
+            }
+        }
     }
 
     private val trackers = listOf(
@@ -329,16 +368,81 @@ object Torrent {
         @JsonProperty("trackers") @SerialName("trackers") var trackers: List<String>?,
     ) {
         fun streamUrl(url: String): String {
-            val fileName =
-                this.fileStats?.first { !it.path.isNullOrBlank() }?.path
-                    ?: throw ErrorLoadingException("Null path")
+            val validFiles = this.fileStats?.filter { !it.path.isNullOrBlank() }.orEmpty()
+            if (validFiles.isEmpty()) {
+                throw ErrorLoadingException("Torrent metadata timed out or contains no files")
+            }
 
-            val index = url.substringAfter("index=").substringBefore("&").toIntOrNull() ?: 0
+            val explicitIndex = extractQueryParam(url, "index")?.toIntOrNull()
+            val filenameHint = extractQueryParam(url, "stremioFilename")
+            val seasonHint = extractQueryParam(url, "stremioSeason")?.toIntOrNull()
+            val episodeHint = extractQueryParam(url, "stremioEpisode")?.toIntOrNull()
 
-            //  https://github.com/Diegopyl1209/torrentserver-aniyomi/blob/c18f58e51b6738f053261bc863177078aa9c1c98/web/api/stream.go#L18
+            val selectedFile = selectBestTorrentFile(
+                files = validFiles,
+                explicitIndex = explicitIndex,
+                filenameHint = filenameHint,
+                season = seasonHint,
+                episode = episodeHint,
+            )
+
+            val rawPath = selectedFile.path ?: throw ErrorLoadingException("Null path")
+            val leafName = rawPath.substringAfterLast('/').substringAfterLast('\\').ifBlank { rawPath }
+            val resolvedIndex = selectedFile.id ?: explicitIndex ?: 0
+
+            // https://github.com/Diegopyl1209/torrentserver-aniyomi/blob/c18f58e51b6738f053261bc863177078aa9c1c98/web/api/stream.go#L18
             return "$TORRENT_SERVER_URL/stream/${
-                URLEncoder.encode(fileName, "utf-8")
-            }?link=${this.hash}&index=$index&play"
+                URLEncoder.encode(leafName, "utf-8")
+            }?link=${this.hash}&index=$resolvedIndex&play&preload"
+        }
+
+        private fun extractQueryParam(url: String, key: String): String? {
+            val query = url.substringAfter("?", "")
+            if (query.isEmpty()) return null
+            val prefix = "$key="
+            val rawVal = query.split("&").firstOrNull { it.startsWith(prefix) }?.substring(prefix.length)
+                ?: return null
+            return runCatching { URLDecoder.decode(rawVal, "UTF-8") }.getOrDefault(rawVal).takeIf { it.isNotBlank() }
+        }
+
+        private fun selectBestTorrentFile(
+            files: List<TorrentFileStat>,
+            explicitIndex: Int?,
+            filenameHint: String?,
+            season: Int?,
+            episode: Int?,
+        ): TorrentFileStat {
+            if (explicitIndex != null) {
+                files.firstOrNull { it.id == explicitIndex }?.let { return it }
+                files.getOrNull(explicitIndex)?.let { return it }
+            }
+
+            if (!filenameHint.isNullOrBlank()) {
+                val cleanHint = filenameHint.substringAfterLast('/').substringAfterLast('\\')
+                files.firstOrNull { f ->
+                    val leaf = f.path?.substringAfterLast('/')?.substringAfterLast('\\')
+                    leaf.equals(cleanHint, ignoreCase = true)
+                }?.let { return it }
+            }
+
+            val videoExtensions = setOf("mkv", "mp4", "avi", "webm", "ts", "m4v", "mov", "mpg", "mpeg", "flv")
+            val videoFiles = files.filter { f ->
+                val ext = f.path?.substringAfterLast('.', "")?.lowercase().orEmpty()
+                ext in videoExtensions && !(f.path?.contains("sample", ignoreCase = true) == true && files.size > 1)
+            }.ifEmpty { files }
+
+            if (season != null && episode != null && videoFiles.size > 1) {
+                val sPad = season.toString().padStart(2, '0')
+                val ePad = episode.toString().padStart(2, '0')
+                val epRegex = Regex(
+                    "(?:s0*$season[._\\s-]*e0*$episode\\b|\\b0*${season}x$ePad\\b|\\bs${sPad}e$ePad\\b)",
+                    RegexOption.IGNORE_CASE
+                )
+                videoFiles.firstOrNull { f -> epRegex.containsMatchIn(f.path.orEmpty()) }?.let { return it }
+            }
+
+            // Per Stremio Stream spec: when `fileIdx` is omitted, select the largest video file in the torrent
+            return videoFiles.maxByOrNull { it.length ?: 0L } ?: files.first()
         }
     }
 

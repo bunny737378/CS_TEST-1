@@ -37,7 +37,10 @@ import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.core.view.marginStart
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -333,6 +336,21 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                         val url = str.replaceFirst(APP_STRING_REPO, "https")
                         loadRepository(url)
                         return true
+                    } else if (safeURI(str)?.scheme.equals("stremio", ignoreCase = true)) {
+                        ioSafe {
+                            runCatching {
+                                com.lagradost.cloudstream3.stremio.StremioAddonManager.fetchAndInstallAddon(str)
+                            }.onSuccess { installed ->
+                                showToast("Installed ${installed.name}", Toast.LENGTH_SHORT)
+                                main {
+                                    activity.navigate(R.id.action_navigation_global_to_navigation_settings_addons)
+                                }
+                            }.onFailure { err ->
+                                logError(err)
+                                showToast(err.localizedMessage ?: "Failed to install Stremio addon", Toast.LENGTH_SHORT)
+                            }
+                        }
+                        return true
                     } else if (safeURI(str)?.scheme == APP_STRING_SEARCH) {
                         val query = str.substringAfter("$APP_STRING_SEARCH://")
                         nextSearchQuery =
@@ -491,6 +509,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             !listOf(
                 R.id.navigation_results_phone,
                 R.id.navigation_results_tv,
+                R.id.navigation_stremio_streams,
                 R.id.navigation_player
             ).contains(destination.id)
 
@@ -511,6 +530,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
             R.id.navigation_settings_providers,
             R.id.navigation_settings_general,
             R.id.navigation_settings_extensions,
+            R.id.navigation_settings_addons,
             R.id.navigation_settings_plugins,
             R.id.navigation_test_providers,
         ).contains(destination.id)
@@ -587,6 +607,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                     R.id.navigation_settings_providers,
                     R.id.navigation_settings_general,
                     R.id.navigation_settings_extensions,
+                    R.id.navigation_settings_addons,
                     R.id.navigation_settings_plugins,
                     R.id.navigation_test_providers
                 ) -> {
@@ -1191,6 +1212,37 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
         setNavigationBarColorCompat(R.attr.primaryGrayBackground)
         updateLocale()
         super.onCreate(savedInstanceState)
+        supportFragmentManager.registerFragmentLifecycleCallbacks(
+            object : FragmentManager.FragmentLifecycleCallbacks() {
+                override fun onFragmentPreAttached(
+                    fm: FragmentManager,
+                    f: Fragment,
+                    context: Context
+                ) {
+                    if (f is DialogFragment && PluginManager.isBlockedPluginDialog(f)) {
+                        f.showsDialog = false
+                    }
+                }
+
+                override fun onFragmentCreated(
+                    fm: FragmentManager,
+                    f: Fragment,
+                    savedInstanceState: Bundle?
+                ) {
+                    if (f is DialogFragment && PluginManager.isBlockedPluginDialog(f)) {
+                        f.showsDialog = false
+                        window.decorView.post {
+                            safe {
+                                if (f.isAdded) {
+                                    f.dismissAllowingStateLoss()
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            true
+        )
         try {
             if (isCastApiAvailable()) {
                 CastContext.getSharedInstance(this) { it.run() }
@@ -1631,8 +1683,8 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
 
         ioSafe {
             initAll()
-
             apis = allProviders.distinctBy { it }
+            com.lagradost.cloudstream3.stremio.StremioAddonManager.ensureInitialized()
         }
 
 
@@ -1994,7 +2046,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
 
             } else if (PluginManager.getPluginsOnline().isEmpty()
                 && PluginManager.getPluginsLocal().isEmpty()
-
+                && !com.lagradost.cloudstream3.stremio.StremioAddonManager.hasInstalledAddonsSync()
             ) {
                 navController.navigate(
                     R.id.navigation_setup_extensions,

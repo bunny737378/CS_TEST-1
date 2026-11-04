@@ -1553,6 +1553,20 @@ class ResultViewModel2 : ViewModel() {
 
                 val index = generator.videos.indexOfFirst { value -> value.id == click.data.id }
 
+                if (com.lagradost.cloudstream3.stremio.StremioAddonManager.isStremioProvider(currentResponse?.apiName)) {
+                    val episodeList = generator.videos.filterIsInstance<ResultEpisode>()
+                    if (episodeList.isNotEmpty()) {
+                        com.lagradost.cloudstream3.stremio.StremioStreamSession.startSession(
+                            episodes = episodeList,
+                            initialIndex = index.coerceAtLeast(0),
+                            loadResponse = currentResponse,
+                            syncData = list,
+                        )
+                        activity?.navigate(R.id.global_to_navigation_stremio_streams)
+                        return
+                    }
+                }
+
                 if (currentResponse?.type == TvType.CustomMedia) {
                     generator.generateLinks(
                         offset = index,

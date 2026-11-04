@@ -202,6 +202,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
 
 
     private fun reloadRepos(success: Boolean = false) = main {
+        selectedApis = DataStoreHelper.searchPreferenceProviders.toMutableSet()
         searchViewModel.reloadRepos()
         context?.filterProviderByPreferredMedia()?.let { validAPIs ->
             bindChips(

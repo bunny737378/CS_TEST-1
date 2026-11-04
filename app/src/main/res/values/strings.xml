@@ -357,6 +357,8 @@
 
     <string name="pref_category_backup">Backup</string>
     <string name="pref_category_extensions">Extensions</string>
+    <string name="category_addons">Addones</string>
+    <string name="category_addons_subtitle">Stremio Catalog, Metadata, Stream &amp; Subtitles</string>
     <string name="pref_category_actions">Actions</string>
     <string name="pref_category_cache">Cache</string>
     <string name="pref_category_android_tv">Android TV</string>
