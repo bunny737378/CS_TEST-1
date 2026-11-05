@@ -71,22 +71,57 @@ jobs:
         if: failure()
         run: |
           python3 - <<'PY'
+          import re
           from pathlib import Path
 
           log_path = Path("gradle-build.log")
           lines = log_path.read_text(errors="replace").splitlines() if log_path.exists() else []
-          diagnostics = [
-              line for line in lines
-              if line.lstrip().startswith((
-                  "e: ", "error:", "ERROR:", "FAILURE:",
-                  "Execution failed for task ", "* What went wrong:", "Caused by:"
-              ))
-          ]
-          if not diagnostics:
-              diagnostics = [line for line in lines if line.strip()][-40:]
-          for line in diagnostics[:80]:
-              escaped = line.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-              print(f"::error title=Gradle build diagnostic::{escaped}")
+
+          keep = set()
+          diag = re.compile(
+              r"(error|aapt|\.xml:|\.kt:|\.kts:|failed linking|not found|more than one time|"
+              r"duplicate|Execution failed for task|What went wrong|Caused by:|^e: |^w: |"
+              r"FAILURE:|BUILD FAILED|Resource and asset merger|unresolved reference)",
+              re.IGNORECASE,
+          )
+
+          # Keep every diagnostic line plus generous context. AAPT2 prints the concrete
+          # "<file>:<line>: AAPT: error: ..." message immediately *before* the generic
+          # "error: failed linking file resources." summary line, so context matters.
+          for i, line in enumerate(lines):
+              if diag.search(line):
+                  keep.update(range(max(0, i - 12), min(len(lines), i + 6)))
+
+          # Keep the whole Gradle failure summary block.
+          start = next(
+              (i for i, l in enumerate(lines) if l.startswith("FAILURE:") or "What went wrong" in l),
+              None,
+          )
+          if start is not None:
+              keep.update(range(start, min(len(lines), start + 300)))
+
+          # Keep the tail as a last resort.
+          keep.update(i for i, l in enumerate(lines) if l.strip())
+
+          selected = [lines[i] for i in sorted(keep)][-400:]
+          if not selected:
+              selected = ["(gradle-build.log was empty or missing)"]
+
+          # Emit as a few chunked annotations so the full text survives through the API.
+          chunks, buf, size = [], [], 0
+          for line in selected:
+              if size + len(line) + 1 > 3500 and buf:
+                  chunks.append("\n".join(buf))
+                  buf, size = [], 0
+              buf.append(line)
+              size += len(line) + 1
+          if buf:
+              chunks.append("\n".join(buf))
+          chunks = chunks[-14:]
+
+          for n, chunk in enumerate(chunks, 1):
+              escaped = chunk.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+              print(f"::error title=Build log {n}/{len(chunks)}::{escaped}")
           PY
 
       - name: Upload Release APK

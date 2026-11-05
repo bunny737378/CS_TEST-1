@@ -8,6 +8,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
     - uses: actions/checkout@v6
 
@@ -32,10 +33,77 @@ jobs:
       run: ./gradlew library:checkKotlinAbi
 
     - name: Run Gradle
-      run: ./gradlew assemblePrereleaseDebug lint check
+      # This fork only declares the "release" and "debug" build types, so the
+      # upstream "assemblePrereleaseDebug" task does not exist here and Gradle
+      # aborted with "Task 'assemblePrereleaseDebug' not found in project ':app'".
+      shell: bash
+      run: |
+        set +e
+        ./gradlew assembleDebug lint check --no-daemon --no-configuration-cache --stacktrace --console=plain 2>&1 | tee gradle-build.log
+        build_status=${PIPESTATUS[0]}
+        exit "$build_status"
+
+    - name: Annotate Gradle build diagnostics
+      if: failure()
+      run: |
+        python3 - <<'PY'
+        import re
+        from pathlib import Path
+
+        log_path = Path("gradle-build.log")
+        lines = log_path.read_text(errors="replace").splitlines() if log_path.exists() else []
+
+        keep = set()
+        diag = re.compile(
+            r"(error|aapt|\.xml:|\.kt:|\.kts:|failed linking|not found|more than one time|"
+            r"duplicate|Execution failed for task|What went wrong|Caused by:|^e: |^w: |"
+            r"FAILURE:|BUILD FAILED|Resource and asset merger|unresolved reference|"
+            r"lint error|\bFAILED\b)",
+            re.IGNORECASE,
+        )
+
+        # Keep every diagnostic line plus generous context. AAPT2 prints the concrete
+        # "<file>:<line>: AAPT: error: ..." message immediately *before* the generic
+        # "error: failed linking file resources." summary line, so context matters.
+        for i, line in enumerate(lines):
+            if diag.search(line):
+                keep.update(range(max(0, i - 12), min(len(lines), i + 6)))
+
+        # Keep the whole Gradle failure summary block.
+        start = next(
+            (i for i, l in enumerate(lines) if l.startswith("FAILURE:") or "What went wrong" in l),
+            None,
+        )
+        if start is not None:
+            keep.update(range(start, min(len(lines), start + 300)))
+
+        # Keep the tail as a last resort.
+        keep.update(i for i, l in enumerate(lines) if l.strip())
+
+        selected = [lines[i] for i in sorted(keep)][-400:]
+        if not selected:
+            selected = ["(gradle-build.log was empty or missing)"]
+
+        # Emit as a few chunked annotations so the full text survives through the API.
+        chunks, buf, size = [], [], 0
+        for line in selected:
+            if size + len(line) + 1 > 3500 and buf:
+                chunks.append("\n".join(buf))
+                buf, size = [], 0
+            buf.append(line)
+            size += len(line) + 1
+        if buf:
+            chunks.append("\n".join(buf))
+        chunks = chunks[-14:]
+
+        for n, chunk in enumerate(chunks, 1):
+            escaped = chunk.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+            print(f"::error title=Build log {n}/{len(chunks)}::{escaped}")
+        PY
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v7
       with:
         name: pull-request-build
-        path: "app/build/outputs/apk/prerelease/debug/*.apk"
+        path: "app/build/outputs/apk/debug/*.apk"
+        if-no-files-found: error
