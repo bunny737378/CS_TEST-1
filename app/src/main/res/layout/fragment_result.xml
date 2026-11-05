@@ -282,6 +282,19 @@
                             android:id="@+id/fragment_trailer"
                             layout="@layout/fragment_trailer" />
 
+                        <ImageView
+                            android:id="@+id/result_trailer_back"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_gravity="top|start"
+                            android:layout_margin="12dp"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/go_back"
+                            android:elevation="12dp"
+                            android:padding="9dp"
+                            android:src="@drawable/ic_baseline_arrow_back_24"
+                            android:visibility="gone"
+                            app:tint="@color/white" />
                     </FrameLayout>
 
                     <FrameLayout
@@ -314,6 +327,19 @@
                             android:adjustViewBounds="true"
                             android:scaleType="fitStart"
                             android:contentDescription="@null" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/result_play_trailer"
+                            style="@style/SmallBlackButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginEnd="@dimen/result_padding"
+                            android:layout_marginBottom="12dp"
+                            android:focusable="true"
+                            android:text="@string/play_trailer_button"
+                            android:visibility="gone"
+                            app:icon="@drawable/ic_baseline_play_arrow_24" />
 
                     </FrameLayout>
                 </FrameLayout>
