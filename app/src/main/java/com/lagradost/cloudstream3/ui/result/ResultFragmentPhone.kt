@@ -25,6 +25,8 @@ import androidx.core.widget.NestedScrollView
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.discord.panels.OverlappingPanelsLayout
 import com.discord.panels.PanelState
 import com.discord.panels.PanelsChildGestureRegionObserver
@@ -228,10 +230,15 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
 
     var currentTrailers: List<Pair<ExtractorLink, String>> = emptyList()
     var currentTrailerIndex = 0
+    private var isTrailerPlayingInResult = false
 
     override fun nextMirror() {
-        currentTrailerIndex++
-        loadTrailer()
+        if (hasNextMirror()) {
+            currentTrailerIndex++
+            loadTrailer()
+        } else {
+            stopTrailer()
+        }
     }
 
     override fun hasNextMirror(): Boolean {
@@ -247,87 +254,62 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
     }
 
     private fun loadTrailer(index: Int? = null) {
-
-        val isSuccess =
-            currentTrailers.getOrNull(index ?: currentTrailerIndex)
-                ?.let { (extractedTrailerLink, _) ->
-                    context?.let { ctx ->
-                        player.onPause()
-                        player.loadPlayer(
-                            ctx,
-                            false,
-                            extractedTrailerLink,
-                            null,
-                            startPosition = 0L,
-                            subtitles = emptySet(),
-                            subtitle = null,
-                            autoPlay = false,
-                            preview = false
-                        )
-                        true
-                    } ?: run {
-                        false
-                    }
-                } ?: run {
-                false
-            }
-        //result_trailer_thumbnail?.setImageBitmap(result_poster_background?.drawable?.toBitmap())
-
-
-        // result_trailer_loading?.isVisible = isSuccess
-        val turnVis = !isSuccess && !isFullScreenPlayer
-        resultBinding?.apply {
-            // If we load a trailer, then cancel the big logo and only show the small title
-            if (isSuccess) {
-                // This is still a bit of a race condition, but it should work if we have the
-                // trailers observe after the page observe!
-                bindLogo(
-                    url = null,
-                    headers = null,
-                    logoView = backgroundPosterWatermarkBadge,
-                    titleView = resultTitle
-                )
-            }
-            resultSmallscreenHolder.isVisible = turnVis
-            resultPosterBackgroundHolder.apply {
-                val fadeIn: Animation = AlphaAnimation(alpha, if (turnVis) 1.0f else 0.0f).apply {
-                    interpolator = DecelerateInterpolator()
-                    duration = 200
-                    fillAfter = true
-                }
-                clearAnimation()
-                startAnimation(fadeIn)
-            }
-
-            // We don't want the trailer to be focusable if it's not visible
-            resultSmallscreenHolder.descendantFocusability = if (isSuccess) {
-                ViewGroup.FOCUS_AFTER_DESCENDANTS
-            } else {
-                ViewGroup.FOCUS_BLOCK_DESCENDANTS
-            }
-            binding?.resultFullscreenHolder?.isVisible = !isSuccess && isFullScreenPlayer
+        val trailerIndex = index ?: currentTrailerIndex
+        val trailer = currentTrailers.getOrNull(trailerIndex)
+        val ctx = context
+        if (trailer == null || ctx == null) {
+            stopTrailer()
+            return
         }
-        //player_view?.apply {
-        //alpha = 0.0f
-        //ObjectAnimator.ofFloat(player_view, "alpha", 1f).apply {
-        //    duration = 200
-        //    start()
-        //}
 
-        //val fadeIn: Animation = AlphaAnimation(0.0f, 1f).apply {
-        //    interpolator = DecelerateInterpolator()
-        //    duration = 2000
-        //    fillAfter = true
-        //}
-        //startAnimation(fadeIn)
-        //}
+        currentTrailerIndex = trailerIndex
+        player.onPause()
+        player.loadPlayer(
+            ctx,
+            false,
+            trailer.first,
+            null,
+            startPosition = 0L,
+            subtitles = emptySet(),
+            subtitle = null,
+            autoPlay = true,
+            preview = false,
+        )
+        isTrailerPlayingInResult = true
+        resultBinding?.apply {
+            resultSmallscreenHolder.isVisible = true
+            resultSmallscreenHolder.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
+            resultPosterBackgroundHolder.isVisible = false
+            resultTrailerBack.isVisible = true
+            resultPlayTrailer.isVisible = false
+        }
+        binding?.resultFullscreenHolder?.isVisible = false
+    }
+
+    private fun stopTrailer() {
+        if (isTrailerPlayingInResult) {
+            player.handleEvent(CSPlayerEvent.Pause)
+        }
+        isTrailerPlayingInResult = false
+        resultBinding?.apply {
+            resultSmallscreenHolder.isVisible = false
+            resultSmallscreenHolder.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+            resultPosterBackgroundHolder.isVisible = true
+            resultTrailerBack.isVisible = false
+            resultPlayTrailer.isVisible = currentTrailers.isNotEmpty()
+        }
+        binding?.resultFullscreenHolder?.isVisible = false
     }
 
     private fun setTrailers(trailers: List<Pair<ExtractorLink, String>>?) {
         context?.updateHasTrailers()
-        if (!LoadResponse.isTrailersEnabled) return
-        currentTrailers = trailers?.sortedBy { -it.first.quality } ?: emptyList()
-        loadTrailer()
+        currentTrailers = if (LoadResponse.isTrailersEnabled) {
+            trailers?.sortedByDescending { it.first.quality }.orEmpty()
+        } else {
+            emptyList()
+        }
+        currentTrailerIndex = 0
+        stopTrailer()
     }
 
     override fun onDestroyView() {
@@ -381,12 +363,11 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
             }
         }
 
-        resultBinding?.resultReloadConnectionOpenInBrowser?.setOnClickListener {
-            view?.context?.openBrowser(url)
-        }
-
-        resultBinding?.resultMetaSite?.setOnClickListener {
-            view?.context?.openBrowser(url)
+        // Provider metadata is informational only; the top-level browser action remains separate.
+        resultBinding?.resultMetaSite?.apply {
+            isClickable = false
+            isFocusable = false
+            setOnClickListener(null)
         }
     }
 
@@ -449,6 +430,13 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
             TrailerCustomLayoutBinding.bind(it)
         }
         playerHostView?.initialize()
+        resultBinding?.apply {
+            resultPlayTrailer.setOnClickListener { loadTrailer() }
+            resultTrailerBack.setOnClickListener { stopTrailer() }
+            resultSmallscreenHolder.isVisible = false
+            resultTrailerBack.isVisible = false
+            resultPlayTrailer.isVisible = currentTrailers.isNotEmpty()
+        }
 
         // ===== setup =====
         val storedData = getStoredData() ?: return
@@ -547,11 +535,22 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
 
                 )
 
-            observeNullable(viewModel.selectedSorting) {
-                resultSortButton.setText(it)
+            resultEpisodeGridToggle.setOnClickListener {
+                viewModel.toggleEpisodeGridMode()
+            }
+
+            observeNullable(viewModel.selectedSorting) { selectedSort ->
+                if (selectedSort == null) {
+                    resultSortButton.text = getString(R.string.sort_by)
+                    resultSortButton.isVisible = !viewModel.sortSelections.value.isNullOrEmpty()
+                } else {
+                    resultSortButton.setText(selectedSort)
+                    resultSortButton.isVisible = true
+                }
             }
 
             observe(viewModel.sortSelections) { sort ->
+                resultSortButton.isVisible = sort.isNotEmpty()
                 resultBinding?.resultSortButton?.setOnClickListener { view ->
                     view?.context?.let { ctx ->
                         val names = sort
@@ -811,11 +810,16 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
                 // no failure?
                 resultEpisodeLoading.isVisible = episodes is Resource.Loading
                 resultEpisodes.isVisible = episodes is Resource.Success
+                resultEpisodeGridToggle.isVisible =
+                    episodes is Resource.Success && episodes.value.isNotEmpty()
                 resultBatchDownloadButton.isVisible =
                     episodes is Resource.Success && episodes.value.isNotEmpty()
 
                 if (episodes is Resource.Success) {
-                    (resultEpisodes.adapter as? EpisodeAdapter)?.submitList(episodes.value)
+                    (resultEpisodes.adapter as? EpisodeAdapter)?.apply {
+                        setGridMode(viewModel.isEpisodeGridMode.value == true)
+                        submitList(episodes.value)
+                    }
 
                     // Show quality dialog with all sources
                     resultBatchDownloadButton.setOnLongClickListener {
@@ -1047,19 +1051,16 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
                     }
                 }
 
-                (data as? Resource.Failure)?.let { data ->
-                    @SuppressLint("SetTextI18n")
-                    resultErrorText.text = storedData.url.plus("\n") + data.errorString
-                }
-
                 binding.resultBookmarkFab.isVisible = data is Resource.Success
                 resultFinishLoading.isVisible = data is Resource.Success
 
                 resultLoading.isVisible = data is Resource.Loading
 
                 resultLoadingError.isVisible = data is Resource.Failure
-                resultErrorText.isVisible = data is Resource.Failure
-                resultReloadConnectionOpenInBrowser.isVisible = data is Resource.Failure
+                // Metadata failures should expose only Retry, not provider URLs or browser actions.
+                resultErrorText.isVisible = false
+                resultReloadConnectionOpenInBrowser.isVisible = false
+                if (data !is Resource.Success) binding.resultOpenInBrowser.isVisible = false
 
                 resultTitle.setOnLongClickListener {
                     clipboardHelper(
@@ -1351,12 +1352,38 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
         observeNullable(viewModel.selectedRange) { range ->
             resultBinding?.apply {
                 resultEpisodeSelect.setText(range)
+                resultEpisodeSelect.isVisible = range != null && viewModel.isEpisodeGridMode.value != true
 
                 selectEpisodeRange = range?.asStringNull(resultEpisodeSelect.context)
                 // If Season button is invisible then the bookmark button next focus is episode select
                 if (resultEpisodeSelect.isVisible && !resultSeasonButton.isVisible && resultResumeParent.isVisible) {
                     setFocusUpAndDown(resultResumeSeriesButton, resultEpisodeSelect)
                 }
+            }
+        }
+
+        observe(viewModel.isEpisodeGridMode) { isGrid ->
+            resultBinding?.apply {
+                val gridMode = isGrid == true
+                val selectedRange = viewModel.selectedRange.value
+                resultEpisodeSelect.setText(selectedRange)
+                resultEpisodeSelect.isVisible = !gridMode && selectedRange != null
+                resultEpisodeGridToggle.setImageResource(
+                    if (gridMode) R.drawable.baseline_list_alt_24 else R.drawable.baseline_grid_view_24
+                )
+                resultEpisodeGridToggle.contentDescription = getString(
+                    if (gridMode) R.string.episode_range_layout else R.string.episode_grid_layout
+                )
+
+                val screenWidthDp = resultEpisodes.resources.displayMetrics.widthPixels /
+                    resultEpisodes.resources.displayMetrics.density
+                val spanCount = (screenWidthDp / 64f).toInt().coerceIn(4, 10)
+                resultEpisodes.layoutManager = if (gridMode) {
+                    GridLayoutManager(resultEpisodes.context, spanCount)
+                } else {
+                    LinearLayoutManager(resultEpisodes.context)
+                }
+                (resultEpisodes.adapter as? EpisodeAdapter)?.setGridMode(gridMode)
             }
         }
 

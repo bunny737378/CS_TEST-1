@@ -947,10 +947,7 @@ class ResultFragmentTv : BaseFragment<FragmentResultTvBinding>(
 
                     is Resource.Loading -> {}
 
-                    is Resource.Failure -> {
-                        resultErrorText.text =
-                            storedData.url.plus("\n") + data.errorString
-                    }
+                    is Resource.Failure -> Unit
                 }
 
                 resultFinishLoading.isVisible = data is Resource.Success

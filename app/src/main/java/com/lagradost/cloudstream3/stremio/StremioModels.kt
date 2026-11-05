@@ -155,6 +155,7 @@ data class InstalledStremioAddon(
     val enabled: Boolean = true,
     val addedAt: Long = System.currentTimeMillis(),
     val configValues: Map<String, String> = emptyMap(),
+    val isDefault: Boolean = false,
 ) {
     val id: String get() = manifest.id
     val name: String get() = manifest.name.trim().ifEmpty { manifest.id }
@@ -162,7 +163,7 @@ data class InstalledStremioAddon(
     fun supportsCapability(capability: StremioAddonCapability): Boolean =
         capability in manifest.capabilities
 
-    fun configureWebUrl(): String = "${transportBaseUrl.trimEnd('/')}/configure"
+    fun configureWebUrl(): String = StremioTransport.buildConfigureWebUrl(this)
 }
 
 data class StremioMetaLink(
@@ -774,6 +775,7 @@ object StremioJsonParser {
             obj.put("manifestRaw", addon.manifest.rawJson)
             obj.put("enabled", addon.enabled)
             obj.put("addedAt", addon.addedAt)
+            obj.put("isDefault", addon.isDefault)
             val cfgObj = JSONObject()
             addon.configValues.forEach { (k, v) -> cfgObj.put(k, v) }
             obj.put("configValues", cfgObj)
@@ -804,6 +806,7 @@ object StremioJsonParser {
                         enabled = obj.optBoolean("enabled", true),
                         addedAt = obj.optLong("addedAt", 0L),
                         configValues = obj.optJSONObject("configValues").toStringMap(),
+                        isDefault = obj.optBoolean("isDefault", false),
                     )
                 )
             }

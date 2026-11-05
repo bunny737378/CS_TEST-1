@@ -1,6 +1,7 @@
 package com.lagradost.cloudstream3.ui.result
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isGone
@@ -13,6 +14,7 @@ import com.lagradost.cloudstream3.CommonActivity
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.actions.VideoClickActionHolder
 import com.lagradost.cloudstream3.databinding.ResultEpisodeBinding
+import com.lagradost.cloudstream3.databinding.ResultEpisodeGridBinding
 import com.lagradost.cloudstream3.databinding.ResultEpisodeLargeBinding
 import com.lagradost.cloudstream3.syncproviders.AccountManager.Companion.secondsToReadable
 import com.lagradost.cloudstream3.ui.BaseDiffCallback
@@ -29,6 +31,7 @@ import com.lagradost.cloudstream3.ui.settings.Globals.isLayout
 import com.lagradost.cloudstream3.utils.AppContextUtils.html
 import com.lagradost.cloudstream3.utils.Coroutines.main
 import com.lagradost.cloudstream3.utils.ImageLoader.loadImage
+import com.lagradost.cloudstream3.utils.UIHelper.colorFromAttribute
 import com.lagradost.cloudstream3.utils.UIHelper.toPx
 import com.lagradost.cloudstream3.utils.downloader.DownloadObjects
 import com.lagradost.cloudstream3.utils.downloader.VideoDownloadManager
@@ -79,9 +82,25 @@ class EpisodeAdapter(
 }, contentSame = { a, b ->
     a == b
 })) {
+    private var gridMode: Boolean = false
+    private var currentlyPlayingEpisodeId: Int? = null
+
+    fun setGridMode(enabled: Boolean) {
+        if (gridMode == enabled) return
+        gridMode = enabled
+        notifyDataSetChanged()
+    }
+
+    fun setCurrentlyPlayingEpisode(id: Int?) {
+        if (currentlyPlayingEpisodeId == id) return
+        currentlyPlayingEpisodeId = id
+        notifyDataSetChanged()
+    }
+
     companion object {
         const val HAS_POSTER: Int = 0
         const val HAS_NO_POSTER: Int = 1
+        const val GRID_MODE: Int = 2
         fun getPlayerAction(context: Context): Int {
             val settingsManager = PreferenceManager.getDefaultSharedPreferences(context)
             val playerPref =
@@ -94,6 +113,7 @@ class EpisodeAdapter(
             newSharedPool {
                 setMaxRecycledViews(HAS_POSTER or CONTENT, 10)
                 setMaxRecycledViews(HAS_NO_POSTER or CONTENT, 10)
+                setMaxRecycledViews(GRID_MODE or CONTENT, 20)
             }
     }
 
@@ -110,8 +130,11 @@ class EpisodeAdapter(
         super.onClearView(holder)
     }
 
-    override fun customContentViewType(item: ResultEpisode): Int =
-        if (item.poster.isNullOrBlank() && item.description.isNullOrBlank()) HAS_NO_POSTER else HAS_POSTER
+    override fun customContentViewType(item: ResultEpisode): Int = when {
+        gridMode -> GRID_MODE
+        item.poster.isNullOrBlank() && item.description.isNullOrBlank() -> HAS_NO_POSTER
+        else -> HAS_POSTER
+    }
 
     override fun onCreateCustomContent(parent: ViewGroup, viewType: Int): ViewHolderState<Any> {
         return when (viewType) {
@@ -135,6 +158,16 @@ class EpisodeAdapter(
                 )
             }
 
+            GRID_MODE -> {
+                ViewHolderState(
+                    ResultEpisodeGridBinding.inflate(
+                        LayoutInflater.from(parent.context),
+                        parent,
+                        false
+                    )
+                )
+            }
+
             else -> throw NotImplementedError()
         }
     }
@@ -142,7 +175,36 @@ class EpisodeAdapter(
     override fun onBindContent(holder: ViewHolderState<Any>, item: ResultEpisode, position: Int) {
         val itemView = holder.itemView
         when (val binding = holder.view) {
+            is ResultEpisodeGridBinding -> {
+                val isCurrentlyPlaying = item.id == currentlyPlayingEpisodeId
+                binding.episodeGridNumber.text = item.episode.toString()
+                binding.episodeGridBox.isActivated = isCurrentlyPlaying
+                binding.episodeGridBox.setCardBackgroundColor(
+                    itemView.context.colorFromAttribute(
+                        if (isCurrentlyPlaying) R.attr.colorPrimary else R.attr.primaryGrayBackground
+                    )
+                )
+                binding.episodeGridNumber.alpha = if (item.videoWatchState == VideoWatchState.Watched) 0.65f else 1f
+
+                itemView.setOnClickListener {
+                    clickCallback.invoke(EpisodeClickEvent(position, ACTION_CLICK_DEFAULT, item))
+                }
+                itemView.setOnLongClickListener {
+                    clickCallback.invoke(EpisodeClickEvent(position, ACTION_SHOW_OPTIONS, item))
+                    true
+                }
+                if (isLayout(TV)) {
+                    itemView.isFocusable = true
+                    itemView.isFocusableInTouchMode = true
+                }
+            }
+
             is ResultEpisodeLargeBinding -> {
+                binding.episodeHolderLarge.setCardBackgroundColor(
+                    itemView.context.colorFromAttribute(
+                        if (item.id == currentlyPlayingEpisodeId) R.attr.colorPrimary else R.attr.boxItemBackground
+                    )
+                )
                 val setWidth =
                     if (isLayout(TV or EMULATOR)) TV_EP_SIZE.toPx else ViewGroup.LayoutParams.MATCH_PARENT
 
@@ -371,6 +433,13 @@ class EpisodeAdapter(
             }
 
             is ResultEpisodeBinding -> {
+                binding.episodeHolder.setCardBackgroundColor(
+                    if (item.id == currentlyPlayingEpisodeId) {
+                        itemView.context.colorFromAttribute(R.attr.colorPrimary)
+                    } else {
+                        Color.TRANSPARENT
+                    }
+                )
                 binding.episodeHolder.layoutParams.apply {
                     width =
                         if (isLayout(TV or EMULATOR)) TV_EP_SIZE.toPx else ViewGroup.LayoutParams.MATCH_PARENT
