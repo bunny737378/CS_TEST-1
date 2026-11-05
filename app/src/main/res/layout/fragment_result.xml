@@ -328,19 +328,6 @@
                             android:scaleType="fitStart"
                             android:contentDescription="@null" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/result_play_trailer"
-                            style="@style/SmallBlackButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom|end"
-                            android:layout_marginEnd="@dimen/result_padding"
-                            android:layout_marginBottom="12dp"
-                            android:focusable="true"
-                            android:text="@string/play_trailer_button"
-                            android:visibility="gone"
-                            app:icon="@drawable/ic_baseline_play_arrow_24" />
-
                     </FrameLayout>
                 </FrameLayout>
 
@@ -875,6 +862,23 @@
                                     android:paddingEnd="5dp"
                                     android:text="Sort"
                                     android:visibility="gone"
+                                    tools:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/result_episode_grid_toggle"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_margin="2dp"
+                                    android:background="?selectableItemBackgroundBorderless"
+                                    android:contentDescription="@string/episode_grid_layout"
+                                    android:focusable="true"
+                                    android:nextFocusLeft="@id/result_sort_button"
+                                    android:nextFocusUp="@id/result_description"
+                                    android:nextFocusDown="@id/result_episodes"
+                                    android:padding="6dp"
+                                    android:src="@drawable/baseline_grid_view_24"
+                                    android:visibility="gone"
+                                    app:tint="?attr/textColor"
                                     tools:visibility="visible" />
 
                                 <ImageView
