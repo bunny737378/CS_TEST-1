@@ -524,14 +524,12 @@ object StremioAddonsScreen : Screen {
                     )
                 }
 
-                if (!addon.isDefault) {
-                    WhiteIconButton(onClick = onRemove) {
-                        Icon(
-                            painter = painterResource(R.drawable.delete_24px),
-                            contentDescription = "Remove addon",
-                            tint = MaterialTheme.colorScheme.onBackground,
-                        )
-                    }
+                WhiteIconButton(onClick = onRemove) {
+                    Icon(
+                        painter = painterResource(R.drawable.delete_24px),
+                        contentDescription = "Remove addon",
+                        tint = MaterialTheme.colorScheme.onBackground,
+                    )
                 }
             }
         }

@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Bitmap
-import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
@@ -19,7 +18,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.ArrayAdapter
-import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -48,7 +46,6 @@ import androidx.media3.ui.PlayerNotificationManager.MediaDescriptionAdapter
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.button.MaterialButton
 import com.lagradost.cloudstream3.APIHolder.getApiFromNameNull
 import com.lagradost.cloudstream3.CloudStreamApp
 import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
@@ -129,7 +126,6 @@ import com.lagradost.cloudstream3.utils.UIHelper.navigate
 import com.lagradost.cloudstream3.utils.UIHelper.popCurrentPage
 import com.lagradost.cloudstream3.utils.UIHelper.showProgress
 import com.lagradost.cloudstream3.utils.UIHelper.toPx
-import com.lagradost.cloudstream3.utils.asStringNull
 import com.lagradost.cloudstream3.utils.downloader.DownloadUtils.getImageBitmapFromUrl
 import com.lagradost.cloudstream3.utils.setText
 import com.lagradost.cloudstream3.utils.txt
@@ -2364,168 +2360,74 @@ class GeneratorPlayer : FullScreenPlayer() {
 
     override fun showEpisodesOverlay() {
         try {
-            val ctx = context ?: return
-            val episodes = allMeta?.filterIsInstance<ResultEpisode>().orEmpty()
-            if (episodes.isEmpty()) return
-
-            fun seasonKey(episode: ResultEpisode): Int =
-                episode.seasonIndex ?: episode.season ?: 0
-
-            val seasonOptions = episodes
-                .groupBy(::seasonKey)
-                .map { (season, seasonEpisodes) ->
-                    val representative = seasonEpisodes.first()
-                    val title = ResultViewModel2.seasonToTxt(
-                        representative.seasonData,
-                        representative.seasonIndex ?: representative.season,
-                    )?.asStringNull(ctx) ?: season.toString()
-                    season to title
-                }
-                .sortedBy { it.first }
-
-            val playingIndex = viewModel.state.generatorState?.index ?: viewModel.episodeIndex
-            val playingEpisode = (viewModel.state.generatorState?.meta as? ResultEpisode)
-                ?: episodes.getOrNull(playingIndex)
-            var selectedSeason = playingEpisode?.let(::seasonKey)
-                ?: seasonOptions.first().first
-            if (seasonOptions.none { it.first == selectedSeason }) {
-                selectedSeason = seasonOptions.first().first
-            }
-
             playerBinding?.apply {
-                val seasonButtonViews = LinkedHashMap<Int, View>()
-                var visibleEpisodes: List<ResultEpisode> = emptyList()
-                val adapter = EpisodeAdapter(
+                playerEpisodeList.setRecycledViewPool(EpisodeAdapter.sharedPool)
+                playerEpisodeList.adapter = EpisodeAdapter(
                     false,
                     { episodeClick ->
                         if (episodeClick.action == ACTION_CLICK_DEFAULT) {
-                            val selectedEpisode = episodeClick.data
-                            val globalIndex = episodes.indexOfFirst { it.id == selectedEpisode.id }
-                            if (globalIndex >= 0 && switchStremioEpisodeToStreamSelector(globalIndex)) {
+                            val clickedPos = episodeClick.position
+                            if (clickedPos != null && switchStremioEpisodeToStreamSelector(clickedPos)) {
                                 return@EpisodeAdapter
                             }
                             isNextEpisode = false
                             releasePlayer()
                             playerEpisodeOverlay.isGone = true
-                            globalIndex.takeIf { it >= 0 }?.let { viewModel.loadThisEpisode(it) }
+                            clickedPos?.let { viewModel.loadThisEpisode(it) }
                         }
                     },
                     { downloadClickEvent ->
                         DownloadButtonSetup.handleDownloadClick(downloadClickEvent)
                     }
                 )
-                adapter.setCurrentlyPlayingEpisode(playingEpisode?.id)
-                playerEpisodeList.setRecycledViewPool(EpisodeAdapter.sharedPool)
-                playerEpisodeList.adapter = adapter
                 playerEpisodeList.setLinearListLayout(
                     isHorizontal = false,
                     nextUp = FOCUS_SELF,
                     nextDown = FOCUS_SELF,
                     nextRight = FOCUS_SELF,
                 )
+                val episodes = allMeta ?: emptyList()
+                (playerEpisodeList.adapter as? EpisodeAdapter)?.submitList(episodes)
 
-                var updateVisibleSeason: (Boolean) -> Unit = {}
-
-                fun updateSeasonButtons(scrollToSelected: Boolean) {
-                    playerEpisodeSeasons.removeAllViews()
-                    seasonButtonViews.clear()
-                    playerEpisodeSeasonsScroll.isVisible = seasonOptions.isNotEmpty()
-
-                    seasonOptions.forEach { (season, title) ->
-                        val selected = season == selectedSeason
-                        val button = MaterialButton(ctx).apply {
-                            text = title
-                            isAllCaps = false
-                            isSelected = selected
-                            textSize = 13f
-                            cornerRadius = 20.toPx
-                            insetTop = 0
-                            insetBottom = 0
-                            minHeight = 38.toPx
-                            setPadding(12.toPx, 0, 12.toPx, 0)
-                            backgroundTintList = ColorStateList.valueOf(
-                                ctx.colorFromAttribute(
-                                    if (selected) R.attr.colorPrimary else R.attr.iconGrayBackground
-                                )
-                            )
-                            setTextColor(
-                                if (selected) Color.WHITE else ctx.colorFromAttribute(R.attr.textColor)
-                            )
-                            setOnClickListener {
-                                if (selectedSeason != season) {
-                                    selectedSeason = season
-                                    updateVisibleSeason(false)
-                                }
-                            }
-                        }
-                        playerEpisodeSeasons.addView(
-                            button,
-                            LinearLayout.LayoutParams(
-                                ViewGroup.LayoutParams.WRAP_CONTENT,
-                                38.toPx,
-                            ).apply {
-                                marginEnd = 6.toPx
-                            },
-                        )
-                        seasonButtonViews[season] = button
-                    }
-
-                    if (scrollToSelected) {
-                        playerEpisodeSeasonsScroll.post {
-                            seasonButtonViews[selectedSeason]?.let { button ->
-                                playerEpisodeSeasonsScroll.smoothScrollTo(button.left, 0)
+                // Scroll to current episode
+                viewModel.state.generatorState?.index?.let { index ->
+                    playerEpisodeList.scrollToPosition(index)
+                    // Ensure focus on tv
+                    if (isLayout(TV)) {
+                        playerEpisodeList.post {
+                            val viewHolder =
+                                playerEpisodeList.findViewHolderForAdapterPosition(index)
+                            viewHolder?.itemView?.requestFocus()
+                            viewHolder?.itemView?.let { itemView ->
+                                itemView.isFocusableInTouchMode = true
+                                itemView.requestFocus()
                             }
                         }
                     }
                 }
 
-                updateVisibleSeason = { scrollToPlayingEpisode ->
-                    visibleEpisodes = episodes.filter { seasonKey(it) == selectedSeason }
-                    val currentIndex = if (scrollToPlayingEpisode) {
-                        visibleEpisodes.indexOfFirst { it.id == playingEpisode?.id }
-                    } else {
-                        -1
-                    }
-                    val scrollIndex = currentIndex.takeIf { it >= 0 } ?: 0
-                    val selectedTitle = seasonOptions.firstOrNull { it.first == selectedSeason }?.second
-                    playerEpisodeOverlayTitle.text = selectedTitle ?: ctx.getString(R.string.episodes)
-                    adapter.submitList(visibleEpisodes, Runnable {
-                        if (visibleEpisodes.isNotEmpty()) {
-                            playerEpisodeList.scrollToPosition(scrollIndex)
-                            if (isLayout(TV)) {
-                                playerEpisodeList.post {
-                                    playerEpisodeList.findViewHolderForAdapterPosition(scrollIndex)
-                                        ?.itemView?.apply {
-                                            isFocusableInTouchMode = true
-                                            requestFocus()
-                                        }
-                                }
-                            }
-                        }
-                    })
-                    updateSeasonButtons(scrollToSelected = true)
-                }
-
-                playerEpisodeList.clearOnScrollListeners()
+                // update overlay season title
                 var lastTopIndex = -1
                 playerEpisodeList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                     override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                        val layoutManager = recyclerView.layoutManager as? LinearLayoutManager ?: return
+                        val layoutManager =
+                            recyclerView.layoutManager as? LinearLayoutManager ?: return
                         val topIndex = layoutManager.findFirstCompletelyVisibleItemPosition()
                         if (topIndex != RecyclerView.NO_POSITION && topIndex != lastTopIndex) {
+                            @Suppress("AssignedValueIsNeverRead")
                             lastTopIndex = topIndex
-                            val topItem = visibleEpisodes.getOrNull(topIndex) ?: return
-                            playerEpisodeOverlayTitle.setText(
-                                ResultViewModel2.seasonToTxt(
-                                    topItem.seasonData,
-                                    topItem.seasonIndex ?: topItem.season,
+                            val topItem = episodes.getOrNull(topIndex)
+                            topItem?.let {
+                                playerEpisodeOverlayTitle.setText(
+                                    ResultViewModel2.seasonToTxt(
+                                        topItem.seasonData,
+                                        topItem.seasonIndex
+                                    )
                                 )
-                            )
+                            }
                         }
                     }
                 })
-
-                updateVisibleSeason(true)
             }
         } catch (e: Exception) {
             logError(e)

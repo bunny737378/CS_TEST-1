@@ -72,7 +72,6 @@ import com.lagradost.cloudstream3.syncproviders.providers.Kitsu
 import com.lagradost.cloudstream3.ui.APIRepository
 import com.lagradost.cloudstream3.ui.WatchType
 import com.lagradost.cloudstream3.ui.player.GeneratorPlayer
-import com.lagradost.cloudstream3.ui.streams.CloudStreamStreamSession
 import com.lagradost.cloudstream3.ui.player.LOADTYPE_ALL
 import com.lagradost.cloudstream3.ui.player.LOADTYPE_CHROMECAST
 import com.lagradost.cloudstream3.ui.player.LOADTYPE_INAPP
@@ -558,9 +557,6 @@ class ResultViewModel2 : ViewModel() {
 
     private val _selectedDubStatusIndex: MutableLiveData<Int> = MutableLiveData(-1)
     val selectedDubStatusIndex: LiveData<Int> = _selectedDubStatusIndex
-
-    private val _isEpisodeGridMode: MutableLiveData<Boolean> = MutableLiveData(false)
-    val isEpisodeGridMode: LiveData<Boolean> = _isEpisodeGridMode
 
     private val _loadedLinks: MutableLiveData<LinkProgress?> = MutableLiveData(null)
     val loadedLinks: LiveData<LinkProgress?> = _loadedLinks
@@ -1556,7 +1552,6 @@ class ResultViewModel2 : ViewModel() {
 
 
                 val index = generator.videos.indexOfFirst { value -> value.id == click.data.id }
-                    .coerceAtLeast(0)
 
                 if (com.lagradost.cloudstream3.stremio.StremioAddonManager.isStremioProvider(currentResponse?.apiName)) {
                     val episodeList = generator.videos.filterIsInstance<ResultEpisode>()
@@ -1581,13 +1576,12 @@ class ResultViewModel2 : ViewModel() {
                         callback = {},
                         subtitleCallback = {})
                 } else {
-                    CloudStreamStreamSession.startSession(
-                        generator = generator,
-                        initialIndex = index,
-                        loadResponse = currentResponse,
-                        syncData = list,
+                    activity?.navigate(
+                        R.id.global_to_navigation_player,
+                        GeneratorPlayer.newInstance(
+                            generator, index,list
+                        )
                     )
-                    activity?.navigate(R.id.global_to_navigation_cloudstream_streams)
                 }
             }
 
@@ -1872,12 +1866,6 @@ class ResultViewModel2 : ViewModel() {
         postEpisodeRange(currentIndex, range, currentSorting ?: DataStoreHelper.resultsSortingMode)
     }
 
-    fun toggleEpisodeGridMode() {
-        val indexer = currentIndex ?: return
-        _isEpisodeGridMode.value = _isEpisodeGridMode.value != true
-        postEpisodeRange(indexer, currentRange, currentSorting ?: DataStoreHelper.resultsSortingMode)
-    }
-
     fun changeSeason(season: Int) {
         postEpisodeRange(
             currentIndex?.copy(season = season),
@@ -1901,11 +1889,11 @@ class ResultViewModel2 : ViewModel() {
 
     private fun getEpisodes(
         indexer: EpisodeIndexer,
-        range: EpisodeRange? = null,
+        range: EpisodeRange,
     ): List<ResultEpisode> {
         return currentEpisodes[indexer]?.let { list ->
-            val start = range?.let { minOf(list.size, it.startIndex) } ?: 0
-            val end = range?.let { minOf(list.size, start + it.length) } ?: list.size
+            val start = minOf(list.size, range.startIndex)
+            val end = minOf(list.size, start + range.length)
             list.subList(start, end).map {
                 val posDur = getViewPos(it.id)
                 val watchState = getVideoWatchState(it.id) ?: VideoWatchState.None
@@ -1975,7 +1963,7 @@ class ResultViewModel2 : ViewModel() {
                     getSortedEpisodes(
                         getEpisodes(
                             currentIndex ?: return,
-                            if (_isEpisodeGridMode.value == true) null else currentRange ?: return,
+                            currentRange ?: return,
                         ), currentSorting ?: return
                     )
                 )
@@ -2120,7 +2108,7 @@ class ResultViewModel2 : ViewModel() {
 
             postMovie()
         } else {
-            val ret = getEpisodes(indexer, if (_isEpisodeGridMode.value == true) null else range)
+            val ret = getEpisodes(indexer, range)
 
             if (ret.size <= 1) {
 
@@ -2129,33 +2117,45 @@ class ResultViewModel2 : ViewModel() {
                 _selectedSorting.postValue(null)
                 _episodes.postValue(Resource.Success(ret))
             } else {
-                val sortData = currentEpisodes[indexer].orEmpty()
                 val sortOptions = mutableListOf<Pair<UiText, EpisodeSortType>>().apply {
-                    if (shouldEnableSort(EpisodeSortType.RATING_HIGH_LOW, sortData)) {
+
+                    add(txt(R.string.sort_episodes_number_asc) to EpisodeSortType.NUMBER_ASC)
+                    add(txt(R.string.sort_episodes_number_desc) to EpisodeSortType.NUMBER_DESC)
+
+
+                    if (shouldEnableSort(EpisodeSortType.RATING_HIGH_LOW, ret)) {
                         add(txt(R.string.sort_episodes_rating_high_low) to EpisodeSortType.RATING_HIGH_LOW)
                         add(txt(R.string.sort_episodes_rating_low_high) to EpisodeSortType.RATING_LOW_HIGH)
                     }
-                    if (shouldEnableSort(EpisodeSortType.DATE_NEWEST, sortData)) {
+
+
+                    if (shouldEnableSort(EpisodeSortType.DATE_NEWEST, ret)) {
                         add(txt(R.string.sort_episodes_date_newest) to EpisodeSortType.DATE_NEWEST)
                         add(txt(R.string.sort_episodes_date_oldest) to EpisodeSortType.DATE_OLDEST)
                     }
                 }
 
-                val sortIndex = sortOptions.indexOfFirst { it.second == sorting }
-                // Numeric ascending remains the natural episode order. The former ascending /
-                // descending choices are replaced by the independent range/grid layout toggle.
-                val correctedSorting = if (sortIndex >= 0) sorting else EpisodeSortType.NUMBER_ASC
+                var sortIndex = sortOptions.indexOfFirst { it.second == sorting }
+
+
+                val correctedSorting = if (sortIndex == -1) {
+                    sortIndex = 0
+                    EpisodeSortType.NUMBER_ASC
+                } else {
+                    sorting
+                }
 
                 currentSorting = correctedSorting
                 _sortSelections.postValue(sortOptions)
                 _selectedSortingIndex.postValue(sortIndex)
                 _selectedSorting.postValue(
                     when (correctedSorting) {
+                        EpisodeSortType.NUMBER_ASC -> txt(R.string.sort_button_episode, "↑")
+                        EpisodeSortType.NUMBER_DESC -> txt(R.string.sort_button_episode, "↓")
                         EpisodeSortType.RATING_HIGH_LOW -> txt(R.string.sort_button_rating, "↓")
                         EpisodeSortType.RATING_LOW_HIGH -> txt(R.string.sort_button_rating, "↑")
                         EpisodeSortType.DATE_NEWEST -> txt(R.string.sort_button_date, "↓")
                         EpisodeSortType.DATE_OLDEST -> txt(R.string.sort_button_date, "↑")
-                        EpisodeSortType.NUMBER_ASC, EpisodeSortType.NUMBER_DESC -> null
                     }
                 )
                 _episodes.postValue(Resource.Success(getSortedEpisodes(ret, correctedSorting)))
@@ -2638,7 +2638,6 @@ class ResultViewModel2 : ViewModel() {
         ioSafe {
             _page.postValue(Resource.Loading(url))
             _episodes.postValue(Resource.Loading())
-            _isEpisodeGridMode.postValue(false)
 
             preferDubStatus = dubStatus
             currentShowFillers = showFillers

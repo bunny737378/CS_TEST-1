@@ -78,29 +78,6 @@ object StremioTransport {
         }
     }
 
-    /** Removes the serialized declarative-config path segment, if the addon has one. */
-    fun unconfiguredTransportBaseUrl(addon: InstalledStremioAddon): String {
-        val base = addon.transportBaseUrl.trimEnd('/')
-        val lastSlash = base.lastIndexOf('/')
-        val protoEnd = base.indexOf("://")
-        val hostSlash = if (protoEnd >= 0) base.indexOf('/', protoEnd + 3) else -1
-        if (hostSlash < 0 || lastSlash < hostSlash) return base
-
-        val lastSegment = base.substring(lastSlash + 1)
-        val decoded = runCatching { java.net.URLDecoder.decode(lastSegment, "UTF-8") }.getOrNull()
-        val isConfigSegment = decoded != null && decoded.startsWith("{") && decoded.endsWith("}")
-        return if (isConfigSegment || addon.configValues.isNotEmpty()) {
-            base.substring(0, lastSlash)
-        } else {
-            base
-        }
-    }
-
-    /** Builds the add-on's configure web URL from its (de-serialized) transport base URL. */
-    fun buildConfigureWebUrl(addon: InstalledStremioAddon): String {
-        return "${unconfiguredTransportBaseUrl(addon)}/configure"
-    }
-
     private fun extractQuerySuffix(manifestUrl: String): String {
         val q = manifestUrl.substringAfter("?", "")
             .substringBefore("#")
@@ -117,10 +94,28 @@ object StremioTransport {
         newConfig: Map<String, String>
     ): String {
         val cleanMap = newConfig.filterValues { it.isNotEmpty() }
+        val baseWithoutManifest = addon.transportBaseUrl.trimEnd('/')
         val querySuffix = extractQuerySuffix(addon.manifestUrl)
 
-        // Strip an existing serialized config segment before appending the new one.
-        val rootBase = unconfiguredTransportBaseUrl(addon)
+        // Strip previous JSON userData path segment if one was already present
+        val rootBase = run {
+            val lastSlash = baseWithoutManifest.lastIndexOf('/')
+            val protoEnd = baseWithoutManifest.indexOf("://")
+            val hostSlash = if (protoEnd >= 0) baseWithoutManifest.indexOf('/', protoEnd + 3) else -1
+            if (hostSlash >= 0 && lastSlash >= hostSlash) {
+                val lastSeg = baseWithoutManifest.substring(lastSlash + 1)
+                val decoded = runCatching { java.net.URLDecoder.decode(lastSeg, "UTF-8") }.getOrNull()
+                if (decoded != null && (decoded.startsWith("{") && decoded.endsWith("}")) ||
+                    addon.configValues.isNotEmpty()
+                ) {
+                    baseWithoutManifest.substring(0, lastSlash)
+                } else {
+                    baseWithoutManifest
+                }
+            } else {
+                baseWithoutManifest
+            }
+        }
 
         if (cleanMap.isEmpty()) {
             return "$rootBase/manifest.json$querySuffix"

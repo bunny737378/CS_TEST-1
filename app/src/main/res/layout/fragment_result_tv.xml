@@ -160,8 +160,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:textColor="?attr/textColor"
-            android:visibility="gone" />
+            android:textColor="?attr/textColor" />
     </LinearLayout>
 
     <androidx.core.widget.NestedScrollView

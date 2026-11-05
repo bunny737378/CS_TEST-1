@@ -14,72 +14,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import java.net.URI
 import java.util.concurrent.ConcurrentHashMap
 
 object StremioAddonManager {
     private const val STORAGE_KEY = "stremio_installed_addons_v1"
-
-    private val builtInDefaults: List<InstalledStremioAddon> by lazy {
-        listOf(
-            builtInAddon(
-                "https://v3-cinemeta.strem.io/manifest.json",
-                """{
-                    "id":"com.linvo.cinemeta",
-                    "version":"1.0.0",
-                    "name":"Cinemeta",
-                    "description":"Stremio metadata and catalogs",
-                    "types":["movie","series","anime"],
-                    "idPrefixes":["tt"],
-                    "resources":[
-                        {"name":"catalog","types":["movie","series","anime"],"idPrefixes":["tt"]},
-                        {"name":"meta","types":["movie","series","anime"],"idPrefixes":["tt"]}
-                    ],
-                    "catalogs":[
-                        {"type":"movie","id":"top","name":"Popular Movies","extra":[{"name":"search","isRequired":false}]},
-                        {"type":"series","id":"top","name":"Popular Series","extra":[{"name":"search","isRequired":false}]}
-                    ]
-                }""",
-            ),
-            builtInAddon(
-                "https://opensubtitles.strem.io/manifest.json",
-                """{
-                    "id":"org.stremio.opensubtitles",
-                    "version":"1.0.0",
-                    "name":"OpenSubtitles",
-                    "description":"OpenSubtitles subtitle addon",
-                    "types":["movie","series","anime"],
-                    "idPrefixes":["tt"],
-                    "resources":[{"name":"subtitles","types":["movie","series","anime"],"idPrefixes":["tt"]}]
-                }""",
-            ),
-            builtInAddon(
-                "https://opensubtitles-v3.strem.io/manifest.json",
-                """{
-                    "id":"org.stremio.opensubtitles-v3",
-                    "version":"1.0.0",
-                    "name":"OpenSubtitles V3",
-                    "description":"OpenSubtitles V3 subtitle addon",
-                    "types":["movie","series","anime"],
-                    "idPrefixes":["tt"],
-                    "resources":[{"name":"subtitles","types":["movie","series","anime"],"idPrefixes":["tt"]}]
-                }""",
-            ),
-        )
-    }
-
-    private fun builtInAddon(manifestUrl: String, manifestJson: String): InstalledStremioAddon {
-        val normalizedUrl = StremioTransport.normalizeManifestUrl(manifestUrl)
-        val manifest = StremioJsonParser.parseManifest(manifestJson)
-        return InstalledStremioAddon(
-            manifestUrl = normalizedUrl,
-            transportBaseUrl = StremioTransport.extractTransportBaseUrl(normalizedUrl),
-            manifest = manifest,
-            enabled = true,
-            addedAt = 0L,
-            isDefault = true,
-        )
-    }
 
     private val mutex = Mutex()
     private val _addons = MutableStateFlow<List<InstalledStremioAddon>>(emptyList())
@@ -104,51 +42,16 @@ object StremioAddonManager {
             if (initialized) return
             val raw = CloudStreamApp.getKey<String>(STORAGE_KEY)
             val saved = StremioJsonParser.deserializeInstalledAddons(raw)
-            val merged = mergeBuiltInDefaults(saved)
-            _addons.value = merged
-            if (merged != saved) {
-                CloudStreamApp.setKey(STORAGE_KEY, StremioJsonParser.serializeInstalledAddons(merged))
-            }
-            syncProvidersToApiHolder(merged, notifyEvent = true)
+            _addons.value = saved
+            syncProvidersToApiHolder(saved, notifyEvent = true)
             initialized = true
         }
     }
 
     fun hasInstalledAddonsSync(): Boolean {
-        if (_addons.value.isNotEmpty() || builtInDefaults.isNotEmpty()) return true
+        if (_addons.value.isNotEmpty()) return true
         val raw = CloudStreamApp.getKey<String>(STORAGE_KEY)
         return !raw.isNullOrBlank() && raw.trim() != "[]"
-    }
-
-    private fun mergeBuiltInDefaults(saved: List<InstalledStremioAddon>): List<InstalledStremioAddon> {
-        val merged = saved.toMutableList()
-        for (default in builtInDefaults) {
-            val matchingIndex = merged.indexOfFirst { addon ->
-                addon.manifestUrl.equals(default.manifestUrl, ignoreCase = true) ||
-                    (addon.id == default.id && sameOrigin(addon.manifestUrl, default.manifestUrl)) ||
-                    (addon.isDefault && sameOrigin(addon.manifestUrl, default.manifestUrl))
-            }
-            if (matchingIndex >= 0) {
-                merged[matchingIndex] = merged[matchingIndex].copy(isDefault = true)
-            } else {
-                merged.add(default)
-            }
-        }
-        return merged
-    }
-
-    private fun isBuiltInDefault(manifestUrl: String, manifestId: String): Boolean {
-        return builtInDefaults.any { default ->
-            manifestUrl.equals(default.manifestUrl, ignoreCase = true) ||
-                (manifestId == default.id && sameOrigin(manifestUrl, default.manifestUrl))
-        }
-    }
-
-    private fun sameOrigin(firstUrl: String, secondUrl: String): Boolean {
-        fun origin(url: String): String? = runCatching {
-            URI(url).let { "${it.scheme}://${it.rawAuthority}" }
-        }.getOrNull()
-        return origin(firstUrl)?.equals(origin(secondUrl), ignoreCase = true) == true
     }
 
     fun isStremioProvider(apiName: String?): Boolean {
@@ -183,7 +86,6 @@ object StremioAddonManager {
                     enabled = prev.enabled,
                     addedAt = prev.addedAt,
                     configValues = configValues.ifEmpty { prev.configValues },
-                    isDefault = prev.isDefault || isBuiltInDefault(normalizedManifestUrl, manifest.id),
                 ).also { current[existingIdx] = it }
             } else {
                 InstalledStremioAddon(
@@ -193,7 +95,6 @@ object StremioAddonManager {
                     enabled = true,
                     addedAt = System.currentTimeMillis(),
                     configValues = configValues,
-                    isDefault = isBuiltInDefault(normalizedManifestUrl, manifest.id),
                 ).also { current.add(it) }
             }
 
@@ -234,9 +135,7 @@ object StremioAddonManager {
     suspend fun removeAddon(manifestUrl: String) {
         ensureInitialized()
         mutex.withLock {
-            val updated = _addons.value.filterNot {
-                it.manifestUrl.equals(manifestUrl, ignoreCase = true) && !it.isDefault
-            }
+            val updated = _addons.value.filterNot { it.manifestUrl == manifestUrl }
             persistAndSyncLocked(updated, newlyAddedOrEnabled = null)
         }
     }

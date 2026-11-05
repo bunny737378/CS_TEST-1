@@ -1052,9 +1052,7 @@ open class FullScreenPlayer : AbstractPlayerFragment<FragmentPlayerBinding>(
             playerCenterMenu.isGone = isGone
             playerLock.isGone = !isShowing
             playerGoBackHolder.isGone = isGone
-            // Links are chosen on the stream-selection page before entering the player.
-            // Keep subtitles/tracks available, but remove the obsolete in-player source picker.
-            playerSourcesBtt.isGone = true
+            playerSourcesBtt.isGone = isGone
             shadowOverlay.isGone = isGone
             playerSkipEpisode.isClickable = !isGone
         }
