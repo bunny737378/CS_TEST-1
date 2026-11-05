@@ -233,9 +233,10 @@ object Torrent {
         }
 
         var status = add(link.url)
-        val hash = status.hash
-        if (status.fileStats.isNullOrEmpty() && !hash.isNullOrBlank()) {
-            // Wait for magnet metadata (`GotInfo`) so fileStats are populated before selecting file index
+        val hash = status.hash?.takeIf { it.isNotBlank() }
+            ?: throw ErrorLoadingException("Torrent server did not return a torrent hash")
+        if (status.fileStats.isNullOrEmpty()) {
+            // Wait for magnet metadata (`GotInfo`) so fileStats are populated before selecting a file.
             var attempts = 0
             while (attempts < 75 && status.fileStats.isNullOrEmpty()) {
                 delay(400)
@@ -245,6 +246,9 @@ object Torrent {
                 }
                 attempts++
             }
+        }
+        if (status.fileStats.isNullOrEmpty()) {
+            throw ErrorLoadingException("Torrent metadata timed out before the file list became available")
         }
 
         return newExtractorLink(
@@ -368,12 +372,15 @@ object Torrent {
         @JsonProperty("trackers") @SerialName("trackers") var trackers: List<String>?,
     ) {
         fun streamUrl(url: String): String {
-            val validFiles = this.fileStats?.filter { !it.path.isNullOrBlank() }.orEmpty()
+            val allFiles = this.fileStats.orEmpty()
+            val validFiles = allFiles.filter { !it.path.isNullOrBlank() }
             if (validFiles.isEmpty()) {
                 throw ErrorLoadingException("Torrent metadata timed out or contains no files")
             }
+            val torrentHash = hash?.takeIf { it.isNotBlank() }
+                ?: throw ErrorLoadingException("Torrent server did not return a torrent hash")
 
-            val explicitIndex = extractQueryParam(url, "index")?.toIntOrNull()
+            val explicitIndex = extractQueryParam(url, "index")?.toIntOrNull()?.takeIf { it >= 0 }
             val filenameHint = extractQueryParam(url, "stremioFilename")
             val seasonHint = extractQueryParam(url, "stremioSeason")?.toIntOrNull()
             val episodeHint = extractQueryParam(url, "stremioEpisode")?.toIntOrNull()
@@ -388,12 +395,14 @@ object Torrent {
 
             val rawPath = selectedFile.path ?: throw ErrorLoadingException("Null path")
             val leafName = rawPath.substringAfterLast('/').substringAfterLast('\\').ifBlank { rawPath }
-            val resolvedIndex = selectedFile.id ?: explicitIndex ?: 0
+            val resolvedIndex = selectedFile.id?.takeIf { it >= 0 }
+                ?: allFiles.indexOf(selectedFile).takeIf { it >= 0 }
+                ?: throw ErrorLoadingException("Torrent file index is unavailable")
 
             // https://github.com/Diegopyl1209/torrentserver-aniyomi/blob/c18f58e51b6738f053261bc863177078aa9c1c98/web/api/stream.go#L18
             return "$TORRENT_SERVER_URL/stream/${
                 URLEncoder.encode(leafName, "utf-8")
-            }?link=${this.hash}&index=$resolvedIndex&play&preload"
+            }?link=$torrentHash&index=$resolvedIndex&play&preload"
         }
 
         private fun extractQueryParam(url: String, key: String): String? {
