@@ -65,7 +65,9 @@ lifecycleViewmodelCompose = "2.11.0"
 jvmTarget = "11"
 jdkToolchain = "21"
 minSdk = "24"
-compileSdk = "36"
+# Compose Multiplatform 1.12.0 and lifecycle-*-compose 2.11.0 ship AAR metadata
+# requiring compileSdk 37; anything lower fails :shared:checkAndroidMainAarMetadata.
+compileSdk = "37"
 targetSdk = "36"
 
 versionCode = "68"
