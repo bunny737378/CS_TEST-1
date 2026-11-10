@@ -40,7 +40,28 @@ jobs:
           echo "$SDK_ROOT/platform-tools" >> "$GITHUB_PATH"
           "$SDKMANAGER" --version
           yes | "$SDKMANAGER" --licenses > /dev/null || true
-          "$SDKMANAGER" --install "platforms;android-37" "platforms;android-36" "build-tools;37.0.0" "build-tools;36.0.0" "platform-tools"
+
+          # compileSdk is 37. The runner images already ship an API 37 platform and
+          # build-tools 37.0.0, but the exact package id varies (platforms;android-37
+          # vs platforms;android-37.0), so install each candidate best-effort. Never
+          # abort the job here: a hard failure in this step kills the build before
+          # Gradle writes anything the diagnostics step can read.
+          for pkg in "platforms;android-37" "platforms;android-37.0" "build-tools;37.0.0" \
+                     "platforms;android-36" "build-tools;36.0.0" "platform-tools"; do
+            if "$SDKMANAGER" --install "$pkg" > /dev/null 2>&1; then
+              echo "sdk: installed $pkg"
+            else
+              echo "sdk: skipped $pkg (unavailable under that id, or already present)"
+            fi
+          done
+
+          # Record what is actually on disk so the diagnostics step can report it.
+          {
+            echo "== \$ANDROID_HOME/platforms =="
+            ls -1 "$SDK_ROOT/platforms" 2>&1
+            echo "== \$ANDROID_HOME/build-tools =="
+            ls -1 "$SDK_ROOT/build-tools" 2>&1
+          } | tee sdk-diagnostics.log
 
       - name: Verify fixed debug keystore
         run: |
@@ -76,6 +97,12 @@ jobs:
 
           log_path = Path("gradle-build.log")
           lines = log_path.read_text(errors="replace").splitlines() if log_path.exists() else []
+
+          # Surface the SDK inventory too: when the job dies before Gradle runs,
+          # gradle-build.log is empty and this is the only useful signal.
+          sdk_path = Path("sdk-diagnostics.log")
+          if sdk_path.exists():
+              lines = sdk_path.read_text(errors="replace").splitlines() + lines
 
           keep = set()
           diag = re.compile(
